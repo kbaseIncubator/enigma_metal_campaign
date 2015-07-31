@@ -1,11 +1,14 @@
-#include <KBaseFeatureValues.spec>
-
-
-module KBaseEnigmaTest {
+module KBaseEnigmaMetals {
 
 
 	typedef string time_unit;
 	typedef string concentration_unit;
+
+    typedef structure {
+        list<string> row_ids;
+        list<string> col_ids;
+        list<list<float>> values;
+    } FloatMatrix2D;
 
 
 	 /*//////////////////////////////
@@ -110,7 +113,7 @@ module KBaseEnigmaTest {
 
 		GenericSeriesMetadata row_metadata;
 		TimeSeriesMetadata column_metadata;
-		KBaseFeatureValues.FloatMatrix2D data;
+		FloatMatrix2D data;
 	} GrowthMatrix;
 
 
@@ -120,7 +123,7 @@ module KBaseEnigmaTest {
 
 		GenericSeriesMetadata row_metadata;
 		TimeSeriesMetadata column_metadata;
-		KBaseFeatureValues.FloatMatrix2D data;
+		FloatMatrix2D data;
 	} ChromotographyMatrix;
 
 
@@ -131,7 +134,7 @@ module KBaseEnigmaTest {
 		GenericSeriesMetadata row_metadata;
 		WellSampleSeriesMetadata column_metadata;
 
-		KBaseFeatureValues.FloatMatrix2D data;
+		FloatMatrix2D data;
 	} WellSampleMatrix;
 
 };
