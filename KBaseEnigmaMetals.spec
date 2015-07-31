@@ -1,6 +1,6 @@
 /* KBase-ENIGMA data models */
 
-module KBaseEnigmaTest {
+module KBaseEnigmaMetals {
 
 	typedef string date ;
 	
