@@ -8,9 +8,9 @@ module KBaseEnigmaTest {
 	typedef string concentration_unit;
 
 
-	  /*//////////////////////////////
+	 /*//////////////////////////////
 	 //////////   Wells   ///////////
-	//////////////////////////////*/
+	 //////////////////////////////*/
 
     /*
       @optional description elevation
@@ -23,7 +23,7 @@ module KBaseEnigmaTest {
 	} Location;
 
 	/*
-		@optional cluster_number area_code location metadata 
+		@optional cluster_number area_code location 
 	*/
 	typedef structure {
 		string title;
@@ -34,7 +34,7 @@ module KBaseEnigmaTest {
 
 
 	/*
-		@optional collection_date description well_info measurements metadata
+		@optional sample_name collection_date description well_info fraction 
 	*/
 	typedef structure {
 		string sample_id;
@@ -48,8 +48,8 @@ module KBaseEnigmaTest {
 
 
 
-	  /*////////////////////////////////
-	 ///  Metadata for data series ////
+	/*////////////////////////////////
+	///  Metadata for data series ////
 	////////////////////////////////*/
 
 
@@ -61,22 +61,22 @@ module KBaseEnigmaTest {
 
 	typedef structure {
 		string base_media;
-		string series_elem_compaund;
+		string series_elem_compound;
 		concentration_unit unit;
 		list<float> concentration_values;
 	} ConcentrationSeriesMetadata;
 
 	typedef structure {
 		string base_media;
-		string series_elem_compaund_class;
-		list<string> compaund_values;
-	} CompaundSeriesMetadata;
+		string series_elem_compound_class;
+		list<string> compound_values;
+	} CompoundSeriesMetadata;
 
 	typedef structure {
 		string base_media;
-		string series_elem_compaund_class;
-		list<tuple<string,float>> compaund_concentration_values;
-	} CompaundConcentrationSeriesMetadata;
+		string series_elem_compound_class;
+		list<tuple<string,float>> compound_concentration_values;
+	} CompoundConcentrationSeriesMetadata;
 
 
 	typedef structure {
@@ -99,8 +99,8 @@ module KBaseEnigmaTest {
 	} WellSampleSeriesMetadata;
 
 
-	  /*////////////////////////////////
-	 ///  Metadata for data series ////
+	/*////////////////////////////////
+	///  Metadata for data series ////
 	////////////////////////////////*/
 
 
