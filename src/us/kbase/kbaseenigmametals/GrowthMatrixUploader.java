@@ -4,9 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.apache.commons.cli.CommandLine;
@@ -17,20 +15,23 @@ import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import us.kbase.auth.AuthService;
-import us.kbase.auth.AuthToken;
-import us.kbase.auth.TokenFormatException;
-import us.kbase.common.service.JsonClientException;
 import us.kbase.common.service.UObject;
 import us.kbase.kbaseenigmametals.ConcentrationSeriesMetadata;
 import us.kbase.kbaseenigmametals.FloatMatrix2D;
 import us.kbase.kbaseenigmametals.GenericSeriesMetadata;
 import us.kbase.kbaseenigmametals.GrowthMatrix;
 import us.kbase.kbaseenigmametals.TimeSeriesMetadata;
+/*
+import java.net.URL;
+import java.util.HashMap;
+import us.kbase.auth.AuthService;
+import us.kbase.auth.AuthToken;
+import us.kbase.auth.TokenFormatException;
+import us.kbase.common.service.JsonClientException;
 import us.kbase.workspace.ObjectSaveData;
 import us.kbase.workspace.SaveObjectsParams;
 import us.kbase.workspace.WorkspaceClient;
-
+*/
 public class GrowthMatrixUploader {
 
 	static Options options = new Options();
@@ -112,14 +113,14 @@ public class GrowthMatrixUploader {
 		OptionBuilder.withArgName("fill_missing_values");
 		options.addOption(OptionBuilder.create("fm"));
 	}
-
+/*
 	private static WorkspaceClient getWsClient(String wsUrl, AuthToken token)
 			throws Exception {
 		WorkspaceClient wsClient = new WorkspaceClient(new URL(wsUrl), token);
 		wsClient.setAuthAllowedForHttp(true);
 		return wsClient;
 	}
-
+*/
 	public void upload(String[] args) throws Exception {
 		CommandLineParser parser = new GnuParser();
 
@@ -141,18 +142,18 @@ public class GrowthMatrixUploader {
 
 				if (validateInput(line)) {
 
-					AuthToken token = null;
+/*					AuthToken token = null;
 					String user = System.getProperty("test.user");
 					String pwd = System.getProperty("test.pwd");
 					String tokenString = System.getenv("KB_AUTH_TOKEN");
 					token = tokenString == null ? AuthService.login(user, pwd)
 							.getToken() : new AuthToken(tokenString);
-
+*/
 					File inputFile = findTabFile(new File(
 							line.getOptionValue("id")));
 
 					boolean fillMissingValues = false;
-					if (line.getOptionValue("fm").equalsIgnoreCase("1")) {
+					if (line.hasOption("fm") && line.getOptionValue("fm").equalsIgnoreCase("1")) {
 						fillMissingValues = true;
 					}
 					//TODO: fillMissingValue is not of use 
@@ -161,8 +162,20 @@ public class GrowthMatrixUploader {
 							line.getOptionValue("on"));
 
 					// System.out.println(matrix.toString());
+					String outputFileName = line.getOptionValue("of");
+			        if (outputFileName == null)
+			            outputFileName = "expression_output.json";
 
-					WorkspaceClient cl = getWsClient(line.getOptionValue("ws"),
+			        String workDirName = line.getOptionValue("wd");
+			        if (workDirName == null)
+			            workDirName = (".");
+			        File workDir = new File(workDirName);
+			        if (!workDir.exists())
+			            workDir.mkdirs();
+			        File outputFile = new File(workDir, outputFileName);
+			        UObject.getMapper().writeValue(outputFile, matrix);
+
+/*					WorkspaceClient cl = getWsClient(line.getOptionValue("ws"),
 							token);
 					List<ObjectSaveData> saveData = new ArrayList<ObjectSaveData>();
 					saveData.add(new ObjectSaveData()
@@ -172,12 +185,12 @@ public class GrowthMatrixUploader {
 							.withType("KBaseEnigmaMetals.GrowthMatrix")
 							.withName(line.getOptionValue("on"))
 							.withMeta(new HashMap<String, String>()));
-					SaveObjectsParams params = new SaveObjectsParams().withId(
-							Long.valueOf(line.getOptionValue("wn")))
+					SaveObjectsParams params = new SaveObjectsParams()
+							.withWorkspace(line.getOptionValue("wn"))
 							.withObjects(saveData);
 
 					cl.saveObjects(params);
-
+*/
 				} else {
 					HelpFormatter formatter = new HelpFormatter();
 					formatter
@@ -196,7 +209,7 @@ public class GrowthMatrixUploader {
 	}
 
 	public GrowthMatrix generateGrowthMatrix(File inputFile, String name)
-			throws TokenFormatException, IOException, JsonClientException {
+			throws Exception {
 		GrowthMatrix matrix = new GrowthMatrix();
 		matrix.setName(name);
 
@@ -333,7 +346,7 @@ public class GrowthMatrixUploader {
 							|| (fields[1].equals("description"))) {
 						description = fields[2];
 					} else {
-						System.err.println("Unknown parameter " + fields[1]
+						System.out.println("Unknown parameter " + fields[1]
 								+ " in line " + line);
 					}
 				} else if (sampleNames.contains(fields[0])) {
@@ -405,9 +418,8 @@ public class GrowthMatrixUploader {
 			returnVal = false;
 		}
 
-		if (!line.hasOption("fm")
-				|| !(line.getOptionValue("fm").equalsIgnoreCase("1") || line
-						.getOptionValue("fm").equalsIgnoreCase("0"))) {
+		if (line.hasOption("fm")&&!((line.getOptionValue("fm").equalsIgnoreCase("1")) || (line
+						.getOptionValue("fm").equalsIgnoreCase("0")))) {
 			System.err.println("Fill missing value option must be 0 or 1");
 			returnVal = false;
 		}
