@@ -265,10 +265,12 @@ public class GrowthMatrixUploader {
 		for (String line : data) {
 			if (line.matches("Time\t.*")) {
 				String[] fields = line.split("\t");
-				samplesNumber = fields.length - 1L;
 				for (int i = 1; i < fields.length; i++) {
-					sampleNames.add(fields[i]);
-					// System.out.println(fields[i]);
+					if (!fields[i].equals("")){
+						sampleNames.add(fields[i]);
+						samplesNumber ++;
+						//System.out.println(fields[i]);
+					}
 				}
 				/*
 				 * for (Integer i = 0; i < samplesNumber; i++) { HashMap<String,
