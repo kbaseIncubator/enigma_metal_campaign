@@ -12,6 +12,10 @@ module KBaseEnigmaMetals {
 	///         Metadata          ////
 	////////////////////////////////*/
 
+    /* Single piece of metadata
+
+      @optional value_unit value
+    */
 
 	typedef structure {
 		string type;
@@ -19,6 +23,11 @@ module KBaseEnigmaMetals {
 		string value_unit;
 		float value;
 	} MetadataItem;
+
+    /* Metadata for data matrix
+
+      @optional description series_properties
+    */
 
 	typedef structure {
 		string description;
@@ -31,6 +40,10 @@ module KBaseEnigmaMetals {
 	///         Data series       ////
 	////////////////////////////////*/
 
+    /* Generic data matrix
+
+      @optional description type
+    */
 
 	typedef structure{
 		string name;
@@ -40,6 +53,11 @@ module KBaseEnigmaMetals {
 		FloatMatrix2D data;
 	} DataMatrix;
 
+    /* Growth data matrix
+
+      @optional description
+    */
+
 	typedef structure{
 		string name;
 		string description;
@@ -47,14 +65,22 @@ module KBaseEnigmaMetals {
 		FloatMatrix2D data;
 	} GrowthMatrix;
 
+    /* Chromatography data matrix
+
+      @optional description
+    */
 
 	typedef structure{
 		string name;
 		string description;
 		SeriesMetadata metadata;
 		FloatMatrix2D data;
-	} ChromotographyMatrix;
+	} ChromatographyMatrix;
 
+    /* Well sample data matrix
+
+      @optional description
+    */
 
 	typedef structure{
 		string name;

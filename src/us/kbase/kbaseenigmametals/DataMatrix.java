@@ -12,10 +12,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * <p>Original spec-file type: GrowthMatrix</p>
+ * <p>Original spec-file type: DataMatrix</p>
  * <pre>
- * Growth data matrix
- *       @optional description
+ * Generic data matrix
+ *       @optional description type
  * </pre>
  * 
  */
@@ -23,14 +23,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @Generated("com.googlecode.jsonschema2pojo")
 @JsonPropertyOrder({
     "name",
+    "type",
     "description",
     "metadata",
     "data"
 })
-public class GrowthMatrix {
+public class DataMatrix {
 
     @JsonProperty("name")
     private String name;
+    @JsonProperty("type")
+    private String type;
     @JsonProperty("description")
     private String description;
     /**
@@ -62,8 +65,23 @@ public class GrowthMatrix {
         this.name = name;
     }
 
-    public GrowthMatrix withName(String name) {
+    public DataMatrix withName(String name) {
         this.name = name;
+        return this;
+    }
+
+    @JsonProperty("type")
+    public String getType() {
+        return type;
+    }
+
+    @JsonProperty("type")
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public DataMatrix withType(String type) {
+        this.type = type;
         return this;
     }
 
@@ -77,7 +95,7 @@ public class GrowthMatrix {
         this.description = description;
     }
 
-    public GrowthMatrix withDescription(String description) {
+    public DataMatrix withDescription(String description) {
         this.description = description;
         return this;
     }
@@ -108,7 +126,7 @@ public class GrowthMatrix {
         this.metadata = metadata;
     }
 
-    public GrowthMatrix withMetadata(SeriesMetadata metadata) {
+    public DataMatrix withMetadata(SeriesMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
@@ -133,7 +151,7 @@ public class GrowthMatrix {
         this.data = data;
     }
 
-    public GrowthMatrix withData(FloatMatrix2D data) {
+    public DataMatrix withData(FloatMatrix2D data) {
         this.data = data;
         return this;
     }
@@ -150,7 +168,7 @@ public class GrowthMatrix {
 
     @Override
     public String toString() {
-        return ((((((((((("GrowthMatrix"+" [name=")+ name)+", description=")+ description)+", metadata=")+ metadata)+", data=")+ data)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((((("DataMatrix"+" [name=")+ name)+", type=")+ type)+", description=")+ description)+", metadata=")+ metadata)+", data=")+ data)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

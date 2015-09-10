@@ -13,7 +13,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
  * <p>Original spec-file type: WellSampleMatrix</p>
- * 
+ * <pre>
+ * Well sample data matrix
+ *       @optional description
+ * </pre>
  * 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -21,8 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "name",
     "description",
-    "row_metadata",
-    "column_metadata",
+    "metadata",
     "data"
 })
 public class WellSampleMatrix {
@@ -32,19 +34,15 @@ public class WellSampleMatrix {
     @JsonProperty("description")
     private String description;
     /**
-     * <p>Original spec-file type: GenericSeriesMetadata</p>
-     * 
-     * 
-     */
-    @JsonProperty("row_metadata")
-    private GenericSeriesMetadata rowMetadata;
-    /**
-     * <p>Original spec-file type: WellSampleSeriesMetadata</p>
-     * 
+     * <p>Original spec-file type: SeriesMetadata</p>
+     * <pre>
+     * Metadata for data matrix
+     *       @optional description series_properties
+     * </pre>
      * 
      */
-    @JsonProperty("column_metadata")
-    private WellSampleSeriesMetadata columnMetadata;
+    @JsonProperty("metadata")
+    private SeriesMetadata metadata;
     /**
      * <p>Original spec-file type: FloatMatrix2D</p>
      * 
@@ -85,52 +83,33 @@ public class WellSampleMatrix {
     }
 
     /**
-     * <p>Original spec-file type: GenericSeriesMetadata</p>
-     * 
+     * <p>Original spec-file type: SeriesMetadata</p>
+     * <pre>
+     * Metadata for data matrix
+     *       @optional description series_properties
+     * </pre>
      * 
      */
-    @JsonProperty("row_metadata")
-    public GenericSeriesMetadata getRowMetadata() {
-        return rowMetadata;
+    @JsonProperty("metadata")
+    public SeriesMetadata getMetadata() {
+        return metadata;
     }
 
     /**
-     * <p>Original spec-file type: GenericSeriesMetadata</p>
-     * 
-     * 
-     */
-    @JsonProperty("row_metadata")
-    public void setRowMetadata(GenericSeriesMetadata rowMetadata) {
-        this.rowMetadata = rowMetadata;
-    }
-
-    public WellSampleMatrix withRowMetadata(GenericSeriesMetadata rowMetadata) {
-        this.rowMetadata = rowMetadata;
-        return this;
-    }
-
-    /**
-     * <p>Original spec-file type: WellSampleSeriesMetadata</p>
-     * 
+     * <p>Original spec-file type: SeriesMetadata</p>
+     * <pre>
+     * Metadata for data matrix
+     *       @optional description series_properties
+     * </pre>
      * 
      */
-    @JsonProperty("column_metadata")
-    public WellSampleSeriesMetadata getColumnMetadata() {
-        return columnMetadata;
+    @JsonProperty("metadata")
+    public void setMetadata(SeriesMetadata metadata) {
+        this.metadata = metadata;
     }
 
-    /**
-     * <p>Original spec-file type: WellSampleSeriesMetadata</p>
-     * 
-     * 
-     */
-    @JsonProperty("column_metadata")
-    public void setColumnMetadata(WellSampleSeriesMetadata columnMetadata) {
-        this.columnMetadata = columnMetadata;
-    }
-
-    public WellSampleMatrix withColumnMetadata(WellSampleSeriesMetadata columnMetadata) {
-        this.columnMetadata = columnMetadata;
+    public WellSampleMatrix withMetadata(SeriesMetadata metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -171,7 +150,7 @@ public class WellSampleMatrix {
 
     @Override
     public String toString() {
-        return ((((((((((((("WellSampleMatrix"+" [name=")+ name)+", description=")+ description)+", rowMetadata=")+ rowMetadata)+", columnMetadata=")+ columnMetadata)+", data=")+ data)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((("WellSampleMatrix"+" [name=")+ name)+", description=")+ description)+", metadata=")+ metadata)+", data=")+ data)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

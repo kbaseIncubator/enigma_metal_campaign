@@ -19,9 +19,8 @@ import org.apache.commons.cli.ParseException;
 
 import us.kbase.common.service.Tuple2;
 import us.kbase.common.service.UObject;
-import us.kbase.kbaseenigmametals.GrowthMatrix;
 
-public class GrowthMatrixUploader {
+public class WellSampleMatrixUploader {
 
 	static Options options = new Options();
 
@@ -30,11 +29,11 @@ public class GrowthMatrixUploader {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		GrowthMatrixUploader uploader = new GrowthMatrixUploader();
+		WellSampleMatrixUploader uploader = new WellSampleMatrixUploader();
 		uploader.upload(args);
 	}
 
-	public GrowthMatrixUploader() {
+	public WellSampleMatrixUploader() {
 
 		OptionBuilder.withLongOpt("help");
 		OptionBuilder.withDescription("print this message");
@@ -121,10 +120,10 @@ public class GrowthMatrixUploader {
 					File inputFile = findTabFile(new File(
 							line.getOptionValue("id")));
 
-					GrowthMatrix matrix = new GrowthMatrix();
+					WellSampleMatrix matrix = new WellSampleMatrix();
 					matrix.setName(line.getOptionValue("on"));
 					
-					matrix = generateGrowthMatrix(inputFile, matrix);
+					matrix = generateWellSampleMatrix(inputFile, matrix);
 
 					// System.out.println(matrix.toString());
 					String outputFileName = line.getOptionValue("of");
@@ -157,7 +156,7 @@ public class GrowthMatrixUploader {
 
 	}
 
-	public GrowthMatrix generateGrowthMatrix(File inputFile, GrowthMatrix matrix)
+	public WellSampleMatrix generateWellSampleMatrix(File inputFile, WellSampleMatrix matrix)
 			throws Exception {
 
 		List<String> data = new ArrayList<String>();
@@ -206,7 +205,7 @@ public class GrowthMatrixUploader {
 		
 		matrix.setData(DataMatrixUploader.parseData(data));
 
-		matrix.setMetadata(parseGrowthMetadata(columnMetaData, rowMetaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
+		matrix.setMetadata(parseWellSampleMetadata(columnMetaData, rowMetaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
 		
 		if (matrix.getMetadata().getSeriesProperties().containsKey("Description")) {
@@ -219,7 +218,7 @@ public class GrowthMatrixUploader {
 	}
 
 
-	private SeriesMetadata parseGrowthMetadata (List<String> columnMetaData, List<String> rowMetaData, List<String> sampleNames, List<String> rowNames) {
+	private SeriesMetadata parseWellSampleMetadata (List<String> columnMetaData, List<String> rowMetaData, List<String> sampleNames, List<String> rowNames) {
 		
 		SeriesMetadata returnVal = DataMatrixUploader.parseMetadata(columnMetaData, rowMetaData, sampleNames, rowNames);
 		
@@ -229,7 +228,7 @@ public class GrowthMatrixUploader {
 			String key = tuple.getE2().getType() + tuple.getE2().getName();
 			if (units.containsKey(key)) {
 				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Growth matrix upload failed: Row metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
+					System.err.println("Well sample matrix upload failed: Row metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
 					System.exit(1);
 				}
 			} else {
@@ -241,7 +240,7 @@ public class GrowthMatrixUploader {
 			String key = tuple.getE2().getType() + tuple.getE2().getName();
 			if (units.containsKey(key)) {
 				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Growth matrix upload failed: Column metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
+					System.err.println("Well sample matrix upload failed: Column metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
 					System.exit(1);
 				}
 			} else {

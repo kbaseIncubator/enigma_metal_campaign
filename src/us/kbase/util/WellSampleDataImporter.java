@@ -4,15 +4,17 @@ import java.io.File;
 import us.kbase.common.service.UObject;
 import us.kbase.kbaseenigmametals.ChromatographyMatrix;
 import us.kbase.kbaseenigmametals.ChromatographyMatrixUploader;
+import us.kbase.kbaseenigmametals.WellSampleMatrix;
+import us.kbase.kbaseenigmametals.WellSampleMatrixUploader;
 
-public class ChromatographyDataImporter {
+public class WellSampleDataImporter {
 
 	private String fileName = null;
 	private String token = null;
 	private Long workspaceId = null;
 
 	
-	public ChromatographyDataImporter (String fileName, Long workspaceId, String token) throws Exception{
+	public WellSampleDataImporter (String fileName, Long workspaceId, String token) throws Exception{
 		if (fileName == null) {
 			System.out.println("cMonkey Expression data file name required");
 		} else {
@@ -34,16 +36,16 @@ public class ChromatographyDataImporter {
 	
 	public void importMatrix (String matrixName) throws Exception {
 		
-		ChromatographyMatrixUploader uploader = new ChromatographyMatrixUploader();
+		WellSampleMatrixUploader uploader = new WellSampleMatrixUploader();
 		
-		ChromatographyMatrix matrix = new ChromatographyMatrix();
+		WellSampleMatrix matrix = new WellSampleMatrix();
 		matrix.setName(matrixName);
 		
 		File inputFile = new File(this.fileName);
 		
-		matrix = uploader.generateChromatographyMatrix(inputFile, matrix);
+		matrix = uploader.generateWellSampleMatrix(inputFile, matrix);
 		//System.out.println(matrix.toString());
-		WsDeluxeUtil.saveObjectToWorkspaceRef(UObject.transformObjectToObject(matrix, UObject.class), "KBaseEnigmaMetals.ChromatographyMatrix", workspaceId, matrixName, "https://ci.kbase.us/services/ws", token.toString());
+		WsDeluxeUtil.saveObjectToWorkspaceRef(UObject.transformObjectToObject(matrix, UObject.class), "KBaseEnigmaMetals.WellSampleMatrix", workspaceId, matrixName, "https://ci.kbase.us/services/ws", token.toString());
 	}
 	
 

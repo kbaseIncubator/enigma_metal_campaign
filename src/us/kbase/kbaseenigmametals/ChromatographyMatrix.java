@@ -12,8 +12,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * <p>Original spec-file type: ChromotographyMatrix</p>
- * 
+ * <p>Original spec-file type: ChromatographyMatrix</p>
+ * <pre>
+ * Chromatography data matrix
+ *       @optional description
+ * </pre>
  * 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -21,34 +24,25 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "name",
     "description",
-    "row_metadata",
-    "column_metadata",
+    "metadata",
     "data"
 })
-public class ChromotographyMatrix {
+public class ChromatographyMatrix {
 
     @JsonProperty("name")
     private String name;
     @JsonProperty("description")
     private String description;
     /**
-     * <p>Original spec-file type: GenericSeriesMetadata</p>
-     * 
-     * 
-     */
-    @JsonProperty("row_metadata")
-    private GenericSeriesMetadata rowMetadata;
-    /**
-     * <p>Original spec-file type: TimeSeriesMetadata</p>
+     * <p>Original spec-file type: SeriesMetadata</p>
      * <pre>
-     * ////////////////////////////////
-     * ///  Metadata for data series ////
-     * ////////////////////////////////
+     * Metadata for data matrix
+     *       @optional description series_properties
      * </pre>
      * 
      */
-    @JsonProperty("column_metadata")
-    private TimeSeriesMetadata columnMetadata;
+    @JsonProperty("metadata")
+    private SeriesMetadata metadata;
     /**
      * <p>Original spec-file type: FloatMatrix2D</p>
      * 
@@ -68,7 +62,7 @@ public class ChromotographyMatrix {
         this.name = name;
     }
 
-    public ChromotographyMatrix withName(String name) {
+    public ChromatographyMatrix withName(String name) {
         this.name = name;
         return this;
     }
@@ -83,66 +77,39 @@ public class ChromotographyMatrix {
         this.description = description;
     }
 
-    public ChromotographyMatrix withDescription(String description) {
+    public ChromatographyMatrix withDescription(String description) {
         this.description = description;
         return this;
     }
 
     /**
-     * <p>Original spec-file type: GenericSeriesMetadata</p>
-     * 
-     * 
-     */
-    @JsonProperty("row_metadata")
-    public GenericSeriesMetadata getRowMetadata() {
-        return rowMetadata;
-    }
-
-    /**
-     * <p>Original spec-file type: GenericSeriesMetadata</p>
-     * 
-     * 
-     */
-    @JsonProperty("row_metadata")
-    public void setRowMetadata(GenericSeriesMetadata rowMetadata) {
-        this.rowMetadata = rowMetadata;
-    }
-
-    public ChromotographyMatrix withRowMetadata(GenericSeriesMetadata rowMetadata) {
-        this.rowMetadata = rowMetadata;
-        return this;
-    }
-
-    /**
-     * <p>Original spec-file type: TimeSeriesMetadata</p>
+     * <p>Original spec-file type: SeriesMetadata</p>
      * <pre>
-     * ////////////////////////////////
-     * ///  Metadata for data series ////
-     * ////////////////////////////////
+     * Metadata for data matrix
+     *       @optional description series_properties
      * </pre>
      * 
      */
-    @JsonProperty("column_metadata")
-    public TimeSeriesMetadata getColumnMetadata() {
-        return columnMetadata;
+    @JsonProperty("metadata")
+    public SeriesMetadata getMetadata() {
+        return metadata;
     }
 
     /**
-     * <p>Original spec-file type: TimeSeriesMetadata</p>
+     * <p>Original spec-file type: SeriesMetadata</p>
      * <pre>
-     * ////////////////////////////////
-     * ///  Metadata for data series ////
-     * ////////////////////////////////
+     * Metadata for data matrix
+     *       @optional description series_properties
      * </pre>
      * 
      */
-    @JsonProperty("column_metadata")
-    public void setColumnMetadata(TimeSeriesMetadata columnMetadata) {
-        this.columnMetadata = columnMetadata;
+    @JsonProperty("metadata")
+    public void setMetadata(SeriesMetadata metadata) {
+        this.metadata = metadata;
     }
 
-    public ChromotographyMatrix withColumnMetadata(TimeSeriesMetadata columnMetadata) {
-        this.columnMetadata = columnMetadata;
+    public ChromatographyMatrix withMetadata(SeriesMetadata metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -166,7 +133,7 @@ public class ChromotographyMatrix {
         this.data = data;
     }
 
-    public ChromotographyMatrix withData(FloatMatrix2D data) {
+    public ChromatographyMatrix withData(FloatMatrix2D data) {
         this.data = data;
         return this;
     }
@@ -183,7 +150,7 @@ public class ChromotographyMatrix {
 
     @Override
     public String toString() {
-        return ((((((((((((("ChromotographyMatrix"+" [name=")+ name)+", description=")+ description)+", rowMetadata=")+ rowMetadata)+", columnMetadata=")+ columnMetadata)+", data=")+ data)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((("ChromatographyMatrix"+" [name=")+ name)+", description=")+ description)+", metadata=")+ metadata)+", data=")+ data)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

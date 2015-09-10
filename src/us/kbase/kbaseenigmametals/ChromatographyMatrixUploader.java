@@ -19,9 +19,18 @@ import org.apache.commons.cli.ParseException;
 
 import us.kbase.common.service.Tuple2;
 import us.kbase.common.service.UObject;
-import us.kbase.kbaseenigmametals.GrowthMatrix;
-
-public class GrowthMatrixUploader {
+/*
+import java.net.URL;
+import java.util.HashMap;
+import us.kbase.auth.AuthService;
+import us.kbase.auth.AuthToken;
+import us.kbase.auth.TokenFormatException;
+import us.kbase.common.service.JsonClientException;
+import us.kbase.workspace.ObjectSaveData;
+import us.kbase.workspace.SaveObjectsParams;
+import us.kbase.workspace.WorkspaceClient;
+*/
+public class ChromatographyMatrixUploader {
 
 	static Options options = new Options();
 
@@ -30,11 +39,11 @@ public class GrowthMatrixUploader {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		GrowthMatrixUploader uploader = new GrowthMatrixUploader();
+		ChromatographyMatrixUploader uploader = new ChromatographyMatrixUploader();
 		uploader.upload(args);
 	}
 
-	public GrowthMatrixUploader() {
+	public ChromatographyMatrixUploader() {
 
 		OptionBuilder.withLongOpt("help");
 		OptionBuilder.withDescription("print this message");
@@ -96,7 +105,14 @@ public class GrowthMatrixUploader {
 		options.addOption(OptionBuilder.create("ft"));
 
 	}
-
+/*
+	private static WorkspaceClient getWsClient(String wsUrl, AuthToken token)
+			throws Exception {
+		WorkspaceClient wsClient = new WorkspaceClient(new URL(wsUrl), token);
+		wsClient.setAuthAllowedForHttp(true);
+		return wsClient;
+	}
+*/
 	public void upload(String[] args) throws Exception {
 		CommandLineParser parser = new GnuParser();
 
@@ -108,7 +124,7 @@ public class GrowthMatrixUploader {
 				HelpFormatter formatter = new HelpFormatter();
 				formatter
 						.printHelp(
-								"java -jar /kb/deployment/lib/jars/kbase/enigma_metals/kbase-enigma-metals-0.1.jar [parameters]",
+								"java -cp /kb/deployment/lib/jars/kbase/enigma_metals/kbase-enigma-metals-0.1.jar [parameters]",
 								options);
 
 			} else if (line.hasOption("test")) {
@@ -121,10 +137,10 @@ public class GrowthMatrixUploader {
 					File inputFile = findTabFile(new File(
 							line.getOptionValue("id")));
 
-					GrowthMatrix matrix = new GrowthMatrix();
+					ChromatographyMatrix matrix = new ChromatographyMatrix();
 					matrix.setName(line.getOptionValue("on"));
-					
-					matrix = generateGrowthMatrix(inputFile, matrix);
+
+					matrix = generateChromatographyMatrix(inputFile, matrix);
 
 					// System.out.println(matrix.toString());
 					String outputFileName = line.getOptionValue("of");
@@ -140,6 +156,22 @@ public class GrowthMatrixUploader {
 			        File outputFile = new File(workDir, outputFileName);
 			        UObject.getMapper().writeValue(outputFile, matrix);
 
+/*					WorkspaceClient cl = getWsClient(line.getOptionValue("ws"),
+							token);
+					List<ObjectSaveData> saveData = new ArrayList<ObjectSaveData>();
+					saveData.add(new ObjectSaveData()
+							.withData(
+									UObject.transformObjectToObject(matrix,
+											UObject.class))
+							.withType("KBaseEnigmaMetals.GrowthMatrix")
+							.withName(line.getOptionValue("on"))
+							.withMeta(new HashMap<String, String>()));
+					SaveObjectsParams params = new SaveObjectsParams()
+							.withWorkspace(line.getOptionValue("wn"))
+							.withObjects(saveData);
+
+					cl.saveObjects(params);
+*/
 				} else {
 					HelpFormatter formatter = new HelpFormatter();
 					formatter
@@ -157,12 +189,13 @@ public class GrowthMatrixUploader {
 
 	}
 
-	public GrowthMatrix generateGrowthMatrix(File inputFile, GrowthMatrix matrix)
+	public ChromatographyMatrix generateChromatographyMatrix(File inputFile, ChromatographyMatrix matrix)
 			throws Exception {
 
 		List<String> data = new ArrayList<String>();
 		List<String> columnMetaData = new ArrayList<String>();
 		List<String> rowMetaData = new ArrayList<String>();
+
 
 		try {
 			String line = null;
@@ -205,9 +238,8 @@ public class GrowthMatrixUploader {
 		}
 		
 		matrix.setData(DataMatrixUploader.parseData(data));
-
-		matrix.setMetadata(parseGrowthMetadata(columnMetaData, rowMetaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
+		matrix.setMetadata(parseChromatographyMetadata(columnMetaData, rowMetaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
 		if (matrix.getMetadata().getSeriesProperties().containsKey("Description")) {
 			matrix.setDescription(matrix.getMetadata().getSeriesProperties().get("Description"));
@@ -218,8 +250,7 @@ public class GrowthMatrixUploader {
 		return matrix;
 	}
 
-
-	private SeriesMetadata parseGrowthMetadata (List<String> columnMetaData, List<String> rowMetaData, List<String> sampleNames, List<String> rowNames) {
+	private SeriesMetadata parseChromatographyMetadata (List<String> columnMetaData, List<String> rowMetaData, List<String> sampleNames, List<String> rowNames) {
 		
 		SeriesMetadata returnVal = DataMatrixUploader.parseMetadata(columnMetaData, rowMetaData, sampleNames, rowNames);
 		
@@ -229,7 +260,7 @@ public class GrowthMatrixUploader {
 			String key = tuple.getE2().getType() + tuple.getE2().getName();
 			if (units.containsKey(key)) {
 				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Growth matrix upload failed: Row metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
+					System.err.println("Chromatography matrix upload failed: Row metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
 					System.exit(1);
 				}
 			} else {
@@ -241,7 +272,7 @@ public class GrowthMatrixUploader {
 			String key = tuple.getE2().getType() + tuple.getE2().getName();
 			if (units.containsKey(key)) {
 				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Growth matrix upload failed: Column metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
+					System.err.println("Chromatography matrix upload failed: Column metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
 					System.exit(1);
 				}
 			} else {
@@ -251,7 +282,6 @@ public class GrowthMatrixUploader {
 
 		return returnVal;
 	};
-	
 
 	private static boolean validateInput(CommandLine line) {
 		boolean returnVal = true;
