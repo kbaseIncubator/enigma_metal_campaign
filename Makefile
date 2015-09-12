@@ -4,7 +4,7 @@ KB_RUNTIME ?= /kb/runtime
 KB_TOP ?= /kb/deployment
 JAVA_HOME ?= $(KB_RUNTIME)/java
 TARGET ?= $(KB_TOP)
-MAIN_CLASS = us.kbase.kbaseenigmametals.GrowthMatrixUploader
+MAIN_CLASS = us.kbase.kbaseenigmametals.DataMatrixUploader
 DEPLOY_JAR = $(KB_TOP)/lib/jars/kbase/enigma-metals
 
 default: compile

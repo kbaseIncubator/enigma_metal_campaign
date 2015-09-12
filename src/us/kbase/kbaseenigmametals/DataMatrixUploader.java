@@ -121,7 +121,7 @@ public class DataMatrixUploader {
 				HelpFormatter formatter = new HelpFormatter();
 				formatter
 						.printHelp(
-								"java -jar /kb/deployment/lib/jars/kbase/enigma_metals/kbase-enigma-metals-0.1.jar [parameters]",
+								"java -jar /kb/deployment/lib/jars/kbase/enigma_metals/kbase-enigma-metals-0.2.jar [parameters]",
 								options);
 
 			} else if (line.hasOption("test")) {
@@ -131,70 +131,27 @@ public class DataMatrixUploader {
 
 				if (validateInput(line)) {
 
-/*					AuthToken token = null;
-					String user = System.getProperty("test.user");
-					String pwd = System.getProperty("test.pwd");
-					String tokenString = System.getenv("KB_AUTH_TOKEN");
-					token = tokenString == null ? AuthService.login(user, pwd)
-							.getToken() : new AuthToken(tokenString);
-*/
-							
-
-					File inputFile = findTabFile(new File(
-							line.getOptionValue("id")));
-
 					String externalType = line.getOptionValue("et");
-					DataMatrix matrix = new DataMatrix();
-					matrix.setName(line.getOptionValue("on"));
-					
+
 					if (externalType.equalsIgnoreCase(GROWTH_EXTERNAL_TYPE)) {
-						matrix = generateGrowthMatrix(inputFile, matrix);
+						GrowthMatrixUploader uploader = new GrowthMatrixUploader();
+						uploader.upload(args);
 					} else if (externalType.equalsIgnoreCase(CHROMATOGRAPHY_EXTERNAL_TYPE)){
-						//TODO
+						ChromatographyMatrixUploader uploader = new ChromatographyMatrixUploader();
+						uploader.upload(args);
 					} else if (externalType.equalsIgnoreCase(WELLS_EXTERNAL_TYPE)){
-						//TODO
+						WellSampleMatrixUploader uploader = new WellSampleMatrixUploader();
+						uploader.upload(args);
 					} else {
 						System.err.println("Unknown external type " + externalType);
 						System.exit(1);
 					};
 
-					
-
-					// System.out.println(matrix.toString());
-					String outputFileName = line.getOptionValue("of");
-			        if (outputFileName == null)
-			            outputFileName = "matrix_output.json";
-
-			        String workDirName = line.getOptionValue("wd");
-			        if (workDirName == null)
-			            workDirName = (".");
-			        File workDir = new File(workDirName);
-			        if (!workDir.exists())
-			            workDir.mkdirs();
-			        File outputFile = new File(workDir, outputFileName);
-			        UObject.getMapper().writeValue(outputFile, matrix);
-
-/*					WorkspaceClient cl = getWsClient(line.getOptionValue("ws"),
-							token);
-					List<ObjectSaveData> saveData = new ArrayList<ObjectSaveData>();
-					saveData.add(new ObjectSaveData()
-							.withData(
-									UObject.transformObjectToObject(matrix,
-											UObject.class))
-							.withType("KBaseEnigmaMetals.GrowthMatrix")
-							.withName(line.getOptionValue("on"))
-							.withMeta(new HashMap<String, String>()));
-					SaveObjectsParams params = new SaveObjectsParams()
-							.withWorkspace(line.getOptionValue("wn"))
-							.withObjects(saveData);
-
-					cl.saveObjects(params);
-*/
 				} else {
 					HelpFormatter formatter = new HelpFormatter();
 					formatter
 							.printHelp(
-									"java -jar /kb/deployment/lib/jars/kbase/enigma_metals/kbase-enigma-metals-0.1.jar [parameters]",
+									"java -jar /kb/deployment/lib/jars/kbase/enigma_metals/kbase-enigma-metals-0.2.jar [parameters]",
 									options);
 					System.exit(1);
 				}
@@ -207,7 +164,7 @@ public class DataMatrixUploader {
 
 	}
 
-	public DataMatrix generateGrowthMatrix(File inputFile, DataMatrix matrix)
+	public DataMatrix generateDataMatrix(File inputFile, DataMatrix matrix)
 			throws Exception {
 
 		List<String> data = new ArrayList<String>();
@@ -410,94 +367,6 @@ public class DataMatrixUploader {
 		return returnVal;
 	};
 	
-/*	private GrowthMatrix parseMetaData(List<String> metaData,
-			GrowthMatrix matrix) {
-
-		String timeUnit = "Unspecified";
-		String baseMedia = "Unspecified";
-		String concentrationUnit = "Unspecified";
-		String element = "Unspecified";
-		String description = "Unspecified";
-
-		List<Double> concentrationValues = new ArrayList<Double>();
-		List<Double> timeValues = new ArrayList<Double>();
-		List<String> elemLabels = new ArrayList<String>();
-
-		List<String> sampleNames = matrix.getData().getColIds();
-		List<String> rowNames = matrix.getData().getRowIds();
-
-		for (String line : metaData) {
-			if (line.equals("")) {
-				// do nothing on blank lines
-			} else {
-				String[] fields = line.split("\t");
-				if (fields[0].equals("")) {
-					// process series-specific fields
-					if ((fields[1].equals("Time unit"))
-							|| (fields[1].equals("time unit"))) {
-						timeUnit = fields[2];
-					} else if ((fields[1].equals("Base medium"))
-							|| (fields[1].equals("base medium"))
-							|| (fields[1].equals("Medium"))
-							|| (fields[1].equals("medium"))) {
-						baseMedia = fields[2];
-					} else if ((fields[1].equals("Concentration unit"))
-							|| (fields[1].equals("concentration unit"))) {
-						concentrationUnit = fields[2];
-					} else if ((fields[1].equals("Substance"))
-							|| (fields[1].equals("substance"))
-							|| (fields[1].equals("Compound"))
-							|| (fields[1].equals("compound"))) {
-						element = fields[2];
-					} else if ((fields[1].equals("Description"))
-							|| (fields[1].equals("description"))) {
-						description = fields[2];
-					} else {
-						System.out.println("Unknown parameter " + fields[1]
-								+ " in line " + line);
-					}
-				} else if (sampleNames.contains(fields[0])) {
-					// process sample-specific fields
-					if ((fields[1].equals("Concentration"))
-							|| (fields[1].equals("concentration"))) {
-						concentrationValues.add(Double.valueOf(fields[2]));
-						elemLabels.add(fields[0]);
-					} else {
-						System.err.println("Unknown parameter " + fields[1]
-								+ " in line " + line);
-					}
-				} else {
-					System.err.println("Unknown sample label in line " + line);
-				}
-			}
-		}
-
-		for (String value : rowNames) {
-			timeValues.add(Double.valueOf(value.split(":", -1)[0]));
-		}
-
-		TimeSeriesMetadata timeSeriesMetadata = new TimeSeriesMetadata()
-				.withTimeValues(timeValues).withUnit(timeUnit);
-
-		ConcentrationSeriesMetadata concentrationSeriesMetadata = new ConcentrationSeriesMetadata()
-				.withBaseMedia(baseMedia).withSeriesElemCompound(element)
-				.withUnit(concentrationUnit)
-				.withConcentrationValues(concentrationValues);
-
-		GenericSeriesMetadata genericSeriesMetadata = new GenericSeriesMetadata()
-				.withSeriesMetadataType("ConcentrationSeriesMetadata")
-				.withElemLabels(elemLabels)
-				.withSeriesMetadata(
-						UObject.transformObjectToObject(
-								concentrationSeriesMetadata, UObject.class));
-
-		matrix.setRowMetadata(genericSeriesMetadata);
-		matrix.setColumnMetadata(timeSeriesMetadata);
-		matrix.setDescription(description);
-
-		return matrix;
-	}
-*/
 	private static boolean validateInput(CommandLine line) {
 		boolean returnVal = true;
 		if (!line.hasOption("ws")) {

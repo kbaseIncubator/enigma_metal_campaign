@@ -2,8 +2,6 @@ package us.kbase.util;
 
 import java.io.File;
 import us.kbase.common.service.UObject;
-import us.kbase.kbaseenigmametals.ChromatographyMatrix;
-import us.kbase.kbaseenigmametals.ChromatographyMatrixUploader;
 import us.kbase.kbaseenigmametals.WellSampleMatrix;
 import us.kbase.kbaseenigmametals.WellSampleMatrixUploader;
 
