@@ -9,9 +9,13 @@ Data section consists of a table which leftmost column contains rows identifiers
 Example:
 
 DATA  C1  C2  C3
+
 R1  0.00  0.00  0.00
+
 R2  0.11  0.22  0.44
+
 R3  0.22  0.33  0.66
+
 
 Metadata section conatins a table haing five columns.
 The first raw of metadata table must contain only "METADATA Type  Name  Unit  Value".
@@ -21,11 +25,20 @@ The second column indicates type (category) of metadata, the third column indica
 Last two columns of metadata section contain unit and numerical(decimal) value. These two columns are optional
 
 For example, growth data series for the data shown above contain the following metadata:
+
 METADATA  Type  Name  Unit  Value
+
 T Base media  LB
+
 C1  Concentration CompoundX mM  0.00
+
 C2  Concentration CompoundX mM  1.00
+
 C3  Concentration CompoundX mM  10.00
+
 R1  Time  Time  hours 0
+
 R2  Time  Time  hours 1
+
 R3  Time  Time  hours 3
+
