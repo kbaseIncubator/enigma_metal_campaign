@@ -18,7 +18,6 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 import us.kbase.common.service.Tuple2;
-import us.kbase.common.service.UObject;
 import us.kbase.kbaseenigmametals.FloatMatrix2D;
 import us.kbase.kbaseenigmametals.DataMatrix;
 
@@ -168,13 +167,11 @@ public class DataMatrixUploader {
 			throws Exception {
 
 		List<String> data = new ArrayList<String>();
-		List<String> columnMetaData = new ArrayList<String>();
-		List<String> rowMetaData = new ArrayList<String>();
+		List<String> metaData = new ArrayList<String>();
 
 		try {
 			String line = null;
-			boolean colMetaDataFlag = false;
-			boolean rowMetaDataFlag = false;
+			boolean metaDataFlag = false;
 			boolean dataFlag = false;
 			BufferedReader br = new BufferedReader(new FileReader(inputFile));
 			while ((line = br.readLine()) != null) {
@@ -182,23 +179,15 @@ public class DataMatrixUploader {
 					// do nothing on blank lines
 				} else if (line.matches("DATA\t\t.*")) {
 					dataFlag = true;
-					colMetaDataFlag = false;
-					rowMetaDataFlag = false;
-				} else if (line.matches("COL_METADATA\t\t.*")) {
+					metaDataFlag = false;
+				} else if (line.matches("METADATA\tType\tName\tUnit\tValue.*")) {
 					dataFlag = false;
-					colMetaDataFlag = true;
-					rowMetaDataFlag = false;
-				} else if (line.matches("ROW_METADATA\t\t.*")) {
-					dataFlag = false;
-					colMetaDataFlag = false;
-					rowMetaDataFlag = true;
+					metaDataFlag = true;
 				} else {
-					if (dataFlag && !colMetaDataFlag && !rowMetaDataFlag) {
+					if (dataFlag && !metaDataFlag) {
 						data.add(line);
-					} else if (!dataFlag && colMetaDataFlag && !rowMetaDataFlag) {
-						columnMetaData.add(line);
-					} else if (!dataFlag && !colMetaDataFlag && rowMetaDataFlag) {
-						rowMetaData.add(line);
+					} else if (!dataFlag && metaDataFlag) {
+						metaData.add(line);
 					} else {
 						System.out.println("Warning: string will be missed "
 								+ line);
@@ -214,7 +203,7 @@ public class DataMatrixUploader {
 		}
 		
 		matrix.setData(parseData(data));
-		matrix.setMetadata(parseMetadata(columnMetaData, rowMetaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
+		matrix.setMetadata(parseMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
 		
 		if (matrix.getMetadata().getSeriesProperties().containsKey("Description")) {
@@ -251,7 +240,7 @@ public class DataMatrixUploader {
 				 */
 			} else {
 				// System.out.println(samplesNumber);
-				// System.out.println(line);
+				//System.out.println(line);
 				String[] fields = line.split("\t", -1);
 				rowNames.add(fields[0]);
 
@@ -264,7 +253,7 @@ public class DataMatrixUploader {
 						rowValues.add(value);
 					} catch (NumberFormatException e) {
 						rowValues.add(0.00);
-						System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[4] + " in line " + line);
+						System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[j+1] + " in line " + line);
 					}
 					// System.out.println(fields[0]+" "+fields[j+1]);
 					j++;
@@ -366,7 +355,79 @@ public class DataMatrixUploader {
 		
 		return returnVal;
 	};
-	
+
+	protected static SeriesMetadata parseMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
+		SeriesMetadata returnVal = new SeriesMetadata();
+		
+		List<Tuple2<String, MetadataItem>> columnMetaDataItems = new ArrayList<Tuple2<String, MetadataItem>>();
+		List<Tuple2<String, MetadataItem>> rowMetaDataItems = new ArrayList<Tuple2<String, MetadataItem>>();
+		Map<String, String> seriesProperties = new HashMap<String, String>();
+		
+		for (String line : metaData) {
+			if (line.equals("")) {
+				// do nothing on blank lines
+			} else {
+				String[] fields = line.split("\t");
+				if (fields[0].equals("T")) {
+					// process series-specific fields
+					seriesProperties.put(fields[1], fields[2]);
+				} else if (sampleNames.contains(fields[0])) {
+					// process sample-specific fields
+					MetadataItem item = new MetadataItem();
+					if (fields.length==5) {
+						item.setType(fields[1]);
+						item.setName(fields[2]);
+						item.setValueUnit(fields[3]);
+						try {
+							Double value = Double.valueOf(fields[4]);
+							item.setValue(value);
+						} catch (NumberFormatException e) {
+							item.setValue(0.00);
+							System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[4] + " in line " + line);
+						}
+					} else {
+						item.setType(fields[1]);
+						item.setName(fields[2]);
+						item.setValueUnit("");
+						item.setValue(0.00);
+					}
+					Tuple2<String, MetadataItem> itemTuple = new Tuple2<String, MetadataItem>().withE1(fields[0]).withE2(item);
+					columnMetaDataItems.add(itemTuple);
+				} else if (rowNames.contains(fields[0])) {
+					MetadataItem item = new MetadataItem();
+					if (fields.length==5) {
+						item.setType(fields[1]);
+						item.setName(fields[2]);
+						item.setValueUnit(fields[3]);
+						try {
+							Double value = Double.valueOf(fields[4]);
+							item.setValue(value);
+						} catch (NumberFormatException e) {
+							item.setValue(0.00);
+							System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[4] + " in line " + line);
+							System.out.println("Zero value is set for " + fields[1] + ":" + fields[2] + " in sample " + fields[0]);
+						}
+					} else {
+						item.setType(fields[1]);
+						item.setName(fields[2]);
+						item.setValueUnit("");
+						item.setValue(0.00);
+					}
+					Tuple2<String, MetadataItem> itemTuple = new Tuple2<String, MetadataItem>().withE1(fields[0]).withE2(item);
+					rowMetaDataItems.add(itemTuple);
+				} else {
+					System.err.println("Unknown label \"" + fields[0] + "\" in line " + line);
+				}
+			}
+		}
+
+		returnVal.setColumnMetadata(columnMetaDataItems);
+		returnVal.setRowMetadata(rowMetaDataItems);
+		returnVal.setSeriesProperties(seriesProperties);
+		
+		return returnVal;
+	};
+
 	private static boolean validateInput(CommandLine line) {
 		boolean returnVal = true;
 		if (!line.hasOption("ws")) {

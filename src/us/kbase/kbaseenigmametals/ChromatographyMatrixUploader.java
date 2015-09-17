@@ -193,14 +193,11 @@ public class ChromatographyMatrixUploader {
 			throws Exception {
 
 		List<String> data = new ArrayList<String>();
-		List<String> columnMetaData = new ArrayList<String>();
-		List<String> rowMetaData = new ArrayList<String>();
-
+		List<String> metaData = new ArrayList<String>();
 
 		try {
 			String line = null;
-			boolean colMetaDataFlag = false;
-			boolean rowMetaDataFlag = false;
+			boolean metaDataFlag = false;
 			boolean dataFlag = false;
 			BufferedReader br = new BufferedReader(new FileReader(inputFile));
 			while ((line = br.readLine()) != null) {
@@ -208,38 +205,34 @@ public class ChromatographyMatrixUploader {
 					// do nothing on blank lines
 				} else if (line.matches("DATA\t.*")) {
 					dataFlag = true;
-					colMetaDataFlag = false;
-					rowMetaDataFlag = false;
+					metaDataFlag = false;
 					data.add(line);
-				} else if (line.matches("COLUMN_METADATA\tType\tName\tUnit\tValue.*")) {
+				} else if (line.matches("METADATA\tType\tName\tUnit\tValue.*")) {
 					dataFlag = false;
-					colMetaDataFlag = true;
-					rowMetaDataFlag = false;
-				} else if (line.matches("ROW_METADATA\tType\tName\tUnit\tValue.*")) {
-					dataFlag = false;
-					colMetaDataFlag = false;
-					rowMetaDataFlag = true;
+					metaDataFlag = true;
 				} else {
-					if (dataFlag && !colMetaDataFlag && !rowMetaDataFlag) {
+					if (dataFlag && !metaDataFlag) {
 						data.add(line);
-					} else if (!dataFlag && colMetaDataFlag && !rowMetaDataFlag) {
-						columnMetaData.add(line);
-					} else if (!dataFlag && !colMetaDataFlag && rowMetaDataFlag) {
-						rowMetaData.add(line);
+					} else if (!dataFlag && metaDataFlag) {
+						metaData.add(line);
 					} else {
 						System.out.println("Warning: string will be missed "
 								+ line);
 					}
+					;
 				}
+				;
+
 			}
 			br.close();
 		} catch (IOException e) {
 			System.out.println(e.getLocalizedMessage());
 		}
 		
+		
 		matrix.setData(DataMatrixUploader.parseData(data));
 		
-		matrix.setMetadata(parseChromatographyMetadata(columnMetaData, rowMetaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
+		matrix.setMetadata(parseChromatographyMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
 		if (matrix.getMetadata().getSeriesProperties().containsKey("Description")) {
 			matrix.setDescription(matrix.getMetadata().getSeriesProperties().get("Description"));
@@ -250,9 +243,9 @@ public class ChromatographyMatrixUploader {
 		return matrix;
 	}
 
-	private SeriesMetadata parseChromatographyMetadata (List<String> columnMetaData, List<String> rowMetaData, List<String> sampleNames, List<String> rowNames) {
+	private SeriesMetadata parseChromatographyMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
 		
-		SeriesMetadata returnVal = DataMatrixUploader.parseMetadata(columnMetaData, rowMetaData, sampleNames, rowNames);
+		SeriesMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames);
 		
 		Map<String,String> units = new HashMap<String, String>();
 		
