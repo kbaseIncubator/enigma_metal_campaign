@@ -37,15 +37,14 @@ public class DataMatrix {
     @JsonProperty("description")
     private String description;
     /**
-     * <p>Original spec-file type: SeriesMetadata</p>
+     * <p>Original spec-file type: Matrix2DMetadata</p>
      * <pre>
      * Metadata for data matrix
-     *       @optional description series_properties
      * </pre>
      * 
      */
     @JsonProperty("metadata")
-    private SeriesMetadata metadata;
+    private Matrix2DMetadata metadata;
     /**
      * <p>Original spec-file type: FloatMatrix2D</p>
      * 
@@ -101,32 +100,30 @@ public class DataMatrix {
     }
 
     /**
-     * <p>Original spec-file type: SeriesMetadata</p>
+     * <p>Original spec-file type: Matrix2DMetadata</p>
      * <pre>
      * Metadata for data matrix
-     *       @optional description series_properties
      * </pre>
      * 
      */
     @JsonProperty("metadata")
-    public SeriesMetadata getMetadata() {
+    public Matrix2DMetadata getMetadata() {
         return metadata;
     }
 
     /**
-     * <p>Original spec-file type: SeriesMetadata</p>
+     * <p>Original spec-file type: Matrix2DMetadata</p>
      * <pre>
      * Metadata for data matrix
-     *       @optional description series_properties
      * </pre>
      * 
      */
     @JsonProperty("metadata")
-    public void setMetadata(SeriesMetadata metadata) {
+    public void setMetadata(Matrix2DMetadata metadata) {
         this.metadata = metadata;
     }
 
-    public DataMatrix withMetadata(SeriesMetadata metadata) {
+    public DataMatrix withMetadata(Matrix2DMetadata metadata) {
         this.metadata = metadata;
         return this;
     }

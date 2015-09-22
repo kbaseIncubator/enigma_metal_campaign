@@ -17,7 +17,6 @@ import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import us.kbase.common.service.Tuple2;
 import us.kbase.common.service.UObject;
 
 public class WellSampleMatrixUploader {
@@ -174,7 +173,7 @@ public class WellSampleMatrixUploader {
 					dataFlag = true;
 					metaDataFlag = false;
 					data.add(line);
-				} else if (line.matches("METADATA\tType\tName\tUnit\tValue.*")) {
+				} else if (line.matches("METADATA\tEntity\tProperty\tUnit\tValue.*")) {
 					dataFlag = false;
 					metaDataFlag = true;
 				} else {
@@ -201,46 +200,55 @@ public class WellSampleMatrixUploader {
 		matrix.setMetadata(parseWellSampleMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
 		
-		if (matrix.getMetadata().getSeriesProperties().containsKey("Description")) {
-			matrix.setDescription(matrix.getMetadata().getSeriesProperties().get("Description"));
-		} else {
-			matrix.setDescription("");
+		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
+		matrix.setDescription("");
+		for (PropertyValue propertyValue:properties){
+			if (propertyValue.getEntity().equals("Description")){
+				matrix.setDescription(propertyValue.getPropertyValue());
+				break;
+			}
 		}
 
 		return matrix;
 	}
 
 
-	private SeriesMetadata parseWellSampleMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
+	private Matrix2DMetadata parseWellSampleMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
 		
-		SeriesMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames);
+		Matrix2DMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames);
 		
 		Map<String,String> units = new HashMap<String, String>();
-		
-		for (Tuple2<String, MetadataItem> tuple: returnVal.getRowMetadata()){
-			String key = tuple.getE2().getType() + tuple.getE2().getName();
-			if (units.containsKey(key)) {
-				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Well sample matrix upload failed: Row metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
-					System.exit(1);
-				}
-			} else {
-				units.put(key, tuple.getE2().getValueUnit());
-			}
-		}
-		
-		for (Tuple2<String, MetadataItem> tuple: returnVal.getColumnMetadata()){
-			String key = tuple.getE2().getType() + tuple.getE2().getName();
-			if (units.containsKey(key)) {
-				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Well sample matrix upload failed: Column metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
-					System.exit(1);
-				}
-			} else {
-				units.put(key, tuple.getE2().getValueUnit());
-			}
-		}
 
+		for (List<PropertyValue> properties : returnVal.getRowMetadata().values()){
+			for (PropertyValue property: properties){
+				String key = property.getEntity() + property.getPropertyName() + property.getPropertyValue();
+				if (units.containsKey(key)) {
+					if (!units.get(key).equals(property.getPropertyUnit())) {
+						System.err.println("Well sample matrix upload failed: " + property.getPropertyName() + " of " + property.getEntity() + " of " + property.getPropertyValue() + " has two different units: " + units.get(key) + " and " + property.getPropertyUnit());
+						System.exit(1);
+					}
+				} else {
+					units.put(key, property.getPropertyUnit());
+				}
+			}
+		}
+		
+		units.clear();
+
+		for (List<PropertyValue> properties : returnVal.getColumnMetadata().values()){
+			for (PropertyValue property: properties){
+				String key = property.getEntity() + property.getPropertyName() + property.getPropertyValue();
+				if (units.containsKey(key)) {
+					if (!units.get(key).equals(property.getPropertyUnit())) {
+						System.err.println("Well sample matrix upload failed: " + property.getPropertyName() + " of " + property.getEntity() + " of " + property.getPropertyValue() + " has two different units: " + units.get(key) + " and " + property.getPropertyUnit());
+						System.exit(1);
+					}
+				} else {
+					units.put(key, property.getPropertyUnit());
+				}
+			}
+		}
+		
 		return returnVal;
 	};
 	

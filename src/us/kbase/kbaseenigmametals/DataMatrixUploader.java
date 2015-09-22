@@ -17,9 +17,9 @@ import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import us.kbase.common.service.Tuple2;
 import us.kbase.kbaseenigmametals.FloatMatrix2D;
 import us.kbase.kbaseenigmametals.DataMatrix;
+import us.kbase.kbaseenigmametals.Matrix2DMetadata;;
 
 public class DataMatrixUploader {
 
@@ -180,7 +180,7 @@ public class DataMatrixUploader {
 				} else if (line.matches("DATA\t\t.*")) {
 					dataFlag = true;
 					metaDataFlag = false;
-				} else if (line.matches("METADATA\tType\tName\tUnit\tValue.*")) {
+				} else if (line.matches("METADATA\tEntity\tProperty\tUnit\tValue.*")) {
 					dataFlag = false;
 					metaDataFlag = true;
 				} else {
@@ -205,13 +205,14 @@ public class DataMatrixUploader {
 		matrix.setData(parseData(data));
 		matrix.setMetadata(parseMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
-		
-		if (matrix.getMetadata().getSeriesProperties().containsKey("Description")) {
-			matrix.setDescription(matrix.getMetadata().getSeriesProperties().get("Description"));
-		} else {
-			matrix.setDescription("");
+		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
+		matrix.setDescription("");
+		for (PropertyValue propertyValue:properties){
+			if (propertyValue.getEntity().equals("Description")){
+				matrix.setDescription(propertyValue.getPropertyValue());
+				break;
+			}
 		}
-
 
 		return matrix;
 	}
@@ -253,7 +254,7 @@ public class DataMatrixUploader {
 						rowValues.add(value);
 					} catch (NumberFormatException e) {
 						rowValues.add(0.00);
-						System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[j+1] + " in line " + line);
+						System.out.println("WARNING: unsuccessful conversion of data value " + fields[j+1] + " in line " + line);
 					}
 					// System.out.println(fields[0]+" "+fields[j+1]);
 					j++;
@@ -269,161 +270,158 @@ public class DataMatrixUploader {
 
 	};
 
-	protected static SeriesMetadata parseMetadata (List<String> columnMetaData, List<String> rowMetaData, List<String> sampleNames, List<String> rowNames) {
-		SeriesMetadata returnVal = new SeriesMetadata();
+	protected static Matrix2DMetadata parseMetadata (List<String> columnMetadataLines, List<String> rowMetadataLines, List<String> sampleNames, List<String> rowNames) {
+		Matrix2DMetadata returnVal = new Matrix2DMetadata();
 		
-		List<Tuple2<String, MetadataItem>> columnMetaDataItems = new ArrayList<Tuple2<String, MetadataItem>>();
-		List<Tuple2<String, MetadataItem>> rowMetaDataItems = new ArrayList<Tuple2<String, MetadataItem>>();
-		Map<String, String> seriesProperties = new HashMap<String, String>();
 		
-		for (String line : columnMetaData) {
-			if (line.equals("")) {
-				// do nothing on blank lines
-			} else {
-				String[] fields = line.split("\t");
-				if (fields[0].equals("")) {
-					// process series-specific fields
-					seriesProperties.put(fields[1], fields[2]);
-				} else if (sampleNames.contains(fields[0])) {
-					// process sample-specific fields
-					MetadataItem item = new MetadataItem();
-					if (fields.length==5) {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit(fields[3]);
-						try {
-							Double value = Double.valueOf(fields[4]);
-							item.setValue(value);
-						} catch (NumberFormatException e) {
-							item.setValue(0.00);
-							System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[4] + " in line " + line);
-						}
-					} else {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit("");
-						item.setValue(0.00);
-					}
-					Tuple2<String, MetadataItem> itemTuple = new Tuple2<String, MetadataItem>().withE1(fields[0]).withE2(item);
-					columnMetaDataItems.add(itemTuple);
-				} else {
-					System.err.println("Unknown column label in line " + line);
-				}
-			}
-		}
-
-		for (String line : rowMetaData) {
-			if (line.equals("")) {
-				// do nothing on blank lines
-			} else {
-				String[] fields = line.split("\t");
-				if (fields[0].equals("")) {
-					// process series-specific fields
-					seriesProperties.put(fields[1], fields[2]);
-				} else if (rowNames.contains(fields[0])) {
-					// process sample-specific fields
-					MetadataItem item = new MetadataItem();
-					if (fields.length==5) {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit(fields[3]);
-						try {
-							Double value = Double.valueOf(fields[4]);
-							item.setValue(value);
-						} catch (NumberFormatException e) {
-							item.setValue(0.00);
-							System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[4] + " in line " + line);
-							System.out.println("Zero value is set for " + fields[1] + ":" + fields[2] + " in sample " + fields[0]);
-						}
-					} else {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit("");
-						item.setValue(0.00);
-					}
-					Tuple2<String, MetadataItem> itemTuple = new Tuple2<String, MetadataItem>().withE1(fields[0]).withE2(item);
-					rowMetaDataItems.add(itemTuple);
-				} else {
-					System.err.println("Unknown row label in line " + line);
-				}
-			}
-		}
+		Map<String, List<PropertyValue>> columnMetadata = new HashMap<String, List<PropertyValue>>();
+		Map<String, List<PropertyValue>> rowMetadata = new HashMap<String, List<PropertyValue>>();
+		List<PropertyValue> matrixMetadata = new ArrayList<PropertyValue>();
 		
-		returnVal.setColumnMetadata(columnMetaDataItems);
-		returnVal.setRowMetadata(rowMetaDataItems);
-		returnVal.setSeriesProperties(seriesProperties);
-		
-		return returnVal;
-	};
-
-	protected static SeriesMetadata parseMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
-		SeriesMetadata returnVal = new SeriesMetadata();
-		
-		List<Tuple2<String, MetadataItem>> columnMetaDataItems = new ArrayList<Tuple2<String, MetadataItem>>();
-		List<Tuple2<String, MetadataItem>> rowMetaDataItems = new ArrayList<Tuple2<String, MetadataItem>>();
-		Map<String, String> seriesProperties = new HashMap<String, String>();
-		
-		for (String line : metaData) {
+		for (String line : columnMetadataLines) {
 			if (line.equals("")) {
 				// do nothing on blank lines
 			} else {
 				String[] fields = line.split("\t");
 				if (fields[0].equals("T")) {
 					// process series-specific fields
-					seriesProperties.put(fields[1], fields[2]);
+					PropertyValue propertyValue = new PropertyValue();
+					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
+					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
+					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
+					matrixMetadata.add(propertyValue);
 				} else if (sampleNames.contains(fields[0])) {
 					// process sample-specific fields
-					MetadataItem item = new MetadataItem();
-					if (fields.length==5) {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit(fields[3]);
-						try {
-							Double value = Double.valueOf(fields[4]);
-							item.setValue(value);
-						} catch (NumberFormatException e) {
-							item.setValue(0.00);
-							System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[4] + " in line " + line);
-						}
+					PropertyValue propertyValue = new PropertyValue();
+					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
+					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
+					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
+
+					if (columnMetadata.containsKey(fields[0])) {
+						List<PropertyValue> propertyValuesList = columnMetadata.get(fields[0]);
+						propertyValuesList.add(propertyValue);
+						columnMetadata.put(fields[0], propertyValuesList);
 					} else {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit("");
-						item.setValue(0.00);
+						List<PropertyValue> propertyValuesList = new ArrayList<PropertyValue>();
+						propertyValuesList.add(propertyValue);
+						columnMetadata.put(fields[0], propertyValuesList);
 					}
-					Tuple2<String, MetadataItem> itemTuple = new Tuple2<String, MetadataItem>().withE1(fields[0]).withE2(item);
-					columnMetaDataItems.add(itemTuple);
-				} else if (rowNames.contains(fields[0])) {
-					MetadataItem item = new MetadataItem();
-					if (fields.length==5) {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit(fields[3]);
-						try {
-							Double value = Double.valueOf(fields[4]);
-							item.setValue(value);
-						} catch (NumberFormatException e) {
-							item.setValue(0.00);
-							System.out.println("WARNING: unsuccessful conversion of metadata value " + fields[4] + " in line " + line);
-							System.out.println("Zero value is set for " + fields[1] + ":" + fields[2] + " in sample " + fields[0]);
-						}
-					} else {
-						item.setType(fields[1]);
-						item.setName(fields[2]);
-						item.setValueUnit("");
-						item.setValue(0.00);
-					}
-					Tuple2<String, MetadataItem> itemTuple = new Tuple2<String, MetadataItem>().withE1(fields[0]).withE2(item);
-					rowMetaDataItems.add(itemTuple);
+					
 				} else {
-					System.err.println("Unknown label \"" + fields[0] + "\" in line " + line);
+					System.err.println("Unknown column label in line " + line);
 				}
 			}
 		}
 
-		returnVal.setColumnMetadata(columnMetaDataItems);
-		returnVal.setRowMetadata(rowMetaDataItems);
-		returnVal.setSeriesProperties(seriesProperties);
+		for (String line : rowMetadataLines) {
+			if (line.equals("")) {
+				// do nothing on blank lines
+			} else {
+				String[] fields = line.split("\t");
+				if (fields[0].equals("T")) {
+					// process series-specific fields
+					PropertyValue propertyValue = new PropertyValue();
+					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
+					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
+					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
+					matrixMetadata.add(propertyValue);
+				} else if (rowNames.contains(fields[0])) {
+					// process sample-specific fields
+					PropertyValue propertyValue = new PropertyValue();
+					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
+					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
+					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
+
+					if (rowMetadata.containsKey(fields[0])) {
+						List<PropertyValue> propertyValuesList = rowMetadata.get(fields[0]);
+						propertyValuesList.add(propertyValue);
+						rowMetadata.put(fields[0], propertyValuesList);
+					} else {
+						List<PropertyValue> propertyValuesList = new ArrayList<PropertyValue>();
+						propertyValuesList.add(propertyValue);
+						rowMetadata.put(fields[0], propertyValuesList);
+					}
+					
+				} else {
+					System.err.println("Unknown column label in line " + line);
+				}
+			}
+		}
+
+		returnVal.setColumnMetadata(columnMetadata);
+		returnVal.setRowMetadata(rowMetadata);
+		returnVal.setMatrixMetadata(matrixMetadata);
+		
+		return returnVal;
+	};
+
+	protected static Matrix2DMetadata parseMetadata (List<String> metadataLines, List<String> sampleNames, List<String> rowNames) {
+		Matrix2DMetadata returnVal = new Matrix2DMetadata();
+		
+		Map<String, List<PropertyValue>> columnMetadata = new HashMap<String, List<PropertyValue>>();
+		Map<String, List<PropertyValue>> rowMetadata = new HashMap<String, List<PropertyValue>>();
+		List<PropertyValue> matrixMetadata = new ArrayList<PropertyValue>();
+		
+		for (String line : metadataLines) {
+			if (line.equals("")) {
+				// do nothing on blank lines
+			} else {
+				String[] fields = line.split("\t");
+				if (fields[0].equals("T")) {
+					// process series-specific fields
+					PropertyValue propertyValue = new PropertyValue();
+					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
+					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
+					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
+					matrixMetadata.add(propertyValue);
+				} else if (sampleNames.contains(fields[0])) {
+					// process sample-specific fields
+					PropertyValue propertyValue = new PropertyValue();
+					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
+					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
+					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
+
+					if (columnMetadata.containsKey(fields[0])) {
+						List<PropertyValue> propertyValuesList = columnMetadata.get(fields[0]);
+						propertyValuesList.add(propertyValue);
+						columnMetadata.put(fields[0], propertyValuesList);
+					} else {
+						List<PropertyValue> propertyValuesList = new ArrayList<PropertyValue>();
+						propertyValuesList.add(propertyValue);
+						columnMetadata.put(fields[0], propertyValuesList);
+					}
+				} else if (rowNames.contains(fields[0])) {
+					// process sample-specific fields
+					PropertyValue propertyValue = new PropertyValue();
+					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
+					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
+					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
+
+					if (rowMetadata.containsKey(fields[0])) {
+						List<PropertyValue> propertyValuesList = rowMetadata.get(fields[0]);
+						propertyValuesList.add(propertyValue);
+						rowMetadata.put(fields[0], propertyValuesList);
+					} else {
+						List<PropertyValue> propertyValuesList = new ArrayList<PropertyValue>();
+						propertyValuesList.add(propertyValue);
+						rowMetadata.put(fields[0], propertyValuesList);
+					}
+				} else {
+					System.err.println("Unknown column label in line " + line);
+				}
+			}
+		}
+
+		returnVal.setColumnMetadata(columnMetadata);
+		returnVal.setRowMetadata(rowMetadata);
+		returnVal.setMatrixMetadata(matrixMetadata);
 		
 		return returnVal;
 	};

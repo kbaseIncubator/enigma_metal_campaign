@@ -14,27 +14,25 @@ module KBaseEnigmaMetals {
 
     /* Single piece of metadata
 
-      @optional value_unit value
+      @optional property_unit
     */
 
 	typedef structure {
-		string type;
-		string name;
-		string value_unit;
-		float value;
-	} MetadataItem;
+		string entity;
+		string property_name;
+		string property_unit;
+		string property_value;
+	} PropertyValue;
 
     /* Metadata for data matrix
 
-      @optional description series_properties
     */
 
 	typedef structure {
-		string description;
-		list<tuple<string,MetadataItem>> row_metadata;
-		list<tuple<string,MetadataItem>> column_metadata;
-		mapping<string,string> series_properties;
-	} SeriesMetadata;
+		mapping<string,list<PropertyValue>> row_metadata;
+		mapping<string,list<PropertyValue>> column_metadata;
+		list<PropertyValue> matrix_metadata;
+	} Matrix2DMetadata;
 	
 	/*////////////////////////////////
 	///         Data series       ////
@@ -49,7 +47,7 @@ module KBaseEnigmaMetals {
 		string name;
 		string type;
 		string description;
-		SeriesMetadata metadata;
+		Matrix2DMetadata metadata;
 		FloatMatrix2D data;
 	} DataMatrix;
 
@@ -61,7 +59,7 @@ module KBaseEnigmaMetals {
 	typedef structure{
 		string name;
 		string description;
-		SeriesMetadata metadata;
+		Matrix2DMetadata metadata;
 		FloatMatrix2D data;
 	} GrowthMatrix;
 
@@ -73,7 +71,7 @@ module KBaseEnigmaMetals {
 	typedef structure{
 		string name;
 		string description;
-		SeriesMetadata metadata;
+		Matrix2DMetadata metadata;
 		FloatMatrix2D data;
 	} ChromatographyMatrix;
 
@@ -85,7 +83,7 @@ module KBaseEnigmaMetals {
 	typedef structure{
 		string name;
 		string description;
-		SeriesMetadata metadata;
+		Matrix2DMetadata metadata;
 		FloatMatrix2D data;
 	} WellSampleMatrix;
 };

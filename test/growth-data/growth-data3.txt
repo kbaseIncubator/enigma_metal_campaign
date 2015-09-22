@@ -48,69 +48,66 @@ R46	0.2415	0.298	0.381	0.318	0.3445
 R47	0.248	0.3055	0.3815	0.323	0.348
 R48	0.2575	0.3165	0.3805	0.328	0.3505
 R49	0.264	0.323	0.3805	0.3305	0.352
-METADATA	Type	Name	Unit	Value	
-C1	concentration	Nickel	uM	0	
-C2	concentration	Nickel	uM	2.5	
-C3	concentration	Nickel	uM	5	
-C4	concentration	Nickel	uM	8	
-C5	Concentration	Nickel	uM	10	
-T	Description	"FW510-R11 in R2A, Nickel"			
-T	Substance	Nickel			
-T	Plate Number	Plate 1			
-T	Date	11/20/2014			
-T	Time	6:05:56 PM			
-T	Reader Type:	Eon			
-T	Reader Serial Number:	1309247			
-T	Reading Type	Reader			
-T	Media	Unknown			
-T	concentration unit	uM			
-T	Time unit	hours			
-R1	Time	Time	hours	0	
-R2	Time	Time	hours	1	
-R3	Time	Time	hours	2	
-R4	Time	Time	hours	3	
-R5	Time	Time	hours	4	
-R6	Time	Time	hours	5	
-R7	Time	Time	hours	6	
-R8	Time	Time	hours	7	
-R9	Time	Time	hours	8	
-R10	Time	Time	hours	9	
-R11	Time	Time	hours	10	
-R12	Time	Time	hours	11	
-R13	Time	Time	hours	12	
-R14	Time	Time	hours	13	
-R15	Time	Time	hours	14	
-R16	Time	Time	hours	15	
-R17	Time	Time	hours	16	
-R18	Time	Time	hours	17	
-R19	Time	Time	hours	18	
-R20	Time	Time	hours	19	
-R21	Time	Time	hours	20	
-R22	Time	Time	hours	21	
-R23	Time	Time	hours	22	
-R24	Time	Time	hours	23	
-R25	Time	Time	hours	24	
-R26	Time	Time	hours	25	
-R27	Time	Time	hours	26	
-R28	Time	Time	hours	27	
-R29	Time	Time	hours	28	
-R30	Time	Time	hours	29	
-R31	Time	Time	hours	30	
-R32	Time	Time	hours	31	
-R33	Time	Time	hours	32	
-R34	Time	Time	hours	33	
-R35	Time	Time	hours	34	
-R36	Time	Time	hours	35	
-R37	Time	Time	hours	36	
-R38	Time	Time	hours	37	
-R39	Time	Time	hours	38	
-R40	Time	Time	hours	39	
-R41	Time	Time	hours	40	
-R42	Time	Time	hours	41	
-R43	Time	Time	hours	42	
-R44	Time	Time	hours	43	
-R45	Time	Time	hours	44	
-R46	Time	Time	hours	45	
-R47	Time	Time	hours	46	
-R48	Time	Time	hours	47	
-R49	Time	Time	hours	48	
+METADATA	Entity	Property	Unit	Value	
+C1	Nickel	Concentration	uM	0	
+C2	Nickel	Concentration	uM	2.5	
+C3	Nickel	Concentration	uM	5	
+C4	Nickel	Concentration	uM	8	
+C5	Nickel	Concentration	uM	10	
+T	Description			"FW510-R11 in R2A, Nickel"	
+T	Medium	Substance		Nickel	
+T	Plate Number			Plate 1	
+T	Experiment	Date		11/20/2014	
+T	Experiment	Time		6:05:56 PM	
+T	Experiment	Reader Type:		Eon	
+T	Experiment	Reader Serial Number:		1309247	
+T	Experiment	Reading Type		Reader	
+R1	Time series	Time	hours	0	
+R2	Time series	Time	hours	1	
+R3	Time series	Time	hours	2	
+R4	Time series	Time	hours	3	
+R5	Time series	Time	hours	4	
+R6	Time series	Time	hours	5	
+R7	Time series	Time	hours	6	
+R8	Time series	Time	hours	7	
+R9	Time series	Time	hours	8	
+R10	Time series	Time	hours	9	
+R11	Time series	Time	hours	10	
+R12	Time series	Time	hours	11	
+R13	Time series	Time	hours	12	
+R14	Time series	Time	hours	13	
+R15	Time series	Time	hours	14	
+R16	Time series	Time	hours	15	
+R17	Time series	Time	hours	16	
+R18	Time series	Time	hours	17	
+R19	Time series	Time	hours	18	
+R20	Time series	Time	hours	19	
+R21	Time series	Time	hours	20	
+R22	Time series	Time	hours	21	
+R23	Time series	Time	hours	22	
+R24	Time series	Time	hours	23	
+R25	Time series	Time	hours	24	
+R26	Time series	Time	hours	25	
+R27	Time series	Time	hours	26	
+R28	Time series	Time	hours	27	
+R29	Time series	Time	hours	28	
+R30	Time series	Time	hours	29	
+R31	Time series	Time	hours	30	
+R32	Time series	Time	hours	31	
+R33	Time series	Time	hours	32	
+R34	Time series	Time	hours	33	
+R35	Time series	Time	hours	34	
+R36	Time series	Time	hours	35	
+R37	Time series	Time	hours	36	
+R38	Time series	Time	hours	37	
+R39	Time series	Time	hours	38	
+R40	Time series	Time	hours	39	
+R41	Time series	Time	hours	40	
+R42	Time series	Time	hours	41	
+R43	Time series	Time	hours	42	
+R44	Time series	Time	hours	43	
+R45	Time series	Time	hours	44	
+R46	Time series	Time	hours	45	
+R47	Time series	Time	hours	46	
+R48	Time series	Time	hours	47	
+R49	Time series	Time	hours	48	

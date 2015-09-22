@@ -14,7 +14,7 @@ deploy: deploy-lib
 deploy-lib: 
 	rm -rf $(DEPLOY_JAR)
 	mkdir -p $(DEPLOY_JAR)
-	cp ./dist/kbase-enigma-metals-0.1.jar $(DEPLOY_JAR)
+	cp ./dist/kbase-enigma-metals-0.2.jar $(DEPLOY_JAR)
 
 build-lib:
 	./make_jar.sh $(MAIN_CLASS)

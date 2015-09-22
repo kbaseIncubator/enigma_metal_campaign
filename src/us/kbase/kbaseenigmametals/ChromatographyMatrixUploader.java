@@ -17,19 +17,8 @@ import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import us.kbase.common.service.Tuple2;
 import us.kbase.common.service.UObject;
-/*
-import java.net.URL;
-import java.util.HashMap;
-import us.kbase.auth.AuthService;
-import us.kbase.auth.AuthToken;
-import us.kbase.auth.TokenFormatException;
-import us.kbase.common.service.JsonClientException;
-import us.kbase.workspace.ObjectSaveData;
-import us.kbase.workspace.SaveObjectsParams;
-import us.kbase.workspace.WorkspaceClient;
-*/
+
 public class ChromatographyMatrixUploader {
 
 	static Options options = new Options();
@@ -207,7 +196,7 @@ public class ChromatographyMatrixUploader {
 					dataFlag = true;
 					metaDataFlag = false;
 					data.add(line);
-				} else if (line.matches("METADATA\tType\tName\tUnit\tValue.*")) {
+				} else if (line.matches("METADATA\tEntity\tProperty\tUnit\tValue.*")) {
 					dataFlag = false;
 					metaDataFlag = true;
 				} else {
@@ -234,42 +223,51 @@ public class ChromatographyMatrixUploader {
 		
 		matrix.setMetadata(parseChromatographyMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
 		
-		if (matrix.getMetadata().getSeriesProperties().containsKey("Description")) {
-			matrix.setDescription(matrix.getMetadata().getSeriesProperties().get("Description"));
-		} else {
-			matrix.setDescription("");
+		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
+		matrix.setDescription("");
+		for (PropertyValue propertyValue:properties){
+			if (propertyValue.getEntity().equals("Description")){
+				matrix.setDescription(propertyValue.getPropertyValue());
+				break;
+			}
 		}
 
 		return matrix;
 	}
 
-	private SeriesMetadata parseChromatographyMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
+	private Matrix2DMetadata parseChromatographyMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
 		
-		SeriesMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames);
+		Matrix2DMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames);
 		
 		Map<String,String> units = new HashMap<String, String>();
 		
-		for (Tuple2<String, MetadataItem> tuple: returnVal.getRowMetadata()){
-			String key = tuple.getE2().getType() + tuple.getE2().getName();
-			if (units.containsKey(key)) {
-				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Chromatography matrix upload failed: Row metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
-					System.exit(1);
+		for (List<PropertyValue> properties : returnVal.getRowMetadata().values()){
+			for (PropertyValue property: properties){
+				String key = property.getEntity() + property.getPropertyName();
+				if (units.containsKey(key)) {
+					if (!units.get(key).equals(property.getPropertyUnit())) {
+						System.err.println("Chromatography matrix upload failed: " + property.getPropertyName() + " of " + property.getEntity() + " has two different units: " + units.get(key) + " and " + property.getPropertyUnit());
+						System.exit(1);
+					}
+				} else {
+					units.put(key, property.getPropertyUnit());
 				}
-			} else {
-				units.put(key, tuple.getE2().getValueUnit());
 			}
 		}
 		
-		for (Tuple2<String, MetadataItem> tuple: returnVal.getColumnMetadata()){
-			String key = tuple.getE2().getType() + tuple.getE2().getName();
-			if (units.containsKey(key)) {
-				if (!units.get(key).equals(tuple.getE2().getValueUnit())) {
-					System.err.println("Chromatography matrix upload failed: Column metadata " + tuple.getE2().getType() + " parameter for " + tuple.getE2().getName() + " has two kinds of unit: " + units.get(key) + " and " + tuple.getE2().getValueUnit());
-					System.exit(1);
+		units.clear();
+
+		for (List<PropertyValue> properties : returnVal.getColumnMetadata().values()){
+			for (PropertyValue property: properties){
+				String key = property.getEntity() + property.getPropertyName();
+				if (units.containsKey(key)) {
+					if (!units.get(key).equals(property.getPropertyUnit())) {
+						System.err.println("Chromatography matrix upload failed: " + property.getPropertyName() + " of " + property.getEntity() + " has two different units: " + units.get(key) + " and " + property.getPropertyUnit());
+						System.exit(1);
+					}
+				} else {
+					units.put(key, property.getPropertyUnit());
 				}
-			} else {
-				units.put(key, tuple.getE2().getValueUnit());
 			}
 		}
 

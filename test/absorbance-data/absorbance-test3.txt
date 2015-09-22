@@ -2059,2069 +2059,2068 @@ R2057	0.045776367
 R2058	0.045061111			
 R2059	0.045478344			
 R2060	0.04607439			
-METADATA	Type	Name	Unit	Value
-T	Description	Protein absorbance at 280 nm		
-T	Time unit	minutes		
-C1	Substance	Protein		
-C1	Wavelength	280 nm		
-C1	Measurement	Absorbance		
-R1	Time	Time	minutes	0
-R2	Time	Time	minutes	0.009706853
-R3	Time	Time	minutes	0.019413706
-R4	Time	Time	minutes	0.029120559
-R5	Time	Time	minutes	0.038827412
-R6	Time	Time	minutes	0.048534265
-R7	Time	Time	minutes	0.058241118
-R8	Time	Time	minutes	0.067947971
-R9	Time	Time	minutes	0.077654824
-R10	Time	Time	minutes	0.087361677
-R11	Time	Time	minutes	0.09706853
-R12	Time	Time	minutes	0.106775383
-R13	Time	Time	minutes	0.116482236
-R14	Time	Time	minutes	0.126189089
-R15	Time	Time	minutes	0.135895943
-R16	Time	Time	minutes	0.145602796
-R17	Time	Time	minutes	0.155309649
-R18	Time	Time	minutes	0.165016502
-R19	Time	Time	minutes	0.174723355
-R20	Time	Time	minutes	0.184430208
-R21	Time	Time	minutes	0.194137061
-R22	Time	Time	minutes	0.203843914
-R23	Time	Time	minutes	0.213550767
-R24	Time	Time	minutes	0.22325762
-R25	Time	Time	minutes	0.232964473
-R26	Time	Time	minutes	0.242671326
-R27	Time	Time	minutes	0.252378179
-R28	Time	Time	minutes	0.262085032
-R29	Time	Time	minutes	0.271791885
-R30	Time	Time	minutes	0.281498738
-R31	Time	Time	minutes	0.291205591
-R32	Time	Time	minutes	0.300912444
-R33	Time	Time	minutes	0.310619297
-R34	Time	Time	minutes	0.32032615
-R35	Time	Time	minutes	0.330033003
-R36	Time	Time	minutes	0.339739856
-R37	Time	Time	minutes	0.349446709
-R38	Time	Time	minutes	0.359153562
-R39	Time	Time	minutes	0.368860415
-R40	Time	Time	minutes	0.378567268
-R41	Time	Time	minutes	0.388274122
-R42	Time	Time	minutes	0.397980975
-R43	Time	Time	minutes	0.407687828
-R44	Time	Time	minutes	0.417394681
-R45	Time	Time	minutes	0.427101534
-R46	Time	Time	minutes	0.436808387
-R47	Time	Time	minutes	0.44651524
-R48	Time	Time	minutes	0.456222093
-R49	Time	Time	minutes	0.465928946
-R50	Time	Time	minutes	0.475635799
-R51	Time	Time	minutes	0.485342652
-R52	Time	Time	minutes	0.495049505
-R53	Time	Time	minutes	0.504756358
-R54	Time	Time	minutes	0.514463211
-R55	Time	Time	minutes	0.524170064
-R56	Time	Time	minutes	0.533876917
-R57	Time	Time	minutes	0.54358377
-R58	Time	Time	minutes	0.553290623
-R59	Time	Time	minutes	0.562997476
-R60	Time	Time	minutes	0.572704329
-R61	Time	Time	minutes	0.582411182
-R62	Time	Time	minutes	0.592118035
-R63	Time	Time	minutes	0.601824888
-R64	Time	Time	minutes	0.611531741
-R65	Time	Time	minutes	0.621238594
-R66	Time	Time	minutes	0.630945447
-R67	Time	Time	minutes	0.640652301
-R68	Time	Time	minutes	0.650359154
-R69	Time	Time	minutes	0.660066007
-R70	Time	Time	minutes	0.66977286
-R71	Time	Time	minutes	0.679479713
-R72	Time	Time	minutes	0.689186566
-R73	Time	Time	minutes	0.698893419
-R74	Time	Time	minutes	0.708600272
-R75	Time	Time	minutes	0.718307125
-R76	Time	Time	minutes	0.728013978
-R77	Time	Time	minutes	0.737720831
-R78	Time	Time	minutes	0.747427684
-R79	Time	Time	minutes	0.757134537
-R80	Time	Time	minutes	0.76684139
-R81	Time	Time	minutes	0.776548243
-R82	Time	Time	minutes	0.786255096
-R83	Time	Time	minutes	0.795961949
-R84	Time	Time	minutes	0.805668802
-R85	Time	Time	minutes	0.815375655
-R86	Time	Time	minutes	0.825082508
-R87	Time	Time	minutes	0.834789361
-R88	Time	Time	minutes	0.844496214
-R89	Time	Time	minutes	0.854203067
-R90	Time	Time	minutes	0.86390992
-R91	Time	Time	minutes	0.873616773
-R92	Time	Time	minutes	0.883323626
-R93	Time	Time	minutes	0.89303048
-R94	Time	Time	minutes	0.902737333
-R95	Time	Time	minutes	0.912444186
-R96	Time	Time	minutes	0.922151039
-R97	Time	Time	minutes	0.931857892
-R98	Time	Time	minutes	0.941564745
-R99	Time	Time	minutes	0.951271598
-R100	Time	Time	minutes	0.960978451
-R101	Time	Time	minutes	0.970685304
-R102	Time	Time	minutes	0.980392157
-R103	Time	Time	minutes	0.99009901
-R104	Time	Time	minutes	0.999805863
-R105	Time	Time	minutes	1.009512716
-R106	Time	Time	minutes	1.019219569
-R107	Time	Time	minutes	1.028926422
-R108	Time	Time	minutes	1.038633275
-R109	Time	Time	minutes	1.048340128
-R110	Time	Time	minutes	1.058046981
-R111	Time	Time	minutes	1.067753834
-R112	Time	Time	minutes	1.077460687
-R113	Time	Time	minutes	1.08716754
-R114	Time	Time	minutes	1.096874393
-R115	Time	Time	minutes	1.106581246
-R116	Time	Time	minutes	1.116288099
-R117	Time	Time	minutes	1.125994952
-R118	Time	Time	minutes	1.135701805
-R119	Time	Time	minutes	1.145408659
-R120	Time	Time	minutes	1.155115512
-R121	Time	Time	minutes	1.164822365
-R122	Time	Time	minutes	1.174529218
-R123	Time	Time	minutes	1.184236071
-R124	Time	Time	minutes	1.193942924
-R125	Time	Time	minutes	1.203649777
-R126	Time	Time	minutes	1.21335663
-R127	Time	Time	minutes	1.223063483
-R128	Time	Time	minutes	1.232770336
-R129	Time	Time	minutes	1.242477189
-R130	Time	Time	minutes	1.252184042
-R131	Time	Time	minutes	1.261890895
-R132	Time	Time	minutes	1.271597748
-R133	Time	Time	minutes	1.281304601
-R134	Time	Time	minutes	1.291011454
-R135	Time	Time	minutes	1.300718307
-R136	Time	Time	minutes	1.31042516
-R137	Time	Time	minutes	1.320132013
-R138	Time	Time	minutes	1.329838866
-R139	Time	Time	minutes	1.339545719
-R140	Time	Time	minutes	1.349252572
-R141	Time	Time	minutes	1.358959425
-R142	Time	Time	minutes	1.368666278
-R143	Time	Time	minutes	1.378373131
-R144	Time	Time	minutes	1.388079984
-R145	Time	Time	minutes	1.397786838
-R146	Time	Time	minutes	1.407493691
-R147	Time	Time	minutes	1.417200544
-R148	Time	Time	minutes	1.426907397
-R149	Time	Time	minutes	1.43661425
-R150	Time	Time	minutes	1.446321103
-R151	Time	Time	minutes	1.456027956
-R152	Time	Time	minutes	1.465734809
-R153	Time	Time	minutes	1.475441662
-R154	Time	Time	minutes	1.485148515
-R155	Time	Time	minutes	1.494855368
-R156	Time	Time	minutes	1.504562221
-R157	Time	Time	minutes	1.514269074
-R158	Time	Time	minutes	1.523975927
-R159	Time	Time	minutes	1.53368278
-R160	Time	Time	minutes	1.543389633
-R161	Time	Time	minutes	1.553096486
-R162	Time	Time	minutes	1.562803339
-R163	Time	Time	minutes	1.572510192
-R164	Time	Time	minutes	1.582217045
-R165	Time	Time	minutes	1.591923898
-R166	Time	Time	minutes	1.601630751
-R167	Time	Time	minutes	1.611337604
-R168	Time	Time	minutes	1.621044457
-R169	Time	Time	minutes	1.63075131
-R170	Time	Time	minutes	1.640458163
-R171	Time	Time	minutes	1.650165017
-R172	Time	Time	minutes	1.65987187
-R173	Time	Time	minutes	1.669578723
-R174	Time	Time	minutes	1.679285576
-R175	Time	Time	minutes	1.688992429
-R176	Time	Time	minutes	1.698699282
-R177	Time	Time	minutes	1.708406135
-R178	Time	Time	minutes	1.718112988
-R179	Time	Time	minutes	1.727819841
-R180	Time	Time	minutes	1.737526694
-R181	Time	Time	minutes	1.747233547
-R182	Time	Time	minutes	1.7569404
-R183	Time	Time	minutes	1.766647253
-R184	Time	Time	minutes	1.776354106
-R185	Time	Time	minutes	1.786060959
-R186	Time	Time	minutes	1.795767812
-R187	Time	Time	minutes	1.805474665
-R188	Time	Time	minutes	1.815181518
-R189	Time	Time	minutes	1.824888371
-R190	Time	Time	minutes	1.834595224
-R191	Time	Time	minutes	1.844302077
-R192	Time	Time	minutes	1.85400893
-R193	Time	Time	minutes	1.863715783
-R194	Time	Time	minutes	1.873422636
-R195	Time	Time	minutes	1.883129489
-R196	Time	Time	minutes	1.892836342
-R197	Time	Time	minutes	1.902543195
-R198	Time	Time	minutes	1.912250049
-R199	Time	Time	minutes	1.921956902
-R200	Time	Time	minutes	1.931663755
-R201	Time	Time	minutes	1.941370608
-R202	Time	Time	minutes	1.951077461
-R203	Time	Time	minutes	1.960784314
-R204	Time	Time	minutes	1.970491167
-R205	Time	Time	minutes	1.98019802
-R206	Time	Time	minutes	1.989904873
-R207	Time	Time	minutes	1.999611726
-R208	Time	Time	minutes	2.009318579
-R209	Time	Time	minutes	2.019025432
-R210	Time	Time	minutes	2.028732285
-R211	Time	Time	minutes	2.038439138
-R212	Time	Time	minutes	2.048145991
-R213	Time	Time	minutes	2.057852844
-R214	Time	Time	minutes	2.067559697
-R215	Time	Time	minutes	2.07726655
-R216	Time	Time	minutes	2.086973403
-R217	Time	Time	minutes	2.096680256
-R218	Time	Time	minutes	2.106387109
-R219	Time	Time	minutes	2.116093962
-R220	Time	Time	minutes	2.125800815
-R221	Time	Time	minutes	2.135507668
-R222	Time	Time	minutes	2.145214521
-R223	Time	Time	minutes	2.154921374
-R224	Time	Time	minutes	2.164628228
-R225	Time	Time	minutes	2.174335081
-R226	Time	Time	minutes	2.184041934
-R227	Time	Time	minutes	2.193748787
-R228	Time	Time	minutes	2.20345564
-R229	Time	Time	minutes	2.213162493
-R230	Time	Time	minutes	2.222869346
-R231	Time	Time	minutes	2.232576199
-R232	Time	Time	minutes	2.242283052
-R233	Time	Time	minutes	2.251989905
-R234	Time	Time	minutes	2.261696758
-R235	Time	Time	minutes	2.271403611
-R236	Time	Time	minutes	2.281110464
-R237	Time	Time	minutes	2.290817317
-R238	Time	Time	minutes	2.30052417
-R239	Time	Time	minutes	2.310231023
-R240	Time	Time	minutes	2.319937876
-R241	Time	Time	minutes	2.329644729
-R242	Time	Time	minutes	2.339351582
-R243	Time	Time	minutes	2.349058435
-R244	Time	Time	minutes	2.358765288
-R245	Time	Time	minutes	2.368472141
-R246	Time	Time	minutes	2.378178994
-R247	Time	Time	minutes	2.387885847
-R248	Time	Time	minutes	2.3975927
-R249	Time	Time	minutes	2.407299553
-R250	Time	Time	minutes	2.417006407
-R251	Time	Time	minutes	2.42671326
-R252	Time	Time	minutes	2.436420113
-R253	Time	Time	minutes	2.446126966
-R254	Time	Time	minutes	2.455833819
-R255	Time	Time	minutes	2.465540672
-R256	Time	Time	minutes	2.475247525
-R257	Time	Time	minutes	2.484954378
-R258	Time	Time	minutes	2.494661231
-R259	Time	Time	minutes	2.504368084
-R260	Time	Time	minutes	2.514074937
-R261	Time	Time	minutes	2.52378179
-R262	Time	Time	minutes	2.533488643
-R263	Time	Time	minutes	2.543195496
-R264	Time	Time	minutes	2.552902349
-R265	Time	Time	minutes	2.562609202
-R266	Time	Time	minutes	2.572316055
-R267	Time	Time	minutes	2.582022908
-R268	Time	Time	minutes	2.591729761
-R269	Time	Time	minutes	2.601436614
-R270	Time	Time	minutes	2.611143467
-R271	Time	Time	minutes	2.62085032
-R272	Time	Time	minutes	2.630557173
-R273	Time	Time	minutes	2.640264026
-R274	Time	Time	minutes	2.649970879
-R275	Time	Time	minutes	2.659677732
-R276	Time	Time	minutes	2.669384586
-R277	Time	Time	minutes	2.679091439
-R278	Time	Time	minutes	2.688798292
-R279	Time	Time	minutes	2.698505145
-R280	Time	Time	minutes	2.708211998
-R281	Time	Time	minutes	2.717918851
-R282	Time	Time	minutes	2.727625704
-R283	Time	Time	minutes	2.737332557
-R284	Time	Time	minutes	2.74703941
-R285	Time	Time	minutes	2.756746263
-R286	Time	Time	minutes	2.766453116
-R287	Time	Time	minutes	2.776159969
-R288	Time	Time	minutes	2.785866822
-R289	Time	Time	minutes	2.795573675
-R290	Time	Time	minutes	2.805280528
-R291	Time	Time	minutes	2.814987381
-R292	Time	Time	minutes	2.824694234
-R293	Time	Time	minutes	2.834401087
-R294	Time	Time	minutes	2.84410794
-R295	Time	Time	minutes	2.853814793
-R296	Time	Time	minutes	2.863521646
-R297	Time	Time	minutes	2.873228499
-R298	Time	Time	minutes	2.882935352
-R299	Time	Time	minutes	2.892642205
-R300	Time	Time	minutes	2.902349058
-R301	Time	Time	minutes	2.912055911
-R302	Time	Time	minutes	2.921762765
-R303	Time	Time	minutes	2.931469618
-R304	Time	Time	minutes	2.941176471
-R305	Time	Time	minutes	2.950883324
-R306	Time	Time	minutes	2.960590177
-R307	Time	Time	minutes	2.97029703
-R308	Time	Time	minutes	2.980003883
-R309	Time	Time	minutes	2.989710736
-R310	Time	Time	minutes	2.999417589
-R311	Time	Time	minutes	3.009124442
-R312	Time	Time	minutes	3.018831295
-R313	Time	Time	minutes	3.028538148
-R314	Time	Time	minutes	3.038245001
-R315	Time	Time	minutes	3.047951854
-R316	Time	Time	minutes	3.057658707
-R317	Time	Time	minutes	3.06736556
-R318	Time	Time	minutes	3.077072413
-R319	Time	Time	minutes	3.086779266
-R320	Time	Time	minutes	3.096486119
-R321	Time	Time	minutes	3.106192972
-R322	Time	Time	minutes	3.115899825
-R323	Time	Time	minutes	3.125606678
-R324	Time	Time	minutes	3.135313531
-R325	Time	Time	minutes	3.145020384
-R326	Time	Time	minutes	3.154727237
-R327	Time	Time	minutes	3.16443409
-R328	Time	Time	minutes	3.174140944
-R329	Time	Time	minutes	3.183847797
-R330	Time	Time	minutes	3.19355465
-R331	Time	Time	minutes	3.203261503
-R332	Time	Time	minutes	3.212968356
-R333	Time	Time	minutes	3.222675209
-R334	Time	Time	minutes	3.232382062
-R335	Time	Time	minutes	3.242088915
-R336	Time	Time	minutes	3.251795768
-R337	Time	Time	minutes	3.261502621
-R338	Time	Time	minutes	3.271209474
-R339	Time	Time	minutes	3.280916327
-R340	Time	Time	minutes	3.29062318
-R341	Time	Time	minutes	3.300330033
-R342	Time	Time	minutes	3.310036886
-R343	Time	Time	minutes	3.319743739
-R344	Time	Time	minutes	3.329450592
-R345	Time	Time	minutes	3.339157445
-R346	Time	Time	minutes	3.348864298
-R347	Time	Time	minutes	3.358571151
-R348	Time	Time	minutes	3.368278004
-R349	Time	Time	minutes	3.377984857
-R350	Time	Time	minutes	3.38769171
-R351	Time	Time	minutes	3.397398563
-R352	Time	Time	minutes	3.407105416
-R353	Time	Time	minutes	3.416812269
-R354	Time	Time	minutes	3.426519123
-R355	Time	Time	minutes	3.436225976
-R356	Time	Time	minutes	3.445932829
-R357	Time	Time	minutes	3.455639682
-R358	Time	Time	minutes	3.465346535
-R359	Time	Time	minutes	3.475053388
-R360	Time	Time	minutes	3.484760241
-R361	Time	Time	minutes	3.494467094
-R362	Time	Time	minutes	3.504173947
-R363	Time	Time	minutes	3.5138808
-R364	Time	Time	minutes	3.523587653
-R365	Time	Time	minutes	3.533294506
-R366	Time	Time	minutes	3.543001359
-R367	Time	Time	minutes	3.552708212
-R368	Time	Time	minutes	3.562415065
-R369	Time	Time	minutes	3.572121918
-R370	Time	Time	minutes	3.581828771
-R371	Time	Time	minutes	3.591535624
-R372	Time	Time	minutes	3.601242477
-R373	Time	Time	minutes	3.61094933
-R374	Time	Time	minutes	3.620656183
-R375	Time	Time	minutes	3.630363036
-R376	Time	Time	minutes	3.640069889
-R377	Time	Time	minutes	3.649776742
-R378	Time	Time	minutes	3.659483595
-R379	Time	Time	minutes	3.669190448
-R380	Time	Time	minutes	3.678897301
-R381	Time	Time	minutes	3.688604155
-R382	Time	Time	minutes	3.698311008
-R383	Time	Time	minutes	3.708017861
-R384	Time	Time	minutes	3.717724714
-R385	Time	Time	minutes	3.727431567
-R386	Time	Time	minutes	3.73713842
-R387	Time	Time	minutes	3.746845273
-R388	Time	Time	minutes	3.756552126
-R389	Time	Time	minutes	3.766258979
-R390	Time	Time	minutes	3.775965832
-R391	Time	Time	minutes	3.785672685
-R392	Time	Time	minutes	3.795379538
-R393	Time	Time	minutes	3.805086391
-R394	Time	Time	minutes	3.814793244
-R395	Time	Time	minutes	3.824500097
-R396	Time	Time	minutes	3.83420695
-R397	Time	Time	minutes	3.843913803
-R398	Time	Time	minutes	3.853620656
-R399	Time	Time	minutes	3.863327509
-R400	Time	Time	minutes	3.873034362
-R401	Time	Time	minutes	3.882741215
-R402	Time	Time	minutes	3.892448068
-R403	Time	Time	minutes	3.902154921
-R404	Time	Time	minutes	3.911861774
-R405	Time	Time	minutes	3.921568627
-R406	Time	Time	minutes	3.93127548
-R407	Time	Time	minutes	3.940982334
-R408	Time	Time	minutes	3.950689187
-R409	Time	Time	minutes	3.96039604
-R410	Time	Time	minutes	3.970102893
-R411	Time	Time	minutes	3.979809746
-R412	Time	Time	minutes	3.989516599
-R413	Time	Time	minutes	3.999223452
-R414	Time	Time	minutes	4.008930305
-R415	Time	Time	minutes	4.018637158
-R416	Time	Time	minutes	4.028344011
-R417	Time	Time	minutes	4.038050864
-R418	Time	Time	minutes	4.047757717
-R419	Time	Time	minutes	4.05746457
-R420	Time	Time	minutes	4.067171423
-R421	Time	Time	minutes	4.076878276
-R422	Time	Time	minutes	4.086585129
-R423	Time	Time	minutes	4.096291982
-R424	Time	Time	minutes	4.105998835
-R425	Time	Time	minutes	4.115705688
-R426	Time	Time	minutes	4.125412541
-R427	Time	Time	minutes	4.135119394
-R428	Time	Time	minutes	4.144826247
-R429	Time	Time	minutes	4.1545331
-R430	Time	Time	minutes	4.164239953
-R431	Time	Time	minutes	4.173946806
-R432	Time	Time	minutes	4.183653659
-R433	Time	Time	minutes	4.193360513
-R434	Time	Time	minutes	4.203067366
-R435	Time	Time	minutes	4.212774219
-R436	Time	Time	minutes	4.222481072
-R437	Time	Time	minutes	4.232187925
-R438	Time	Time	minutes	4.241894778
-R439	Time	Time	minutes	4.251601631
-R440	Time	Time	minutes	4.261308484
-R441	Time	Time	minutes	4.271015337
-R442	Time	Time	minutes	4.28072219
-R443	Time	Time	minutes	4.290429043
-R444	Time	Time	minutes	4.300135896
-R445	Time	Time	minutes	4.309842749
-R446	Time	Time	minutes	4.319549602
-R447	Time	Time	minutes	4.329256455
-R448	Time	Time	minutes	4.338963308
-R449	Time	Time	minutes	4.348670161
-R450	Time	Time	minutes	4.358377014
-R451	Time	Time	minutes	4.368083867
-R452	Time	Time	minutes	4.37779072
-R453	Time	Time	minutes	4.387497573
-R454	Time	Time	minutes	4.397204426
-R455	Time	Time	minutes	4.406911279
-R456	Time	Time	minutes	4.416618132
-R457	Time	Time	minutes	4.426324985
-R458	Time	Time	minutes	4.436031838
-R459	Time	Time	minutes	4.445738692
-R460	Time	Time	minutes	4.455445545
-R461	Time	Time	minutes	4.465152398
-R462	Time	Time	minutes	4.474859251
-R463	Time	Time	minutes	4.484566104
-R464	Time	Time	minutes	4.494272957
-R465	Time	Time	minutes	4.50397981
-R466	Time	Time	minutes	4.513686663
-R467	Time	Time	minutes	4.523393516
-R468	Time	Time	minutes	4.533100369
-R469	Time	Time	minutes	4.542807222
-R470	Time	Time	minutes	4.552514075
-R471	Time	Time	minutes	4.562220928
-R472	Time	Time	minutes	4.571927781
-R473	Time	Time	minutes	4.581634634
-R474	Time	Time	minutes	4.591341487
-R475	Time	Time	minutes	4.60104834
-R476	Time	Time	minutes	4.610755193
-R477	Time	Time	minutes	4.620462046
-R478	Time	Time	minutes	4.630168899
-R479	Time	Time	minutes	4.639875752
-R480	Time	Time	minutes	4.649582605
-R481	Time	Time	minutes	4.659289458
-R482	Time	Time	minutes	4.668996311
-R483	Time	Time	minutes	4.678703164
-R484	Time	Time	minutes	4.688410017
-R485	Time	Time	minutes	4.698116871
-R486	Time	Time	minutes	4.707823724
-R487	Time	Time	minutes	4.717530577
-R488	Time	Time	minutes	4.72723743
-R489	Time	Time	minutes	4.736944283
-R490	Time	Time	minutes	4.746651136
-R491	Time	Time	minutes	4.756357989
-R492	Time	Time	minutes	4.766064842
-R493	Time	Time	minutes	4.775771695
-R494	Time	Time	minutes	4.785478548
-R495	Time	Time	minutes	4.795185401
-R496	Time	Time	minutes	4.804892254
-R497	Time	Time	minutes	4.814599107
-R498	Time	Time	minutes	4.82430596
-R499	Time	Time	minutes	4.834012813
-R500	Time	Time	minutes	4.843719666
-R501	Time	Time	minutes	4.853426519
-R502	Time	Time	minutes	4.863133372
-R503	Time	Time	minutes	4.872840225
-R504	Time	Time	minutes	4.882547078
-R505	Time	Time	minutes	4.892253931
-R506	Time	Time	minutes	4.901960784
-R507	Time	Time	minutes	4.911667637
-R508	Time	Time	minutes	4.92137449
-R509	Time	Time	minutes	4.931081343
-R510	Time	Time	minutes	4.940788196
-R511	Time	Time	minutes	4.95049505
-R512	Time	Time	minutes	4.960201903
-R513	Time	Time	minutes	4.969908756
-R514	Time	Time	minutes	4.979615609
-R515	Time	Time	minutes	4.989322462
-R516	Time	Time	minutes	4.999029315
-R517	Time	Time	minutes	5.008736168
-R518	Time	Time	minutes	5.018443021
-R519	Time	Time	minutes	5.028149874
-R520	Time	Time	minutes	5.037856727
-R521	Time	Time	minutes	5.04756358
-R522	Time	Time	minutes	5.057270433
-R523	Time	Time	minutes	5.066977286
-R524	Time	Time	minutes	5.076684139
-R525	Time	Time	minutes	5.086390992
-R526	Time	Time	minutes	5.096097845
-R527	Time	Time	minutes	5.105804698
-R528	Time	Time	minutes	5.115511551
-R529	Time	Time	minutes	5.125218404
-R530	Time	Time	minutes	5.134925257
-R531	Time	Time	minutes	5.14463211
-R532	Time	Time	minutes	5.154338963
-R533	Time	Time	minutes	5.164045816
-R534	Time	Time	minutes	5.173752669
-R535	Time	Time	minutes	5.183459522
-R536	Time	Time	minutes	5.193166375
-R537	Time	Time	minutes	5.202873228
-R538	Time	Time	minutes	5.212580082
-R539	Time	Time	minutes	5.222286935
-R540	Time	Time	minutes	5.231993788
-R541	Time	Time	minutes	5.241700641
-R542	Time	Time	minutes	5.251407494
-R543	Time	Time	minutes	5.261114347
-R544	Time	Time	minutes	5.2708212
-R545	Time	Time	minutes	5.280528053
-R546	Time	Time	minutes	5.290234906
-R547	Time	Time	minutes	5.299941759
-R548	Time	Time	minutes	5.309648612
-R549	Time	Time	minutes	5.319355465
-R550	Time	Time	minutes	5.329062318
-R551	Time	Time	minutes	5.338769171
-R552	Time	Time	minutes	5.348476024
-R553	Time	Time	minutes	5.358182877
-R554	Time	Time	minutes	5.36788973
-R555	Time	Time	minutes	5.377596583
-R556	Time	Time	minutes	5.387303436
-R557	Time	Time	minutes	5.397010289
-R558	Time	Time	minutes	5.406717142
-R559	Time	Time	minutes	5.416423995
-R560	Time	Time	minutes	5.426130848
-R561	Time	Time	minutes	5.435837701
-R562	Time	Time	minutes	5.445544554
-R563	Time	Time	minutes	5.455251407
-R564	Time	Time	minutes	5.464958261
-R565	Time	Time	minutes	5.474665114
-R566	Time	Time	minutes	5.484371967
-R567	Time	Time	minutes	5.49407882
-R568	Time	Time	minutes	5.503785673
-R569	Time	Time	minutes	5.513492526
-R570	Time	Time	minutes	5.523199379
-R571	Time	Time	minutes	5.532906232
-R572	Time	Time	minutes	5.542613085
-R573	Time	Time	minutes	5.552319938
-R574	Time	Time	minutes	5.562026791
-R575	Time	Time	minutes	5.571733644
-R576	Time	Time	minutes	5.581440497
-R577	Time	Time	minutes	5.59114735
-R578	Time	Time	minutes	5.600854203
-R579	Time	Time	minutes	5.610561056
-R580	Time	Time	minutes	5.620267909
-R581	Time	Time	minutes	5.629974762
-R582	Time	Time	minutes	5.639681615
-R583	Time	Time	minutes	5.649388468
-R584	Time	Time	minutes	5.659095321
-R585	Time	Time	minutes	5.668802174
-R586	Time	Time	minutes	5.678509027
-R587	Time	Time	minutes	5.68821588
-R588	Time	Time	minutes	5.697922733
-R589	Time	Time	minutes	5.707629586
-R590	Time	Time	minutes	5.71733644
-R591	Time	Time	minutes	5.727043293
-R592	Time	Time	minutes	5.736750146
-R593	Time	Time	minutes	5.746456999
-R594	Time	Time	minutes	5.756163852
-R595	Time	Time	minutes	5.765870705
-R596	Time	Time	minutes	5.775577558
-R597	Time	Time	minutes	5.785284411
-R598	Time	Time	minutes	5.794991264
-R599	Time	Time	minutes	5.804698117
-R600	Time	Time	minutes	5.81440497
-R601	Time	Time	minutes	5.824111823
-R602	Time	Time	minutes	5.833818676
-R603	Time	Time	minutes	5.843525529
-R604	Time	Time	minutes	5.853232382
-R605	Time	Time	minutes	5.862939235
-R606	Time	Time	minutes	5.872646088
-R607	Time	Time	minutes	5.882352941
-R608	Time	Time	minutes	5.892059794
-R609	Time	Time	minutes	5.901766647
-R610	Time	Time	minutes	5.9114735
-R611	Time	Time	minutes	5.921180353
-R612	Time	Time	minutes	5.930887206
-R613	Time	Time	minutes	5.940594059
-R614	Time	Time	minutes	5.950300912
-R615	Time	Time	minutes	5.960007765
-R616	Time	Time	minutes	5.969714619
-R617	Time	Time	minutes	5.979421472
-R618	Time	Time	minutes	5.989128325
-R619	Time	Time	minutes	5.998835178
-R620	Time	Time	minutes	6.008542031
-R621	Time	Time	minutes	6.018248884
-R622	Time	Time	minutes	6.027955737
-R623	Time	Time	minutes	6.03766259
-R624	Time	Time	minutes	6.047369443
-R625	Time	Time	minutes	6.057076296
-R626	Time	Time	minutes	6.066783149
-R627	Time	Time	minutes	6.076490002
-R628	Time	Time	minutes	6.086196855
-R629	Time	Time	minutes	6.095903708
-R630	Time	Time	minutes	6.105610561
-R631	Time	Time	minutes	6.115317414
-R632	Time	Time	minutes	6.125024267
-R633	Time	Time	minutes	6.13473112
-R634	Time	Time	minutes	6.144437973
-R635	Time	Time	minutes	6.154144826
-R636	Time	Time	minutes	6.163851679
-R637	Time	Time	minutes	6.173558532
-R638	Time	Time	minutes	6.183265385
-R639	Time	Time	minutes	6.192972238
-R640	Time	Time	minutes	6.202679091
-R641	Time	Time	minutes	6.212385944
-R642	Time	Time	minutes	6.222092798
-R643	Time	Time	minutes	6.231799651
-R644	Time	Time	minutes	6.241506504
-R645	Time	Time	minutes	6.251213357
-R646	Time	Time	minutes	6.26092021
-R647	Time	Time	minutes	6.270627063
-R648	Time	Time	minutes	6.280333916
-R649	Time	Time	minutes	6.290040769
-R650	Time	Time	minutes	6.299747622
-R651	Time	Time	minutes	6.309454475
-R652	Time	Time	minutes	6.319161328
-R653	Time	Time	minutes	6.328868181
-R654	Time	Time	minutes	6.338575034
-R655	Time	Time	minutes	6.348281887
-R656	Time	Time	minutes	6.35798874
-R657	Time	Time	minutes	6.367695593
-R658	Time	Time	minutes	6.377402446
-R659	Time	Time	minutes	6.387109299
-R660	Time	Time	minutes	6.396816152
-R661	Time	Time	minutes	6.406523005
-R662	Time	Time	minutes	6.416229858
-R663	Time	Time	minutes	6.425936711
-R664	Time	Time	minutes	6.435643564
-R665	Time	Time	minutes	6.445350417
-R666	Time	Time	minutes	6.45505727
-R667	Time	Time	minutes	6.464764123
-R668	Time	Time	minutes	6.474470977
-R669	Time	Time	minutes	6.48417783
-R670	Time	Time	minutes	6.493884683
-R671	Time	Time	minutes	6.503591536
-R672	Time	Time	minutes	6.513298389
-R673	Time	Time	minutes	6.523005242
-R674	Time	Time	minutes	6.532712095
-R675	Time	Time	minutes	6.542418948
-R676	Time	Time	minutes	6.552125801
-R677	Time	Time	minutes	6.561832654
-R678	Time	Time	minutes	6.571539507
-R679	Time	Time	minutes	6.58124636
-R680	Time	Time	minutes	6.590953213
-R681	Time	Time	minutes	6.600660066
-R682	Time	Time	minutes	6.610366919
-R683	Time	Time	minutes	6.620073772
-R684	Time	Time	minutes	6.629780625
-R685	Time	Time	minutes	6.639487478
-R686	Time	Time	minutes	6.649194331
-R687	Time	Time	minutes	6.658901184
-R688	Time	Time	minutes	6.668608037
-R689	Time	Time	minutes	6.67831489
-R690	Time	Time	minutes	6.688021743
-R691	Time	Time	minutes	6.697728596
-R692	Time	Time	minutes	6.707435449
-R693	Time	Time	minutes	6.717142302
-R694	Time	Time	minutes	6.726849156
-R695	Time	Time	minutes	6.736556009
-R696	Time	Time	minutes	6.746262862
-R697	Time	Time	minutes	6.755969715
-R698	Time	Time	minutes	6.765676568
-R699	Time	Time	minutes	6.775383421
-R700	Time	Time	minutes	6.785090274
-R701	Time	Time	minutes	6.794797127
-R702	Time	Time	minutes	6.80450398
-R703	Time	Time	minutes	6.814210833
-R704	Time	Time	minutes	6.823917686
-R705	Time	Time	minutes	6.833624539
-R706	Time	Time	minutes	6.843331392
-R707	Time	Time	minutes	6.853038245
-R708	Time	Time	minutes	6.862745098
-R709	Time	Time	minutes	6.872451951
-R710	Time	Time	minutes	6.882158804
-R711	Time	Time	minutes	6.891865657
-R712	Time	Time	minutes	6.90157251
-R713	Time	Time	minutes	6.911279363
-R714	Time	Time	minutes	6.920986216
-R715	Time	Time	minutes	6.930693069
-R716	Time	Time	minutes	6.940399922
-R717	Time	Time	minutes	6.950106775
-R718	Time	Time	minutes	6.959813628
-R719	Time	Time	minutes	6.969520481
-R720	Time	Time	minutes	6.979227334
-R721	Time	Time	minutes	6.988934188
-R722	Time	Time	minutes	6.998641041
-R723	Time	Time	minutes	7.008347894
-R724	Time	Time	minutes	7.018054747
-R725	Time	Time	minutes	7.0277616
-R726	Time	Time	minutes	7.037468453
-R727	Time	Time	minutes	7.047175306
-R728	Time	Time	minutes	7.056882159
-R729	Time	Time	minutes	7.066589012
-R730	Time	Time	minutes	7.076295865
-R731	Time	Time	minutes	7.086002718
-R732	Time	Time	minutes	7.095709571
-R733	Time	Time	minutes	7.105416424
-R734	Time	Time	minutes	7.115123277
-R735	Time	Time	minutes	7.12483013
-R736	Time	Time	minutes	7.134536983
-R737	Time	Time	minutes	7.144243836
-R738	Time	Time	minutes	7.153950689
-R739	Time	Time	minutes	7.163657542
-R740	Time	Time	minutes	7.173364395
-R741	Time	Time	minutes	7.183071248
-R742	Time	Time	minutes	7.192778101
-R743	Time	Time	minutes	7.202484954
-R744	Time	Time	minutes	7.212191807
-R745	Time	Time	minutes	7.22189866
-R746	Time	Time	minutes	7.231605513
-R747	Time	Time	minutes	7.241312367
-R748	Time	Time	minutes	7.25101922
-R749	Time	Time	minutes	7.260726073
-R750	Time	Time	minutes	7.270432926
-R751	Time	Time	minutes	7.280139779
-R752	Time	Time	minutes	7.289846632
-R753	Time	Time	minutes	7.299553485
-R754	Time	Time	minutes	7.309260338
-R755	Time	Time	minutes	7.318967191
-R756	Time	Time	minutes	7.328674044
-R757	Time	Time	minutes	7.338380897
-R758	Time	Time	minutes	7.34808775
-R759	Time	Time	minutes	7.357794603
-R760	Time	Time	minutes	7.367501456
-R761	Time	Time	minutes	7.377208309
-R762	Time	Time	minutes	7.386915162
-R763	Time	Time	minutes	7.396622015
-R764	Time	Time	minutes	7.406328868
-R765	Time	Time	minutes	7.416035721
-R766	Time	Time	minutes	7.425742574
-R767	Time	Time	minutes	7.435449427
-R768	Time	Time	minutes	7.44515628
-R769	Time	Time	minutes	7.454863133
-R770	Time	Time	minutes	7.464569986
-R771	Time	Time	minutes	7.474276839
-R772	Time	Time	minutes	7.483983692
-R773	Time	Time	minutes	7.493690546
-R774	Time	Time	minutes	7.503397399
-R775	Time	Time	minutes	7.513104252
-R776	Time	Time	minutes	7.522811105
-R777	Time	Time	minutes	7.532517958
-R778	Time	Time	minutes	7.542224811
-R779	Time	Time	minutes	7.551931664
-R780	Time	Time	minutes	7.561638517
-R781	Time	Time	minutes	7.57134537
-R782	Time	Time	minutes	7.581052223
-R783	Time	Time	minutes	7.590759076
-R784	Time	Time	minutes	7.600465929
-R785	Time	Time	minutes	7.610172782
-R786	Time	Time	minutes	7.619879635
-R787	Time	Time	minutes	7.629586488
-R788	Time	Time	minutes	7.639293341
-R789	Time	Time	minutes	7.649000194
-R790	Time	Time	minutes	7.658707047
-R791	Time	Time	minutes	7.6684139
-R792	Time	Time	minutes	7.678120753
-R793	Time	Time	minutes	7.687827606
-R794	Time	Time	minutes	7.697534459
-R795	Time	Time	minutes	7.707241312
-R796	Time	Time	minutes	7.716948165
-R797	Time	Time	minutes	7.726655018
-R798	Time	Time	minutes	7.736361871
-R799	Time	Time	minutes	7.746068725
-R800	Time	Time	minutes	7.755775578
-R801	Time	Time	minutes	7.765482431
-R802	Time	Time	minutes	7.775189284
-R803	Time	Time	minutes	7.784896137
-R804	Time	Time	minutes	7.79460299
-R805	Time	Time	minutes	7.804309843
-R806	Time	Time	minutes	7.814016696
-R807	Time	Time	minutes	7.823723549
-R808	Time	Time	minutes	7.833430402
-R809	Time	Time	minutes	7.843137255
-R810	Time	Time	minutes	7.852844108
-R811	Time	Time	minutes	7.862550961
-R812	Time	Time	minutes	7.872257814
-R813	Time	Time	minutes	7.881964667
-R814	Time	Time	minutes	7.89167152
-R815	Time	Time	minutes	7.901378373
-R816	Time	Time	minutes	7.911085226
-R817	Time	Time	minutes	7.920792079
-R818	Time	Time	minutes	7.930498932
-R819	Time	Time	minutes	7.940205785
-R820	Time	Time	minutes	7.949912638
-R821	Time	Time	minutes	7.959619491
-R822	Time	Time	minutes	7.969326344
-R823	Time	Time	minutes	7.979033197
-R824	Time	Time	minutes	7.98874005
-R825	Time	Time	minutes	7.998446904
-R826	Time	Time	minutes	8.008153757
-R827	Time	Time	minutes	8.01786061
-R828	Time	Time	minutes	8.027567463
-R829	Time	Time	minutes	8.037274316
-R830	Time	Time	minutes	8.046981169
-R831	Time	Time	minutes	8.056688022
-R832	Time	Time	minutes	8.066394875
-R833	Time	Time	minutes	8.076101728
-R834	Time	Time	minutes	8.085808581
-R835	Time	Time	minutes	8.095515434
-R836	Time	Time	minutes	8.105222287
-R837	Time	Time	minutes	8.11492914
-R838	Time	Time	minutes	8.124635993
-R839	Time	Time	minutes	8.134342846
-R840	Time	Time	minutes	8.144049699
-R841	Time	Time	minutes	8.153756552
-R842	Time	Time	minutes	8.163463405
-R843	Time	Time	minutes	8.173170258
-R844	Time	Time	minutes	8.182877111
-R845	Time	Time	minutes	8.192583964
-R846	Time	Time	minutes	8.202290817
-R847	Time	Time	minutes	8.21199767
-R848	Time	Time	minutes	8.221704523
-R849	Time	Time	minutes	8.231411376
-R850	Time	Time	minutes	8.241118229
-R851	Time	Time	minutes	8.250825083
-R852	Time	Time	minutes	8.260531936
-R853	Time	Time	minutes	8.270238789
-R854	Time	Time	minutes	8.279945642
-R855	Time	Time	minutes	8.289652495
-R856	Time	Time	minutes	8.299359348
-R857	Time	Time	minutes	8.309066201
-R858	Time	Time	minutes	8.318773054
-R859	Time	Time	minutes	8.328479907
-R860	Time	Time	minutes	8.33818676
-R861	Time	Time	minutes	8.347893613
-R862	Time	Time	minutes	8.357600466
-R863	Time	Time	minutes	8.367307319
-R864	Time	Time	minutes	8.377014172
-R865	Time	Time	minutes	8.386721025
-R866	Time	Time	minutes	8.396427878
-R867	Time	Time	minutes	8.406134731
-R868	Time	Time	minutes	8.415841584
-R869	Time	Time	minutes	8.425548437
-R870	Time	Time	minutes	8.43525529
-R871	Time	Time	minutes	8.444962143
-R872	Time	Time	minutes	8.454668996
-R873	Time	Time	minutes	8.464375849
-R874	Time	Time	minutes	8.474082702
-R875	Time	Time	minutes	8.483789555
-R876	Time	Time	minutes	8.493496408
-R877	Time	Time	minutes	8.503203262
-R878	Time	Time	minutes	8.512910115
-R879	Time	Time	minutes	8.522616968
-R880	Time	Time	minutes	8.532323821
-R881	Time	Time	minutes	8.542030674
-R882	Time	Time	minutes	8.551737527
-R883	Time	Time	minutes	8.56144438
-R884	Time	Time	minutes	8.571151233
-R885	Time	Time	minutes	8.580858086
-R886	Time	Time	minutes	8.590564939
-R887	Time	Time	minutes	8.600271792
-R888	Time	Time	minutes	8.609978645
-R889	Time	Time	minutes	8.619685498
-R890	Time	Time	minutes	8.629392351
-R891	Time	Time	minutes	8.639099204
-R892	Time	Time	minutes	8.648806057
-R893	Time	Time	minutes	8.65851291
-R894	Time	Time	minutes	8.668219763
-R895	Time	Time	minutes	8.677926616
-R896	Time	Time	minutes	8.687633469
-R897	Time	Time	minutes	8.697340322
-R898	Time	Time	minutes	8.707047175
-R899	Time	Time	minutes	8.716754028
-R900	Time	Time	minutes	8.726460881
-R901	Time	Time	minutes	8.736167734
-R902	Time	Time	minutes	8.745874587
-R903	Time	Time	minutes	8.75558144
-R904	Time	Time	minutes	8.765288294
-R905	Time	Time	minutes	8.774995147
-R906	Time	Time	minutes	8.784702
-R907	Time	Time	minutes	8.794408853
-R908	Time	Time	minutes	8.804115706
-R909	Time	Time	minutes	8.813822559
-R910	Time	Time	minutes	8.823529412
-R911	Time	Time	minutes	8.833236265
-R912	Time	Time	minutes	8.842943118
-R913	Time	Time	minutes	8.852649971
-R914	Time	Time	minutes	8.862356824
-R915	Time	Time	minutes	8.872063677
-R916	Time	Time	minutes	8.88177053
-R917	Time	Time	minutes	8.891477383
-R918	Time	Time	minutes	8.901184236
-R919	Time	Time	minutes	8.910891089
-R920	Time	Time	minutes	8.920597942
-R921	Time	Time	minutes	8.930304795
-R922	Time	Time	minutes	8.940011648
-R923	Time	Time	minutes	8.949718501
-R924	Time	Time	minutes	8.959425354
-R925	Time	Time	minutes	8.969132207
-R926	Time	Time	minutes	8.97883906
-R927	Time	Time	minutes	8.988545913
-R928	Time	Time	minutes	8.998252766
-R929	Time	Time	minutes	9.007959619
-R930	Time	Time	minutes	9.017666473
-R931	Time	Time	minutes	9.027373326
-R932	Time	Time	minutes	9.037080179
-R933	Time	Time	minutes	9.046787032
-R934	Time	Time	minutes	9.056493885
-R935	Time	Time	minutes	9.066200738
-R936	Time	Time	minutes	9.075907591
-R937	Time	Time	minutes	9.085614444
-R938	Time	Time	minutes	9.095321297
-R939	Time	Time	minutes	9.10502815
-R940	Time	Time	minutes	9.114735003
-R941	Time	Time	minutes	9.124441856
-R942	Time	Time	minutes	9.134148709
-R943	Time	Time	minutes	9.143855562
-R944	Time	Time	minutes	9.153562415
-R945	Time	Time	minutes	9.163269268
-R946	Time	Time	minutes	9.172976121
-R947	Time	Time	minutes	9.182682974
-R948	Time	Time	minutes	9.192389827
-R949	Time	Time	minutes	9.20209668
-R950	Time	Time	minutes	9.211803533
-R951	Time	Time	minutes	9.221510386
-R952	Time	Time	minutes	9.231217239
-R953	Time	Time	minutes	9.240924092
-R954	Time	Time	minutes	9.250630945
-R955	Time	Time	minutes	9.260337798
-R956	Time	Time	minutes	9.270044652
-R957	Time	Time	minutes	9.279751505
-R958	Time	Time	minutes	9.289458358
-R959	Time	Time	minutes	9.299165211
-R960	Time	Time	minutes	9.308872064
-R961	Time	Time	minutes	9.318578917
-R962	Time	Time	minutes	9.32828577
-R963	Time	Time	minutes	9.337992623
-R964	Time	Time	minutes	9.347699476
-R965	Time	Time	minutes	9.357406329
-R966	Time	Time	minutes	9.367113182
-R967	Time	Time	minutes	9.376820035
-R968	Time	Time	minutes	9.386526888
-R969	Time	Time	minutes	9.396233741
-R970	Time	Time	minutes	9.405940594
-R971	Time	Time	minutes	9.415647447
-R972	Time	Time	minutes	9.4253543
-R973	Time	Time	minutes	9.435061153
-R974	Time	Time	minutes	9.444768006
-R975	Time	Time	minutes	9.454474859
-R976	Time	Time	minutes	9.464181712
-R977	Time	Time	minutes	9.473888565
-R978	Time	Time	minutes	9.483595418
-R979	Time	Time	minutes	9.493302271
-R980	Time	Time	minutes	9.503009124
-R981	Time	Time	minutes	9.512715977
-R982	Time	Time	minutes	9.522422831
-R983	Time	Time	minutes	9.532129684
-R984	Time	Time	minutes	9.541836537
-R985	Time	Time	minutes	9.55154339
-R986	Time	Time	minutes	9.561250243
-R987	Time	Time	minutes	9.570957096
-R988	Time	Time	minutes	9.580663949
-R989	Time	Time	minutes	9.590370802
-R990	Time	Time	minutes	9.600077655
-R991	Time	Time	minutes	9.609784508
-R992	Time	Time	minutes	9.619491361
-R993	Time	Time	minutes	9.629198214
-R994	Time	Time	minutes	9.638905067
-R995	Time	Time	minutes	9.64861192
-R996	Time	Time	minutes	9.658318773
-R997	Time	Time	minutes	9.668025626
-R998	Time	Time	minutes	9.677732479
-R999	Time	Time	minutes	9.687439332
-R1000	Time	Time	minutes	9.697146185
-R1001	Time	Time	minutes	9.706853038
-R1002	Time	Time	minutes	9.716559891
-R1003	Time	Time	minutes	9.726266744
-R1004	Time	Time	minutes	9.735973597
-R1005	Time	Time	minutes	9.74568045
-R1006	Time	Time	minutes	9.755387303
-R1007	Time	Time	minutes	9.765094156
-R1008	Time	Time	minutes	9.77480101
-R1009	Time	Time	minutes	9.784507863
-R1010	Time	Time	minutes	9.794214716
-R1011	Time	Time	minutes	9.803921569
-R1012	Time	Time	minutes	9.813628422
-R1013	Time	Time	minutes	9.823335275
-R1014	Time	Time	minutes	9.833042128
-R1015	Time	Time	minutes	9.842748981
-R1016	Time	Time	minutes	9.852455834
-R1017	Time	Time	minutes	9.862162687
-R1018	Time	Time	minutes	9.87186954
-R1019	Time	Time	minutes	9.881576393
-R1020	Time	Time	minutes	9.891283246
-R1021	Time	Time	minutes	9.900990099
-R1022	Time	Time	minutes	9.910696952
-R1023	Time	Time	minutes	9.920403805
-R1024	Time	Time	minutes	9.930110658
-R1025	Time	Time	minutes	9.939817511
-R1026	Time	Time	minutes	9.949524364
-R1027	Time	Time	minutes	9.959231217
-R1028	Time	Time	minutes	9.96893807
-R1029	Time	Time	minutes	9.978644923
-R1030	Time	Time	minutes	9.988351776
-R1031	Time	Time	minutes	9.998058629
-R1032	Time	Time	minutes	10.00776548
-R1033	Time	Time	minutes	10.01747234
-R1034	Time	Time	minutes	10.02717919
-R1035	Time	Time	minutes	10.03688604
-R1036	Time	Time	minutes	10.04659289
-R1037	Time	Time	minutes	10.05629975
-R1038	Time	Time	minutes	10.0660066
-R1039	Time	Time	minutes	10.07571345
-R1040	Time	Time	minutes	10.08542031
-R1041	Time	Time	minutes	10.09512716
-R1042	Time	Time	minutes	10.10483401
-R1043	Time	Time	minutes	10.11454087
-R1044	Time	Time	minutes	10.12424772
-R1045	Time	Time	minutes	10.13395457
-R1046	Time	Time	minutes	10.14366142
-R1047	Time	Time	minutes	10.15336828
-R1048	Time	Time	minutes	10.16307513
-R1049	Time	Time	minutes	10.17278198
-R1050	Time	Time	minutes	10.18248884
-R1051	Time	Time	minutes	10.19219569
-R1052	Time	Time	minutes	10.20190254
-R1053	Time	Time	minutes	10.2116094
-R1054	Time	Time	minutes	10.22131625
-R1055	Time	Time	minutes	10.2310231
-R1056	Time	Time	minutes	10.24072996
-R1057	Time	Time	minutes	10.25043681
-R1058	Time	Time	minutes	10.26014366
-R1059	Time	Time	minutes	10.26985051
-R1060	Time	Time	minutes	10.27955737
-R1061	Time	Time	minutes	10.28926422
-R1062	Time	Time	minutes	10.29897107
-R1063	Time	Time	minutes	10.30867793
-R1064	Time	Time	minutes	10.31838478
-R1065	Time	Time	minutes	10.32809163
-R1066	Time	Time	minutes	10.33779849
-R1067	Time	Time	minutes	10.34750534
-R1068	Time	Time	minutes	10.35721219
-R1069	Time	Time	minutes	10.36691904
-R1070	Time	Time	minutes	10.3766259
-R1071	Time	Time	minutes	10.38633275
-R1072	Time	Time	minutes	10.3960396
-R1073	Time	Time	minutes	10.40574646
-R1074	Time	Time	minutes	10.41545331
-R1075	Time	Time	minutes	10.42516016
-R1076	Time	Time	minutes	10.43486702
-R1077	Time	Time	minutes	10.44457387
-R1078	Time	Time	minutes	10.45428072
-R1079	Time	Time	minutes	10.46398758
-R1080	Time	Time	minutes	10.47369443
-R1081	Time	Time	minutes	10.48340128
-R1082	Time	Time	minutes	10.49310813
-R1083	Time	Time	minutes	10.50281499
-R1084	Time	Time	minutes	10.51252184
-R1085	Time	Time	minutes	10.52222869
-R1086	Time	Time	minutes	10.53193555
-R1087	Time	Time	minutes	10.5416424
-R1088	Time	Time	minutes	10.55134925
-R1089	Time	Time	minutes	10.56105611
-R1090	Time	Time	minutes	10.57076296
-R1091	Time	Time	minutes	10.58046981
-R1092	Time	Time	minutes	10.59017666
-R1093	Time	Time	minutes	10.59988352
-R1094	Time	Time	minutes	10.60959037
-R1095	Time	Time	minutes	10.61929722
-R1096	Time	Time	minutes	10.62900408
-R1097	Time	Time	minutes	10.63871093
-R1098	Time	Time	minutes	10.64841778
-R1099	Time	Time	minutes	10.65812464
-R1100	Time	Time	minutes	10.66783149
-R1101	Time	Time	minutes	10.67753834
-R1102	Time	Time	minutes	10.6872452
-R1103	Time	Time	minutes	10.69695205
-R1104	Time	Time	minutes	10.7066589
-R1105	Time	Time	minutes	10.71636575
-R1106	Time	Time	minutes	10.72607261
-R1107	Time	Time	minutes	10.73577946
-R1108	Time	Time	minutes	10.74548631
-R1109	Time	Time	minutes	10.75519317
-R1110	Time	Time	minutes	10.76490002
-R1111	Time	Time	minutes	10.77460687
-R1112	Time	Time	minutes	10.78431373
-R1113	Time	Time	minutes	10.79402058
-R1114	Time	Time	minutes	10.80372743
-R1115	Time	Time	minutes	10.81343428
-R1116	Time	Time	minutes	10.82314114
-R1117	Time	Time	minutes	10.83284799
-R1118	Time	Time	minutes	10.84255484
-R1119	Time	Time	minutes	10.8522617
-R1120	Time	Time	minutes	10.86196855
-R1121	Time	Time	minutes	10.8716754
-R1122	Time	Time	minutes	10.88138226
-R1123	Time	Time	minutes	10.89108911
-R1124	Time	Time	minutes	10.90079596
-R1125	Time	Time	minutes	10.91050281
-R1126	Time	Time	minutes	10.92020967
-R1127	Time	Time	minutes	10.92991652
-R1128	Time	Time	minutes	10.93962337
-R1129	Time	Time	minutes	10.94933023
-R1130	Time	Time	minutes	10.95903708
-R1131	Time	Time	minutes	10.96874393
-R1132	Time	Time	minutes	10.97845079
-R1133	Time	Time	minutes	10.98815764
-R1134	Time	Time	minutes	10.99786449
-R1135	Time	Time	minutes	11.00757135
-R1136	Time	Time	minutes	11.0172782
-R1137	Time	Time	minutes	11.02698505
-R1138	Time	Time	minutes	11.0366919
-R1139	Time	Time	minutes	11.04639876
-R1140	Time	Time	minutes	11.05610561
-R1141	Time	Time	minutes	11.06581246
-R1142	Time	Time	minutes	11.07551932
-R1143	Time	Time	minutes	11.08522617
-R1144	Time	Time	minutes	11.09493302
-R1145	Time	Time	minutes	11.10463988
-R1146	Time	Time	minutes	11.11434673
-R1147	Time	Time	minutes	11.12405358
-R1148	Time	Time	minutes	11.13376043
-R1149	Time	Time	minutes	11.14346729
-R1150	Time	Time	minutes	11.15317414
-R1151	Time	Time	minutes	11.16288099
-R1152	Time	Time	minutes	11.17258785
-R1153	Time	Time	minutes	11.1822947
-R1154	Time	Time	minutes	11.19200155
-R1155	Time	Time	minutes	11.20170841
-R1156	Time	Time	minutes	11.21141526
-R1157	Time	Time	minutes	11.22112211
-R1158	Time	Time	minutes	11.23082897
-R1159	Time	Time	minutes	11.24053582
-R1160	Time	Time	minutes	11.25024267
-R1161	Time	Time	minutes	11.25994952
-R1162	Time	Time	minutes	11.26965638
-R1163	Time	Time	minutes	11.27936323
-R1164	Time	Time	minutes	11.28907008
-R1165	Time	Time	minutes	11.29877694
-R1166	Time	Time	minutes	11.30848379
-R1167	Time	Time	minutes	11.31819064
-R1168	Time	Time	minutes	11.3278975
-R1169	Time	Time	minutes	11.33760435
-R1170	Time	Time	minutes	11.3473112
-R1171	Time	Time	minutes	11.35701805
-R1172	Time	Time	minutes	11.36672491
-R1173	Time	Time	minutes	11.37643176
-R1174	Time	Time	minutes	11.38613861
-R1175	Time	Time	minutes	11.39584547
-R1176	Time	Time	minutes	11.40555232
-R1177	Time	Time	minutes	11.41525917
-R1178	Time	Time	minutes	11.42496603
-R1179	Time	Time	minutes	11.43467288
-R1180	Time	Time	minutes	11.44437973
-R1181	Time	Time	minutes	11.45408659
-R1182	Time	Time	minutes	11.46379344
-R1183	Time	Time	minutes	11.47350029
-R1184	Time	Time	minutes	11.48320714
-R1185	Time	Time	minutes	11.492914
-R1186	Time	Time	minutes	11.50262085
-R1187	Time	Time	minutes	11.5123277
-R1188	Time	Time	minutes	11.52203456
-R1189	Time	Time	minutes	11.53174141
-R1190	Time	Time	minutes	11.54144826
-R1191	Time	Time	minutes	11.55115512
-R1192	Time	Time	minutes	11.56086197
-R1193	Time	Time	minutes	11.57056882
-R1194	Time	Time	minutes	11.58027567
-R1195	Time	Time	minutes	11.58998253
-R1196	Time	Time	minutes	11.59968938
-R1197	Time	Time	minutes	11.60939623
-R1198	Time	Time	minutes	11.61910309
-R1199	Time	Time	minutes	11.62880994
-R1200	Time	Time	minutes	11.63851679
-R1201	Time	Time	minutes	11.64822365
-R1202	Time	Time	minutes	11.6579305
-R1203	Time	Time	minutes	11.66763735
-R1204	Time	Time	minutes	11.67734421
-R1205	Time	Time	minutes	11.68705106
-R1206	Time	Time	minutes	11.69675791
-R1207	Time	Time	minutes	11.70646476
-R1208	Time	Time	minutes	11.71617162
-R1209	Time	Time	minutes	11.72587847
-R1210	Time	Time	minutes	11.73558532
-R1211	Time	Time	minutes	11.74529218
-R1212	Time	Time	minutes	11.75499903
-R1213	Time	Time	minutes	11.76470588
-R1214	Time	Time	minutes	11.77441274
-R1215	Time	Time	minutes	11.78411959
-R1216	Time	Time	minutes	11.79382644
-R1217	Time	Time	minutes	11.80353329
-R1218	Time	Time	minutes	11.81324015
-R1219	Time	Time	minutes	11.822947
-R1220	Time	Time	minutes	11.83265385
-R1221	Time	Time	minutes	11.84236071
-R1222	Time	Time	minutes	11.85206756
-R1223	Time	Time	minutes	11.86177441
-R1224	Time	Time	minutes	11.87148127
-R1225	Time	Time	minutes	11.88118812
-R1226	Time	Time	minutes	11.89089497
-R1227	Time	Time	minutes	11.90060182
-R1228	Time	Time	minutes	11.91030868
-R1229	Time	Time	minutes	11.92001553
-R1230	Time	Time	minutes	11.92972238
-R1231	Time	Time	minutes	11.93942924
-R1232	Time	Time	minutes	11.94913609
-R1233	Time	Time	minutes	11.95884294
-R1234	Time	Time	minutes	11.9685498
-R1235	Time	Time	minutes	11.97825665
-R1236	Time	Time	minutes	11.9879635
-R1237	Time	Time	minutes	11.99767036
-R1238	Time	Time	minutes	12.00737721
-R1239	Time	Time	minutes	12.01708406
-R1240	Time	Time	minutes	12.02679091
-R1241	Time	Time	minutes	12.03649777
-R1242	Time	Time	minutes	12.04620462
-R1243	Time	Time	minutes	12.05591147
-R1244	Time	Time	minutes	12.06561833
-R1245	Time	Time	minutes	12.07532518
-R1246	Time	Time	minutes	12.08503203
-R1247	Time	Time	minutes	12.09473889
-R1248	Time	Time	minutes	12.10444574
-R1249	Time	Time	minutes	12.11415259
-R1250	Time	Time	minutes	12.12385944
-R1251	Time	Time	minutes	12.1335663
-R1252	Time	Time	minutes	12.14327315
-R1253	Time	Time	minutes	12.15298
-R1254	Time	Time	minutes	12.16268686
-R1255	Time	Time	minutes	12.17239371
-R1256	Time	Time	minutes	12.18210056
-R1257	Time	Time	minutes	12.19180742
-R1258	Time	Time	minutes	12.20151427
-R1259	Time	Time	minutes	12.21122112
-R1260	Time	Time	minutes	12.22092798
-R1261	Time	Time	minutes	12.23063483
-R1262	Time	Time	minutes	12.24034168
-R1263	Time	Time	minutes	12.25004853
-R1264	Time	Time	minutes	12.25975539
-R1265	Time	Time	minutes	12.26946224
-R1266	Time	Time	minutes	12.27916909
-R1267	Time	Time	minutes	12.28887595
-R1268	Time	Time	minutes	12.2985828
-R1269	Time	Time	minutes	12.30828965
-R1270	Time	Time	minutes	12.31799651
-R1271	Time	Time	minutes	12.32770336
-R1272	Time	Time	minutes	12.33741021
-R1273	Time	Time	minutes	12.34711706
-R1274	Time	Time	minutes	12.35682392
-R1275	Time	Time	minutes	12.36653077
-R1276	Time	Time	minutes	12.37623762
-R1277	Time	Time	minutes	12.38594448
-R1278	Time	Time	minutes	12.39565133
-R1279	Time	Time	minutes	12.40535818
-R1280	Time	Time	minutes	12.41506504
-R1281	Time	Time	minutes	12.42477189
-R1282	Time	Time	minutes	12.43447874
-R1283	Time	Time	minutes	12.4441856
-R1284	Time	Time	minutes	12.45389245
-R1285	Time	Time	minutes	12.4635993
-R1286	Time	Time	minutes	12.47330615
-R1287	Time	Time	minutes	12.48301301
-R1288	Time	Time	minutes	12.49271986
-R1289	Time	Time	minutes	12.50242671
-R1290	Time	Time	minutes	12.51213357
-R1291	Time	Time	minutes	12.52184042
-R1292	Time	Time	minutes	12.53154727
-R1293	Time	Time	minutes	12.54125413
-R1294	Time	Time	minutes	12.55096098
-R1295	Time	Time	minutes	12.56066783
-R1296	Time	Time	minutes	12.57037468
-R1297	Time	Time	minutes	12.58008154
-R1298	Time	Time	minutes	12.58978839
-R1299	Time	Time	minutes	12.59949524
-R1300	Time	Time	minutes	12.6092021
-R1301	Time	Time	minutes	12.61890895
-R1302	Time	Time	minutes	12.6286158
-R1303	Time	Time	minutes	12.63832266
-R1304	Time	Time	minutes	12.64802951
-R1305	Time	Time	minutes	12.65773636
-R1306	Time	Time	minutes	12.66744321
-R1307	Time	Time	minutes	12.67715007
-R1308	Time	Time	minutes	12.68685692
-R1309	Time	Time	minutes	12.69656377
-R1310	Time	Time	minutes	12.70627063
-R1311	Time	Time	minutes	12.71597748
-R1312	Time	Time	minutes	12.72568433
-R1313	Time	Time	minutes	12.73539119
-R1314	Time	Time	minutes	12.74509804
-R1315	Time	Time	minutes	12.75480489
-R1316	Time	Time	minutes	12.76451175
-R1317	Time	Time	minutes	12.7742186
-R1318	Time	Time	minutes	12.78392545
-R1319	Time	Time	minutes	12.7936323
-R1320	Time	Time	minutes	12.80333916
-R1321	Time	Time	minutes	12.81304601
-R1322	Time	Time	minutes	12.82275286
-R1323	Time	Time	minutes	12.83245972
-R1324	Time	Time	minutes	12.84216657
-R1325	Time	Time	minutes	12.85187342
-R1326	Time	Time	minutes	12.86158028
-R1327	Time	Time	minutes	12.87128713
-R1328	Time	Time	minutes	12.88099398
-R1329	Time	Time	minutes	12.89070083
-R1330	Time	Time	minutes	12.90040769
-R1331	Time	Time	minutes	12.91011454
-R1332	Time	Time	minutes	12.91982139
-R1333	Time	Time	minutes	12.92952825
-R1334	Time	Time	minutes	12.9392351
-R1335	Time	Time	minutes	12.94894195
-R1336	Time	Time	minutes	12.95864881
-R1337	Time	Time	minutes	12.96835566
-R1338	Time	Time	minutes	12.97806251
-R1339	Time	Time	minutes	12.98776937
-R1340	Time	Time	minutes	12.99747622
-R1341	Time	Time	minutes	13.00718307
-R1342	Time	Time	minutes	13.01688992
-R1343	Time	Time	minutes	13.02659678
-R1344	Time	Time	minutes	13.03630363
-R1345	Time	Time	minutes	13.04601048
-R1346	Time	Time	minutes	13.05571734
-R1347	Time	Time	minutes	13.06542419
-R1348	Time	Time	minutes	13.07513104
-R1349	Time	Time	minutes	13.0848379
-R1350	Time	Time	minutes	13.09454475
-R1351	Time	Time	minutes	13.1042516
-R1352	Time	Time	minutes	13.11395845
-R1353	Time	Time	minutes	13.12366531
-R1354	Time	Time	minutes	13.13337216
-R1355	Time	Time	minutes	13.14307901
-R1356	Time	Time	minutes	13.15278587
-R1357	Time	Time	minutes	13.16249272
-R1358	Time	Time	minutes	13.17219957
-R1359	Time	Time	minutes	13.18190643
-R1360	Time	Time	minutes	13.19161328
-R1361	Time	Time	minutes	13.20132013
-R1362	Time	Time	minutes	13.21102699
-R1363	Time	Time	minutes	13.22073384
-R1364	Time	Time	minutes	13.23044069
-R1365	Time	Time	minutes	13.24014754
-R1366	Time	Time	minutes	13.2498544
-R1367	Time	Time	minutes	13.25956125
-R1368	Time	Time	minutes	13.2692681
-R1369	Time	Time	minutes	13.27897496
-R1370	Time	Time	minutes	13.28868181
-R1371	Time	Time	minutes	13.29838866
-R1372	Time	Time	minutes	13.30809552
-R1373	Time	Time	minutes	13.31780237
-R1374	Time	Time	minutes	13.32750922
-R1375	Time	Time	minutes	13.33721607
-R1376	Time	Time	minutes	13.34692293
-R1377	Time	Time	minutes	13.35662978
-R1378	Time	Time	minutes	13.36633663
-R1379	Time	Time	minutes	13.37604349
-R1380	Time	Time	minutes	13.38575034
-R1381	Time	Time	minutes	13.39545719
-R1382	Time	Time	minutes	13.40516405
-R1383	Time	Time	minutes	13.4148709
-R1384	Time	Time	minutes	13.42457775
-R1385	Time	Time	minutes	13.4342846
-R1386	Time	Time	minutes	13.44399146
-R1387	Time	Time	minutes	13.45369831
-R1388	Time	Time	minutes	13.46340516
-R1389	Time	Time	minutes	13.47311202
-R1390	Time	Time	minutes	13.48281887
-R1391	Time	Time	minutes	13.49252572
-R1392	Time	Time	minutes	13.50223258
-R1393	Time	Time	minutes	13.51193943
-R1394	Time	Time	minutes	13.52164628
-R1395	Time	Time	minutes	13.53135314
-R1396	Time	Time	minutes	13.54105999
-R1397	Time	Time	minutes	13.55076684
-R1398	Time	Time	minutes	13.56047369
-R1399	Time	Time	minutes	13.57018055
-R1400	Time	Time	minutes	13.5798874
-R1401	Time	Time	minutes	13.58959425
-R1402	Time	Time	minutes	13.59930111
-R1403	Time	Time	minutes	13.60900796
-R1404	Time	Time	minutes	13.61871481
-R1405	Time	Time	minutes	13.62842167
-R1406	Time	Time	minutes	13.63812852
-R1407	Time	Time	minutes	13.64783537
-R1408	Time	Time	minutes	13.65754222
-R1409	Time	Time	minutes	13.66724908
-R1410	Time	Time	minutes	13.67695593
-R1411	Time	Time	minutes	13.68666278
-R1412	Time	Time	minutes	13.69636964
-R1413	Time	Time	minutes	13.70607649
-R1414	Time	Time	minutes	13.71578334
-R1415	Time	Time	minutes	13.7254902
-R1416	Time	Time	minutes	13.73519705
-R1417	Time	Time	minutes	13.7449039
-R1418	Time	Time	minutes	13.75461076
-R1419	Time	Time	minutes	13.76431761
-R1420	Time	Time	minutes	13.77402446
-R1421	Time	Time	minutes	13.78373131
-R1422	Time	Time	minutes	13.79343817
-R1423	Time	Time	minutes	13.80314502
-R1424	Time	Time	minutes	13.81285187
-R1425	Time	Time	minutes	13.82255873
-R1426	Time	Time	minutes	13.83226558
-R1427	Time	Time	minutes	13.84197243
-R1428	Time	Time	minutes	13.85167929
-R1429	Time	Time	minutes	13.86138614
-R1430	Time	Time	minutes	13.87109299
-R1431	Time	Time	minutes	13.88079984
-R1432	Time	Time	minutes	13.8905067
-R1433	Time	Time	minutes	13.90021355
-R1434	Time	Time	minutes	13.9099204
-R1435	Time	Time	minutes	13.91962726
-R1436	Time	Time	minutes	13.92933411
-R1437	Time	Time	minutes	13.93904096
-R1438	Time	Time	minutes	13.94874782
-R1439	Time	Time	minutes	13.95845467
-R1440	Time	Time	minutes	13.96816152
-R1441	Time	Time	minutes	13.97786838
-R1442	Time	Time	minutes	13.98757523
-R1443	Time	Time	minutes	13.99728208
-R1444	Time	Time	minutes	14.00698893
-R1445	Time	Time	minutes	14.01669579
-R1446	Time	Time	minutes	14.02640264
-R1447	Time	Time	minutes	14.03610949
-R1448	Time	Time	minutes	14.04581635
-R1449	Time	Time	minutes	14.0555232
-R1450	Time	Time	minutes	14.06523005
-R1451	Time	Time	minutes	14.07493691
-R1452	Time	Time	minutes	14.08464376
-R1453	Time	Time	minutes	14.09435061
-R1454	Time	Time	minutes	14.10405746
-R1455	Time	Time	minutes	14.11376432
-R1456	Time	Time	minutes	14.12347117
-R1457	Time	Time	minutes	14.13317802
-R1458	Time	Time	minutes	14.14288488
-R1459	Time	Time	minutes	14.15259173
-R1460	Time	Time	minutes	14.16229858
-R1461	Time	Time	minutes	14.17200544
-R1462	Time	Time	minutes	14.18171229
-R1463	Time	Time	minutes	14.19141914
-R1464	Time	Time	minutes	14.20112599
-R1465	Time	Time	minutes	14.21083285
-R1466	Time	Time	minutes	14.2205397
-R1467	Time	Time	minutes	14.23024655
-R1468	Time	Time	minutes	14.23995341
-R1469	Time	Time	minutes	14.24966026
-R1470	Time	Time	minutes	14.25936711
-R1471	Time	Time	minutes	14.26907397
-R1472	Time	Time	minutes	14.27878082
-R1473	Time	Time	minutes	14.28848767
-R1474	Time	Time	minutes	14.29819453
-R1475	Time	Time	minutes	14.30790138
-R1476	Time	Time	minutes	14.31760823
-R1477	Time	Time	minutes	14.32731508
-R1478	Time	Time	minutes	14.33702194
-R1479	Time	Time	minutes	14.34672879
-R1480	Time	Time	minutes	14.35643564
-R1481	Time	Time	minutes	14.3661425
-R1482	Time	Time	minutes	14.37584935
-R1483	Time	Time	minutes	14.3855562
-R1484	Time	Time	minutes	14.39526306
-R1485	Time	Time	minutes	14.40496991
-R1486	Time	Time	minutes	14.41467676
-R1487	Time	Time	minutes	14.42438361
-R1488	Time	Time	minutes	14.43409047
-R1489	Time	Time	minutes	14.44379732
-R1490	Time	Time	minutes	14.45350417
-R1491	Time	Time	minutes	14.46321103
-R1492	Time	Time	minutes	14.47291788
-R1493	Time	Time	minutes	14.48262473
-R1494	Time	Time	minutes	14.49233159
-R1495	Time	Time	minutes	14.50203844
-R1496	Time	Time	minutes	14.51174529
-R1497	Time	Time	minutes	14.52145215
-R1498	Time	Time	minutes	14.531159
-R1499	Time	Time	minutes	14.54086585
-R1500	Time	Time	minutes	14.5505727
-R1501	Time	Time	minutes	14.56027956
-R1502	Time	Time	minutes	14.56998641
-R1503	Time	Time	minutes	14.57969326
-R1504	Time	Time	minutes	14.58940012
-R1505	Time	Time	minutes	14.59910697
-R1506	Time	Time	minutes	14.60881382
-R1507	Time	Time	minutes	14.61852068
-R1508	Time	Time	minutes	14.62822753
-R1509	Time	Time	minutes	14.63793438
-R1510	Time	Time	minutes	14.64764123
-R1511	Time	Time	minutes	14.65734809
-R1512	Time	Time	minutes	14.66705494
-R1513	Time	Time	minutes	14.67676179
-R1514	Time	Time	minutes	14.68646865
-R1515	Time	Time	minutes	14.6961755
-R1516	Time	Time	minutes	14.70588235
-R1517	Time	Time	minutes	14.71558921
-R1518	Time	Time	minutes	14.72529606
-R1519	Time	Time	minutes	14.73500291
-R1520	Time	Time	minutes	14.74470977
-R1521	Time	Time	minutes	14.75441662
-R1522	Time	Time	minutes	14.76412347
-R1523	Time	Time	minutes	14.77383032
-R1524	Time	Time	minutes	14.78353718
-R1525	Time	Time	minutes	14.79324403
-R1526	Time	Time	minutes	14.80295088
-R1527	Time	Time	minutes	14.81265774
-R1528	Time	Time	minutes	14.82236459
-R1529	Time	Time	minutes	14.83207144
-R1530	Time	Time	minutes	14.8417783
-R1531	Time	Time	minutes	14.85148515
-R1532	Time	Time	minutes	14.861192
-R1533	Time	Time	minutes	14.87089885
-R1534	Time	Time	minutes	14.88060571
-R1535	Time	Time	minutes	14.89031256
-R1536	Time	Time	minutes	14.90001941
-R1537	Time	Time	minutes	14.90972627
-R1538	Time	Time	minutes	14.91943312
-R1539	Time	Time	minutes	14.92913997
-R1540	Time	Time	minutes	14.93884683
-R1541	Time	Time	minutes	14.94855368
-R1542	Time	Time	minutes	14.95826053
-R1543	Time	Time	minutes	14.96796738
-R1544	Time	Time	minutes	14.97767424
-R1545	Time	Time	minutes	14.98738109
-R1546	Time	Time	minutes	14.99708794
-R1547	Time	Time	minutes	15.0067948
-R1548	Time	Time	minutes	15.01650165
-R1549	Time	Time	minutes	15.0262085
-R1550	Time	Time	minutes	15.03591536
-R1551	Time	Time	minutes	15.04562221
-R1552	Time	Time	minutes	15.05532906
-R1553	Time	Time	minutes	15.06503592
-R1554	Time	Time	minutes	15.07474277
-R1555	Time	Time	minutes	15.08444962
-R1556	Time	Time	minutes	15.09415647
-R1557	Time	Time	minutes	15.10386333
-R1558	Time	Time	minutes	15.11357018
-R1559	Time	Time	minutes	15.12327703
-R1560	Time	Time	minutes	15.13298389
-R1561	Time	Time	minutes	15.14269074
-R1562	Time	Time	minutes	15.15239759
-R1563	Time	Time	minutes	15.16210445
-R1564	Time	Time	minutes	15.1718113
-R1565	Time	Time	minutes	15.18151815
-R1566	Time	Time	minutes	15.191225
-R1567	Time	Time	minutes	15.20093186
-R1568	Time	Time	minutes	15.21063871
-R1569	Time	Time	minutes	15.22034556
-R1570	Time	Time	minutes	15.23005242
-R1571	Time	Time	minutes	15.23975927
-R1572	Time	Time	minutes	15.24946612
-R1573	Time	Time	minutes	15.25917298
-R1574	Time	Time	minutes	15.26887983
-R1575	Time	Time	minutes	15.27858668
-R1576	Time	Time	minutes	15.28829354
-R1577	Time	Time	minutes	15.29800039
-R1578	Time	Time	minutes	15.30770724
-R1579	Time	Time	minutes	15.31741409
-R1580	Time	Time	minutes	15.32712095
-R1581	Time	Time	minutes	15.3368278
-R1582	Time	Time	minutes	15.34653465
-R1583	Time	Time	minutes	15.35624151
-R1584	Time	Time	minutes	15.36594836
-R1585	Time	Time	minutes	15.37565521
-R1586	Time	Time	minutes	15.38536207
-R1587	Time	Time	minutes	15.39506892
-R1588	Time	Time	minutes	15.40477577
-R1589	Time	Time	minutes	15.41448262
-R1590	Time	Time	minutes	15.42418948
-R1591	Time	Time	minutes	15.43389633
-R1592	Time	Time	minutes	15.44360318
-R1593	Time	Time	minutes	15.45331004
-R1594	Time	Time	minutes	15.46301689
-R1595	Time	Time	minutes	15.47272374
-R1596	Time	Time	minutes	15.4824306
-R1597	Time	Time	minutes	15.49213745
-R1598	Time	Time	minutes	15.5018443
-R1599	Time	Time	minutes	15.51155116
-R1600	Time	Time	minutes	15.52125801
-R1601	Time	Time	minutes	15.53096486
-R1602	Time	Time	minutes	15.54067171
-R1603	Time	Time	minutes	15.55037857
-R1604	Time	Time	minutes	15.56008542
-R1605	Time	Time	minutes	15.56979227
-R1606	Time	Time	minutes	15.57949913
-R1607	Time	Time	minutes	15.58920598
-R1608	Time	Time	minutes	15.59891283
-R1609	Time	Time	minutes	15.60861969
-R1610	Time	Time	minutes	15.61832654
-R1611	Time	Time	minutes	15.62803339
-R1612	Time	Time	minutes	15.63774024
-R1613	Time	Time	minutes	15.6474471
-R1614	Time	Time	minutes	15.65715395
-R1615	Time	Time	minutes	15.6668608
-R1616	Time	Time	minutes	15.67656766
-R1617	Time	Time	minutes	15.68627451
-R1618	Time	Time	minutes	15.69598136
-R1619	Time	Time	minutes	15.70568822
-R1620	Time	Time	minutes	15.71539507
-R1621	Time	Time	minutes	15.72510192
-R1622	Time	Time	minutes	15.73480877
-R1623	Time	Time	minutes	15.74451563
-R1624	Time	Time	minutes	15.75422248
-R1625	Time	Time	minutes	15.76392933
-R1626	Time	Time	minutes	15.77363619
-R1627	Time	Time	minutes	15.78334304
-R1628	Time	Time	minutes	15.79304989
-R1629	Time	Time	minutes	15.80275675
-R1630	Time	Time	minutes	15.8124636
-R1631	Time	Time	minutes	15.82217045
-R1632	Time	Time	minutes	15.83187731
-R1633	Time	Time	minutes	15.84158416
-R1634	Time	Time	minutes	15.85129101
-R1635	Time	Time	minutes	15.86099786
-R1636	Time	Time	minutes	15.87070472
-R1637	Time	Time	minutes	15.88041157
-R1638	Time	Time	minutes	15.89011842
-R1639	Time	Time	minutes	15.89982528
-R1640	Time	Time	minutes	15.90953213
-R1641	Time	Time	minutes	15.91923898
-R1642	Time	Time	minutes	15.92894584
-R1643	Time	Time	minutes	15.93865269
-R1644	Time	Time	minutes	15.94835954
-R1645	Time	Time	minutes	15.95806639
-R1646	Time	Time	minutes	15.96777325
-R1647	Time	Time	minutes	15.9774801
-R1648	Time	Time	minutes	15.98718695
-R1649	Time	Time	minutes	15.99689381
-R1650	Time	Time	minutes	16.00660066
-R1651	Time	Time	minutes	16.01630751
-R1652	Time	Time	minutes	16.02601437
-R1653	Time	Time	minutes	16.03572122
-R1654	Time	Time	minutes	16.04542807
-R1655	Time	Time	minutes	16.05513493
-R1656	Time	Time	minutes	16.06484178
-R1657	Time	Time	minutes	16.07454863
-R1658	Time	Time	minutes	16.08425548
-R1659	Time	Time	minutes	16.09396234
-R1660	Time	Time	minutes	16.10366919
-R1661	Time	Time	minutes	16.11337604
-R1662	Time	Time	minutes	16.1230829
-R1663	Time	Time	minutes	16.13278975
-R1664	Time	Time	minutes	16.1424966
-R1665	Time	Time	minutes	16.15220346
-R1666	Time	Time	minutes	16.16191031
-R1667	Time	Time	minutes	16.17161716
-R1668	Time	Time	minutes	16.18132401
-R1669	Time	Time	minutes	16.19103087
-R1670	Time	Time	minutes	16.20073772
-R1671	Time	Time	minutes	16.21044457
-R1672	Time	Time	minutes	16.22015143
-R1673	Time	Time	minutes	16.22985828
-R1674	Time	Time	minutes	16.23956513
-R1675	Time	Time	minutes	16.24927199
-R1676	Time	Time	minutes	16.25897884
-R1677	Time	Time	minutes	16.26868569
-R1678	Time	Time	minutes	16.27839255
-R1679	Time	Time	minutes	16.2880994
-R1680	Time	Time	minutes	16.29780625
-R1681	Time	Time	minutes	16.3075131
-R1682	Time	Time	minutes	16.31721996
-R1683	Time	Time	minutes	16.32692681
-R1684	Time	Time	minutes	16.33663366
-R1685	Time	Time	minutes	16.34634052
-R1686	Time	Time	minutes	16.35604737
-R1687	Time	Time	minutes	16.36575422
-R1688	Time	Time	minutes	16.37546108
-R1689	Time	Time	minutes	16.38516793
-R1690	Time	Time	minutes	16.39487478
-R1691	Time	Time	minutes	16.40458163
-R1692	Time	Time	minutes	16.41428849
-R1693	Time	Time	minutes	16.42399534
-R1694	Time	Time	minutes	16.43370219
-R1695	Time	Time	minutes	16.44340905
-R1696	Time	Time	minutes	16.4531159
-R1697	Time	Time	minutes	16.46282275
-R1698	Time	Time	minutes	16.47252961
-R1699	Time	Time	minutes	16.48223646
-R1700	Time	Time	minutes	16.49194331
-R1701	Time	Time	minutes	16.50165017
-R1702	Time	Time	minutes	16.51135702
-R1703	Time	Time	minutes	16.52106387
-R1704	Time	Time	minutes	16.53077072
-R1705	Time	Time	minutes	16.54047758
-R1706	Time	Time	minutes	16.55018443
-R1707	Time	Time	minutes	16.55989128
-R1708	Time	Time	minutes	16.56959814
-R1709	Time	Time	minutes	16.57930499
-R1710	Time	Time	minutes	16.58901184
-R1711	Time	Time	minutes	16.5987187
-R1712	Time	Time	minutes	16.60842555
-R1713	Time	Time	minutes	16.6181324
-R1714	Time	Time	minutes	16.62783925
-R1715	Time	Time	minutes	16.63754611
-R1716	Time	Time	minutes	16.64725296
-R1717	Time	Time	minutes	16.65695981
-R1718	Time	Time	minutes	16.66666667
-R1719	Time	Time	minutes	16.67637352
-R1720	Time	Time	minutes	16.68608037
-R1721	Time	Time	minutes	16.69578723
-R1722	Time	Time	minutes	16.70549408
-R1723	Time	Time	minutes	16.71520093
-R1724	Time	Time	minutes	16.72490778
-R1725	Time	Time	minutes	16.73461464
-R1726	Time	Time	minutes	16.74432149
-R1727	Time	Time	minutes	16.75402834
-R1728	Time	Time	minutes	16.7637352
-R1729	Time	Time	minutes	16.77344205
-R1730	Time	Time	minutes	16.7831489
-R1731	Time	Time	minutes	16.79285576
-R1732	Time	Time	minutes	16.80256261
-R1733	Time	Time	minutes	16.81226946
-R1734	Time	Time	minutes	16.82197632
-R1735	Time	Time	minutes	16.83168317
-R1736	Time	Time	minutes	16.84139002
-R1737	Time	Time	minutes	16.85109687
-R1738	Time	Time	minutes	16.86080373
-R1739	Time	Time	minutes	16.87051058
-R1740	Time	Time	minutes	16.88021743
-R1741	Time	Time	minutes	16.88992429
-R1742	Time	Time	minutes	16.89963114
-R1743	Time	Time	minutes	16.90933799
-R1744	Time	Time	minutes	16.91904485
-R1745	Time	Time	minutes	16.9287517
-R1746	Time	Time	minutes	16.93845855
-R1747	Time	Time	minutes	16.9481654
-R1748	Time	Time	minutes	16.95787226
-R1749	Time	Time	minutes	16.96757911
-R1750	Time	Time	minutes	16.97728596
-R1751	Time	Time	minutes	16.98699282
-R1752	Time	Time	minutes	16.99669967
-R1753	Time	Time	minutes	17.00640652
-R1754	Time	Time	minutes	17.01611338
-R1755	Time	Time	minutes	17.02582023
-R1756	Time	Time	minutes	17.03552708
-R1757	Time	Time	minutes	17.04523394
-R1758	Time	Time	minutes	17.05494079
-R1759	Time	Time	minutes	17.06464764
-R1760	Time	Time	minutes	17.07435449
-R1761	Time	Time	minutes	17.08406135
-R1762	Time	Time	minutes	17.0937682
-R1763	Time	Time	minutes	17.10347505
-R1764	Time	Time	minutes	17.11318191
-R1765	Time	Time	minutes	17.12288876
-R1766	Time	Time	minutes	17.13259561
-R1767	Time	Time	minutes	17.14230247
-R1768	Time	Time	minutes	17.15200932
-R1769	Time	Time	minutes	17.16171617
-R1770	Time	Time	minutes	17.17142302
-R1771	Time	Time	minutes	17.18112988
-R1772	Time	Time	minutes	17.19083673
-R1773	Time	Time	minutes	17.20054358
-R1774	Time	Time	minutes	17.21025044
-R1775	Time	Time	minutes	17.21995729
-R1776	Time	Time	minutes	17.22966414
-R1777	Time	Time	minutes	17.239371
-R1778	Time	Time	minutes	17.24907785
-R1779	Time	Time	minutes	17.2587847
-R1780	Time	Time	minutes	17.26849156
-R1781	Time	Time	minutes	17.27819841
-R1782	Time	Time	minutes	17.28790526
-R1783	Time	Time	minutes	17.29761211
-R1784	Time	Time	minutes	17.30731897
-R1785	Time	Time	minutes	17.31702582
-R1786	Time	Time	minutes	17.32673267
-R1787	Time	Time	minutes	17.33643953
-R1788	Time	Time	minutes	17.34614638
-R1789	Time	Time	minutes	17.35585323
-R1790	Time	Time	minutes	17.36556009
-R1791	Time	Time	minutes	17.37526694
-R1792	Time	Time	minutes	17.38497379
-R1793	Time	Time	minutes	17.39468064
-R1794	Time	Time	minutes	17.4043875
-R1795	Time	Time	minutes	17.41409435
-R1796	Time	Time	minutes	17.4238012
-R1797	Time	Time	minutes	17.43350806
-R1798	Time	Time	minutes	17.44321491
-R1799	Time	Time	minutes	17.45292176
-R1800	Time	Time	minutes	17.46262862
-R1801	Time	Time	minutes	17.47233547
-R1802	Time	Time	minutes	17.48204232
-R1803	Time	Time	minutes	17.49174917
-R1804	Time	Time	minutes	17.50145603
-R1805	Time	Time	minutes	17.51116288
-R1806	Time	Time	minutes	17.52086973
-R1807	Time	Time	minutes	17.53057659
-R1808	Time	Time	minutes	17.54028344
-R1809	Time	Time	minutes	17.54999029
-R1810	Time	Time	minutes	17.55969715
-R1811	Time	Time	minutes	17.569404
-R1812	Time	Time	minutes	17.57911085
-R1813	Time	Time	minutes	17.58881771
-R1814	Time	Time	minutes	17.59852456
-R1815	Time	Time	minutes	17.60823141
-R1816	Time	Time	minutes	17.61793826
-R1817	Time	Time	minutes	17.62764512
-R1818	Time	Time	minutes	17.63735197
-R1819	Time	Time	minutes	17.64705882
-R1820	Time	Time	minutes	17.65676568
-R1821	Time	Time	minutes	17.66647253
-R1822	Time	Time	minutes	17.67617938
-R1823	Time	Time	minutes	17.68588624
-R1824	Time	Time	minutes	17.69559309
-R1825	Time	Time	minutes	17.70529994
-R1826	Time	Time	minutes	17.71500679
-R1827	Time	Time	minutes	17.72471365
-R1828	Time	Time	minutes	17.7344205
-R1829	Time	Time	minutes	17.74412735
-R1830	Time	Time	minutes	17.75383421
-R1831	Time	Time	minutes	17.76354106
-R1832	Time	Time	minutes	17.77324791
-R1833	Time	Time	minutes	17.78295477
-R1834	Time	Time	minutes	17.79266162
-R1835	Time	Time	minutes	17.80236847
-R1836	Time	Time	minutes	17.81207533
-R1837	Time	Time	minutes	17.82178218
-R1838	Time	Time	minutes	17.83148903
-R1839	Time	Time	minutes	17.84119588
-R1840	Time	Time	minutes	17.85090274
-R1841	Time	Time	minutes	17.86060959
-R1842	Time	Time	minutes	17.87031644
-R1843	Time	Time	minutes	17.8800233
-R1844	Time	Time	minutes	17.88973015
-R1845	Time	Time	minutes	17.899437
-R1846	Time	Time	minutes	17.90914386
-R1847	Time	Time	minutes	17.91885071
-R1848	Time	Time	minutes	17.92855756
-R1849	Time	Time	minutes	17.93826441
-R1850	Time	Time	minutes	17.94797127
-R1851	Time	Time	minutes	17.95767812
-R1852	Time	Time	minutes	17.96738497
-R1853	Time	Time	minutes	17.97709183
-R1854	Time	Time	minutes	17.98679868
-R1855	Time	Time	minutes	17.99650553
-R1856	Time	Time	minutes	18.00621239
-R1857	Time	Time	minutes	18.01591924
-R1858	Time	Time	minutes	18.02562609
-R1859	Time	Time	minutes	18.03533295
-R1860	Time	Time	minutes	18.0450398
-R1861	Time	Time	minutes	18.05474665
-R1862	Time	Time	minutes	18.0644535
-R1863	Time	Time	minutes	18.07416036
-R1864	Time	Time	minutes	18.08386721
-R1865	Time	Time	minutes	18.09357406
-R1866	Time	Time	minutes	18.10328092
-R1867	Time	Time	minutes	18.11298777
-R1868	Time	Time	minutes	18.12269462
-R1869	Time	Time	minutes	18.13240148
-R1870	Time	Time	minutes	18.14210833
-R1871	Time	Time	minutes	18.15181518
-R1872	Time	Time	minutes	18.16152203
-R1873	Time	Time	minutes	18.17122889
-R1874	Time	Time	minutes	18.18093574
-R1875	Time	Time	minutes	18.19064259
-R1876	Time	Time	minutes	18.20034945
-R1877	Time	Time	minutes	18.2100563
-R1878	Time	Time	minutes	18.21976315
-R1879	Time	Time	minutes	18.22947001
-R1880	Time	Time	minutes	18.23917686
-R1881	Time	Time	minutes	18.24888371
-R1882	Time	Time	minutes	18.25859056
-R1883	Time	Time	minutes	18.26829742
-R1884	Time	Time	minutes	18.27800427
-R1885	Time	Time	minutes	18.28771112
-R1886	Time	Time	minutes	18.29741798
-R1887	Time	Time	minutes	18.30712483
-R1888	Time	Time	minutes	18.31683168
-R1889	Time	Time	minutes	18.32653854
-R1890	Time	Time	minutes	18.33624539
-R1891	Time	Time	minutes	18.34595224
-R1892	Time	Time	minutes	18.3556591
-R1893	Time	Time	minutes	18.36536595
-R1894	Time	Time	minutes	18.3750728
-R1895	Time	Time	minutes	18.38477965
-R1896	Time	Time	minutes	18.39448651
-R1897	Time	Time	minutes	18.40419336
-R1898	Time	Time	minutes	18.41390021
-R1899	Time	Time	minutes	18.42360707
-R1900	Time	Time	minutes	18.43331392
-R1901	Time	Time	minutes	18.44302077
-R1902	Time	Time	minutes	18.45272763
-R1903	Time	Time	minutes	18.46243448
-R1904	Time	Time	minutes	18.47214133
-R1905	Time	Time	minutes	18.48184818
-R1906	Time	Time	minutes	18.49155504
-R1907	Time	Time	minutes	18.50126189
-R1908	Time	Time	minutes	18.51096874
-R1909	Time	Time	minutes	18.5206756
-R1910	Time	Time	minutes	18.53038245
-R1911	Time	Time	minutes	18.5400893
-R1912	Time	Time	minutes	18.54979616
-R1913	Time	Time	minutes	18.55950301
-R1914	Time	Time	minutes	18.56920986
-R1915	Time	Time	minutes	18.57891672
-R1916	Time	Time	minutes	18.58862357
-R1917	Time	Time	minutes	18.59833042
-R1918	Time	Time	minutes	18.60803727
-R1919	Time	Time	minutes	18.61774413
-R1920	Time	Time	minutes	18.62745098
-R1921	Time	Time	minutes	18.63715783
-R1922	Time	Time	minutes	18.64686469
-R1923	Time	Time	minutes	18.65657154
-R1924	Time	Time	minutes	18.66627839
-R1925	Time	Time	minutes	18.67598525
-R1926	Time	Time	minutes	18.6856921
-R1927	Time	Time	minutes	18.69539895
-R1928	Time	Time	minutes	18.7051058
-R1929	Time	Time	minutes	18.71481266
-R1930	Time	Time	minutes	18.72451951
-R1931	Time	Time	minutes	18.73422636
-R1932	Time	Time	minutes	18.74393322
-R1933	Time	Time	minutes	18.75364007
-R1934	Time	Time	minutes	18.76334692
-R1935	Time	Time	minutes	18.77305378
-R1936	Time	Time	minutes	18.78276063
-R1937	Time	Time	minutes	18.79246748
-R1938	Time	Time	minutes	18.80217434
-R1939	Time	Time	minutes	18.81188119
-R1940	Time	Time	minutes	18.82158804
-R1941	Time	Time	minutes	18.83129489
-R1942	Time	Time	minutes	18.84100175
-R1943	Time	Time	minutes	18.8507086
-R1944	Time	Time	minutes	18.86041545
-R1945	Time	Time	minutes	18.87012231
-R1946	Time	Time	minutes	18.87982916
-R1947	Time	Time	minutes	18.88953601
-R1948	Time	Time	minutes	18.89924287
-R1949	Time	Time	minutes	18.90894972
-R1950	Time	Time	minutes	18.91865657
-R1951	Time	Time	minutes	18.92836342
-R1952	Time	Time	minutes	18.93807028
-R1953	Time	Time	minutes	18.94777713
-R1954	Time	Time	minutes	18.95748398
-R1955	Time	Time	minutes	18.96719084
-R1956	Time	Time	minutes	18.97689769
-R1957	Time	Time	minutes	18.98660454
-R1958	Time	Time	minutes	18.9963114
-R1959	Time	Time	minutes	19.00601825
-R1960	Time	Time	minutes	19.0157251
-R1961	Time	Time	minutes	19.02543195
-R1962	Time	Time	minutes	19.03513881
-R1963	Time	Time	minutes	19.04484566
-R1964	Time	Time	minutes	19.05455251
-R1965	Time	Time	minutes	19.06425937
-R1966	Time	Time	minutes	19.07396622
-R1967	Time	Time	minutes	19.08367307
-R1968	Time	Time	minutes	19.09337993
-R1969	Time	Time	minutes	19.10308678
-R1970	Time	Time	minutes	19.11279363
-R1971	Time	Time	minutes	19.12250049
-R1972	Time	Time	minutes	19.13220734
-R1973	Time	Time	minutes	19.14191419
-R1974	Time	Time	minutes	19.15162104
-R1975	Time	Time	minutes	19.1613279
-R1976	Time	Time	minutes	19.17103475
-R1977	Time	Time	minutes	19.1807416
-R1978	Time	Time	minutes	19.19044846
-R1979	Time	Time	minutes	19.20015531
-R1980	Time	Time	minutes	19.20986216
-R1981	Time	Time	minutes	19.21956902
-R1982	Time	Time	minutes	19.22927587
-R1983	Time	Time	minutes	19.23898272
-R1984	Time	Time	minutes	19.24868957
-R1985	Time	Time	minutes	19.25839643
-R1986	Time	Time	minutes	19.26810328
-R1987	Time	Time	minutes	19.27781013
-R1988	Time	Time	minutes	19.28751699
-R1989	Time	Time	minutes	19.29722384
-R1990	Time	Time	minutes	19.30693069
-R1991	Time	Time	minutes	19.31663755
-R1992	Time	Time	minutes	19.3263444
-R1993	Time	Time	minutes	19.33605125
-R1994	Time	Time	minutes	19.34575811
-R1995	Time	Time	minutes	19.35546496
-R1996	Time	Time	minutes	19.36517181
-R1997	Time	Time	minutes	19.37487866
-R1998	Time	Time	minutes	19.38458552
-R1999	Time	Time	minutes	19.39429237
-R2000	Time	Time	minutes	19.40399922
-R2001	Time	Time	minutes	19.41370608
-R2002	Time	Time	minutes	19.42341293
-R2003	Time	Time	minutes	19.43311978
-R2004	Time	Time	minutes	19.44282664
-R2005	Time	Time	minutes	19.45253349
-R2006	Time	Time	minutes	19.46224034
-R2007	Time	Time	minutes	19.47194719
-R2008	Time	Time	minutes	19.48165405
-R2009	Time	Time	minutes	19.4913609
-R2010	Time	Time	minutes	19.50106775
-R2011	Time	Time	minutes	19.51077461
-R2012	Time	Time	minutes	19.52048146
-R2013	Time	Time	minutes	19.53018831
-R2014	Time	Time	minutes	19.53989517
-R2015	Time	Time	minutes	19.54960202
-R2016	Time	Time	minutes	19.55930887
-R2017	Time	Time	minutes	19.56901573
-R2018	Time	Time	minutes	19.57872258
-R2019	Time	Time	minutes	19.58842943
-R2020	Time	Time	minutes	19.59813628
-R2021	Time	Time	minutes	19.60784314
-R2022	Time	Time	minutes	19.61754999
-R2023	Time	Time	minutes	19.62725684
-R2024	Time	Time	minutes	19.6369637
-R2025	Time	Time	minutes	19.64667055
-R2026	Time	Time	minutes	19.6563774
-R2027	Time	Time	minutes	19.66608426
-R2028	Time	Time	minutes	19.67579111
-R2029	Time	Time	minutes	19.68549796
-R2030	Time	Time	minutes	19.69520481
-R2031	Time	Time	minutes	19.70491167
-R2032	Time	Time	minutes	19.71461852
-R2033	Time	Time	minutes	19.72432537
-R2034	Time	Time	minutes	19.73403223
-R2035	Time	Time	minutes	19.74373908
-R2036	Time	Time	minutes	19.75344593
-R2037	Time	Time	minutes	19.76315279
-R2038	Time	Time	minutes	19.77285964
-R2039	Time	Time	minutes	19.78256649
-R2040	Time	Time	minutes	19.79227334
-R2041	Time	Time	minutes	19.8019802
-R2042	Time	Time	minutes	19.81168705
-R2043	Time	Time	minutes	19.8213939
-R2044	Time	Time	minutes	19.83110076
-R2045	Time	Time	minutes	19.84080761
-R2046	Time	Time	minutes	19.85051446
-R2047	Time	Time	minutes	19.86022132
-R2048	Time	Time	minutes	19.86992817
-R2049	Time	Time	minutes	19.87963502
-R2050	Time	Time	minutes	19.88934188
-R2051	Time	Time	minutes	19.89904873
-R2052	Time	Time	minutes	19.90875558
-R2053	Time	Time	minutes	19.91846243
-R2054	Time	Time	minutes	19.92816929
-R2055	Time	Time	minutes	19.93787614
-R2056	Time	Time	minutes	19.94758299
-R2057	Time	Time	minutes	19.95728985
-R2058	Time	Time	minutes	19.9669967
-R2059	Time	Time	minutes	19.97670355
-R2060	Time	Time	minutes	19.98641041
+METADATA	Entity	Property	Unit	Value
+T	Description			Protein absorbance at 280 nm
+C1	Experiment	Substance		Protein
+C1	Experiment	Wavelength		280 nm
+C1	Experiment	Measurement		Absorbance
+R1	Time series	Time	minutes	0
+R2	Time series	Time	minutes	0.009706853
+R3	Time series	Time	minutes	0.019413706
+R4	Time series	Time	minutes	0.029120559
+R5	Time series	Time	minutes	0.038827412
+R6	Time series	Time	minutes	0.048534265
+R7	Time series	Time	minutes	0.058241118
+R8	Time series	Time	minutes	0.067947971
+R9	Time series	Time	minutes	0.077654824
+R10	Time series	Time	minutes	0.087361677
+R11	Time series	Time	minutes	0.09706853
+R12	Time series	Time	minutes	0.106775383
+R13	Time series	Time	minutes	0.116482236
+R14	Time series	Time	minutes	0.126189089
+R15	Time series	Time	minutes	0.135895943
+R16	Time series	Time	minutes	0.145602796
+R17	Time series	Time	minutes	0.155309649
+R18	Time series	Time	minutes	0.165016502
+R19	Time series	Time	minutes	0.174723355
+R20	Time series	Time	minutes	0.184430208
+R21	Time series	Time	minutes	0.194137061
+R22	Time series	Time	minutes	0.203843914
+R23	Time series	Time	minutes	0.213550767
+R24	Time series	Time	minutes	0.22325762
+R25	Time series	Time	minutes	0.232964473
+R26	Time series	Time	minutes	0.242671326
+R27	Time series	Time	minutes	0.252378179
+R28	Time series	Time	minutes	0.262085032
+R29	Time series	Time	minutes	0.271791885
+R30	Time series	Time	minutes	0.281498738
+R31	Time series	Time	minutes	0.291205591
+R32	Time series	Time	minutes	0.300912444
+R33	Time series	Time	minutes	0.310619297
+R34	Time series	Time	minutes	0.32032615
+R35	Time series	Time	minutes	0.330033003
+R36	Time series	Time	minutes	0.339739856
+R37	Time series	Time	minutes	0.349446709
+R38	Time series	Time	minutes	0.359153562
+R39	Time series	Time	minutes	0.368860415
+R40	Time series	Time	minutes	0.378567268
+R41	Time series	Time	minutes	0.388274122
+R42	Time series	Time	minutes	0.397980975
+R43	Time series	Time	minutes	0.407687828
+R44	Time series	Time	minutes	0.417394681
+R45	Time series	Time	minutes	0.427101534
+R46	Time series	Time	minutes	0.436808387
+R47	Time series	Time	minutes	0.44651524
+R48	Time series	Time	minutes	0.456222093
+R49	Time series	Time	minutes	0.465928946
+R50	Time series	Time	minutes	0.475635799
+R51	Time series	Time	minutes	0.485342652
+R52	Time series	Time	minutes	0.495049505
+R53	Time series	Time	minutes	0.504756358
+R54	Time series	Time	minutes	0.514463211
+R55	Time series	Time	minutes	0.524170064
+R56	Time series	Time	minutes	0.533876917
+R57	Time series	Time	minutes	0.54358377
+R58	Time series	Time	minutes	0.553290623
+R59	Time series	Time	minutes	0.562997476
+R60	Time series	Time	minutes	0.572704329
+R61	Time series	Time	minutes	0.582411182
+R62	Time series	Time	minutes	0.592118035
+R63	Time series	Time	minutes	0.601824888
+R64	Time series	Time	minutes	0.611531741
+R65	Time series	Time	minutes	0.621238594
+R66	Time series	Time	minutes	0.630945447
+R67	Time series	Time	minutes	0.640652301
+R68	Time series	Time	minutes	0.650359154
+R69	Time series	Time	minutes	0.660066007
+R70	Time series	Time	minutes	0.66977286
+R71	Time series	Time	minutes	0.679479713
+R72	Time series	Time	minutes	0.689186566
+R73	Time series	Time	minutes	0.698893419
+R74	Time series	Time	minutes	0.708600272
+R75	Time series	Time	minutes	0.718307125
+R76	Time series	Time	minutes	0.728013978
+R77	Time series	Time	minutes	0.737720831
+R78	Time series	Time	minutes	0.747427684
+R79	Time series	Time	minutes	0.757134537
+R80	Time series	Time	minutes	0.76684139
+R81	Time series	Time	minutes	0.776548243
+R82	Time series	Time	minutes	0.786255096
+R83	Time series	Time	minutes	0.795961949
+R84	Time series	Time	minutes	0.805668802
+R85	Time series	Time	minutes	0.815375655
+R86	Time series	Time	minutes	0.825082508
+R87	Time series	Time	minutes	0.834789361
+R88	Time series	Time	minutes	0.844496214
+R89	Time series	Time	minutes	0.854203067
+R90	Time series	Time	minutes	0.86390992
+R91	Time series	Time	minutes	0.873616773
+R92	Time series	Time	minutes	0.883323626
+R93	Time series	Time	minutes	0.89303048
+R94	Time series	Time	minutes	0.902737333
+R95	Time series	Time	minutes	0.912444186
+R96	Time series	Time	minutes	0.922151039
+R97	Time series	Time	minutes	0.931857892
+R98	Time series	Time	minutes	0.941564745
+R99	Time series	Time	minutes	0.951271598
+R100	Time series	Time	minutes	0.960978451
+R101	Time series	Time	minutes	0.970685304
+R102	Time series	Time	minutes	0.980392157
+R103	Time series	Time	minutes	0.99009901
+R104	Time series	Time	minutes	0.999805863
+R105	Time series	Time	minutes	1.009512716
+R106	Time series	Time	minutes	1.019219569
+R107	Time series	Time	minutes	1.028926422
+R108	Time series	Time	minutes	1.038633275
+R109	Time series	Time	minutes	1.048340128
+R110	Time series	Time	minutes	1.058046981
+R111	Time series	Time	minutes	1.067753834
+R112	Time series	Time	minutes	1.077460687
+R113	Time series	Time	minutes	1.08716754
+R114	Time series	Time	minutes	1.096874393
+R115	Time series	Time	minutes	1.106581246
+R116	Time series	Time	minutes	1.116288099
+R117	Time series	Time	minutes	1.125994952
+R118	Time series	Time	minutes	1.135701805
+R119	Time series	Time	minutes	1.145408659
+R120	Time series	Time	minutes	1.155115512
+R121	Time series	Time	minutes	1.164822365
+R122	Time series	Time	minutes	1.174529218
+R123	Time series	Time	minutes	1.184236071
+R124	Time series	Time	minutes	1.193942924
+R125	Time series	Time	minutes	1.203649777
+R126	Time series	Time	minutes	1.21335663
+R127	Time series	Time	minutes	1.223063483
+R128	Time series	Time	minutes	1.232770336
+R129	Time series	Time	minutes	1.242477189
+R130	Time series	Time	minutes	1.252184042
+R131	Time series	Time	minutes	1.261890895
+R132	Time series	Time	minutes	1.271597748
+R133	Time series	Time	minutes	1.281304601
+R134	Time series	Time	minutes	1.291011454
+R135	Time series	Time	minutes	1.300718307
+R136	Time series	Time	minutes	1.31042516
+R137	Time series	Time	minutes	1.320132013
+R138	Time series	Time	minutes	1.329838866
+R139	Time series	Time	minutes	1.339545719
+R140	Time series	Time	minutes	1.349252572
+R141	Time series	Time	minutes	1.358959425
+R142	Time series	Time	minutes	1.368666278
+R143	Time series	Time	minutes	1.378373131
+R144	Time series	Time	minutes	1.388079984
+R145	Time series	Time	minutes	1.397786838
+R146	Time series	Time	minutes	1.407493691
+R147	Time series	Time	minutes	1.417200544
+R148	Time series	Time	minutes	1.426907397
+R149	Time series	Time	minutes	1.43661425
+R150	Time series	Time	minutes	1.446321103
+R151	Time series	Time	minutes	1.456027956
+R152	Time series	Time	minutes	1.465734809
+R153	Time series	Time	minutes	1.475441662
+R154	Time series	Time	minutes	1.485148515
+R155	Time series	Time	minutes	1.494855368
+R156	Time series	Time	minutes	1.504562221
+R157	Time series	Time	minutes	1.514269074
+R158	Time series	Time	minutes	1.523975927
+R159	Time series	Time	minutes	1.53368278
+R160	Time series	Time	minutes	1.543389633
+R161	Time series	Time	minutes	1.553096486
+R162	Time series	Time	minutes	1.562803339
+R163	Time series	Time	minutes	1.572510192
+R164	Time series	Time	minutes	1.582217045
+R165	Time series	Time	minutes	1.591923898
+R166	Time series	Time	minutes	1.601630751
+R167	Time series	Time	minutes	1.611337604
+R168	Time series	Time	minutes	1.621044457
+R169	Time series	Time	minutes	1.63075131
+R170	Time series	Time	minutes	1.640458163
+R171	Time series	Time	minutes	1.650165017
+R172	Time series	Time	minutes	1.65987187
+R173	Time series	Time	minutes	1.669578723
+R174	Time series	Time	minutes	1.679285576
+R175	Time series	Time	minutes	1.688992429
+R176	Time series	Time	minutes	1.698699282
+R177	Time series	Time	minutes	1.708406135
+R178	Time series	Time	minutes	1.718112988
+R179	Time series	Time	minutes	1.727819841
+R180	Time series	Time	minutes	1.737526694
+R181	Time series	Time	minutes	1.747233547
+R182	Time series	Time	minutes	1.7569404
+R183	Time series	Time	minutes	1.766647253
+R184	Time series	Time	minutes	1.776354106
+R185	Time series	Time	minutes	1.786060959
+R186	Time series	Time	minutes	1.795767812
+R187	Time series	Time	minutes	1.805474665
+R188	Time series	Time	minutes	1.815181518
+R189	Time series	Time	minutes	1.824888371
+R190	Time series	Time	minutes	1.834595224
+R191	Time series	Time	minutes	1.844302077
+R192	Time series	Time	minutes	1.85400893
+R193	Time series	Time	minutes	1.863715783
+R194	Time series	Time	minutes	1.873422636
+R195	Time series	Time	minutes	1.883129489
+R196	Time series	Time	minutes	1.892836342
+R197	Time series	Time	minutes	1.902543195
+R198	Time series	Time	minutes	1.912250049
+R199	Time series	Time	minutes	1.921956902
+R200	Time series	Time	minutes	1.931663755
+R201	Time series	Time	minutes	1.941370608
+R202	Time series	Time	minutes	1.951077461
+R203	Time series	Time	minutes	1.960784314
+R204	Time series	Time	minutes	1.970491167
+R205	Time series	Time	minutes	1.98019802
+R206	Time series	Time	minutes	1.989904873
+R207	Time series	Time	minutes	1.999611726
+R208	Time series	Time	minutes	2.009318579
+R209	Time series	Time	minutes	2.019025432
+R210	Time series	Time	minutes	2.028732285
+R211	Time series	Time	minutes	2.038439138
+R212	Time series	Time	minutes	2.048145991
+R213	Time series	Time	minutes	2.057852844
+R214	Time series	Time	minutes	2.067559697
+R215	Time series	Time	minutes	2.07726655
+R216	Time series	Time	minutes	2.086973403
+R217	Time series	Time	minutes	2.096680256
+R218	Time series	Time	minutes	2.106387109
+R219	Time series	Time	minutes	2.116093962
+R220	Time series	Time	minutes	2.125800815
+R221	Time series	Time	minutes	2.135507668
+R222	Time series	Time	minutes	2.145214521
+R223	Time series	Time	minutes	2.154921374
+R224	Time series	Time	minutes	2.164628228
+R225	Time series	Time	minutes	2.174335081
+R226	Time series	Time	minutes	2.184041934
+R227	Time series	Time	minutes	2.193748787
+R228	Time series	Time	minutes	2.20345564
+R229	Time series	Time	minutes	2.213162493
+R230	Time series	Time	minutes	2.222869346
+R231	Time series	Time	minutes	2.232576199
+R232	Time series	Time	minutes	2.242283052
+R233	Time series	Time	minutes	2.251989905
+R234	Time series	Time	minutes	2.261696758
+R235	Time series	Time	minutes	2.271403611
+R236	Time series	Time	minutes	2.281110464
+R237	Time series	Time	minutes	2.290817317
+R238	Time series	Time	minutes	2.30052417
+R239	Time series	Time	minutes	2.310231023
+R240	Time series	Time	minutes	2.319937876
+R241	Time series	Time	minutes	2.329644729
+R242	Time series	Time	minutes	2.339351582
+R243	Time series	Time	minutes	2.349058435
+R244	Time series	Time	minutes	2.358765288
+R245	Time series	Time	minutes	2.368472141
+R246	Time series	Time	minutes	2.378178994
+R247	Time series	Time	minutes	2.387885847
+R248	Time series	Time	minutes	2.3975927
+R249	Time series	Time	minutes	2.407299553
+R250	Time series	Time	minutes	2.417006407
+R251	Time series	Time	minutes	2.42671326
+R252	Time series	Time	minutes	2.436420113
+R253	Time series	Time	minutes	2.446126966
+R254	Time series	Time	minutes	2.455833819
+R255	Time series	Time	minutes	2.465540672
+R256	Time series	Time	minutes	2.475247525
+R257	Time series	Time	minutes	2.484954378
+R258	Time series	Time	minutes	2.494661231
+R259	Time series	Time	minutes	2.504368084
+R260	Time series	Time	minutes	2.514074937
+R261	Time series	Time	minutes	2.52378179
+R262	Time series	Time	minutes	2.533488643
+R263	Time series	Time	minutes	2.543195496
+R264	Time series	Time	minutes	2.552902349
+R265	Time series	Time	minutes	2.562609202
+R266	Time series	Time	minutes	2.572316055
+R267	Time series	Time	minutes	2.582022908
+R268	Time series	Time	minutes	2.591729761
+R269	Time series	Time	minutes	2.601436614
+R270	Time series	Time	minutes	2.611143467
+R271	Time series	Time	minutes	2.62085032
+R272	Time series	Time	minutes	2.630557173
+R273	Time series	Time	minutes	2.640264026
+R274	Time series	Time	minutes	2.649970879
+R275	Time series	Time	minutes	2.659677732
+R276	Time series	Time	minutes	2.669384586
+R277	Time series	Time	minutes	2.679091439
+R278	Time series	Time	minutes	2.688798292
+R279	Time series	Time	minutes	2.698505145
+R280	Time series	Time	minutes	2.708211998
+R281	Time series	Time	minutes	2.717918851
+R282	Time series	Time	minutes	2.727625704
+R283	Time series	Time	minutes	2.737332557
+R284	Time series	Time	minutes	2.74703941
+R285	Time series	Time	minutes	2.756746263
+R286	Time series	Time	minutes	2.766453116
+R287	Time series	Time	minutes	2.776159969
+R288	Time series	Time	minutes	2.785866822
+R289	Time series	Time	minutes	2.795573675
+R290	Time series	Time	minutes	2.805280528
+R291	Time series	Time	minutes	2.814987381
+R292	Time series	Time	minutes	2.824694234
+R293	Time series	Time	minutes	2.834401087
+R294	Time series	Time	minutes	2.84410794
+R295	Time series	Time	minutes	2.853814793
+R296	Time series	Time	minutes	2.863521646
+R297	Time series	Time	minutes	2.873228499
+R298	Time series	Time	minutes	2.882935352
+R299	Time series	Time	minutes	2.892642205
+R300	Time series	Time	minutes	2.902349058
+R301	Time series	Time	minutes	2.912055911
+R302	Time series	Time	minutes	2.921762765
+R303	Time series	Time	minutes	2.931469618
+R304	Time series	Time	minutes	2.941176471
+R305	Time series	Time	minutes	2.950883324
+R306	Time series	Time	minutes	2.960590177
+R307	Time series	Time	minutes	2.97029703
+R308	Time series	Time	minutes	2.980003883
+R309	Time series	Time	minutes	2.989710736
+R310	Time series	Time	minutes	2.999417589
+R311	Time series	Time	minutes	3.009124442
+R312	Time series	Time	minutes	3.018831295
+R313	Time series	Time	minutes	3.028538148
+R314	Time series	Time	minutes	3.038245001
+R315	Time series	Time	minutes	3.047951854
+R316	Time series	Time	minutes	3.057658707
+R317	Time series	Time	minutes	3.06736556
+R318	Time series	Time	minutes	3.077072413
+R319	Time series	Time	minutes	3.086779266
+R320	Time series	Time	minutes	3.096486119
+R321	Time series	Time	minutes	3.106192972
+R322	Time series	Time	minutes	3.115899825
+R323	Time series	Time	minutes	3.125606678
+R324	Time series	Time	minutes	3.135313531
+R325	Time series	Time	minutes	3.145020384
+R326	Time series	Time	minutes	3.154727237
+R327	Time series	Time	minutes	3.16443409
+R328	Time series	Time	minutes	3.174140944
+R329	Time series	Time	minutes	3.183847797
+R330	Time series	Time	minutes	3.19355465
+R331	Time series	Time	minutes	3.203261503
+R332	Time series	Time	minutes	3.212968356
+R333	Time series	Time	minutes	3.222675209
+R334	Time series	Time	minutes	3.232382062
+R335	Time series	Time	minutes	3.242088915
+R336	Time series	Time	minutes	3.251795768
+R337	Time series	Time	minutes	3.261502621
+R338	Time series	Time	minutes	3.271209474
+R339	Time series	Time	minutes	3.280916327
+R340	Time series	Time	minutes	3.29062318
+R341	Time series	Time	minutes	3.300330033
+R342	Time series	Time	minutes	3.310036886
+R343	Time series	Time	minutes	3.319743739
+R344	Time series	Time	minutes	3.329450592
+R345	Time series	Time	minutes	3.339157445
+R346	Time series	Time	minutes	3.348864298
+R347	Time series	Time	minutes	3.358571151
+R348	Time series	Time	minutes	3.368278004
+R349	Time series	Time	minutes	3.377984857
+R350	Time series	Time	minutes	3.38769171
+R351	Time series	Time	minutes	3.397398563
+R352	Time series	Time	minutes	3.407105416
+R353	Time series	Time	minutes	3.416812269
+R354	Time series	Time	minutes	3.426519123
+R355	Time series	Time	minutes	3.436225976
+R356	Time series	Time	minutes	3.445932829
+R357	Time series	Time	minutes	3.455639682
+R358	Time series	Time	minutes	3.465346535
+R359	Time series	Time	minutes	3.475053388
+R360	Time series	Time	minutes	3.484760241
+R361	Time series	Time	minutes	3.494467094
+R362	Time series	Time	minutes	3.504173947
+R363	Time series	Time	minutes	3.5138808
+R364	Time series	Time	minutes	3.523587653
+R365	Time series	Time	minutes	3.533294506
+R366	Time series	Time	minutes	3.543001359
+R367	Time series	Time	minutes	3.552708212
+R368	Time series	Time	minutes	3.562415065
+R369	Time series	Time	minutes	3.572121918
+R370	Time series	Time	minutes	3.581828771
+R371	Time series	Time	minutes	3.591535624
+R372	Time series	Time	minutes	3.601242477
+R373	Time series	Time	minutes	3.61094933
+R374	Time series	Time	minutes	3.620656183
+R375	Time series	Time	minutes	3.630363036
+R376	Time series	Time	minutes	3.640069889
+R377	Time series	Time	minutes	3.649776742
+R378	Time series	Time	minutes	3.659483595
+R379	Time series	Time	minutes	3.669190448
+R380	Time series	Time	minutes	3.678897301
+R381	Time series	Time	minutes	3.688604155
+R382	Time series	Time	minutes	3.698311008
+R383	Time series	Time	minutes	3.708017861
+R384	Time series	Time	minutes	3.717724714
+R385	Time series	Time	minutes	3.727431567
+R386	Time series	Time	minutes	3.73713842
+R387	Time series	Time	minutes	3.746845273
+R388	Time series	Time	minutes	3.756552126
+R389	Time series	Time	minutes	3.766258979
+R390	Time series	Time	minutes	3.775965832
+R391	Time series	Time	minutes	3.785672685
+R392	Time series	Time	minutes	3.795379538
+R393	Time series	Time	minutes	3.805086391
+R394	Time series	Time	minutes	3.814793244
+R395	Time series	Time	minutes	3.824500097
+R396	Time series	Time	minutes	3.83420695
+R397	Time series	Time	minutes	3.843913803
+R398	Time series	Time	minutes	3.853620656
+R399	Time series	Time	minutes	3.863327509
+R400	Time series	Time	minutes	3.873034362
+R401	Time series	Time	minutes	3.882741215
+R402	Time series	Time	minutes	3.892448068
+R403	Time series	Time	minutes	3.902154921
+R404	Time series	Time	minutes	3.911861774
+R405	Time series	Time	minutes	3.921568627
+R406	Time series	Time	minutes	3.93127548
+R407	Time series	Time	minutes	3.940982334
+R408	Time series	Time	minutes	3.950689187
+R409	Time series	Time	minutes	3.96039604
+R410	Time series	Time	minutes	3.970102893
+R411	Time series	Time	minutes	3.979809746
+R412	Time series	Time	minutes	3.989516599
+R413	Time series	Time	minutes	3.999223452
+R414	Time series	Time	minutes	4.008930305
+R415	Time series	Time	minutes	4.018637158
+R416	Time series	Time	minutes	4.028344011
+R417	Time series	Time	minutes	4.038050864
+R418	Time series	Time	minutes	4.047757717
+R419	Time series	Time	minutes	4.05746457
+R420	Time series	Time	minutes	4.067171423
+R421	Time series	Time	minutes	4.076878276
+R422	Time series	Time	minutes	4.086585129
+R423	Time series	Time	minutes	4.096291982
+R424	Time series	Time	minutes	4.105998835
+R425	Time series	Time	minutes	4.115705688
+R426	Time series	Time	minutes	4.125412541
+R427	Time series	Time	minutes	4.135119394
+R428	Time series	Time	minutes	4.144826247
+R429	Time series	Time	minutes	4.1545331
+R430	Time series	Time	minutes	4.164239953
+R431	Time series	Time	minutes	4.173946806
+R432	Time series	Time	minutes	4.183653659
+R433	Time series	Time	minutes	4.193360513
+R434	Time series	Time	minutes	4.203067366
+R435	Time series	Time	minutes	4.212774219
+R436	Time series	Time	minutes	4.222481072
+R437	Time series	Time	minutes	4.232187925
+R438	Time series	Time	minutes	4.241894778
+R439	Time series	Time	minutes	4.251601631
+R440	Time series	Time	minutes	4.261308484
+R441	Time series	Time	minutes	4.271015337
+R442	Time series	Time	minutes	4.28072219
+R443	Time series	Time	minutes	4.290429043
+R444	Time series	Time	minutes	4.300135896
+R445	Time series	Time	minutes	4.309842749
+R446	Time series	Time	minutes	4.319549602
+R447	Time series	Time	minutes	4.329256455
+R448	Time series	Time	minutes	4.338963308
+R449	Time series	Time	minutes	4.348670161
+R450	Time series	Time	minutes	4.358377014
+R451	Time series	Time	minutes	4.368083867
+R452	Time series	Time	minutes	4.37779072
+R453	Time series	Time	minutes	4.387497573
+R454	Time series	Time	minutes	4.397204426
+R455	Time series	Time	minutes	4.406911279
+R456	Time series	Time	minutes	4.416618132
+R457	Time series	Time	minutes	4.426324985
+R458	Time series	Time	minutes	4.436031838
+R459	Time series	Time	minutes	4.445738692
+R460	Time series	Time	minutes	4.455445545
+R461	Time series	Time	minutes	4.465152398
+R462	Time series	Time	minutes	4.474859251
+R463	Time series	Time	minutes	4.484566104
+R464	Time series	Time	minutes	4.494272957
+R465	Time series	Time	minutes	4.50397981
+R466	Time series	Time	minutes	4.513686663
+R467	Time series	Time	minutes	4.523393516
+R468	Time series	Time	minutes	4.533100369
+R469	Time series	Time	minutes	4.542807222
+R470	Time series	Time	minutes	4.552514075
+R471	Time series	Time	minutes	4.562220928
+R472	Time series	Time	minutes	4.571927781
+R473	Time series	Time	minutes	4.581634634
+R474	Time series	Time	minutes	4.591341487
+R475	Time series	Time	minutes	4.60104834
+R476	Time series	Time	minutes	4.610755193
+R477	Time series	Time	minutes	4.620462046
+R478	Time series	Time	minutes	4.630168899
+R479	Time series	Time	minutes	4.639875752
+R480	Time series	Time	minutes	4.649582605
+R481	Time series	Time	minutes	4.659289458
+R482	Time series	Time	minutes	4.668996311
+R483	Time series	Time	minutes	4.678703164
+R484	Time series	Time	minutes	4.688410017
+R485	Time series	Time	minutes	4.698116871
+R486	Time series	Time	minutes	4.707823724
+R487	Time series	Time	minutes	4.717530577
+R488	Time series	Time	minutes	4.72723743
+R489	Time series	Time	minutes	4.736944283
+R490	Time series	Time	minutes	4.746651136
+R491	Time series	Time	minutes	4.756357989
+R492	Time series	Time	minutes	4.766064842
+R493	Time series	Time	minutes	4.775771695
+R494	Time series	Time	minutes	4.785478548
+R495	Time series	Time	minutes	4.795185401
+R496	Time series	Time	minutes	4.804892254
+R497	Time series	Time	minutes	4.814599107
+R498	Time series	Time	minutes	4.82430596
+R499	Time series	Time	minutes	4.834012813
+R500	Time series	Time	minutes	4.843719666
+R501	Time series	Time	minutes	4.853426519
+R502	Time series	Time	minutes	4.863133372
+R503	Time series	Time	minutes	4.872840225
+R504	Time series	Time	minutes	4.882547078
+R505	Time series	Time	minutes	4.892253931
+R506	Time series	Time	minutes	4.901960784
+R507	Time series	Time	minutes	4.911667637
+R508	Time series	Time	minutes	4.92137449
+R509	Time series	Time	minutes	4.931081343
+R510	Time series	Time	minutes	4.940788196
+R511	Time series	Time	minutes	4.95049505
+R512	Time series	Time	minutes	4.960201903
+R513	Time series	Time	minutes	4.969908756
+R514	Time series	Time	minutes	4.979615609
+R515	Time series	Time	minutes	4.989322462
+R516	Time series	Time	minutes	4.999029315
+R517	Time series	Time	minutes	5.008736168
+R518	Time series	Time	minutes	5.018443021
+R519	Time series	Time	minutes	5.028149874
+R520	Time series	Time	minutes	5.037856727
+R521	Time series	Time	minutes	5.04756358
+R522	Time series	Time	minutes	5.057270433
+R523	Time series	Time	minutes	5.066977286
+R524	Time series	Time	minutes	5.076684139
+R525	Time series	Time	minutes	5.086390992
+R526	Time series	Time	minutes	5.096097845
+R527	Time series	Time	minutes	5.105804698
+R528	Time series	Time	minutes	5.115511551
+R529	Time series	Time	minutes	5.125218404
+R530	Time series	Time	minutes	5.134925257
+R531	Time series	Time	minutes	5.14463211
+R532	Time series	Time	minutes	5.154338963
+R533	Time series	Time	minutes	5.164045816
+R534	Time series	Time	minutes	5.173752669
+R535	Time series	Time	minutes	5.183459522
+R536	Time series	Time	minutes	5.193166375
+R537	Time series	Time	minutes	5.202873228
+R538	Time series	Time	minutes	5.212580082
+R539	Time series	Time	minutes	5.222286935
+R540	Time series	Time	minutes	5.231993788
+R541	Time series	Time	minutes	5.241700641
+R542	Time series	Time	minutes	5.251407494
+R543	Time series	Time	minutes	5.261114347
+R544	Time series	Time	minutes	5.2708212
+R545	Time series	Time	minutes	5.280528053
+R546	Time series	Time	minutes	5.290234906
+R547	Time series	Time	minutes	5.299941759
+R548	Time series	Time	minutes	5.309648612
+R549	Time series	Time	minutes	5.319355465
+R550	Time series	Time	minutes	5.329062318
+R551	Time series	Time	minutes	5.338769171
+R552	Time series	Time	minutes	5.348476024
+R553	Time series	Time	minutes	5.358182877
+R554	Time series	Time	minutes	5.36788973
+R555	Time series	Time	minutes	5.377596583
+R556	Time series	Time	minutes	5.387303436
+R557	Time series	Time	minutes	5.397010289
+R558	Time series	Time	minutes	5.406717142
+R559	Time series	Time	minutes	5.416423995
+R560	Time series	Time	minutes	5.426130848
+R561	Time series	Time	minutes	5.435837701
+R562	Time series	Time	minutes	5.445544554
+R563	Time series	Time	minutes	5.455251407
+R564	Time series	Time	minutes	5.464958261
+R565	Time series	Time	minutes	5.474665114
+R566	Time series	Time	minutes	5.484371967
+R567	Time series	Time	minutes	5.49407882
+R568	Time series	Time	minutes	5.503785673
+R569	Time series	Time	minutes	5.513492526
+R570	Time series	Time	minutes	5.523199379
+R571	Time series	Time	minutes	5.532906232
+R572	Time series	Time	minutes	5.542613085
+R573	Time series	Time	minutes	5.552319938
+R574	Time series	Time	minutes	5.562026791
+R575	Time series	Time	minutes	5.571733644
+R576	Time series	Time	minutes	5.581440497
+R577	Time series	Time	minutes	5.59114735
+R578	Time series	Time	minutes	5.600854203
+R579	Time series	Time	minutes	5.610561056
+R580	Time series	Time	minutes	5.620267909
+R581	Time series	Time	minutes	5.629974762
+R582	Time series	Time	minutes	5.639681615
+R583	Time series	Time	minutes	5.649388468
+R584	Time series	Time	minutes	5.659095321
+R585	Time series	Time	minutes	5.668802174
+R586	Time series	Time	minutes	5.678509027
+R587	Time series	Time	minutes	5.68821588
+R588	Time series	Time	minutes	5.697922733
+R589	Time series	Time	minutes	5.707629586
+R590	Time series	Time	minutes	5.71733644
+R591	Time series	Time	minutes	5.727043293
+R592	Time series	Time	minutes	5.736750146
+R593	Time series	Time	minutes	5.746456999
+R594	Time series	Time	minutes	5.756163852
+R595	Time series	Time	minutes	5.765870705
+R596	Time series	Time	minutes	5.775577558
+R597	Time series	Time	minutes	5.785284411
+R598	Time series	Time	minutes	5.794991264
+R599	Time series	Time	minutes	5.804698117
+R600	Time series	Time	minutes	5.81440497
+R601	Time series	Time	minutes	5.824111823
+R602	Time series	Time	minutes	5.833818676
+R603	Time series	Time	minutes	5.843525529
+R604	Time series	Time	minutes	5.853232382
+R605	Time series	Time	minutes	5.862939235
+R606	Time series	Time	minutes	5.872646088
+R607	Time series	Time	minutes	5.882352941
+R608	Time series	Time	minutes	5.892059794
+R609	Time series	Time	minutes	5.901766647
+R610	Time series	Time	minutes	5.9114735
+R611	Time series	Time	minutes	5.921180353
+R612	Time series	Time	minutes	5.930887206
+R613	Time series	Time	minutes	5.940594059
+R614	Time series	Time	minutes	5.950300912
+R615	Time series	Time	minutes	5.960007765
+R616	Time series	Time	minutes	5.969714619
+R617	Time series	Time	minutes	5.979421472
+R618	Time series	Time	minutes	5.989128325
+R619	Time series	Time	minutes	5.998835178
+R620	Time series	Time	minutes	6.008542031
+R621	Time series	Time	minutes	6.018248884
+R622	Time series	Time	minutes	6.027955737
+R623	Time series	Time	minutes	6.03766259
+R624	Time series	Time	minutes	6.047369443
+R625	Time series	Time	minutes	6.057076296
+R626	Time series	Time	minutes	6.066783149
+R627	Time series	Time	minutes	6.076490002
+R628	Time series	Time	minutes	6.086196855
+R629	Time series	Time	minutes	6.095903708
+R630	Time series	Time	minutes	6.105610561
+R631	Time series	Time	minutes	6.115317414
+R632	Time series	Time	minutes	6.125024267
+R633	Time series	Time	minutes	6.13473112
+R634	Time series	Time	minutes	6.144437973
+R635	Time series	Time	minutes	6.154144826
+R636	Time series	Time	minutes	6.163851679
+R637	Time series	Time	minutes	6.173558532
+R638	Time series	Time	minutes	6.183265385
+R639	Time series	Time	minutes	6.192972238
+R640	Time series	Time	minutes	6.202679091
+R641	Time series	Time	minutes	6.212385944
+R642	Time series	Time	minutes	6.222092798
+R643	Time series	Time	minutes	6.231799651
+R644	Time series	Time	minutes	6.241506504
+R645	Time series	Time	minutes	6.251213357
+R646	Time series	Time	minutes	6.26092021
+R647	Time series	Time	minutes	6.270627063
+R648	Time series	Time	minutes	6.280333916
+R649	Time series	Time	minutes	6.290040769
+R650	Time series	Time	minutes	6.299747622
+R651	Time series	Time	minutes	6.309454475
+R652	Time series	Time	minutes	6.319161328
+R653	Time series	Time	minutes	6.328868181
+R654	Time series	Time	minutes	6.338575034
+R655	Time series	Time	minutes	6.348281887
+R656	Time series	Time	minutes	6.35798874
+R657	Time series	Time	minutes	6.367695593
+R658	Time series	Time	minutes	6.377402446
+R659	Time series	Time	minutes	6.387109299
+R660	Time series	Time	minutes	6.396816152
+R661	Time series	Time	minutes	6.406523005
+R662	Time series	Time	minutes	6.416229858
+R663	Time series	Time	minutes	6.425936711
+R664	Time series	Time	minutes	6.435643564
+R665	Time series	Time	minutes	6.445350417
+R666	Time series	Time	minutes	6.45505727
+R667	Time series	Time	minutes	6.464764123
+R668	Time series	Time	minutes	6.474470977
+R669	Time series	Time	minutes	6.48417783
+R670	Time series	Time	minutes	6.493884683
+R671	Time series	Time	minutes	6.503591536
+R672	Time series	Time	minutes	6.513298389
+R673	Time series	Time	minutes	6.523005242
+R674	Time series	Time	minutes	6.532712095
+R675	Time series	Time	minutes	6.542418948
+R676	Time series	Time	minutes	6.552125801
+R677	Time series	Time	minutes	6.561832654
+R678	Time series	Time	minutes	6.571539507
+R679	Time series	Time	minutes	6.58124636
+R680	Time series	Time	minutes	6.590953213
+R681	Time series	Time	minutes	6.600660066
+R682	Time series	Time	minutes	6.610366919
+R683	Time series	Time	minutes	6.620073772
+R684	Time series	Time	minutes	6.629780625
+R685	Time series	Time	minutes	6.639487478
+R686	Time series	Time	minutes	6.649194331
+R687	Time series	Time	minutes	6.658901184
+R688	Time series	Time	minutes	6.668608037
+R689	Time series	Time	minutes	6.67831489
+R690	Time series	Time	minutes	6.688021743
+R691	Time series	Time	minutes	6.697728596
+R692	Time series	Time	minutes	6.707435449
+R693	Time series	Time	minutes	6.717142302
+R694	Time series	Time	minutes	6.726849156
+R695	Time series	Time	minutes	6.736556009
+R696	Time series	Time	minutes	6.746262862
+R697	Time series	Time	minutes	6.755969715
+R698	Time series	Time	minutes	6.765676568
+R699	Time series	Time	minutes	6.775383421
+R700	Time series	Time	minutes	6.785090274
+R701	Time series	Time	minutes	6.794797127
+R702	Time series	Time	minutes	6.80450398
+R703	Time series	Time	minutes	6.814210833
+R704	Time series	Time	minutes	6.823917686
+R705	Time series	Time	minutes	6.833624539
+R706	Time series	Time	minutes	6.843331392
+R707	Time series	Time	minutes	6.853038245
+R708	Time series	Time	minutes	6.862745098
+R709	Time series	Time	minutes	6.872451951
+R710	Time series	Time	minutes	6.882158804
+R711	Time series	Time	minutes	6.891865657
+R712	Time series	Time	minutes	6.90157251
+R713	Time series	Time	minutes	6.911279363
+R714	Time series	Time	minutes	6.920986216
+R715	Time series	Time	minutes	6.930693069
+R716	Time series	Time	minutes	6.940399922
+R717	Time series	Time	minutes	6.950106775
+R718	Time series	Time	minutes	6.959813628
+R719	Time series	Time	minutes	6.969520481
+R720	Time series	Time	minutes	6.979227334
+R721	Time series	Time	minutes	6.988934188
+R722	Time series	Time	minutes	6.998641041
+R723	Time series	Time	minutes	7.008347894
+R724	Time series	Time	minutes	7.018054747
+R725	Time series	Time	minutes	7.0277616
+R726	Time series	Time	minutes	7.037468453
+R727	Time series	Time	minutes	7.047175306
+R728	Time series	Time	minutes	7.056882159
+R729	Time series	Time	minutes	7.066589012
+R730	Time series	Time	minutes	7.076295865
+R731	Time series	Time	minutes	7.086002718
+R732	Time series	Time	minutes	7.095709571
+R733	Time series	Time	minutes	7.105416424
+R734	Time series	Time	minutes	7.115123277
+R735	Time series	Time	minutes	7.12483013
+R736	Time series	Time	minutes	7.134536983
+R737	Time series	Time	minutes	7.144243836
+R738	Time series	Time	minutes	7.153950689
+R739	Time series	Time	minutes	7.163657542
+R740	Time series	Time	minutes	7.173364395
+R741	Time series	Time	minutes	7.183071248
+R742	Time series	Time	minutes	7.192778101
+R743	Time series	Time	minutes	7.202484954
+R744	Time series	Time	minutes	7.212191807
+R745	Time series	Time	minutes	7.22189866
+R746	Time series	Time	minutes	7.231605513
+R747	Time series	Time	minutes	7.241312367
+R748	Time series	Time	minutes	7.25101922
+R749	Time series	Time	minutes	7.260726073
+R750	Time series	Time	minutes	7.270432926
+R751	Time series	Time	minutes	7.280139779
+R752	Time series	Time	minutes	7.289846632
+R753	Time series	Time	minutes	7.299553485
+R754	Time series	Time	minutes	7.309260338
+R755	Time series	Time	minutes	7.318967191
+R756	Time series	Time	minutes	7.328674044
+R757	Time series	Time	minutes	7.338380897
+R758	Time series	Time	minutes	7.34808775
+R759	Time series	Time	minutes	7.357794603
+R760	Time series	Time	minutes	7.367501456
+R761	Time series	Time	minutes	7.377208309
+R762	Time series	Time	minutes	7.386915162
+R763	Time series	Time	minutes	7.396622015
+R764	Time series	Time	minutes	7.406328868
+R765	Time series	Time	minutes	7.416035721
+R766	Time series	Time	minutes	7.425742574
+R767	Time series	Time	minutes	7.435449427
+R768	Time series	Time	minutes	7.44515628
+R769	Time series	Time	minutes	7.454863133
+R770	Time series	Time	minutes	7.464569986
+R771	Time series	Time	minutes	7.474276839
+R772	Time series	Time	minutes	7.483983692
+R773	Time series	Time	minutes	7.493690546
+R774	Time series	Time	minutes	7.503397399
+R775	Time series	Time	minutes	7.513104252
+R776	Time series	Time	minutes	7.522811105
+R777	Time series	Time	minutes	7.532517958
+R778	Time series	Time	minutes	7.542224811
+R779	Time series	Time	minutes	7.551931664
+R780	Time series	Time	minutes	7.561638517
+R781	Time series	Time	minutes	7.57134537
+R782	Time series	Time	minutes	7.581052223
+R783	Time series	Time	minutes	7.590759076
+R784	Time series	Time	minutes	7.600465929
+R785	Time series	Time	minutes	7.610172782
+R786	Time series	Time	minutes	7.619879635
+R787	Time series	Time	minutes	7.629586488
+R788	Time series	Time	minutes	7.639293341
+R789	Time series	Time	minutes	7.649000194
+R790	Time series	Time	minutes	7.658707047
+R791	Time series	Time	minutes	7.6684139
+R792	Time series	Time	minutes	7.678120753
+R793	Time series	Time	minutes	7.687827606
+R794	Time series	Time	minutes	7.697534459
+R795	Time series	Time	minutes	7.707241312
+R796	Time series	Time	minutes	7.716948165
+R797	Time series	Time	minutes	7.726655018
+R798	Time series	Time	minutes	7.736361871
+R799	Time series	Time	minutes	7.746068725
+R800	Time series	Time	minutes	7.755775578
+R801	Time series	Time	minutes	7.765482431
+R802	Time series	Time	minutes	7.775189284
+R803	Time series	Time	minutes	7.784896137
+R804	Time series	Time	minutes	7.79460299
+R805	Time series	Time	minutes	7.804309843
+R806	Time series	Time	minutes	7.814016696
+R807	Time series	Time	minutes	7.823723549
+R808	Time series	Time	minutes	7.833430402
+R809	Time series	Time	minutes	7.843137255
+R810	Time series	Time	minutes	7.852844108
+R811	Time series	Time	minutes	7.862550961
+R812	Time series	Time	minutes	7.872257814
+R813	Time series	Time	minutes	7.881964667
+R814	Time series	Time	minutes	7.89167152
+R815	Time series	Time	minutes	7.901378373
+R816	Time series	Time	minutes	7.911085226
+R817	Time series	Time	minutes	7.920792079
+R818	Time series	Time	minutes	7.930498932
+R819	Time series	Time	minutes	7.940205785
+R820	Time series	Time	minutes	7.949912638
+R821	Time series	Time	minutes	7.959619491
+R822	Time series	Time	minutes	7.969326344
+R823	Time series	Time	minutes	7.979033197
+R824	Time series	Time	minutes	7.98874005
+R825	Time series	Time	minutes	7.998446904
+R826	Time series	Time	minutes	8.008153757
+R827	Time series	Time	minutes	8.01786061
+R828	Time series	Time	minutes	8.027567463
+R829	Time series	Time	minutes	8.037274316
+R830	Time series	Time	minutes	8.046981169
+R831	Time series	Time	minutes	8.056688022
+R832	Time series	Time	minutes	8.066394875
+R833	Time series	Time	minutes	8.076101728
+R834	Time series	Time	minutes	8.085808581
+R835	Time series	Time	minutes	8.095515434
+R836	Time series	Time	minutes	8.105222287
+R837	Time series	Time	minutes	8.11492914
+R838	Time series	Time	minutes	8.124635993
+R839	Time series	Time	minutes	8.134342846
+R840	Time series	Time	minutes	8.144049699
+R841	Time series	Time	minutes	8.153756552
+R842	Time series	Time	minutes	8.163463405
+R843	Time series	Time	minutes	8.173170258
+R844	Time series	Time	minutes	8.182877111
+R845	Time series	Time	minutes	8.192583964
+R846	Time series	Time	minutes	8.202290817
+R847	Time series	Time	minutes	8.21199767
+R848	Time series	Time	minutes	8.221704523
+R849	Time series	Time	minutes	8.231411376
+R850	Time series	Time	minutes	8.241118229
+R851	Time series	Time	minutes	8.250825083
+R852	Time series	Time	minutes	8.260531936
+R853	Time series	Time	minutes	8.270238789
+R854	Time series	Time	minutes	8.279945642
+R855	Time series	Time	minutes	8.289652495
+R856	Time series	Time	minutes	8.299359348
+R857	Time series	Time	minutes	8.309066201
+R858	Time series	Time	minutes	8.318773054
+R859	Time series	Time	minutes	8.328479907
+R860	Time series	Time	minutes	8.33818676
+R861	Time series	Time	minutes	8.347893613
+R862	Time series	Time	minutes	8.357600466
+R863	Time series	Time	minutes	8.367307319
+R864	Time series	Time	minutes	8.377014172
+R865	Time series	Time	minutes	8.386721025
+R866	Time series	Time	minutes	8.396427878
+R867	Time series	Time	minutes	8.406134731
+R868	Time series	Time	minutes	8.415841584
+R869	Time series	Time	minutes	8.425548437
+R870	Time series	Time	minutes	8.43525529
+R871	Time series	Time	minutes	8.444962143
+R872	Time series	Time	minutes	8.454668996
+R873	Time series	Time	minutes	8.464375849
+R874	Time series	Time	minutes	8.474082702
+R875	Time series	Time	minutes	8.483789555
+R876	Time series	Time	minutes	8.493496408
+R877	Time series	Time	minutes	8.503203262
+R878	Time series	Time	minutes	8.512910115
+R879	Time series	Time	minutes	8.522616968
+R880	Time series	Time	minutes	8.532323821
+R881	Time series	Time	minutes	8.542030674
+R882	Time series	Time	minutes	8.551737527
+R883	Time series	Time	minutes	8.56144438
+R884	Time series	Time	minutes	8.571151233
+R885	Time series	Time	minutes	8.580858086
+R886	Time series	Time	minutes	8.590564939
+R887	Time series	Time	minutes	8.600271792
+R888	Time series	Time	minutes	8.609978645
+R889	Time series	Time	minutes	8.619685498
+R890	Time series	Time	minutes	8.629392351
+R891	Time series	Time	minutes	8.639099204
+R892	Time series	Time	minutes	8.648806057
+R893	Time series	Time	minutes	8.65851291
+R894	Time series	Time	minutes	8.668219763
+R895	Time series	Time	minutes	8.677926616
+R896	Time series	Time	minutes	8.687633469
+R897	Time series	Time	minutes	8.697340322
+R898	Time series	Time	minutes	8.707047175
+R899	Time series	Time	minutes	8.716754028
+R900	Time series	Time	minutes	8.726460881
+R901	Time series	Time	minutes	8.736167734
+R902	Time series	Time	minutes	8.745874587
+R903	Time series	Time	minutes	8.75558144
+R904	Time series	Time	minutes	8.765288294
+R905	Time series	Time	minutes	8.774995147
+R906	Time series	Time	minutes	8.784702
+R907	Time series	Time	minutes	8.794408853
+R908	Time series	Time	minutes	8.804115706
+R909	Time series	Time	minutes	8.813822559
+R910	Time series	Time	minutes	8.823529412
+R911	Time series	Time	minutes	8.833236265
+R912	Time series	Time	minutes	8.842943118
+R913	Time series	Time	minutes	8.852649971
+R914	Time series	Time	minutes	8.862356824
+R915	Time series	Time	minutes	8.872063677
+R916	Time series	Time	minutes	8.88177053
+R917	Time series	Time	minutes	8.891477383
+R918	Time series	Time	minutes	8.901184236
+R919	Time series	Time	minutes	8.910891089
+R920	Time series	Time	minutes	8.920597942
+R921	Time series	Time	minutes	8.930304795
+R922	Time series	Time	minutes	8.940011648
+R923	Time series	Time	minutes	8.949718501
+R924	Time series	Time	minutes	8.959425354
+R925	Time series	Time	minutes	8.969132207
+R926	Time series	Time	minutes	8.97883906
+R927	Time series	Time	minutes	8.988545913
+R928	Time series	Time	minutes	8.998252766
+R929	Time series	Time	minutes	9.007959619
+R930	Time series	Time	minutes	9.017666473
+R931	Time series	Time	minutes	9.027373326
+R932	Time series	Time	minutes	9.037080179
+R933	Time series	Time	minutes	9.046787032
+R934	Time series	Time	minutes	9.056493885
+R935	Time series	Time	minutes	9.066200738
+R936	Time series	Time	minutes	9.075907591
+R937	Time series	Time	minutes	9.085614444
+R938	Time series	Time	minutes	9.095321297
+R939	Time series	Time	minutes	9.10502815
+R940	Time series	Time	minutes	9.114735003
+R941	Time series	Time	minutes	9.124441856
+R942	Time series	Time	minutes	9.134148709
+R943	Time series	Time	minutes	9.143855562
+R944	Time series	Time	minutes	9.153562415
+R945	Time series	Time	minutes	9.163269268
+R946	Time series	Time	minutes	9.172976121
+R947	Time series	Time	minutes	9.182682974
+R948	Time series	Time	minutes	9.192389827
+R949	Time series	Time	minutes	9.20209668
+R950	Time series	Time	minutes	9.211803533
+R951	Time series	Time	minutes	9.221510386
+R952	Time series	Time	minutes	9.231217239
+R953	Time series	Time	minutes	9.240924092
+R954	Time series	Time	minutes	9.250630945
+R955	Time series	Time	minutes	9.260337798
+R956	Time series	Time	minutes	9.270044652
+R957	Time series	Time	minutes	9.279751505
+R958	Time series	Time	minutes	9.289458358
+R959	Time series	Time	minutes	9.299165211
+R960	Time series	Time	minutes	9.308872064
+R961	Time series	Time	minutes	9.318578917
+R962	Time series	Time	minutes	9.32828577
+R963	Time series	Time	minutes	9.337992623
+R964	Time series	Time	minutes	9.347699476
+R965	Time series	Time	minutes	9.357406329
+R966	Time series	Time	minutes	9.367113182
+R967	Time series	Time	minutes	9.376820035
+R968	Time series	Time	minutes	9.386526888
+R969	Time series	Time	minutes	9.396233741
+R970	Time series	Time	minutes	9.405940594
+R971	Time series	Time	minutes	9.415647447
+R972	Time series	Time	minutes	9.4253543
+R973	Time series	Time	minutes	9.435061153
+R974	Time series	Time	minutes	9.444768006
+R975	Time series	Time	minutes	9.454474859
+R976	Time series	Time	minutes	9.464181712
+R977	Time series	Time	minutes	9.473888565
+R978	Time series	Time	minutes	9.483595418
+R979	Time series	Time	minutes	9.493302271
+R980	Time series	Time	minutes	9.503009124
+R981	Time series	Time	minutes	9.512715977
+R982	Time series	Time	minutes	9.522422831
+R983	Time series	Time	minutes	9.532129684
+R984	Time series	Time	minutes	9.541836537
+R985	Time series	Time	minutes	9.55154339
+R986	Time series	Time	minutes	9.561250243
+R987	Time series	Time	minutes	9.570957096
+R988	Time series	Time	minutes	9.580663949
+R989	Time series	Time	minutes	9.590370802
+R990	Time series	Time	minutes	9.600077655
+R991	Time series	Time	minutes	9.609784508
+R992	Time series	Time	minutes	9.619491361
+R993	Time series	Time	minutes	9.629198214
+R994	Time series	Time	minutes	9.638905067
+R995	Time series	Time	minutes	9.64861192
+R996	Time series	Time	minutes	9.658318773
+R997	Time series	Time	minutes	9.668025626
+R998	Time series	Time	minutes	9.677732479
+R999	Time series	Time	minutes	9.687439332
+R1000	Time series	Time	minutes	9.697146185
+R1001	Time series	Time	minutes	9.706853038
+R1002	Time series	Time	minutes	9.716559891
+R1003	Time series	Time	minutes	9.726266744
+R1004	Time series	Time	minutes	9.735973597
+R1005	Time series	Time	minutes	9.74568045
+R1006	Time series	Time	minutes	9.755387303
+R1007	Time series	Time	minutes	9.765094156
+R1008	Time series	Time	minutes	9.77480101
+R1009	Time series	Time	minutes	9.784507863
+R1010	Time series	Time	minutes	9.794214716
+R1011	Time series	Time	minutes	9.803921569
+R1012	Time series	Time	minutes	9.813628422
+R1013	Time series	Time	minutes	9.823335275
+R1014	Time series	Time	minutes	9.833042128
+R1015	Time series	Time	minutes	9.842748981
+R1016	Time series	Time	minutes	9.852455834
+R1017	Time series	Time	minutes	9.862162687
+R1018	Time series	Time	minutes	9.87186954
+R1019	Time series	Time	minutes	9.881576393
+R1020	Time series	Time	minutes	9.891283246
+R1021	Time series	Time	minutes	9.900990099
+R1022	Time series	Time	minutes	9.910696952
+R1023	Time series	Time	minutes	9.920403805
+R1024	Time series	Time	minutes	9.930110658
+R1025	Time series	Time	minutes	9.939817511
+R1026	Time series	Time	minutes	9.949524364
+R1027	Time series	Time	minutes	9.959231217
+R1028	Time series	Time	minutes	9.96893807
+R1029	Time series	Time	minutes	9.978644923
+R1030	Time series	Time	minutes	9.988351776
+R1031	Time series	Time	minutes	9.998058629
+R1032	Time series	Time	minutes	10.00776548
+R1033	Time series	Time	minutes	10.01747234
+R1034	Time series	Time	minutes	10.02717919
+R1035	Time series	Time	minutes	10.03688604
+R1036	Time series	Time	minutes	10.04659289
+R1037	Time series	Time	minutes	10.05629975
+R1038	Time series	Time	minutes	10.0660066
+R1039	Time series	Time	minutes	10.07571345
+R1040	Time series	Time	minutes	10.08542031
+R1041	Time series	Time	minutes	10.09512716
+R1042	Time series	Time	minutes	10.10483401
+R1043	Time series	Time	minutes	10.11454087
+R1044	Time series	Time	minutes	10.12424772
+R1045	Time series	Time	minutes	10.13395457
+R1046	Time series	Time	minutes	10.14366142
+R1047	Time series	Time	minutes	10.15336828
+R1048	Time series	Time	minutes	10.16307513
+R1049	Time series	Time	minutes	10.17278198
+R1050	Time series	Time	minutes	10.18248884
+R1051	Time series	Time	minutes	10.19219569
+R1052	Time series	Time	minutes	10.20190254
+R1053	Time series	Time	minutes	10.2116094
+R1054	Time series	Time	minutes	10.22131625
+R1055	Time series	Time	minutes	10.2310231
+R1056	Time series	Time	minutes	10.24072996
+R1057	Time series	Time	minutes	10.25043681
+R1058	Time series	Time	minutes	10.26014366
+R1059	Time series	Time	minutes	10.26985051
+R1060	Time series	Time	minutes	10.27955737
+R1061	Time series	Time	minutes	10.28926422
+R1062	Time series	Time	minutes	10.29897107
+R1063	Time series	Time	minutes	10.30867793
+R1064	Time series	Time	minutes	10.31838478
+R1065	Time series	Time	minutes	10.32809163
+R1066	Time series	Time	minutes	10.33779849
+R1067	Time series	Time	minutes	10.34750534
+R1068	Time series	Time	minutes	10.35721219
+R1069	Time series	Time	minutes	10.36691904
+R1070	Time series	Time	minutes	10.3766259
+R1071	Time series	Time	minutes	10.38633275
+R1072	Time series	Time	minutes	10.3960396
+R1073	Time series	Time	minutes	10.40574646
+R1074	Time series	Time	minutes	10.41545331
+R1075	Time series	Time	minutes	10.42516016
+R1076	Time series	Time	minutes	10.43486702
+R1077	Time series	Time	minutes	10.44457387
+R1078	Time series	Time	minutes	10.45428072
+R1079	Time series	Time	minutes	10.46398758
+R1080	Time series	Time	minutes	10.47369443
+R1081	Time series	Time	minutes	10.48340128
+R1082	Time series	Time	minutes	10.49310813
+R1083	Time series	Time	minutes	10.50281499
+R1084	Time series	Time	minutes	10.51252184
+R1085	Time series	Time	minutes	10.52222869
+R1086	Time series	Time	minutes	10.53193555
+R1087	Time series	Time	minutes	10.5416424
+R1088	Time series	Time	minutes	10.55134925
+R1089	Time series	Time	minutes	10.56105611
+R1090	Time series	Time	minutes	10.57076296
+R1091	Time series	Time	minutes	10.58046981
+R1092	Time series	Time	minutes	10.59017666
+R1093	Time series	Time	minutes	10.59988352
+R1094	Time series	Time	minutes	10.60959037
+R1095	Time series	Time	minutes	10.61929722
+R1096	Time series	Time	minutes	10.62900408
+R1097	Time series	Time	minutes	10.63871093
+R1098	Time series	Time	minutes	10.64841778
+R1099	Time series	Time	minutes	10.65812464
+R1100	Time series	Time	minutes	10.66783149
+R1101	Time series	Time	minutes	10.67753834
+R1102	Time series	Time	minutes	10.6872452
+R1103	Time series	Time	minutes	10.69695205
+R1104	Time series	Time	minutes	10.7066589
+R1105	Time series	Time	minutes	10.71636575
+R1106	Time series	Time	minutes	10.72607261
+R1107	Time series	Time	minutes	10.73577946
+R1108	Time series	Time	minutes	10.74548631
+R1109	Time series	Time	minutes	10.75519317
+R1110	Time series	Time	minutes	10.76490002
+R1111	Time series	Time	minutes	10.77460687
+R1112	Time series	Time	minutes	10.78431373
+R1113	Time series	Time	minutes	10.79402058
+R1114	Time series	Time	minutes	10.80372743
+R1115	Time series	Time	minutes	10.81343428
+R1116	Time series	Time	minutes	10.82314114
+R1117	Time series	Time	minutes	10.83284799
+R1118	Time series	Time	minutes	10.84255484
+R1119	Time series	Time	minutes	10.8522617
+R1120	Time series	Time	minutes	10.86196855
+R1121	Time series	Time	minutes	10.8716754
+R1122	Time series	Time	minutes	10.88138226
+R1123	Time series	Time	minutes	10.89108911
+R1124	Time series	Time	minutes	10.90079596
+R1125	Time series	Time	minutes	10.91050281
+R1126	Time series	Time	minutes	10.92020967
+R1127	Time series	Time	minutes	10.92991652
+R1128	Time series	Time	minutes	10.93962337
+R1129	Time series	Time	minutes	10.94933023
+R1130	Time series	Time	minutes	10.95903708
+R1131	Time series	Time	minutes	10.96874393
+R1132	Time series	Time	minutes	10.97845079
+R1133	Time series	Time	minutes	10.98815764
+R1134	Time series	Time	minutes	10.99786449
+R1135	Time series	Time	minutes	11.00757135
+R1136	Time series	Time	minutes	11.0172782
+R1137	Time series	Time	minutes	11.02698505
+R1138	Time series	Time	minutes	11.0366919
+R1139	Time series	Time	minutes	11.04639876
+R1140	Time series	Time	minutes	11.05610561
+R1141	Time series	Time	minutes	11.06581246
+R1142	Time series	Time	minutes	11.07551932
+R1143	Time series	Time	minutes	11.08522617
+R1144	Time series	Time	minutes	11.09493302
+R1145	Time series	Time	minutes	11.10463988
+R1146	Time series	Time	minutes	11.11434673
+R1147	Time series	Time	minutes	11.12405358
+R1148	Time series	Time	minutes	11.13376043
+R1149	Time series	Time	minutes	11.14346729
+R1150	Time series	Time	minutes	11.15317414
+R1151	Time series	Time	minutes	11.16288099
+R1152	Time series	Time	minutes	11.17258785
+R1153	Time series	Time	minutes	11.1822947
+R1154	Time series	Time	minutes	11.19200155
+R1155	Time series	Time	minutes	11.20170841
+R1156	Time series	Time	minutes	11.21141526
+R1157	Time series	Time	minutes	11.22112211
+R1158	Time series	Time	minutes	11.23082897
+R1159	Time series	Time	minutes	11.24053582
+R1160	Time series	Time	minutes	11.25024267
+R1161	Time series	Time	minutes	11.25994952
+R1162	Time series	Time	minutes	11.26965638
+R1163	Time series	Time	minutes	11.27936323
+R1164	Time series	Time	minutes	11.28907008
+R1165	Time series	Time	minutes	11.29877694
+R1166	Time series	Time	minutes	11.30848379
+R1167	Time series	Time	minutes	11.31819064
+R1168	Time series	Time	minutes	11.3278975
+R1169	Time series	Time	minutes	11.33760435
+R1170	Time series	Time	minutes	11.3473112
+R1171	Time series	Time	minutes	11.35701805
+R1172	Time series	Time	minutes	11.36672491
+R1173	Time series	Time	minutes	11.37643176
+R1174	Time series	Time	minutes	11.38613861
+R1175	Time series	Time	minutes	11.39584547
+R1176	Time series	Time	minutes	11.40555232
+R1177	Time series	Time	minutes	11.41525917
+R1178	Time series	Time	minutes	11.42496603
+R1179	Time series	Time	minutes	11.43467288
+R1180	Time series	Time	minutes	11.44437973
+R1181	Time series	Time	minutes	11.45408659
+R1182	Time series	Time	minutes	11.46379344
+R1183	Time series	Time	minutes	11.47350029
+R1184	Time series	Time	minutes	11.48320714
+R1185	Time series	Time	minutes	11.492914
+R1186	Time series	Time	minutes	11.50262085
+R1187	Time series	Time	minutes	11.5123277
+R1188	Time series	Time	minutes	11.52203456
+R1189	Time series	Time	minutes	11.53174141
+R1190	Time series	Time	minutes	11.54144826
+R1191	Time series	Time	minutes	11.55115512
+R1192	Time series	Time	minutes	11.56086197
+R1193	Time series	Time	minutes	11.57056882
+R1194	Time series	Time	minutes	11.58027567
+R1195	Time series	Time	minutes	11.58998253
+R1196	Time series	Time	minutes	11.59968938
+R1197	Time series	Time	minutes	11.60939623
+R1198	Time series	Time	minutes	11.61910309
+R1199	Time series	Time	minutes	11.62880994
+R1200	Time series	Time	minutes	11.63851679
+R1201	Time series	Time	minutes	11.64822365
+R1202	Time series	Time	minutes	11.6579305
+R1203	Time series	Time	minutes	11.66763735
+R1204	Time series	Time	minutes	11.67734421
+R1205	Time series	Time	minutes	11.68705106
+R1206	Time series	Time	minutes	11.69675791
+R1207	Time series	Time	minutes	11.70646476
+R1208	Time series	Time	minutes	11.71617162
+R1209	Time series	Time	minutes	11.72587847
+R1210	Time series	Time	minutes	11.73558532
+R1211	Time series	Time	minutes	11.74529218
+R1212	Time series	Time	minutes	11.75499903
+R1213	Time series	Time	minutes	11.76470588
+R1214	Time series	Time	minutes	11.77441274
+R1215	Time series	Time	minutes	11.78411959
+R1216	Time series	Time	minutes	11.79382644
+R1217	Time series	Time	minutes	11.80353329
+R1218	Time series	Time	minutes	11.81324015
+R1219	Time series	Time	minutes	11.822947
+R1220	Time series	Time	minutes	11.83265385
+R1221	Time series	Time	minutes	11.84236071
+R1222	Time series	Time	minutes	11.85206756
+R1223	Time series	Time	minutes	11.86177441
+R1224	Time series	Time	minutes	11.87148127
+R1225	Time series	Time	minutes	11.88118812
+R1226	Time series	Time	minutes	11.89089497
+R1227	Time series	Time	minutes	11.90060182
+R1228	Time series	Time	minutes	11.91030868
+R1229	Time series	Time	minutes	11.92001553
+R1230	Time series	Time	minutes	11.92972238
+R1231	Time series	Time	minutes	11.93942924
+R1232	Time series	Time	minutes	11.94913609
+R1233	Time series	Time	minutes	11.95884294
+R1234	Time series	Time	minutes	11.9685498
+R1235	Time series	Time	minutes	11.97825665
+R1236	Time series	Time	minutes	11.9879635
+R1237	Time series	Time	minutes	11.99767036
+R1238	Time series	Time	minutes	12.00737721
+R1239	Time series	Time	minutes	12.01708406
+R1240	Time series	Time	minutes	12.02679091
+R1241	Time series	Time	minutes	12.03649777
+R1242	Time series	Time	minutes	12.04620462
+R1243	Time series	Time	minutes	12.05591147
+R1244	Time series	Time	minutes	12.06561833
+R1245	Time series	Time	minutes	12.07532518
+R1246	Time series	Time	minutes	12.08503203
+R1247	Time series	Time	minutes	12.09473889
+R1248	Time series	Time	minutes	12.10444574
+R1249	Time series	Time	minutes	12.11415259
+R1250	Time series	Time	minutes	12.12385944
+R1251	Time series	Time	minutes	12.1335663
+R1252	Time series	Time	minutes	12.14327315
+R1253	Time series	Time	minutes	12.15298
+R1254	Time series	Time	minutes	12.16268686
+R1255	Time series	Time	minutes	12.17239371
+R1256	Time series	Time	minutes	12.18210056
+R1257	Time series	Time	minutes	12.19180742
+R1258	Time series	Time	minutes	12.20151427
+R1259	Time series	Time	minutes	12.21122112
+R1260	Time series	Time	minutes	12.22092798
+R1261	Time series	Time	minutes	12.23063483
+R1262	Time series	Time	minutes	12.24034168
+R1263	Time series	Time	minutes	12.25004853
+R1264	Time series	Time	minutes	12.25975539
+R1265	Time series	Time	minutes	12.26946224
+R1266	Time series	Time	minutes	12.27916909
+R1267	Time series	Time	minutes	12.28887595
+R1268	Time series	Time	minutes	12.2985828
+R1269	Time series	Time	minutes	12.30828965
+R1270	Time series	Time	minutes	12.31799651
+R1271	Time series	Time	minutes	12.32770336
+R1272	Time series	Time	minutes	12.33741021
+R1273	Time series	Time	minutes	12.34711706
+R1274	Time series	Time	minutes	12.35682392
+R1275	Time series	Time	minutes	12.36653077
+R1276	Time series	Time	minutes	12.37623762
+R1277	Time series	Time	minutes	12.38594448
+R1278	Time series	Time	minutes	12.39565133
+R1279	Time series	Time	minutes	12.40535818
+R1280	Time series	Time	minutes	12.41506504
+R1281	Time series	Time	minutes	12.42477189
+R1282	Time series	Time	minutes	12.43447874
+R1283	Time series	Time	minutes	12.4441856
+R1284	Time series	Time	minutes	12.45389245
+R1285	Time series	Time	minutes	12.4635993
+R1286	Time series	Time	minutes	12.47330615
+R1287	Time series	Time	minutes	12.48301301
+R1288	Time series	Time	minutes	12.49271986
+R1289	Time series	Time	minutes	12.50242671
+R1290	Time series	Time	minutes	12.51213357
+R1291	Time series	Time	minutes	12.52184042
+R1292	Time series	Time	minutes	12.53154727
+R1293	Time series	Time	minutes	12.54125413
+R1294	Time series	Time	minutes	12.55096098
+R1295	Time series	Time	minutes	12.56066783
+R1296	Time series	Time	minutes	12.57037468
+R1297	Time series	Time	minutes	12.58008154
+R1298	Time series	Time	minutes	12.58978839
+R1299	Time series	Time	minutes	12.59949524
+R1300	Time series	Time	minutes	12.6092021
+R1301	Time series	Time	minutes	12.61890895
+R1302	Time series	Time	minutes	12.6286158
+R1303	Time series	Time	minutes	12.63832266
+R1304	Time series	Time	minutes	12.64802951
+R1305	Time series	Time	minutes	12.65773636
+R1306	Time series	Time	minutes	12.66744321
+R1307	Time series	Time	minutes	12.67715007
+R1308	Time series	Time	minutes	12.68685692
+R1309	Time series	Time	minutes	12.69656377
+R1310	Time series	Time	minutes	12.70627063
+R1311	Time series	Time	minutes	12.71597748
+R1312	Time series	Time	minutes	12.72568433
+R1313	Time series	Time	minutes	12.73539119
+R1314	Time series	Time	minutes	12.74509804
+R1315	Time series	Time	minutes	12.75480489
+R1316	Time series	Time	minutes	12.76451175
+R1317	Time series	Time	minutes	12.7742186
+R1318	Time series	Time	minutes	12.78392545
+R1319	Time series	Time	minutes	12.7936323
+R1320	Time series	Time	minutes	12.80333916
+R1321	Time series	Time	minutes	12.81304601
+R1322	Time series	Time	minutes	12.82275286
+R1323	Time series	Time	minutes	12.83245972
+R1324	Time series	Time	minutes	12.84216657
+R1325	Time series	Time	minutes	12.85187342
+R1326	Time series	Time	minutes	12.86158028
+R1327	Time series	Time	minutes	12.87128713
+R1328	Time series	Time	minutes	12.88099398
+R1329	Time series	Time	minutes	12.89070083
+R1330	Time series	Time	minutes	12.90040769
+R1331	Time series	Time	minutes	12.91011454
+R1332	Time series	Time	minutes	12.91982139
+R1333	Time series	Time	minutes	12.92952825
+R1334	Time series	Time	minutes	12.9392351
+R1335	Time series	Time	minutes	12.94894195
+R1336	Time series	Time	minutes	12.95864881
+R1337	Time series	Time	minutes	12.96835566
+R1338	Time series	Time	minutes	12.97806251
+R1339	Time series	Time	minutes	12.98776937
+R1340	Time series	Time	minutes	12.99747622
+R1341	Time series	Time	minutes	13.00718307
+R1342	Time series	Time	minutes	13.01688992
+R1343	Time series	Time	minutes	13.02659678
+R1344	Time series	Time	minutes	13.03630363
+R1345	Time series	Time	minutes	13.04601048
+R1346	Time series	Time	minutes	13.05571734
+R1347	Time series	Time	minutes	13.06542419
+R1348	Time series	Time	minutes	13.07513104
+R1349	Time series	Time	minutes	13.0848379
+R1350	Time series	Time	minutes	13.09454475
+R1351	Time series	Time	minutes	13.1042516
+R1352	Time series	Time	minutes	13.11395845
+R1353	Time series	Time	minutes	13.12366531
+R1354	Time series	Time	minutes	13.13337216
+R1355	Time series	Time	minutes	13.14307901
+R1356	Time series	Time	minutes	13.15278587
+R1357	Time series	Time	minutes	13.16249272
+R1358	Time series	Time	minutes	13.17219957
+R1359	Time series	Time	minutes	13.18190643
+R1360	Time series	Time	minutes	13.19161328
+R1361	Time series	Time	minutes	13.20132013
+R1362	Time series	Time	minutes	13.21102699
+R1363	Time series	Time	minutes	13.22073384
+R1364	Time series	Time	minutes	13.23044069
+R1365	Time series	Time	minutes	13.24014754
+R1366	Time series	Time	minutes	13.2498544
+R1367	Time series	Time	minutes	13.25956125
+R1368	Time series	Time	minutes	13.2692681
+R1369	Time series	Time	minutes	13.27897496
+R1370	Time series	Time	minutes	13.28868181
+R1371	Time series	Time	minutes	13.29838866
+R1372	Time series	Time	minutes	13.30809552
+R1373	Time series	Time	minutes	13.31780237
+R1374	Time series	Time	minutes	13.32750922
+R1375	Time series	Time	minutes	13.33721607
+R1376	Time series	Time	minutes	13.34692293
+R1377	Time series	Time	minutes	13.35662978
+R1378	Time series	Time	minutes	13.36633663
+R1379	Time series	Time	minutes	13.37604349
+R1380	Time series	Time	minutes	13.38575034
+R1381	Time series	Time	minutes	13.39545719
+R1382	Time series	Time	minutes	13.40516405
+R1383	Time series	Time	minutes	13.4148709
+R1384	Time series	Time	minutes	13.42457775
+R1385	Time series	Time	minutes	13.4342846
+R1386	Time series	Time	minutes	13.44399146
+R1387	Time series	Time	minutes	13.45369831
+R1388	Time series	Time	minutes	13.46340516
+R1389	Time series	Time	minutes	13.47311202
+R1390	Time series	Time	minutes	13.48281887
+R1391	Time series	Time	minutes	13.49252572
+R1392	Time series	Time	minutes	13.50223258
+R1393	Time series	Time	minutes	13.51193943
+R1394	Time series	Time	minutes	13.52164628
+R1395	Time series	Time	minutes	13.53135314
+R1396	Time series	Time	minutes	13.54105999
+R1397	Time series	Time	minutes	13.55076684
+R1398	Time series	Time	minutes	13.56047369
+R1399	Time series	Time	minutes	13.57018055
+R1400	Time series	Time	minutes	13.5798874
+R1401	Time series	Time	minutes	13.58959425
+R1402	Time series	Time	minutes	13.59930111
+R1403	Time series	Time	minutes	13.60900796
+R1404	Time series	Time	minutes	13.61871481
+R1405	Time series	Time	minutes	13.62842167
+R1406	Time series	Time	minutes	13.63812852
+R1407	Time series	Time	minutes	13.64783537
+R1408	Time series	Time	minutes	13.65754222
+R1409	Time series	Time	minutes	13.66724908
+R1410	Time series	Time	minutes	13.67695593
+R1411	Time series	Time	minutes	13.68666278
+R1412	Time series	Time	minutes	13.69636964
+R1413	Time series	Time	minutes	13.70607649
+R1414	Time series	Time	minutes	13.71578334
+R1415	Time series	Time	minutes	13.7254902
+R1416	Time series	Time	minutes	13.73519705
+R1417	Time series	Time	minutes	13.7449039
+R1418	Time series	Time	minutes	13.75461076
+R1419	Time series	Time	minutes	13.76431761
+R1420	Time series	Time	minutes	13.77402446
+R1421	Time series	Time	minutes	13.78373131
+R1422	Time series	Time	minutes	13.79343817
+R1423	Time series	Time	minutes	13.80314502
+R1424	Time series	Time	minutes	13.81285187
+R1425	Time series	Time	minutes	13.82255873
+R1426	Time series	Time	minutes	13.83226558
+R1427	Time series	Time	minutes	13.84197243
+R1428	Time series	Time	minutes	13.85167929
+R1429	Time series	Time	minutes	13.86138614
+R1430	Time series	Time	minutes	13.87109299
+R1431	Time series	Time	minutes	13.88079984
+R1432	Time series	Time	minutes	13.8905067
+R1433	Time series	Time	minutes	13.90021355
+R1434	Time series	Time	minutes	13.9099204
+R1435	Time series	Time	minutes	13.91962726
+R1436	Time series	Time	minutes	13.92933411
+R1437	Time series	Time	minutes	13.93904096
+R1438	Time series	Time	minutes	13.94874782
+R1439	Time series	Time	minutes	13.95845467
+R1440	Time series	Time	minutes	13.96816152
+R1441	Time series	Time	minutes	13.97786838
+R1442	Time series	Time	minutes	13.98757523
+R1443	Time series	Time	minutes	13.99728208
+R1444	Time series	Time	minutes	14.00698893
+R1445	Time series	Time	minutes	14.01669579
+R1446	Time series	Time	minutes	14.02640264
+R1447	Time series	Time	minutes	14.03610949
+R1448	Time series	Time	minutes	14.04581635
+R1449	Time series	Time	minutes	14.0555232
+R1450	Time series	Time	minutes	14.06523005
+R1451	Time series	Time	minutes	14.07493691
+R1452	Time series	Time	minutes	14.08464376
+R1453	Time series	Time	minutes	14.09435061
+R1454	Time series	Time	minutes	14.10405746
+R1455	Time series	Time	minutes	14.11376432
+R1456	Time series	Time	minutes	14.12347117
+R1457	Time series	Time	minutes	14.13317802
+R1458	Time series	Time	minutes	14.14288488
+R1459	Time series	Time	minutes	14.15259173
+R1460	Time series	Time	minutes	14.16229858
+R1461	Time series	Time	minutes	14.17200544
+R1462	Time series	Time	minutes	14.18171229
+R1463	Time series	Time	minutes	14.19141914
+R1464	Time series	Time	minutes	14.20112599
+R1465	Time series	Time	minutes	14.21083285
+R1466	Time series	Time	minutes	14.2205397
+R1467	Time series	Time	minutes	14.23024655
+R1468	Time series	Time	minutes	14.23995341
+R1469	Time series	Time	minutes	14.24966026
+R1470	Time series	Time	minutes	14.25936711
+R1471	Time series	Time	minutes	14.26907397
+R1472	Time series	Time	minutes	14.27878082
+R1473	Time series	Time	minutes	14.28848767
+R1474	Time series	Time	minutes	14.29819453
+R1475	Time series	Time	minutes	14.30790138
+R1476	Time series	Time	minutes	14.31760823
+R1477	Time series	Time	minutes	14.32731508
+R1478	Time series	Time	minutes	14.33702194
+R1479	Time series	Time	minutes	14.34672879
+R1480	Time series	Time	minutes	14.35643564
+R1481	Time series	Time	minutes	14.3661425
+R1482	Time series	Time	minutes	14.37584935
+R1483	Time series	Time	minutes	14.3855562
+R1484	Time series	Time	minutes	14.39526306
+R1485	Time series	Time	minutes	14.40496991
+R1486	Time series	Time	minutes	14.41467676
+R1487	Time series	Time	minutes	14.42438361
+R1488	Time series	Time	minutes	14.43409047
+R1489	Time series	Time	minutes	14.44379732
+R1490	Time series	Time	minutes	14.45350417
+R1491	Time series	Time	minutes	14.46321103
+R1492	Time series	Time	minutes	14.47291788
+R1493	Time series	Time	minutes	14.48262473
+R1494	Time series	Time	minutes	14.49233159
+R1495	Time series	Time	minutes	14.50203844
+R1496	Time series	Time	minutes	14.51174529
+R1497	Time series	Time	minutes	14.52145215
+R1498	Time series	Time	minutes	14.531159
+R1499	Time series	Time	minutes	14.54086585
+R1500	Time series	Time	minutes	14.5505727
+R1501	Time series	Time	minutes	14.56027956
+R1502	Time series	Time	minutes	14.56998641
+R1503	Time series	Time	minutes	14.57969326
+R1504	Time series	Time	minutes	14.58940012
+R1505	Time series	Time	minutes	14.59910697
+R1506	Time series	Time	minutes	14.60881382
+R1507	Time series	Time	minutes	14.61852068
+R1508	Time series	Time	minutes	14.62822753
+R1509	Time series	Time	minutes	14.63793438
+R1510	Time series	Time	minutes	14.64764123
+R1511	Time series	Time	minutes	14.65734809
+R1512	Time series	Time	minutes	14.66705494
+R1513	Time series	Time	minutes	14.67676179
+R1514	Time series	Time	minutes	14.68646865
+R1515	Time series	Time	minutes	14.6961755
+R1516	Time series	Time	minutes	14.70588235
+R1517	Time series	Time	minutes	14.71558921
+R1518	Time series	Time	minutes	14.72529606
+R1519	Time series	Time	minutes	14.73500291
+R1520	Time series	Time	minutes	14.74470977
+R1521	Time series	Time	minutes	14.75441662
+R1522	Time series	Time	minutes	14.76412347
+R1523	Time series	Time	minutes	14.77383032
+R1524	Time series	Time	minutes	14.78353718
+R1525	Time series	Time	minutes	14.79324403
+R1526	Time series	Time	minutes	14.80295088
+R1527	Time series	Time	minutes	14.81265774
+R1528	Time series	Time	minutes	14.82236459
+R1529	Time series	Time	minutes	14.83207144
+R1530	Time series	Time	minutes	14.8417783
+R1531	Time series	Time	minutes	14.85148515
+R1532	Time series	Time	minutes	14.861192
+R1533	Time series	Time	minutes	14.87089885
+R1534	Time series	Time	minutes	14.88060571
+R1535	Time series	Time	minutes	14.89031256
+R1536	Time series	Time	minutes	14.90001941
+R1537	Time series	Time	minutes	14.90972627
+R1538	Time series	Time	minutes	14.91943312
+R1539	Time series	Time	minutes	14.92913997
+R1540	Time series	Time	minutes	14.93884683
+R1541	Time series	Time	minutes	14.94855368
+R1542	Time series	Time	minutes	14.95826053
+R1543	Time series	Time	minutes	14.96796738
+R1544	Time series	Time	minutes	14.97767424
+R1545	Time series	Time	minutes	14.98738109
+R1546	Time series	Time	minutes	14.99708794
+R1547	Time series	Time	minutes	15.0067948
+R1548	Time series	Time	minutes	15.01650165
+R1549	Time series	Time	minutes	15.0262085
+R1550	Time series	Time	minutes	15.03591536
+R1551	Time series	Time	minutes	15.04562221
+R1552	Time series	Time	minutes	15.05532906
+R1553	Time series	Time	minutes	15.06503592
+R1554	Time series	Time	minutes	15.07474277
+R1555	Time series	Time	minutes	15.08444962
+R1556	Time series	Time	minutes	15.09415647
+R1557	Time series	Time	minutes	15.10386333
+R1558	Time series	Time	minutes	15.11357018
+R1559	Time series	Time	minutes	15.12327703
+R1560	Time series	Time	minutes	15.13298389
+R1561	Time series	Time	minutes	15.14269074
+R1562	Time series	Time	minutes	15.15239759
+R1563	Time series	Time	minutes	15.16210445
+R1564	Time series	Time	minutes	15.1718113
+R1565	Time series	Time	minutes	15.18151815
+R1566	Time series	Time	minutes	15.191225
+R1567	Time series	Time	minutes	15.20093186
+R1568	Time series	Time	minutes	15.21063871
+R1569	Time series	Time	minutes	15.22034556
+R1570	Time series	Time	minutes	15.23005242
+R1571	Time series	Time	minutes	15.23975927
+R1572	Time series	Time	minutes	15.24946612
+R1573	Time series	Time	minutes	15.25917298
+R1574	Time series	Time	minutes	15.26887983
+R1575	Time series	Time	minutes	15.27858668
+R1576	Time series	Time	minutes	15.28829354
+R1577	Time series	Time	minutes	15.29800039
+R1578	Time series	Time	minutes	15.30770724
+R1579	Time series	Time	minutes	15.31741409
+R1580	Time series	Time	minutes	15.32712095
+R1581	Time series	Time	minutes	15.3368278
+R1582	Time series	Time	minutes	15.34653465
+R1583	Time series	Time	minutes	15.35624151
+R1584	Time series	Time	minutes	15.36594836
+R1585	Time series	Time	minutes	15.37565521
+R1586	Time series	Time	minutes	15.38536207
+R1587	Time series	Time	minutes	15.39506892
+R1588	Time series	Time	minutes	15.40477577
+R1589	Time series	Time	minutes	15.41448262
+R1590	Time series	Time	minutes	15.42418948
+R1591	Time series	Time	minutes	15.43389633
+R1592	Time series	Time	minutes	15.44360318
+R1593	Time series	Time	minutes	15.45331004
+R1594	Time series	Time	minutes	15.46301689
+R1595	Time series	Time	minutes	15.47272374
+R1596	Time series	Time	minutes	15.4824306
+R1597	Time series	Time	minutes	15.49213745
+R1598	Time series	Time	minutes	15.5018443
+R1599	Time series	Time	minutes	15.51155116
+R1600	Time series	Time	minutes	15.52125801
+R1601	Time series	Time	minutes	15.53096486
+R1602	Time series	Time	minutes	15.54067171
+R1603	Time series	Time	minutes	15.55037857
+R1604	Time series	Time	minutes	15.56008542
+R1605	Time series	Time	minutes	15.56979227
+R1606	Time series	Time	minutes	15.57949913
+R1607	Time series	Time	minutes	15.58920598
+R1608	Time series	Time	minutes	15.59891283
+R1609	Time series	Time	minutes	15.60861969
+R1610	Time series	Time	minutes	15.61832654
+R1611	Time series	Time	minutes	15.62803339
+R1612	Time series	Time	minutes	15.63774024
+R1613	Time series	Time	minutes	15.6474471
+R1614	Time series	Time	minutes	15.65715395
+R1615	Time series	Time	minutes	15.6668608
+R1616	Time series	Time	minutes	15.67656766
+R1617	Time series	Time	minutes	15.68627451
+R1618	Time series	Time	minutes	15.69598136
+R1619	Time series	Time	minutes	15.70568822
+R1620	Time series	Time	minutes	15.71539507
+R1621	Time series	Time	minutes	15.72510192
+R1622	Time series	Time	minutes	15.73480877
+R1623	Time series	Time	minutes	15.74451563
+R1624	Time series	Time	minutes	15.75422248
+R1625	Time series	Time	minutes	15.76392933
+R1626	Time series	Time	minutes	15.77363619
+R1627	Time series	Time	minutes	15.78334304
+R1628	Time series	Time	minutes	15.79304989
+R1629	Time series	Time	minutes	15.80275675
+R1630	Time series	Time	minutes	15.8124636
+R1631	Time series	Time	minutes	15.82217045
+R1632	Time series	Time	minutes	15.83187731
+R1633	Time series	Time	minutes	15.84158416
+R1634	Time series	Time	minutes	15.85129101
+R1635	Time series	Time	minutes	15.86099786
+R1636	Time series	Time	minutes	15.87070472
+R1637	Time series	Time	minutes	15.88041157
+R1638	Time series	Time	minutes	15.89011842
+R1639	Time series	Time	minutes	15.89982528
+R1640	Time series	Time	minutes	15.90953213
+R1641	Time series	Time	minutes	15.91923898
+R1642	Time series	Time	minutes	15.92894584
+R1643	Time series	Time	minutes	15.93865269
+R1644	Time series	Time	minutes	15.94835954
+R1645	Time series	Time	minutes	15.95806639
+R1646	Time series	Time	minutes	15.96777325
+R1647	Time series	Time	minutes	15.9774801
+R1648	Time series	Time	minutes	15.98718695
+R1649	Time series	Time	minutes	15.99689381
+R1650	Time series	Time	minutes	16.00660066
+R1651	Time series	Time	minutes	16.01630751
+R1652	Time series	Time	minutes	16.02601437
+R1653	Time series	Time	minutes	16.03572122
+R1654	Time series	Time	minutes	16.04542807
+R1655	Time series	Time	minutes	16.05513493
+R1656	Time series	Time	minutes	16.06484178
+R1657	Time series	Time	minutes	16.07454863
+R1658	Time series	Time	minutes	16.08425548
+R1659	Time series	Time	minutes	16.09396234
+R1660	Time series	Time	minutes	16.10366919
+R1661	Time series	Time	minutes	16.11337604
+R1662	Time series	Time	minutes	16.1230829
+R1663	Time series	Time	minutes	16.13278975
+R1664	Time series	Time	minutes	16.1424966
+R1665	Time series	Time	minutes	16.15220346
+R1666	Time series	Time	minutes	16.16191031
+R1667	Time series	Time	minutes	16.17161716
+R1668	Time series	Time	minutes	16.18132401
+R1669	Time series	Time	minutes	16.19103087
+R1670	Time series	Time	minutes	16.20073772
+R1671	Time series	Time	minutes	16.21044457
+R1672	Time series	Time	minutes	16.22015143
+R1673	Time series	Time	minutes	16.22985828
+R1674	Time series	Time	minutes	16.23956513
+R1675	Time series	Time	minutes	16.24927199
+R1676	Time series	Time	minutes	16.25897884
+R1677	Time series	Time	minutes	16.26868569
+R1678	Time series	Time	minutes	16.27839255
+R1679	Time series	Time	minutes	16.2880994
+R1680	Time series	Time	minutes	16.29780625
+R1681	Time series	Time	minutes	16.3075131
+R1682	Time series	Time	minutes	16.31721996
+R1683	Time series	Time	minutes	16.32692681
+R1684	Time series	Time	minutes	16.33663366
+R1685	Time series	Time	minutes	16.34634052
+R1686	Time series	Time	minutes	16.35604737
+R1687	Time series	Time	minutes	16.36575422
+R1688	Time series	Time	minutes	16.37546108
+R1689	Time series	Time	minutes	16.38516793
+R1690	Time series	Time	minutes	16.39487478
+R1691	Time series	Time	minutes	16.40458163
+R1692	Time series	Time	minutes	16.41428849
+R1693	Time series	Time	minutes	16.42399534
+R1694	Time series	Time	minutes	16.43370219
+R1695	Time series	Time	minutes	16.44340905
+R1696	Time series	Time	minutes	16.4531159
+R1697	Time series	Time	minutes	16.46282275
+R1698	Time series	Time	minutes	16.47252961
+R1699	Time series	Time	minutes	16.48223646
+R1700	Time series	Time	minutes	16.49194331
+R1701	Time series	Time	minutes	16.50165017
+R1702	Time series	Time	minutes	16.51135702
+R1703	Time series	Time	minutes	16.52106387
+R1704	Time series	Time	minutes	16.53077072
+R1705	Time series	Time	minutes	16.54047758
+R1706	Time series	Time	minutes	16.55018443
+R1707	Time series	Time	minutes	16.55989128
+R1708	Time series	Time	minutes	16.56959814
+R1709	Time series	Time	minutes	16.57930499
+R1710	Time series	Time	minutes	16.58901184
+R1711	Time series	Time	minutes	16.5987187
+R1712	Time series	Time	minutes	16.60842555
+R1713	Time series	Time	minutes	16.6181324
+R1714	Time series	Time	minutes	16.62783925
+R1715	Time series	Time	minutes	16.63754611
+R1716	Time series	Time	minutes	16.64725296
+R1717	Time series	Time	minutes	16.65695981
+R1718	Time series	Time	minutes	16.66666667
+R1719	Time series	Time	minutes	16.67637352
+R1720	Time series	Time	minutes	16.68608037
+R1721	Time series	Time	minutes	16.69578723
+R1722	Time series	Time	minutes	16.70549408
+R1723	Time series	Time	minutes	16.71520093
+R1724	Time series	Time	minutes	16.72490778
+R1725	Time series	Time	minutes	16.73461464
+R1726	Time series	Time	minutes	16.74432149
+R1727	Time series	Time	minutes	16.75402834
+R1728	Time series	Time	minutes	16.7637352
+R1729	Time series	Time	minutes	16.77344205
+R1730	Time series	Time	minutes	16.7831489
+R1731	Time series	Time	minutes	16.79285576
+R1732	Time series	Time	minutes	16.80256261
+R1733	Time series	Time	minutes	16.81226946
+R1734	Time series	Time	minutes	16.82197632
+R1735	Time series	Time	minutes	16.83168317
+R1736	Time series	Time	minutes	16.84139002
+R1737	Time series	Time	minutes	16.85109687
+R1738	Time series	Time	minutes	16.86080373
+R1739	Time series	Time	minutes	16.87051058
+R1740	Time series	Time	minutes	16.88021743
+R1741	Time series	Time	minutes	16.88992429
+R1742	Time series	Time	minutes	16.89963114
+R1743	Time series	Time	minutes	16.90933799
+R1744	Time series	Time	minutes	16.91904485
+R1745	Time series	Time	minutes	16.9287517
+R1746	Time series	Time	minutes	16.93845855
+R1747	Time series	Time	minutes	16.9481654
+R1748	Time series	Time	minutes	16.95787226
+R1749	Time series	Time	minutes	16.96757911
+R1750	Time series	Time	minutes	16.97728596
+R1751	Time series	Time	minutes	16.98699282
+R1752	Time series	Time	minutes	16.99669967
+R1753	Time series	Time	minutes	17.00640652
+R1754	Time series	Time	minutes	17.01611338
+R1755	Time series	Time	minutes	17.02582023
+R1756	Time series	Time	minutes	17.03552708
+R1757	Time series	Time	minutes	17.04523394
+R1758	Time series	Time	minutes	17.05494079
+R1759	Time series	Time	minutes	17.06464764
+R1760	Time series	Time	minutes	17.07435449
+R1761	Time series	Time	minutes	17.08406135
+R1762	Time series	Time	minutes	17.0937682
+R1763	Time series	Time	minutes	17.10347505
+R1764	Time series	Time	minutes	17.11318191
+R1765	Time series	Time	minutes	17.12288876
+R1766	Time series	Time	minutes	17.13259561
+R1767	Time series	Time	minutes	17.14230247
+R1768	Time series	Time	minutes	17.15200932
+R1769	Time series	Time	minutes	17.16171617
+R1770	Time series	Time	minutes	17.17142302
+R1771	Time series	Time	minutes	17.18112988
+R1772	Time series	Time	minutes	17.19083673
+R1773	Time series	Time	minutes	17.20054358
+R1774	Time series	Time	minutes	17.21025044
+R1775	Time series	Time	minutes	17.21995729
+R1776	Time series	Time	minutes	17.22966414
+R1777	Time series	Time	minutes	17.239371
+R1778	Time series	Time	minutes	17.24907785
+R1779	Time series	Time	minutes	17.2587847
+R1780	Time series	Time	minutes	17.26849156
+R1781	Time series	Time	minutes	17.27819841
+R1782	Time series	Time	minutes	17.28790526
+R1783	Time series	Time	minutes	17.29761211
+R1784	Time series	Time	minutes	17.30731897
+R1785	Time series	Time	minutes	17.31702582
+R1786	Time series	Time	minutes	17.32673267
+R1787	Time series	Time	minutes	17.33643953
+R1788	Time series	Time	minutes	17.34614638
+R1789	Time series	Time	minutes	17.35585323
+R1790	Time series	Time	minutes	17.36556009
+R1791	Time series	Time	minutes	17.37526694
+R1792	Time series	Time	minutes	17.38497379
+R1793	Time series	Time	minutes	17.39468064
+R1794	Time series	Time	minutes	17.4043875
+R1795	Time series	Time	minutes	17.41409435
+R1796	Time series	Time	minutes	17.4238012
+R1797	Time series	Time	minutes	17.43350806
+R1798	Time series	Time	minutes	17.44321491
+R1799	Time series	Time	minutes	17.45292176
+R1800	Time series	Time	minutes	17.46262862
+R1801	Time series	Time	minutes	17.47233547
+R1802	Time series	Time	minutes	17.48204232
+R1803	Time series	Time	minutes	17.49174917
+R1804	Time series	Time	minutes	17.50145603
+R1805	Time series	Time	minutes	17.51116288
+R1806	Time series	Time	minutes	17.52086973
+R1807	Time series	Time	minutes	17.53057659
+R1808	Time series	Time	minutes	17.54028344
+R1809	Time series	Time	minutes	17.54999029
+R1810	Time series	Time	minutes	17.55969715
+R1811	Time series	Time	minutes	17.569404
+R1812	Time series	Time	minutes	17.57911085
+R1813	Time series	Time	minutes	17.58881771
+R1814	Time series	Time	minutes	17.59852456
+R1815	Time series	Time	minutes	17.60823141
+R1816	Time series	Time	minutes	17.61793826
+R1817	Time series	Time	minutes	17.62764512
+R1818	Time series	Time	minutes	17.63735197
+R1819	Time series	Time	minutes	17.64705882
+R1820	Time series	Time	minutes	17.65676568
+R1821	Time series	Time	minutes	17.66647253
+R1822	Time series	Time	minutes	17.67617938
+R1823	Time series	Time	minutes	17.68588624
+R1824	Time series	Time	minutes	17.69559309
+R1825	Time series	Time	minutes	17.70529994
+R1826	Time series	Time	minutes	17.71500679
+R1827	Time series	Time	minutes	17.72471365
+R1828	Time series	Time	minutes	17.7344205
+R1829	Time series	Time	minutes	17.74412735
+R1830	Time series	Time	minutes	17.75383421
+R1831	Time series	Time	minutes	17.76354106
+R1832	Time series	Time	minutes	17.77324791
+R1833	Time series	Time	minutes	17.78295477
+R1834	Time series	Time	minutes	17.79266162
+R1835	Time series	Time	minutes	17.80236847
+R1836	Time series	Time	minutes	17.81207533
+R1837	Time series	Time	minutes	17.82178218
+R1838	Time series	Time	minutes	17.83148903
+R1839	Time series	Time	minutes	17.84119588
+R1840	Time series	Time	minutes	17.85090274
+R1841	Time series	Time	minutes	17.86060959
+R1842	Time series	Time	minutes	17.87031644
+R1843	Time series	Time	minutes	17.8800233
+R1844	Time series	Time	minutes	17.88973015
+R1845	Time series	Time	minutes	17.899437
+R1846	Time series	Time	minutes	17.90914386
+R1847	Time series	Time	minutes	17.91885071
+R1848	Time series	Time	minutes	17.92855756
+R1849	Time series	Time	minutes	17.93826441
+R1850	Time series	Time	minutes	17.94797127
+R1851	Time series	Time	minutes	17.95767812
+R1852	Time series	Time	minutes	17.96738497
+R1853	Time series	Time	minutes	17.97709183
+R1854	Time series	Time	minutes	17.98679868
+R1855	Time series	Time	minutes	17.99650553
+R1856	Time series	Time	minutes	18.00621239
+R1857	Time series	Time	minutes	18.01591924
+R1858	Time series	Time	minutes	18.02562609
+R1859	Time series	Time	minutes	18.03533295
+R1860	Time series	Time	minutes	18.0450398
+R1861	Time series	Time	minutes	18.05474665
+R1862	Time series	Time	minutes	18.0644535
+R1863	Time series	Time	minutes	18.07416036
+R1864	Time series	Time	minutes	18.08386721
+R1865	Time series	Time	minutes	18.09357406
+R1866	Time series	Time	minutes	18.10328092
+R1867	Time series	Time	minutes	18.11298777
+R1868	Time series	Time	minutes	18.12269462
+R1869	Time series	Time	minutes	18.13240148
+R1870	Time series	Time	minutes	18.14210833
+R1871	Time series	Time	minutes	18.15181518
+R1872	Time series	Time	minutes	18.16152203
+R1873	Time series	Time	minutes	18.17122889
+R1874	Time series	Time	minutes	18.18093574
+R1875	Time series	Time	minutes	18.19064259
+R1876	Time series	Time	minutes	18.20034945
+R1877	Time series	Time	minutes	18.2100563
+R1878	Time series	Time	minutes	18.21976315
+R1879	Time series	Time	minutes	18.22947001
+R1880	Time series	Time	minutes	18.23917686
+R1881	Time series	Time	minutes	18.24888371
+R1882	Time series	Time	minutes	18.25859056
+R1883	Time series	Time	minutes	18.26829742
+R1884	Time series	Time	minutes	18.27800427
+R1885	Time series	Time	minutes	18.28771112
+R1886	Time series	Time	minutes	18.29741798
+R1887	Time series	Time	minutes	18.30712483
+R1888	Time series	Time	minutes	18.31683168
+R1889	Time series	Time	minutes	18.32653854
+R1890	Time series	Time	minutes	18.33624539
+R1891	Time series	Time	minutes	18.34595224
+R1892	Time series	Time	minutes	18.3556591
+R1893	Time series	Time	minutes	18.36536595
+R1894	Time series	Time	minutes	18.3750728
+R1895	Time series	Time	minutes	18.38477965
+R1896	Time series	Time	minutes	18.39448651
+R1897	Time series	Time	minutes	18.40419336
+R1898	Time series	Time	minutes	18.41390021
+R1899	Time series	Time	minutes	18.42360707
+R1900	Time series	Time	minutes	18.43331392
+R1901	Time series	Time	minutes	18.44302077
+R1902	Time series	Time	minutes	18.45272763
+R1903	Time series	Time	minutes	18.46243448
+R1904	Time series	Time	minutes	18.47214133
+R1905	Time series	Time	minutes	18.48184818
+R1906	Time series	Time	minutes	18.49155504
+R1907	Time series	Time	minutes	18.50126189
+R1908	Time series	Time	minutes	18.51096874
+R1909	Time series	Time	minutes	18.5206756
+R1910	Time series	Time	minutes	18.53038245
+R1911	Time series	Time	minutes	18.5400893
+R1912	Time series	Time	minutes	18.54979616
+R1913	Time series	Time	minutes	18.55950301
+R1914	Time series	Time	minutes	18.56920986
+R1915	Time series	Time	minutes	18.57891672
+R1916	Time series	Time	minutes	18.58862357
+R1917	Time series	Time	minutes	18.59833042
+R1918	Time series	Time	minutes	18.60803727
+R1919	Time series	Time	minutes	18.61774413
+R1920	Time series	Time	minutes	18.62745098
+R1921	Time series	Time	minutes	18.63715783
+R1922	Time series	Time	minutes	18.64686469
+R1923	Time series	Time	minutes	18.65657154
+R1924	Time series	Time	minutes	18.66627839
+R1925	Time series	Time	minutes	18.67598525
+R1926	Time series	Time	minutes	18.6856921
+R1927	Time series	Time	minutes	18.69539895
+R1928	Time series	Time	minutes	18.7051058
+R1929	Time series	Time	minutes	18.71481266
+R1930	Time series	Time	minutes	18.72451951
+R1931	Time series	Time	minutes	18.73422636
+R1932	Time series	Time	minutes	18.74393322
+R1933	Time series	Time	minutes	18.75364007
+R1934	Time series	Time	minutes	18.76334692
+R1935	Time series	Time	minutes	18.77305378
+R1936	Time series	Time	minutes	18.78276063
+R1937	Time series	Time	minutes	18.79246748
+R1938	Time series	Time	minutes	18.80217434
+R1939	Time series	Time	minutes	18.81188119
+R1940	Time series	Time	minutes	18.82158804
+R1941	Time series	Time	minutes	18.83129489
+R1942	Time series	Time	minutes	18.84100175
+R1943	Time series	Time	minutes	18.8507086
+R1944	Time series	Time	minutes	18.86041545
+R1945	Time series	Time	minutes	18.87012231
+R1946	Time series	Time	minutes	18.87982916
+R1947	Time series	Time	minutes	18.88953601
+R1948	Time series	Time	minutes	18.89924287
+R1949	Time series	Time	minutes	18.90894972
+R1950	Time series	Time	minutes	18.91865657
+R1951	Time series	Time	minutes	18.92836342
+R1952	Time series	Time	minutes	18.93807028
+R1953	Time series	Time	minutes	18.94777713
+R1954	Time series	Time	minutes	18.95748398
+R1955	Time series	Time	minutes	18.96719084
+R1956	Time series	Time	minutes	18.97689769
+R1957	Time series	Time	minutes	18.98660454
+R1958	Time series	Time	minutes	18.9963114
+R1959	Time series	Time	minutes	19.00601825
+R1960	Time series	Time	minutes	19.0157251
+R1961	Time series	Time	minutes	19.02543195
+R1962	Time series	Time	minutes	19.03513881
+R1963	Time series	Time	minutes	19.04484566
+R1964	Time series	Time	minutes	19.05455251
+R1965	Time series	Time	minutes	19.06425937
+R1966	Time series	Time	minutes	19.07396622
+R1967	Time series	Time	minutes	19.08367307
+R1968	Time series	Time	minutes	19.09337993
+R1969	Time series	Time	minutes	19.10308678
+R1970	Time series	Time	minutes	19.11279363
+R1971	Time series	Time	minutes	19.12250049
+R1972	Time series	Time	minutes	19.13220734
+R1973	Time series	Time	minutes	19.14191419
+R1974	Time series	Time	minutes	19.15162104
+R1975	Time series	Time	minutes	19.1613279
+R1976	Time series	Time	minutes	19.17103475
+R1977	Time series	Time	minutes	19.1807416
+R1978	Time series	Time	minutes	19.19044846
+R1979	Time series	Time	minutes	19.20015531
+R1980	Time series	Time	minutes	19.20986216
+R1981	Time series	Time	minutes	19.21956902
+R1982	Time series	Time	minutes	19.22927587
+R1983	Time series	Time	minutes	19.23898272
+R1984	Time series	Time	minutes	19.24868957
+R1985	Time series	Time	minutes	19.25839643
+R1986	Time series	Time	minutes	19.26810328
+R1987	Time series	Time	minutes	19.27781013
+R1988	Time series	Time	minutes	19.28751699
+R1989	Time series	Time	minutes	19.29722384
+R1990	Time series	Time	minutes	19.30693069
+R1991	Time series	Time	minutes	19.31663755
+R1992	Time series	Time	minutes	19.3263444
+R1993	Time series	Time	minutes	19.33605125
+R1994	Time series	Time	minutes	19.34575811
+R1995	Time series	Time	minutes	19.35546496
+R1996	Time series	Time	minutes	19.36517181
+R1997	Time series	Time	minutes	19.37487866
+R1998	Time series	Time	minutes	19.38458552
+R1999	Time series	Time	minutes	19.39429237
+R2000	Time series	Time	minutes	19.40399922
+R2001	Time series	Time	minutes	19.41370608
+R2002	Time series	Time	minutes	19.42341293
+R2003	Time series	Time	minutes	19.43311978
+R2004	Time series	Time	minutes	19.44282664
+R2005	Time series	Time	minutes	19.45253349
+R2006	Time series	Time	minutes	19.46224034
+R2007	Time series	Time	minutes	19.47194719
+R2008	Time series	Time	minutes	19.48165405
+R2009	Time series	Time	minutes	19.4913609
+R2010	Time series	Time	minutes	19.50106775
+R2011	Time series	Time	minutes	19.51077461
+R2012	Time series	Time	minutes	19.52048146
+R2013	Time series	Time	minutes	19.53018831
+R2014	Time series	Time	minutes	19.53989517
+R2015	Time series	Time	minutes	19.54960202
+R2016	Time series	Time	minutes	19.55930887
+R2017	Time series	Time	minutes	19.56901573
+R2018	Time series	Time	minutes	19.57872258
+R2019	Time series	Time	minutes	19.58842943
+R2020	Time series	Time	minutes	19.59813628
+R2021	Time series	Time	minutes	19.60784314
+R2022	Time series	Time	minutes	19.61754999
+R2023	Time series	Time	minutes	19.62725684
+R2024	Time series	Time	minutes	19.6369637
+R2025	Time series	Time	minutes	19.64667055
+R2026	Time series	Time	minutes	19.6563774
+R2027	Time series	Time	minutes	19.66608426
+R2028	Time series	Time	minutes	19.67579111
+R2029	Time series	Time	minutes	19.68549796
+R2030	Time series	Time	minutes	19.69520481
+R2031	Time series	Time	minutes	19.70491167
+R2032	Time series	Time	minutes	19.71461852
+R2033	Time series	Time	minutes	19.72432537
+R2034	Time series	Time	minutes	19.73403223
+R2035	Time series	Time	minutes	19.74373908
+R2036	Time series	Time	minutes	19.75344593
+R2037	Time series	Time	minutes	19.76315279
+R2038	Time series	Time	minutes	19.77285964
+R2039	Time series	Time	minutes	19.78256649
+R2040	Time series	Time	minutes	19.79227334
+R2041	Time series	Time	minutes	19.8019802
+R2042	Time series	Time	minutes	19.81168705
+R2043	Time series	Time	minutes	19.8213939
+R2044	Time series	Time	minutes	19.83110076
+R2045	Time series	Time	minutes	19.84080761
+R2046	Time series	Time	minutes	19.85051446
+R2047	Time series	Time	minutes	19.86022132
+R2048	Time series	Time	minutes	19.86992817
+R2049	Time series	Time	minutes	19.87963502
+R2050	Time series	Time	minutes	19.88934188
+R2051	Time series	Time	minutes	19.89904873
+R2052	Time series	Time	minutes	19.90875558
+R2053	Time series	Time	minutes	19.91846243
+R2054	Time series	Time	minutes	19.92816929
+R2055	Time series	Time	minutes	19.93787614
+R2056	Time series	Time	minutes	19.94758299
+R2057	Time series	Time	minutes	19.95728985
+R2058	Time series	Time	minutes	19.9669967
+R2059	Time series	Time	minutes	19.97670355
+R2060	Time series	Time	minutes	19.98641041
