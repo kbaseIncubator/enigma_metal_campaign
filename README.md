@@ -70,6 +70,7 @@ Column metadata may describe sample-specific conditions and type of values in th
 
 |METADATA|Entity|Property|Unit|Value|
 |---|---|---|---|---|
+|...|...|...|...|...|
 |C1 |Condition |Nickel |mM |0.00
 |C1 |Condition |Strain | |Pseudomonas stutzeri RCH2
 |C2 |Condition |Nickel |mM |1.00
@@ -83,10 +84,95 @@ Columns may contain data from replicates, average values, standard deviation or 
 
 |METADATA|Entity|Property|Unit|Value|
 |---|---|---|---|---|
+|...|...|...|...|...|
 |C1 |Measurement |ValueType ||Average
 |C2 |Measurement |ValueType ||SD
 
 # ChromatographyMatrix metadata
 
+Row metadata contain description of time points (see GrowthMatrix metadata section for details).
+
+Column metadata describe type of measurement and type of value. Entity column must contain word "Measurement", and Property column must contain "Intensity" or "ValueType". For Intensity property, the Unit column must contain "CPS", and the Value column should contain a name of substance/compound measured. "ValueType" in the Property column would be used in the same way as in GrowthMatrix metadata.
+
+Example:
+
+|METADATA|Entity|Property|Unit|Value|
+|---|---|---|---|---|
+|...|...|...|...|...|
+|R1 |TimeSeries |Time |seconds |1.001
+|R2 |TimeSeries |Time |seconds |2.002
+|...|...|...|...|...|
+|C1 |Measurement |Intensity |CPS |Nickel
+|C1 |Measurement |Intensity |CPS |Tungsten
+
+
 # WellSampleMAtrix metadata
 
+Row metadata describe samples, and column metadata describe measured characteristics. In case of row meatdata, the leftmost field contains row IDs, the Entity column contains "Sample", the Property column cotains either "ID" or "Well". The Value column contains Sample ID or Well ID, respectively.
+
+Example:
+
+|METADATA|Entity|Property|Unit|Value|
+|---|---|---|---|---|
+|...|...|...|...|...|
+|R1 |Sample |ID | |GW101-7-25-12
+|R1 |Sample |Well | |GW-101
+
+
+If an entry in column metadata describes fraction, it must contain "Measurement" in the Entity column and "Fraction" in the Property column. Typical values are "Suspension", "Supernatant", "Pellet", but this is not a requirement. The Unit column should be empty.
+
+If an entry in column metadata describes a substance, it must contain "Measurement" in the Entity column and "Substance" in the Property column. The Unit column must contain acceptable concentration unit (pM, nM, uM, mM, M). The Value column must contain a name of substance (any text).
+
+If an entry in column metadata describes type of value (replicate, average, standard error, standard deviation), it should be used as described for GrowthMatrix metadata (see above).
+
+Example:
+
+|METADATA|Entity|Property|Unit|Value|
+|---|---|---|---|---|
+|...|...|...|...|...|
+|C1 |Measurement |Substance |uM |Nickel
+|C2 |Measurement |Substance |uM |Nickel
+|C1 |Measurement |ValueType ||Average
+|C2 |Measurement |ValueType ||SD
+
+# Other metadata
+
+Any object may contain additional metadata entries for table, rows or columns. Such entries can use any combination of Entity and Property names, except:
+
+- Measurement.ValueType;
+
+- TimeSeries.Time;
+
+- Description.* (only one Description entry is allowed);
+
+The Unit column of such entries must be always empty.
+
+# Metadata validation
+
+In the process of upload, metadata will be validated. A list of checks that will be implemented include:
+
+- One and only one Description entry exists in the metadata section (for all data types).
+
+- One and only one TimeSeries.Time entry exists for any data row ID (for GrowthMatrix and ChromatographyMatrix).
+
+- All TimeSeries.Time entries have acceptable values: hours, minutes or seconds (for GrowthMatrix and ChromatographyMatrix).
+
+- All TimeSeries.Time entries have identical time units (for GrowthMatrix and ChromatographyMatrix).
+
+- At least one Condition entry exists for any data column ID (for GrowthMatrix).
+
+- All Condition entries with non-empty Unit field have acceptable units: pM, nM, uM, mM, M, pg, ng, ug, mg, g (for GrowthMatrix).
+
+- All Condition entries with the same substance name have identical unit names (for GrowthMatrix).
+
+- All Measurements.ValueType entries have acceptable values: Replicate, Average, SD or SE (for all data types).
+
+- No more than one Measurements.ValueType entry exists for any column (for all data types).
+
+- At least one Measurement entry exists for any data column ID (for ChromatographyMatrix and WellSampleMatrix).
+
+- All Measurements.Intensity entries have identical unit names (for ChromatographyMatrix).
+
+- All Measurements.Substance entries have acceptable unit names: pM, nM, uM, mM, M (for WellSampleMatrix).
+
+- One and only one Sample.ID entry exists for any data row ID (for WellSampleMatrix).
