@@ -5,6 +5,7 @@ ENIGMA Metal Metabolism Campaign generates various types of biological data. Thi
 All uploaders accept tab-separated text files with txt or tsv extension.
 File must contain two sections, data and metadata.
 
+# Data section
 Data section consists of a table which leftmost column contains rows identifiers R1, R2, R3... and top row contains column identifiers C1, C2, C3.... Top left cell must contain DATA word. All other cells should contain decimal numbers. All values that cannot be converted to decimal numbers will be changed to 0.00 during upload.
 Example:
 
@@ -14,6 +15,7 @@ Example:
 |R2  |0.11  |0.22 |0.44|
 |R3  |0.22  |0.33 |0.66|
 
+# Metadata section
 Metadata section contains a table with five columns.
 The first raw of metadata table must contain only "METADATA Type  Name  Unit  Value".
 The first (leftmost) column of metadata should contain either identifiers of columns and rows in the data section or "T".
@@ -37,7 +39,7 @@ Any metadata describing the entire experiment should be placed into metadata as 
 |T |Experiment |Medium ||LB |
 |T |Experiment |Read ||Absorbance |
 
-# GrowthMatrix-specific metadata
+## GrowthMatrix-specific metadata
 
 Row metadata describe time points in the following way:
 
@@ -88,7 +90,7 @@ Columns may contain data from replicates, average values, standard deviation or 
 |C1 |Measurement |ValueType ||Average
 |C2 |Measurement |ValueType ||SD
 
-# ChromatographyMatrix metadata
+## ChromatographyMatrix-specific metadata
 
 Row metadata contain description of time points (see GrowthMatrix metadata section for details).
 
@@ -106,7 +108,7 @@ Example:
 |C1 |Measurement |Intensity |CPS |Tungsten
 
 
-# WellSampleMAtrix metadata
+## WellSampleMatrix-specific metadata
 
 Row metadata describe samples, and column metadata describe measured characteristics. In case of row meatdata, the leftmost field contains row IDs, the Entity column contains "Sample", the Property column cotains either "ID" or "Well". The Value column contains Sample ID or Well ID, respectively.
 
@@ -135,7 +137,7 @@ Example:
 |C1 |Measurement |ValueType ||Average
 |C2 |Measurement |ValueType ||SD
 
-# Other metadata
+## Arbitrary metadata entries
 
 Any object may contain additional metadata entries for table, rows or columns. Such entries can use any combination of Entity and Property names, except:
 
@@ -147,7 +149,18 @@ Any object may contain additional metadata entries for table, rows or columns. S
 
 The Unit column of such entries must be always empty.
 
-# Metadata validation
+Example:
+
+|METADATA|Entity|Property|Unit|Value|
+|---|---|---|---|---|
+|...|...|...|...|...|
+|T |Experiment |Date | |05/16/2013
+|C1 |Experiment |Machine Name | |Ti /  47 [#1]
+|C1 |Experiment |Collision-Mode | |Yes
+|C1 |Experiment |Isotope | |47
+
+
+## Metadata validation on upload
 
 In the process of upload, metadata will be validated. A list of checks that will be implemented include:
 
