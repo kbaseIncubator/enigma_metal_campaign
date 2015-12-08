@@ -27,7 +27,6 @@ Metadata section must contain description of the data object in the Value column
 
 |METADATA|Entity|Property|Unit|Value|
 |---|---|---|---|---|
-|...|...|...|...|...|
 |T |Description |||Pseudomonas stutzeri RCH2 in LB, Nickel |
 
 Any metadata describing the entire experiment should be placed into metadata as key-value pairs in columns Property and Value. Experiment metadata must have "T" in the leftmost column and word "Experiment" in the Entity column. For example:
@@ -38,6 +37,27 @@ Any metadata describing the entire experiment should be placed into metadata as 
 |T |Experiment |Temperature ||30 C |
 |T |Experiment |Medium ||LB |
 |T |Experiment |Read ||Absorbance |
+
+A data object may contain either statistical measures (average, standard deviation, standard error) or raw data. In the first case, metadata must contain an entry with "T" in the left most column, "Measurement" in the Entity column, "Values" in the Property column and "Measures" in the Value column:
+
+|METADATA|Entity|Property|Unit|Value|
+|---|---|---|---|---|
+|T |Measurement |Values||Measures |
+
+In the second case, Measurement entry of metadata must have "RawValues" in the Value column:
+
+|METADATA|Entity|Property|Unit|Value|
+|---|---|---|---|---|
+|T |Measurement |Values||RawValues |
+
+If data contain statistical measures, every column must have a separate entry in the metadata section with designation of a statistical measure. Such entries have a valid column identifier in the leftmost column (like C1, C2 etc.), "Measurement" in the Entity column, "ValueType" in the Property column and "Average", "SD" or "SE" in the value column. For example, C1 column contains average values, and C2 column contains standard deviations:
+
+|METADATA|Entity|Property|Unit|Value|
+|---|---|---|---|---|
+|...|...|...|...|...|
+|C1 |Measurement |ValueType ||Average
+|C2 |Measurement |ValueType ||SD
+
 
 ## GrowthMatrix-specific metadata
 
@@ -82,19 +102,11 @@ In this example, sample in C1 column was grown without nickel, but the column sh
 
 Note: only those condition entries that have acceptable unit values (pM, nM, uM, mM, M, pg, ng, ug, mg, g for columns and hours, minutes, seconds for rows) are considered to have numerical values. All other cells in the Value column are considered to contain text.
 
-Columns may contain data from replicates, average values, standard deviation or standard error. To designate a specific type of value in the data column, make a metadata entry for this column with "Measurement" in the Entity column, "ValueType" in the Property column and "Replicate", "Average", "SD" or "SE" in the value column. For example, C1 contains average values, and C2 contains standard deviations:
-
-|METADATA|Entity|Property|Unit|Value|
-|---|---|---|---|---|
-|...|...|...|...|...|
-|C1 |Measurement |ValueType ||Average
-|C2 |Measurement |ValueType ||SD
-
 ## ChromatographyMatrix-specific metadata
 
 Row metadata contain description of time points (see GrowthMatrix metadata section for details).
 
-Column metadata describe type of measurement and type of value. Entity column must contain word "Measurement", and Property column must contain "Intensity" or "ValueType". For Intensity property, the Unit column must contain "CPS", and the Value column should contain a name of substance/compound measured. "ValueType" in the Property column would be used in the same way as in GrowthMatrix metadata.
+Column metadata describe type of measurement and type of value. Entity column must contain word "Measurement", and Property column must contain "Intensity". For Intensity property, the Unit column must contain "CPS", and the Value column should contain a name of substance/compound measured. 
 
 Example:
 
@@ -106,7 +118,6 @@ Example:
 |...|...|...|...|...|
 |C1 |Measurement |Intensity |CPS |Nickel
 |C1 |Measurement |Intensity |CPS |Tungsten
-
 
 ## WellSampleMatrix-specific metadata
 
@@ -124,8 +135,6 @@ Example:
 If an entry in column metadata describes fraction, it must contain "Measurement" in the Entity column and "Fraction" in the Property column. Typical values are "Suspension", "Supernatant", "Pellet", but this is not a requirement. The Unit column should be empty.
 
 If an entry in column metadata describes a substance, it must contain "Measurement" in the Entity column and "Substance" in the Property column. The Unit column must contain acceptable concentration unit (pM, nM, uM, mM, M). The Value column must contain a name of substance (any text).
-
-If an entry in column metadata describes type of value (replicate, average, standard error, standard deviation), it should be used as described for GrowthMatrix metadata (see above).
 
 Example:
 
@@ -166,6 +175,12 @@ In the process of upload, metadata will be validated. A list of checks that will
 
 - One and only one Description entry exists in the metadata section (for all data types).
 
+- One and only one Measurement.Values entry exists in the metadata section (for all data types).
+
+- Measurement.Values entry contains either "Measures" or "RawValues" in the Value column (for all data types).
+
+- If metadata section contains Measurement.Values entry with "Measures" values, one Measurements.ValueType entry is expected for every data column ID, and Value of the entry have acceptable values: Average, SD or SE (for all data types).
+
 - One and only one TimeSeries.Time entry exists for any data row ID (for GrowthMatrix and ChromatographyMatrix).
 
 - All TimeSeries.Time entries have acceptable values: hours, minutes or seconds (for GrowthMatrix and ChromatographyMatrix).
@@ -177,10 +192,6 @@ In the process of upload, metadata will be validated. A list of checks that will
 - All Condition entries with non-empty Unit field have acceptable units: pM, nM, uM, mM, M, pg, ng, ug, mg, g (for GrowthMatrix).
 
 - All Condition entries with the same substance name have identical unit names (for GrowthMatrix).
-
-- All Measurements.ValueType entries have acceptable values: Replicate, Average, SD or SE (for all data types).
-
-- No more than one Measurements.ValueType entry exists for any column (for all data types).
 
 - At least one Measurement entry exists for any data column ID (for ChromatographyMatrix and WellSampleMatrix).
 
