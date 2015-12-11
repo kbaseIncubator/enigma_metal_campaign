@@ -39,7 +39,7 @@ Any metadata describing the entire experiment should be placed into metadata as 
 |METADATA|Entity|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
-|T |Experiment |Temperature ||30 C |
+|T |Experiment |Temperature |C|30|
 |T |Experiment |Medium ||LB |
 |T |Experiment |Read ||Absorbance |
 
@@ -91,7 +91,7 @@ In addition, row metadata may describe other characteristics of the time point. 
 |METADATA|Entity|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
-|R1 |Experiment |Temperature ||30 C
+|R1 |Experiment |Temperature |C|30
 
 Column metadata may describe sample-specific conditions and type of values in the column. Column metadata entry musty contain a valid column identifier in the leftmost column (like C1, C2 etc.). Description of condition must contain reserved word "Condition" in the Entity column. For chemical substances/compound, metadata entry must contain name of a chemical in the Property column, unit of measurement in Unit column, and a numerical value of weight/concentration in the Value column. Acceptable values in the unit column are: pM, nM, uM, mM, M, pg, ng, ug, mg, g. For description of an organism grown in culture, cell in the Property column should contain "Strain", "Organism", "Mutant" etc., and cell in the Value column must contain name of the organism or designation of the strain. For example:
 
