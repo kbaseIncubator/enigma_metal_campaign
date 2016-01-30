@@ -29,6 +29,7 @@ public class GrowthMatrixUploader {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
+		MetadataProperties.startup();
 		GrowthMatrixUploader uploader = new GrowthMatrixUploader();
 		uploader.upload(args);
 	}
@@ -167,7 +168,10 @@ public class GrowthMatrixUploader {
 			boolean metaDataFlag = false;
 			boolean dataFlag = false;
 			BufferedReader br = new BufferedReader(new FileReader(inputFile));
+			int index = 0;
+
 			while ((line = br.readLine()) != null) {
+				index++;
 				if (line.equals("")) {
 					// do nothing on blank lines
 				} else if (line.matches("DATA\t.*")) {
@@ -183,17 +187,18 @@ public class GrowthMatrixUploader {
 					} else if (!dataFlag && metaDataFlag) {
 						metaData.add(line);
 					} else {
-						System.out.println("Warning: string will be missed "
-								+ line);
+						System.out.println("Warning: line " + index + "will be missed");
 					}
-					;
 				}
-				;
 
 			}
 			br.close();
+			if (!dataFlag && !metaDataFlag) {
+				printErrorStatus("Data parsing");
+				throw new IllegalStateException("Sorry, file format not recognized. Neither data nor metadata sections were found. Please check input file.");
+			}
 		} catch (IOException e) {
-			System.out.println(e.getLocalizedMessage());
+			System.err.println(e.getLocalizedMessage());
 		}
 		
 		
@@ -219,41 +224,98 @@ public class GrowthMatrixUploader {
 		
 		Matrix2DMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames);
 		
-		Map<String,String> units = new HashMap<String, String>();
-			
-		for (List<PropertyValue> properties : returnVal.getRowMetadata().values()){
-			for (PropertyValue property: properties){
-				String key = property.getEntity() + property.getPropertyName() + property.getPropertyValue();
-				if (units.containsKey(key)) {
-					if (!units.get(key).equals(property.getPropertyUnit())) {
-						System.err.println("Growth matrix upload failed: " + property.getPropertyName() + " of " + property.getEntity() +" has two different units: " + units.get(key) + " and " + property.getPropertyUnit());
-						System.exit(1);
-					}
-				} else {
-					units.put(key, property.getPropertyUnit());
-				}
-			}
-		}
+		validateMetadata(returnVal, sampleNames, rowNames);
 		
-		units.clear();
-
-		for (List<PropertyValue> properties : returnVal.getColumnMetadata().values()){
-			for (PropertyValue property: properties){
-				String key = property.getEntity() + property.getPropertyName() + property.getPropertyValue();
-				if (units.containsKey(key)) {
-					if (!units.get(key).equals(property.getPropertyUnit())) {
-						System.err.println("Growth matrix upload failed: " + property.getPropertyName() + " of " + property.getEntity() + " has two different units: " + units.get(key) + " and " + property.getPropertyUnit());
-						System.exit(1);
-					}
-				} else {
-					units.put(key, property.getPropertyUnit());
-				}
-			}
-		}
-
 		return returnVal;
 	};
 	
+
+	private void validateMetadata(Matrix2DMetadata m, List<String> columnNames, List<String> rowNames) {
+		
+		int flag = 0;
+		boolean errorFlag = false;
+		String timeUnit = "";
+		
+		for (String rowName : rowNames){
+			flag = 0;
+			try {
+				for (PropertyValue p: m.getRowMetadata().get(rowName)){
+					//System.out.println(rowName + " " + p.getEntity() + " " + p.getPropertyName() + " " + p.getPropertyUnit() + " " + p.getPropertyValue() + " " + flag);
+					if ((p.getEntity().equals(MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES))&&(p.getPropertyName().equals(MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME))){
+						flag++;
+						if (timeUnit.equals("")) timeUnit = p.getPropertyUnit();
+						if (!MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME_UNIT.contains(p.getPropertyUnit())){
+							if (!errorFlag) printErrorStatus("Metadata validation");
+							System.err.println (MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains illegal unit " + p.getPropertyUnit());
+							errorFlag = true;
+						} else if (!p.getPropertyUnit().equals(timeUnit)) {
+							if (!errorFlag) printErrorStatus("Metadata validation");
+							System.err.println (MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains unit " + p.getPropertyUnit() + ", which is different from " + timeUnit + " in other entries" );
+							errorFlag = true;
+						}
+					}
+				}
+			} catch (NullPointerException e) {
+				if (!errorFlag) printErrorStatus("Metadata validation");
+				System.err.println ("Metadata entries for row " + rowName + " are missing");
+				errorFlag = true;
+			}
+			if (flag == 0) {
+				if (!errorFlag) printErrorStatus("Metadata validation");
+				System.err.println ("Metadata for row " + rowName + " must have one " + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry");
+				errorFlag = true;
+			} else if (flag > 1) {
+				if (!errorFlag) printErrorStatus("Metadata validation");
+				System.err.println ("Metadata for row " + rowName + " must have only one " + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry, but it contains " + flag);
+				errorFlag = true;
+			}
+		}
+
+		
+		Map<String,String> units = new HashMap<String, String>();
+		
+		for (String colName : columnNames) {
+			boolean conditionFlag = false;
+			
+			try {
+				for (PropertyValue p : m.getColumnMetadata().get(colName)){
+					if (p.getEntity().equals(MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_CONDITION)&&!p.getPropertyName().equals("")) {
+						conditionFlag = true;
+						if (MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_CONDITION_UNIT.contains(p.getPropertyUnit())){
+							String key = p.getEntity() + p.getPropertyName();
+							if (units.containsKey(key)) {
+								if (!units.get(key).equals(p.getPropertyUnit())) {
+									if (!errorFlag) printErrorStatus("Metadata validation");
+									System.err.println (p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
+									errorFlag = true;
+								}
+							} else {
+								units.put(key, p.getPropertyUnit());
+							}
+						} else if (!p.getPropertyUnit().equals("")) {
+							if (!errorFlag) printErrorStatus("Metadata validation");
+							System.err.println (p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
+							errorFlag = true;
+						}
+					}
+					
+				}
+			} catch (NullPointerException e) {
+				if (!errorFlag) printErrorStatus("Metadata validation");
+				System.err.println ("Metadata entries for column " + colName + " are missing");
+				errorFlag = true;
+			}
+			
+			if (!conditionFlag) {
+				if (!errorFlag) printErrorStatus("Metadata validation");
+				System.err.println ("Metadata for column " + colName + " must have at least one " + MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_CONDITION + " entry");
+				errorFlag = true;
+			}
+		}
+		if (errorFlag) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed.");
+		}
+	}
 
 	private static boolean validateInput(CommandLine line) {
 		boolean returnVal = true;
@@ -285,6 +347,10 @@ public class GrowthMatrixUploader {
 		return returnVal;
 	}
 
+	private static void printErrorStatus(String message) {
+		System.err.println("\n" + message + " failed. See detailed report for a list of errors.\n                                                                                                                                \n");
+	}
+
 	public static File findTabFile(File inputDir) {
 		File inputFile = null;
 		StringBuilder fileList = new StringBuilder();
@@ -301,10 +367,12 @@ public class GrowthMatrixUploader {
 				fileList.append(", ");
 			fileList.append(f.getName());
 		}
-		if (inputFile == null)
-			throw new IllegalStateException(
-					"Input file with extention .txt or .tsv was not "
+		if (inputFile == null){
+			printErrorStatus("File reading ");
+			
+			throw new IllegalStateException("Input file with extention .txt or .tsv was not "
 							+ "found among: " + fileList);
+		}
 		return inputFile;
 	}
 

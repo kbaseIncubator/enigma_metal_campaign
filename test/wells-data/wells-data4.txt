@@ -118,324 +118,325 @@ R116	0.034066425	0.000294383	0.000208161	<2			0.004056738	0.001862745	0.00044230
 R117	<0.0025			<2			0.000673759	0.00075817	0.000435897	0.008503145	0.1628	15.0898869	0.001062147	0.005511111	0.02162963	0.12870202	0.108960784	0.006019324	0.006152778	0.000888889	0.016227451	3.36307197	0.047203509	0.042683673	0.000917492	0	0	0.003669811	1.08E-04	0.000075	0.000523416	7.47E-05	8.27E-05	0.044374696	7.67E-05	9.52E-05	4.96E-05	0.000232877	4.54E-05	1.53E-05	5.52E-05	0	6.06E-06	1.41E-05	1.97E-06	9.69E-06	0.00011619	0.00061236	0	0	1.80E-06	1.71E-05	0	0.001394231	2.30E-05	0.001271709
 METADATA	Entity	Property	Unit	Value																																																				
 T	Description			Adams Lab 100-well Survey Data 1-118 2013-05-16																																																				
-C1	Experiment	Fraction		Supernatant																																																				
-C2	Experiment	Fraction		Supernatant																																																				
-C3	Experiment	Fraction		Supernatant																																																				
-C1	Experiment	Compound	mM	Nitrate																																																				
-C2	Experiment	Compound	mM	Nitrate																																																				
-C3	Experiment	Compound	mM	Nitrate																																																				
-C1	Experiment	Measurement		Average																																																				
-C2	Experiment	Measurement		SD																																																				
-C3	Experiment	Measurement		SE																																																				
-C4	Experiment	Fraction		Supernatant																																																				
-C5	Experiment	Fraction		Supernatant																																																				
-C6	Experiment	Fraction		Supernatant																																																				
-C4	Experiment	Compound	uM	Nitrite																																																				
-C5	Experiment	Compound	uM	Nitrite																																																				
-C6	Experiment	Compound	uM	Nitrite																																																				
-C4	Experiment	Measurement		Average																																																				
-C5	Experiment	Measurement		SD																																																				
-C6	Experiment	Measurement		SE																																																				
-C7	Experiment	Machine Name		Ti /  47 [#1]																																																				
-C8	Experiment	Machine Name		V /  51 [#1]																																																				
-C9	Experiment	Machine Name		Cr /  52 [#1]																																																				
-C10	Experiment	Machine Name		Cr /  53 [#1]																																																				
-C11	Experiment	Machine Name		Mn /  55 [#1]																																																				
-C12	Experiment	Machine Name		Fe /  56 [#1]																																																				
-C13	Experiment	Machine Name		Co /  59 [#1]																																																				
-C14	Experiment	Machine Name		Ni /  60 [#1]																																																				
-C15	Experiment	Machine Name		Cu /  63 [#1]																																																				
-C16	Experiment	Machine Name		Zn /  66 [#1]																																																				
-C17	Experiment	Machine Name		Zn /  68 [#1]																																																				
-C18	Experiment	Machine Name		Ga /  69 [#1]																																																				
-C19	Experiment	Machine Name		Ge /  72 [#1]																																																				
-C20	Experiment	Machine Name		As /  75 [#1]																																																				
-C21	Experiment	Machine Name		Rb /  85 [#1]																																																				
-C22	Experiment	Machine Name		Sr /  88 [#1]																																																				
-C23	Experiment	Machine Name		Mo /  95 [#1]																																																				
-C24	Experiment	Machine Name		Mo /  98 [#1]																																																				
-C25	Experiment	Machine Name		Ru /  101 [#2]																																																				
-C26	Experiment	Machine Name		Rh /  103 [#2]																																																				
-C27	Experiment	Machine Name		Pd /  105 [#1]																																																				
-C28	Experiment	Machine Name		Cd /  106 [#2]																																																				
-C29	Experiment	Machine Name		Cd /  111 [#2]																																																				
-C30	Experiment	Machine Name		Sn /  120 [#2]																																																				
-C31	Experiment	Machine Name		Sb /  121 [#2]																																																				
-C32	Experiment	Machine Name		Te /  125 [#2]																																																				
-C33	Experiment	Machine Name		Cs /  133 [#2]																																																				
-C34	Experiment	Machine Name		Ba /  137 [#2]																																																				
-C35	Experiment	Machine Name		La /  139 [#2]																																																				
-C36	Experiment	Machine Name		Ce /  140 [#2]																																																				
-C37	Experiment	Machine Name		Pr /  141 [#2]																																																				
-C38	Experiment	Machine Name		Nd /  146 [#2]																																																				
-C39	Experiment	Machine Name		Sm /  147 [#2]																																																				
-C40	Experiment	Machine Name		Eu /  153 [#2]																																																				
-C41	Experiment	Machine Name		Gd /  157 [#2]																																																				
-C42	Experiment	Machine Name		Dy /  163 [#2]																																																				
-C43	Experiment	Machine Name		Ho /  165 [#2]																																																				
-C44	Experiment	Machine Name		Er /  166 [#2]																																																				
-C45	Experiment	Machine Name		Tm /  169 [#2]																																																				
-C46	Experiment	Machine Name		Yb /  172 [#2]																																																				
-C47	Experiment	Machine Name		Lu /  175 [#2]																																																				
-C48	Experiment	Machine Name		Hf /  178 [#2]																																																				
-C49	Experiment	Machine Name		Ta /  181 [#2]																																																				
-C50	Experiment	Machine Name		W /  182 [#2]																																																				
-C51	Experiment	Machine Name		Re /  185 [#2]																																																				
-C52	Experiment	Machine Name		Pt /  195 [#2]																																																				
-C53	Experiment	Machine Name		Tl /  205 [#2]																																																				
-C54	Experiment	Machine Name		Pb /  208 [#2]																																																				
-C55	Experiment	Machine Name		Th /  232 [#2]																																																				
-C56	Experiment	Machine Name		U /  238 [#2]																																																				
-C7	Experiment	Collision-Mode		Yes																																																				
-C8	Experiment	Collision-Mode		Yes																																																				
-C9	Experiment	Collision-Mode		Yes																																																				
-C10	Experiment	Collision-Mode		Yes																																																				
-C11	Experiment	Collision-Mode		Yes																																																				
-C12	Experiment	Collision-Mode		Yes																																																				
-C13	Experiment	Collision-Mode		Yes																																																				
-C14	Experiment	Collision-Mode		Yes																																																				
-C15	Experiment	Collision-Mode		Yes																																																				
-C16	Experiment	Collision-Mode		Yes																																																				
-C17	Experiment	Collision-Mode		Yes																																																				
-C18	Experiment	Collision-Mode		Yes																																																				
-C19	Experiment	Collision-Mode		Yes																																																				
-C20	Experiment	Collision-Mode		Yes																																																				
-C21	Experiment	Collision-Mode		Yes																																																				
-C22	Experiment	Collision-Mode		Yes																																																				
-C23	Experiment	Collision-Mode		Yes																																																				
-C24	Experiment	Collision-Mode		Yes																																																				
-C25	Experiment	Collision-Mode		No																																																				
-C26	Experiment	Collision-Mode		No																																																				
-C27	Experiment	Collision-Mode		Yes																																																				
-C28	Experiment	Collision-Mode		No																																																				
-C29	Experiment	Collision-Mode		No																																																				
-C30	Experiment	Collision-Mode		No																																																				
-C31	Experiment	Collision-Mode		No																																																				
-C32	Experiment	Collision-Mode		No																																																				
-C33	Experiment	Collision-Mode		No																																																				
-C34	Experiment	Collision-Mode		No																																																				
-C35	Experiment	Collision-Mode		No																																																				
-C36	Experiment	Collision-Mode		No																																																				
-C37	Experiment	Collision-Mode		No																																																				
-C38	Experiment	Collision-Mode		No																																																				
-C39	Experiment	Collision-Mode		No																																																				
-C40	Experiment	Collision-Mode		No																																																				
-C41	Experiment	Collision-Mode		No																																																				
-C42	Experiment	Collision-Mode		No																																																				
-C43	Experiment	Collision-Mode		No																																																				
-C44	Experiment	Collision-Mode		No																																																				
-C45	Experiment	Collision-Mode		No																																																				
-C46	Experiment	Collision-Mode		No																																																				
-C47	Experiment	Collision-Mode		No																																																				
-C48	Experiment	Collision-Mode		No																																																				
-C49	Experiment	Collision-Mode		No																																																				
-C50	Experiment	Collision-Mode		No																																																				
-C51	Experiment	Collision-Mode		No																																																				
-C52	Experiment	Collision-Mode		No																																																				
-C53	Experiment	Collision-Mode		No																																																				
-C54	Experiment	Collision-Mode		No																																																				
-C55	Experiment	Collision-Mode		No																																																				
-C56	Experiment	Collision-Mode		No																																																				
-C7	Experiment	Isotope		47																																																				
-C8	Experiment	Isotope		51																																																				
-C9	Experiment	Isotope		52																																																				
-C10	Experiment	Isotope		53																																																				
-C11	Experiment	Isotope		55																																																				
-C12	Experiment	Isotope		56																																																				
-C13	Experiment	Isotope		59																																																				
-C14	Experiment	Isotope		60																																																				
-C15	Experiment	Isotope		63																																																				
-C16	Experiment	Isotope		66																																																				
-C17	Experiment	Isotope		68																																																				
-C18	Experiment	Isotope		69																																																				
-C19	Experiment	Isotope		72																																																				
-C20	Experiment	Isotope		75																																																				
-C21	Experiment	Isotope		85																																																				
-C22	Experiment	Isotope		88																																																				
-C23	Experiment	Isotope		95																																																				
-C24	Experiment	Isotope		98																																																				
-C25	Experiment	Isotope		101																																																				
-C26	Experiment	Isotope		103																																																				
-C27	Experiment	Isotope		105																																																				
-C28	Experiment	Isotope		106																																																				
-C29	Experiment	Isotope		111																																																				
-C30	Experiment	Isotope		120																																																				
-C31	Experiment	Isotope		121																																																				
-C32	Experiment	Isotope		125																																																				
-C33	Experiment	Isotope		133																																																				
-C34	Experiment	Isotope		137																																																				
-C35	Experiment	Isotope		139																																																				
-C36	Experiment	Isotope		140																																																				
-C37	Experiment	Isotope		141																																																				
-C38	Experiment	Isotope		146																																																				
-C39	Experiment	Isotope		147																																																				
-C40	Experiment	Isotope		153																																																				
-C41	Experiment	Isotope		157																																																				
-C42	Experiment	Isotope		163																																																				
-C43	Experiment	Isotope		165																																																				
-C44	Experiment	Isotope		166																																																				
-C45	Experiment	Isotope		169																																																				
-C46	Experiment	Isotope		172																																																				
-C47	Experiment	Isotope		175																																																				
-C48	Experiment	Isotope		178																																																				
-C49	Experiment	Isotope		181																																																				
-C50	Experiment	Isotope		182																																																				
-C51	Experiment	Isotope		185																																																				
-C52	Experiment	Isotope		195																																																				
-C53	Experiment	Isotope		205																																																				
-C54	Experiment	Isotope		208																																																				
-C55	Experiment	Isotope		232																																																				
-C56	Experiment	Isotope		238																																																				
-C7	Experiment	Substance	uM	Ti																																																				
-C8	Experiment	Substance	uM	V																																																				
-C9	Experiment	Substance	uM	Cr52																																																				
-C10	Experiment	Substance	uM	Cr53																																																				
-C11	Experiment	Substance	uM	Mn																																																				
-C12	Experiment	Substance	uM	Fe																																																				
-C13	Experiment	Substance	uM	Co																																																				
-C14	Experiment	Substance	uM	Ni																																																				
-C15	Experiment	Substance	uM	Cu																																																				
-C16	Experiment	Substance	uM	Zn66																																																				
-C17	Experiment	Substance	uM	Zn68																																																				
-C18	Experiment	Substance	uM	Ga																																																				
-C19	Experiment	Substance	uM	Ge																																																				
-C20	Experiment	Substance	uM	As																																																				
-C21	Experiment	Substance	uM	Rb																																																				
-C22	Experiment	Substance	uM	Sr																																																				
-C23	Experiment	Substance	uM	Mo95																																																				
-C24	Experiment	Substance	uM	Mo98																																																				
-C25	Experiment	Substance	uM	Ru																																																				
-C26	Experiment	Substance	uM	Rh																																																				
-C27	Experiment	Substance	uM	Pd																																																				
-C28	Experiment	Substance	uM	Cd106																																																				
-C29	Experiment	Substance	uM	Cd111																																																				
-C30	Experiment	Substance	uM	Sn120																																																				
-C31	Experiment	Substance	uM	Sb																																																				
-C32	Experiment	Substance	uM	Te																																																				
-C33	Experiment	Substance	uM	Cs																																																				
-C34	Experiment	Substance	uM	Ba																																																				
-C35	Experiment	Substance	uM	La																																																				
-C36	Experiment	Substance	uM	Ce																																																				
-C37	Experiment	Substance	uM	Pr																																																				
-C38	Experiment	Substance	uM	Nd																																																				
-C39	Experiment	Substance	uM	Sm																																																				
-C40	Experiment	Substance	uM	Eu																																																				
-C41	Experiment	Substance	uM	Gd																																																				
-C42	Experiment	Substance	uM	Dy																																																				
-C43	Experiment	Substance	uM	Ho																																																				
-C44	Experiment	Substance	uM	Er																																																				
-C45	Experiment	Substance	uM	Tm																																																				
-C46	Experiment	Substance	uM	Yb																																																				
-C47	Experiment	Substance	uM	Lu																																																				
-C48	Experiment	Substance	uM	Hf																																																				
-C49	Experiment	Substance	uM	Ta																																																				
-C50	Experiment	Substance	uM	W																																																				
-C51	Experiment	Substance	uM	Re																																																				
-C52	Experiment	Substance	uM	Pt																																																				
-C53	Experiment	Substance	uM	Tl																																																				
-C54	Experiment	Substance	uM	Pb208																																																				
-C55	Experiment	Substance	uM	Th																																																				
-C56	Experiment	Substance	uM	U																																																				
-C7	Experiment	Fraction		Suspension																																																				
-C8	Experiment	Fraction		Suspension																																																				
-C9	Experiment	Fraction		Suspension																																																				
-C10	Experiment	Fraction		Suspension																																																				
-C11	Experiment	Fraction		Suspension																																																				
-C12	Experiment	Fraction		Suspension																																																				
-C13	Experiment	Fraction		Suspension																																																				
-C14	Experiment	Fraction		Suspension																																																				
-C15	Experiment	Fraction		Suspension																																																				
-C16	Experiment	Fraction		Suspension																																																				
-C17	Experiment	Fraction		Suspension																																																				
-C18	Experiment	Fraction		Suspension																																																				
-C19	Experiment	Fraction		Suspension																																																				
-C20	Experiment	Fraction		Suspension																																																				
-C21	Experiment	Fraction		Suspension																																																				
-C22	Experiment	Fraction		Suspension																																																				
-C23	Experiment	Fraction		Suspension																																																				
-C24	Experiment	Fraction		Suspension																																																				
-C25	Experiment	Fraction		Suspension																																																				
-C26	Experiment	Fraction		Suspension																																																				
-C27	Experiment	Fraction		Suspension																																																				
-C28	Experiment	Fraction		Suspension																																																				
-C29	Experiment	Fraction		Suspension																																																				
-C30	Experiment	Fraction		Suspension																																																				
-C31	Experiment	Fraction		Suspension																																																				
-C32	Experiment	Fraction		Suspension																																																				
-C33	Experiment	Fraction		Suspension																																																				
-C34	Experiment	Fraction		Suspension																																																				
-C35	Experiment	Fraction		Suspension																																																				
-C36	Experiment	Fraction		Suspension																																																				
-C37	Experiment	Fraction		Suspension																																																				
-C38	Experiment	Fraction		Suspension																																																				
-C39	Experiment	Fraction		Suspension																																																				
-C40	Experiment	Fraction		Suspension																																																				
-C41	Experiment	Fraction		Suspension																																																				
-C42	Experiment	Fraction		Suspension																																																				
-C43	Experiment	Fraction		Suspension																																																				
-C44	Experiment	Fraction		Suspension																																																				
-C45	Experiment	Fraction		Suspension																																																				
-C46	Experiment	Fraction		Suspension																																																				
-C47	Experiment	Fraction		Suspension																																																				
-C48	Experiment	Fraction		Suspension																																																				
-C49	Experiment	Fraction		Suspension																																																				
-C50	Experiment	Fraction		Suspension																																																				
-C51	Experiment	Fraction		Suspension																																																				
-C52	Experiment	Fraction		Suspension																																																				
-C53	Experiment	Fraction		Suspension																																																				
-C54	Experiment	Fraction		Suspension																																																				
-C55	Experiment	Fraction		Suspension																																																				
-C56	Experiment	Fraction		Suspension																																																				
-C7	Measure	Measurement		Average																																																				
-C8	Measure	Measurement		Average																																																				
-C9	Measure	Measurement		Average																																																				
-C10	Measure	Measurement		Average																																																				
-C11	Measure	Measurement		Average																																																				
-C12	Measure	Measurement		Average																																																				
-C13	Measure	Measurement		Average																																																				
-C14	Measure	Measurement		Average																																																				
-C15	Measure	Measurement		Average																																																				
-C16	Measure	Measurement		Average																																																				
-C17	Measure	Measurement		Average																																																				
-C18	Measure	Measurement		Average																																																				
-C19	Measure	Measurement		Average																																																				
-C20	Measure	Measurement		Average																																																				
-C21	Measure	Measurement		Average																																																				
-C22	Measure	Measurement		Average																																																				
-C23	Measure	Measurement		Average																																																				
-C24	Measure	Measurement		Average																																																				
-C25	Measure	Measurement		Average																																																				
-C26	Measure	Measurement		Average																																																				
-C27	Measure	Measurement		Average																																																				
-C28	Measure	Measurement		Average																																																				
-C29	Measure	Measurement		Average																																																				
-C30	Measure	Measurement		Average																																																				
-C31	Measure	Measurement		Average																																																				
-C32	Measure	Measurement		Average																																																				
-C33	Measure	Measurement		Average																																																				
-C34	Measure	Measurement		Average																																																				
-C35	Measure	Measurement		Average																																																				
-C36	Measure	Measurement		Average																																																				
-C37	Measure	Measurement		Average																																																				
-C38	Measure	Measurement		Average																																																				
-C39	Measure	Measurement		Average																																																				
-C40	Measure	Measurement		Average																																																				
-C41	Measure	Measurement		Average																																																				
-C42	Measure	Measurement		Average																																																				
-C43	Measure	Measurement		Average																																																				
-C44	Measure	Measurement		Average																																																				
-C45	Measure	Measurement		Average																																																				
-C46	Measure	Measurement		Average																																																				
-C47	Measure	Measurement		Average																																																				
-C48	Measure	Measurement		Average																																																				
-C49	Measure	Measurement		Average																																																				
-C50	Measure	Measurement		Average																																																				
-C51	Measure	Measurement		Average																																																				
-C52	Measure	Measurement		Average																																																				
-C53	Measure	Measurement		Average																																																				
-C54	Measure	Measurement		Average																																																				
-C55	Measure	Measurement		Average																																																				
-C56	Measure	Measurement		Average																																																				
+T	Measurement	Values		Measures																																																				
+C1	Measurement	Fraction		Supernatant																																																				
+C2	Measurement	Fraction		Supernatant																																																				
+C3	Measurement	Fraction		Supernatant																																																				
+C1	Measurement	Substance	mM	Nitrate																																																				
+C2	Measurement	Substance	mM	Nitrate																																																				
+C3	Measurement	Substance	mM	Nitrate																																																				
+C1	Measurement	ValueType		Average																																																				
+C2	Measurement	ValueType		SD																																																				
+C3	Measurement	ValueType		SE																																																				
+C4	Measurement	Fraction		Supernatant																																																				
+C5	Measurement	Fraction		Supernatant																																																				
+C6	Measurement	Fraction		Supernatant																																																				
+C4	Measurement	Substance	uM	Nitrite																																																				
+C5	Measurement	Substance	uM	Nitrite																																																				
+C6	Measurement	Substance	uM	Nitrite																																																				
+C4	Measurement	ValueType		Average																																																				
+C5	Measurement	ValueType		SD																																																				
+C6	Measurement	ValueType		SE																																																				
+C7	Measurement	Machine Name		Ti /  47 [#1]																																																				
+C8	Measurement	Machine Name		V /  51 [#1]																																																				
+C9	Measurement	Machine Name		Cr /  52 [#1]																																																				
+C10	Measurement	Machine Name		Cr /  53 [#1]																																																				
+C11	Measurement	Machine Name		Mn /  55 [#1]																																																				
+C12	Measurement	Machine Name		Fe /  56 [#1]																																																				
+C13	Measurement	Machine Name		Co /  59 [#1]																																																				
+C14	Measurement	Machine Name		Ni /  60 [#1]																																																				
+C15	Measurement	Machine Name		Cu /  63 [#1]																																																				
+C16	Measurement	Machine Name		Zn /  66 [#1]																																																				
+C17	Measurement	Machine Name		Zn /  68 [#1]																																																				
+C18	Measurement	Machine Name		Ga /  69 [#1]																																																				
+C19	Measurement	Machine Name		Ge /  72 [#1]																																																				
+C20	Measurement	Machine Name		As /  75 [#1]																																																				
+C21	Measurement	Machine Name		Rb /  85 [#1]																																																				
+C22	Measurement	Machine Name		Sr /  88 [#1]																																																				
+C23	Measurement	Machine Name		Mo /  95 [#1]																																																				
+C24	Measurement	Machine Name		Mo /  98 [#1]																																																				
+C25	Measurement	Machine Name		Ru /  101 [#2]																																																				
+C26	Measurement	Machine Name		Rh /  103 [#2]																																																				
+C27	Measurement	Machine Name		Pd /  105 [#1]																																																				
+C28	Measurement	Machine Name		Cd /  106 [#2]																																																				
+C29	Measurement	Machine Name		Cd /  111 [#2]																																																				
+C30	Measurement	Machine Name		Sn /  120 [#2]																																																				
+C31	Measurement	Machine Name		Sb /  121 [#2]																																																				
+C32	Measurement	Machine Name		Te /  125 [#2]																																																				
+C33	Measurement	Machine Name		Cs /  133 [#2]																																																				
+C34	Measurement	Machine Name		Ba /  137 [#2]																																																				
+C35	Measurement	Machine Name		La /  139 [#2]																																																				
+C36	Measurement	Machine Name		Ce /  140 [#2]																																																				
+C37	Measurement	Machine Name		Pr /  141 [#2]																																																				
+C38	Measurement	Machine Name		Nd /  146 [#2]																																																				
+C39	Measurement	Machine Name		Sm /  147 [#2]																																																				
+C40	Measurement	Machine Name		Eu /  153 [#2]																																																				
+C41	Measurement	Machine Name		Gd /  157 [#2]																																																				
+C42	Measurement	Machine Name		Dy /  163 [#2]																																																				
+C43	Measurement	Machine Name		Ho /  165 [#2]																																																				
+C44	Measurement	Machine Name		Er /  166 [#2]																																																				
+C45	Measurement	Machine Name		Tm /  169 [#2]																																																				
+C46	Measurement	Machine Name		Yb /  172 [#2]																																																				
+C47	Measurement	Machine Name		Lu /  175 [#2]																																																				
+C48	Measurement	Machine Name		Hf /  178 [#2]																																																				
+C49	Measurement	Machine Name		Ta /  181 [#2]																																																				
+C50	Measurement	Machine Name		W /  182 [#2]																																																				
+C51	Measurement	Machine Name		Re /  185 [#2]																																																				
+C52	Measurement	Machine Name		Pt /  195 [#2]																																																				
+C53	Measurement	Machine Name		Tl /  205 [#2]																																																				
+C54	Measurement	Machine Name		Pb /  208 [#2]																																																				
+C55	Measurement	Machine Name		Th /  232 [#2]																																																				
+C56	Measurement	Machine Name		U /  238 [#2]																																																				
+C7	Measurement	Collision-Mode		Yes																																																				
+C8	Measurement	Collision-Mode		Yes																																																				
+C9	Measurement	Collision-Mode		Yes																																																				
+C10	Measurement	Collision-Mode		Yes																																																				
+C11	Measurement	Collision-Mode		Yes																																																				
+C12	Measurement	Collision-Mode		Yes																																																				
+C13	Measurement	Collision-Mode		Yes																																																				
+C14	Measurement	Collision-Mode		Yes																																																				
+C15	Measurement	Collision-Mode		Yes																																																				
+C16	Measurement	Collision-Mode		Yes																																																				
+C17	Measurement	Collision-Mode		Yes																																																				
+C18	Measurement	Collision-Mode		Yes																																																				
+C19	Measurement	Collision-Mode		Yes																																																				
+C20	Measurement	Collision-Mode		Yes																																																				
+C21	Measurement	Collision-Mode		Yes																																																				
+C22	Measurement	Collision-Mode		Yes																																																				
+C23	Measurement	Collision-Mode		Yes																																																				
+C24	Measurement	Collision-Mode		Yes																																																				
+C25	Measurement	Collision-Mode		No																																																				
+C26	Measurement	Collision-Mode		No																																																				
+C27	Measurement	Collision-Mode		Yes																																																				
+C28	Measurement	Collision-Mode		No																																																				
+C29	Measurement	Collision-Mode		No																																																				
+C30	Measurement	Collision-Mode		No																																																				
+C31	Measurement	Collision-Mode		No																																																				
+C32	Measurement	Collision-Mode		No																																																				
+C33	Measurement	Collision-Mode		No																																																				
+C34	Measurement	Collision-Mode		No																																																				
+C35	Measurement	Collision-Mode		No																																																				
+C36	Measurement	Collision-Mode		No																																																				
+C37	Measurement	Collision-Mode		No																																																				
+C38	Measurement	Collision-Mode		No																																																				
+C39	Measurement	Collision-Mode		No																																																				
+C40	Measurement	Collision-Mode		No																																																				
+C41	Measurement	Collision-Mode		No																																																				
+C42	Measurement	Collision-Mode		No																																																				
+C43	Measurement	Collision-Mode		No																																																				
+C44	Measurement	Collision-Mode		No																																																				
+C45	Measurement	Collision-Mode		No																																																				
+C46	Measurement	Collision-Mode		No																																																				
+C47	Measurement	Collision-Mode		No																																																				
+C48	Measurement	Collision-Mode		No																																																				
+C49	Measurement	Collision-Mode		No																																																				
+C50	Measurement	Collision-Mode		No																																																				
+C51	Measurement	Collision-Mode		No																																																				
+C52	Measurement	Collision-Mode		No																																																				
+C53	Measurement	Collision-Mode		No																																																				
+C54	Measurement	Collision-Mode		No																																																				
+C55	Measurement	Collision-Mode		No																																																				
+C56	Measurement	Collision-Mode		No																																																				
+C7	Measurement	Isotope		47																																																				
+C8	Measurement	Isotope		51																																																				
+C9	Measurement	Isotope		52																																																				
+C10	Measurement	Isotope		53																																																				
+C11	Measurement	Isotope		55																																																				
+C12	Measurement	Isotope		56																																																				
+C13	Measurement	Isotope		59																																																				
+C14	Measurement	Isotope		60																																																				
+C15	Measurement	Isotope		63																																																				
+C16	Measurement	Isotope		66																																																				
+C17	Measurement	Isotope		68																																																				
+C18	Measurement	Isotope		69																																																				
+C19	Measurement	Isotope		72																																																				
+C20	Measurement	Isotope		75																																																				
+C21	Measurement	Isotope		85																																																				
+C22	Measurement	Isotope		88																																																				
+C23	Measurement	Isotope		95																																																				
+C24	Measurement	Isotope		98																																																				
+C25	Measurement	Isotope		101																																																				
+C26	Measurement	Isotope		103																																																				
+C27	Measurement	Isotope		105																																																				
+C28	Measurement	Isotope		106																																																				
+C29	Measurement	Isotope		111																																																				
+C30	Measurement	Isotope		120																																																				
+C31	Measurement	Isotope		121																																																				
+C32	Measurement	Isotope		125																																																				
+C33	Measurement	Isotope		133																																																				
+C34	Measurement	Isotope		137																																																				
+C35	Measurement	Isotope		139																																																				
+C36	Measurement	Isotope		140																																																				
+C37	Measurement	Isotope		141																																																				
+C38	Measurement	Isotope		146																																																				
+C39	Measurement	Isotope		147																																																				
+C40	Measurement	Isotope		153																																																				
+C41	Measurement	Isotope		157																																																				
+C42	Measurement	Isotope		163																																																				
+C43	Measurement	Isotope		165																																																				
+C44	Measurement	Isotope		166																																																				
+C45	Measurement	Isotope		169																																																				
+C46	Measurement	Isotope		172																																																				
+C47	Measurement	Isotope		175																																																				
+C48	Measurement	Isotope		178																																																				
+C49	Measurement	Isotope		181																																																				
+C50	Measurement	Isotope		182																																																				
+C51	Measurement	Isotope		185																																																				
+C52	Measurement	Isotope		195																																																				
+C53	Measurement	Isotope		205																																																				
+C54	Measurement	Isotope		208																																																				
+C55	Measurement	Isotope		232																																																				
+C56	Measurement	Isotope		238																																																				
+C7	Measurement	Substance	uM	Ti																																																				
+C8	Measurement	Substance	uM	V																																																				
+C9	Measurement	Substance	uM	Cr52																																																				
+C10	Measurement	Substance	uM	Cr53																																																				
+C11	Measurement	Substance	uM	Mn																																																				
+C12	Measurement	Substance	uM	Fe																																																				
+C13	Measurement	Substance	uM	Co																																																				
+C14	Measurement	Substance	uM	Ni																																																				
+C15	Measurement	Substance	uM	Cu																																																				
+C16	Measurement	Substance	uM	Zn66																																																				
+C17	Measurement	Substance	uM	Zn68																																																				
+C18	Measurement	Substance	uM	Ga																																																				
+C19	Measurement	Substance	uM	Ge																																																				
+C20	Measurement	Substance	uM	As																																																				
+C21	Measurement	Substance	uM	Rb																																																				
+C22	Measurement	Substance	uM	Sr																																																				
+C23	Measurement	Substance	uM	Mo95																																																				
+C24	Measurement	Substance	uM	Mo98																																																				
+C25	Measurement	Substance	uM	Ru																																																				
+C26	Measurement	Substance	uM	Rh																																																				
+C27	Measurement	Substance	uM	Pd																																																				
+C28	Measurement	Substance	uM	Cd106																																																				
+C29	Measurement	Substance	uM	Cd111																																																				
+C30	Measurement	Substance	uM	Sn120																																																				
+C31	Measurement	Substance	uM	Sb																																																				
+C32	Measurement	Substance	uM	Te																																																				
+C33	Measurement	Substance	uM	Cs																																																				
+C34	Measurement	Substance	uM	Ba																																																				
+C35	Measurement	Substance	uM	La																																																				
+C36	Measurement	Substance	uM	Ce																																																				
+C37	Measurement	Substance	uM	Pr																																																				
+C38	Measurement	Substance	uM	Nd																																																				
+C39	Measurement	Substance	uM	Sm																																																				
+C40	Measurement	Substance	uM	Eu																																																				
+C41	Measurement	Substance	uM	Gd																																																				
+C42	Measurement	Substance	uM	Dy																																																				
+C43	Measurement	Substance	uM	Ho																																																				
+C44	Measurement	Substance	uM	Er																																																				
+C45	Measurement	Substance	uM	Tm																																																				
+C46	Measurement	Substance	uM	Yb																																																				
+C47	Measurement	Substance	uM	Lu																																																				
+C48	Measurement	Substance	uM	Hf																																																				
+C49	Measurement	Substance	uM	Ta																																																				
+C50	Measurement	Substance	uM	W																																																				
+C51	Measurement	Substance	uM	Re																																																				
+C52	Measurement	Substance	uM	Pt																																																				
+C53	Measurement	Substance	uM	Tl																																																				
+C54	Measurement	Substance	uM	Pb208																																																				
+C55	Measurement	Substance	uM	Th																																																				
+C56	Measurement	Substance	uM	U																																																				
+C7	Measurement	Fraction		Suspension																																																				
+C8	Measurement	Fraction		Suspension																																																				
+C9	Measurement	Fraction		Suspension																																																				
+C10	Measurement	Fraction		Suspension																																																				
+C11	Measurement	Fraction		Suspension																																																				
+C12	Measurement	Fraction		Suspension																																																				
+C13	Measurement	Fraction		Suspension																																																				
+C14	Measurement	Fraction		Suspension																																																				
+C15	Measurement	Fraction		Suspension																																																				
+C16	Measurement	Fraction		Suspension																																																				
+C17	Measurement	Fraction		Suspension																																																				
+C18	Measurement	Fraction		Suspension																																																				
+C19	Measurement	Fraction		Suspension																																																				
+C20	Measurement	Fraction		Suspension																																																				
+C21	Measurement	Fraction		Suspension																																																				
+C22	Measurement	Fraction		Suspension																																																				
+C23	Measurement	Fraction		Suspension																																																				
+C24	Measurement	Fraction		Suspension																																																				
+C25	Measurement	Fraction		Suspension																																																				
+C26	Measurement	Fraction		Suspension																																																				
+C27	Measurement	Fraction		Suspension																																																				
+C28	Measurement	Fraction		Suspension																																																				
+C29	Measurement	Fraction		Suspension																																																				
+C30	Measurement	Fraction		Suspension																																																				
+C31	Measurement	Fraction		Suspension																																																				
+C32	Measurement	Fraction		Suspension																																																				
+C33	Measurement	Fraction		Suspension																																																				
+C34	Measurement	Fraction		Suspension																																																				
+C35	Measurement	Fraction		Suspension																																																				
+C36	Measurement	Fraction		Suspension																																																				
+C37	Measurement	Fraction		Suspension																																																				
+C38	Measurement	Fraction		Suspension																																																				
+C39	Measurement	Fraction		Suspension																																																				
+C40	Measurement	Fraction		Suspension																																																				
+C41	Measurement	Fraction		Suspension																																																				
+C42	Measurement	Fraction		Suspension																																																				
+C43	Measurement	Fraction		Suspension																																																				
+C44	Measurement	Fraction		Suspension																																																				
+C45	Measurement	Fraction		Suspension																																																				
+C46	Measurement	Fraction		Suspension																																																				
+C47	Measurement	Fraction		Suspension																																																				
+C48	Measurement	Fraction		Suspension																																																				
+C49	Measurement	Fraction		Suspension																																																				
+C50	Measurement	Fraction		Suspension																																																				
+C51	Measurement	Fraction		Suspension																																																				
+C52	Measurement	Fraction		Suspension																																																				
+C53	Measurement	Fraction		Suspension																																																				
+C54	Measurement	Fraction		Suspension																																																				
+C55	Measurement	Fraction		Suspension																																																				
+C56	Measurement	Fraction		Suspension																																																				
+C7	Measurement	ValueType		Average																																																				
+C8	Measurement	ValueType		Average																																																				
+C9	Measurement	ValueType		Average																																																				
+C10	Measurement	ValueType		Average																																																				
+C11	Measurement	ValueType		Average																																																				
+C12	Measurement	ValueType		Average																																																				
+C13	Measurement	ValueType		Average																																																				
+C14	Measurement	ValueType		Average																																																				
+C15	Measurement	ValueType		Average																																																				
+C16	Measurement	ValueType		Average																																																				
+C17	Measurement	ValueType		Average																																																				
+C18	Measurement	ValueType		Average																																																				
+C19	Measurement	ValueType		Average																																																				
+C20	Measurement	ValueType		Average																																																				
+C21	Measurement	ValueType		Average																																																				
+C22	Measurement	ValueType		Average																																																				
+C23	Measurement	ValueType		Average																																																				
+C24	Measurement	ValueType		Average																																																				
+C25	Measurement	ValueType		Average																																																				
+C26	Measurement	ValueType		Average																																																				
+C27	Measurement	ValueType		Average																																																				
+C28	Measurement	ValueType		Average																																																				
+C29	Measurement	ValueType		Average																																																				
+C30	Measurement	ValueType		Average																																																				
+C31	Measurement	ValueType		Average																																																				
+C32	Measurement	ValueType		Average																																																				
+C33	Measurement	ValueType		Average																																																				
+C34	Measurement	ValueType		Average																																																				
+C35	Measurement	ValueType		Average																																																				
+C36	Measurement	ValueType		Average																																																				
+C37	Measurement	ValueType		Average																																																				
+C38	Measurement	ValueType		Average																																																				
+C39	Measurement	ValueType		Average																																																				
+C40	Measurement	ValueType		Average																																																				
+C41	Measurement	ValueType		Average																																																				
+C42	Measurement	ValueType		Average																																																				
+C43	Measurement	ValueType		Average																																																				
+C44	Measurement	ValueType		Average																																																				
+C45	Measurement	ValueType		Average																																																				
+C46	Measurement	ValueType		Average																																																				
+C47	Measurement	ValueType		Average																																																				
+C48	Measurement	ValueType		Average																																																				
+C49	Measurement	ValueType		Average																																																				
+C50	Measurement	ValueType		Average																																																				
+C51	Measurement	ValueType		Average																																																				
+C52	Measurement	ValueType		Average																																																				
+C53	Measurement	ValueType		Average																																																				
+C54	Measurement	ValueType		Average																																																				
+C55	Measurement	ValueType		Average																																																				
+C56	Measurement	ValueType		Average																																																				
 R1	Sample	ID		GW101-7-25-12																																																				
 R2	Sample	ID		FW104-7-26-12																																																				
 R3	Sample	ID		FW109-1-7-25-12																																																				

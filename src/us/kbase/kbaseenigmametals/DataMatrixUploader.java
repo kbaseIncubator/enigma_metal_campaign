@@ -34,6 +34,7 @@ public class DataMatrixUploader {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
+		MetadataProperties.startup();
 		DataMatrixUploader uploader = new DataMatrixUploader();
 		uploader.upload(args);
 	}
@@ -174,7 +175,9 @@ public class DataMatrixUploader {
 			boolean metaDataFlag = false;
 			boolean dataFlag = false;
 			BufferedReader br = new BufferedReader(new FileReader(inputFile));
+			int index = 0;
 			while ((line = br.readLine()) != null) {
+				index++;
 				if (line.equals("")) {
 					// do nothing on blank lines
 				} else if (line.matches("DATA\t\t.*")) {
@@ -189,15 +192,17 @@ public class DataMatrixUploader {
 					} else if (!dataFlag && metaDataFlag) {
 						metaData.add(line);
 					} else {
-						System.out.println("Warning: string will be missed "
+						System.out.println("Warning: line " + index + " will be missed:\n"
 								+ line);
 					}
-					;
 				}
-				;
-
 			}
 			br.close();
+			
+			if (!dataFlag && !metaDataFlag) {
+				throw new IllegalStateException("Sorry, format not recognized. Check input file.");
+			}
+
 		} catch (IOException e) {
 			System.out.println(e.getLocalizedMessage());
 		}
@@ -223,8 +228,10 @@ public class DataMatrixUploader {
 		List<String> sampleNames = new ArrayList<String>();
 		List<String> rowNames = new ArrayList<String>();
 		FloatMatrix2D floatMatrix = new FloatMatrix2D();
+		int index = 0;
 
 		for (String line : data) {
+			index++;
 			if (line.matches("DATA\t.*")) {
 				String[] fields = line.split("\t");
 				for (int i = 1; i < fields.length; i++) {
@@ -243,6 +250,13 @@ public class DataMatrixUploader {
 				// System.out.println(samplesNumber);
 				//System.out.println(line);
 				String[] fields = line.split("\t", -1);
+				
+				if (fields.length < samplesNumber + 1) {
+					printErrorStatus("Data parsing");
+					System.err.println("Data parsing failed: insufficient number of values in line " + index + " of data section");
+					throw new IllegalStateException("Number of values in line " + index + " of the DATA section smaller than number of columns");
+					
+				}
 				rowNames.add(fields[0]);
 
 				List<Double> rowValues = new ArrayList<Double>();
@@ -254,7 +268,7 @@ public class DataMatrixUploader {
 						rowValues.add(value);
 					} catch (NumberFormatException e) {
 						rowValues.add(0.00);
-						System.out.println("WARNING: unsuccessful conversion of data value " + fields[j+1] + " in line " + line);
+						System.out.println("WARNING: unsuccessful conversion of data value " + fields[j+1] + " in line:\n" + line);
 					}
 					// System.out.println(fields[0]+" "+fields[j+1]);
 					j++;
@@ -278,6 +292,7 @@ public class DataMatrixUploader {
 		Map<String, List<PropertyValue>> rowMetadata = new HashMap<String, List<PropertyValue>>();
 		List<PropertyValue> matrixMetadata = new ArrayList<PropertyValue>();
 		
+		boolean errorFlag = false;
 		for (String line : columnMetadataLines) {
 			if (line.equals("")) {
 				// do nothing on blank lines
@@ -310,7 +325,9 @@ public class DataMatrixUploader {
 					}
 					
 				} else {
-					System.err.println("Unknown column label in line " + line);
+					if (!errorFlag) printErrorStatus("Metadata parsing");
+					System.err.println("Unknown column label " + fields[0] + " in the Metadata section.\n");
+					errorFlag = true;
 				}
 			}
 		}
@@ -347,9 +364,15 @@ public class DataMatrixUploader {
 					}
 					
 				} else {
-					System.err.println("Unknown column label in line " + line);
+					if (!errorFlag) printErrorStatus("Metadata parsing");
+					System.err.println("Unknown row label " + fields[0] + " in the Metadata section.\n");
+					errorFlag = true;
 				}
 			}
+		}
+
+		if (errorFlag) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata parsing failed");
 		}
 
 		returnVal.setColumnMetadata(columnMetadata);
@@ -360,13 +383,17 @@ public class DataMatrixUploader {
 	};
 
 	protected static Matrix2DMetadata parseMetadata (List<String> metadataLines, List<String> sampleNames, List<String> rowNames) {
+		
+		boolean errorFlag = false;
 		Matrix2DMetadata returnVal = new Matrix2DMetadata();
 		
 		Map<String, List<PropertyValue>> columnMetadata = new HashMap<String, List<PropertyValue>>();
 		Map<String, List<PropertyValue>> rowMetadata = new HashMap<String, List<PropertyValue>>();
 		List<PropertyValue> matrixMetadata = new ArrayList<PropertyValue>();
+		int index = 0;
 		
 		for (String line : metadataLines) {
+			index++;
 			if (line.equals("")) {
 				// do nothing on blank lines
 			} else {
@@ -414,18 +441,110 @@ public class DataMatrixUploader {
 						rowMetadata.put(fields[0], propertyValuesList);
 					}
 				} else {
-					System.err.println("Unknown column label in line " + line);
+					if (!errorFlag) printErrorStatus("Metadata parsing");
+					System.err.println("Unknown column or row label " + fields[0] + " in line " + index + " of Metadata section");
+					errorFlag = true;
+					
 				}
 			}
+		}
+		
+		if (errorFlag) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata parsing failed");
 		}
 
 		returnVal.setColumnMetadata(columnMetadata);
 		returnVal.setRowMetadata(rowMetadata);
 		returnVal.setMatrixMetadata(matrixMetadata);
 		
+		validateMetadata(returnVal, sampleNames, rowNames);
+		
 		return returnVal;
 	};
 
+	private static void validateMetadata(Matrix2DMetadata metaData, List<String> sampleNames, List<String> rowNames) {
+		
+		//Check Description 
+		int flag = 0;
+		boolean errorFlag = false;
+		for (PropertyValue p: metaData.getMatrixMetadata()) {
+			if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION)) flag++;			
+		}
+		if (flag == 0) {
+			if (!errorFlag) printErrorStatus("Metadata validation");
+			System.err.println ("Metadata must have a " + MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION + " entry");
+			errorFlag = true;
+		} else if (flag > 1){
+			if (!errorFlag) printErrorStatus("Metadata validation");
+			System.err.println ("Metadata must have only one " + MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION + " entry, but " + flag + " entries found");
+			errorFlag = true;
+		}
+		
+		//Check Measurement for the entire table
+		boolean Measures = false;
+		flag = 0;
+		for (PropertyValue p: metaData.getMatrixMetadata()) {
+			if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES)) {
+				if (!MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE.contains(p.getPropertyValue())){
+					if (!errorFlag) printErrorStatus("Metadata validation");
+					System.err.println (MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " metadata entry contains illegal value " + p.getPropertyValue());
+					errorFlag = true;
+				} else if (p.getPropertyValue().equals("Measures")) {
+					Measures = true;
+				}
+				flag++;
+			}
+		}
+		if (flag == 0) {
+			if (!errorFlag) printErrorStatus("Metadata validation");
+			System.err.println ("Metadata must have " + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " entry");
+			errorFlag = true;
+		} else if (flag > 1){
+			if (!errorFlag) printErrorStatus("Metadata validation");
+			System.err.println ("Metadata must have only one " + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " entry, , but it contains " + flag);
+			errorFlag = true;
+		}
+		
+		if (Measures){
+			for (String sampleName : sampleNames){
+				flag = 0;
+				try {
+					for (PropertyValue p: metaData.getColumnMetadata().get(sampleName)){
+						if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE)){
+							if (!MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE_VALUE.contains(p.getPropertyValue())){
+								if (!errorFlag) printErrorStatus("Metadata validation");
+								System.err.println (MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry for column " + sampleName + " contains illegal value " + p.getPropertyValue());
+								errorFlag = true;
+							}
+							flag++;
+						}
+					}
+				} catch (NullPointerException e) {
+					if (!errorFlag) printErrorStatus("Metadata validation");
+					System.err.println ("Metadata entries for column " + sampleName + " are missing");
+					errorFlag = true;
+				}
+				if (flag == 0) {
+					if (!errorFlag) printErrorStatus("Metadata validation");
+					System.err.println ("Metadata for column " + sampleName + " must have a " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry");
+					errorFlag = true;
+				} else if (flag > 1) {
+					if (!errorFlag) printErrorStatus("Metadata validation");
+					System.err.println ("Metadata for column " + sampleName + " must have only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry, but it contains " + flag);
+					errorFlag = true;
+				}
+			}
+		}
+		if (errorFlag) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed");
+		}
+	 
+	}
+
+	private static void printErrorStatus(String message) {
+		System.err.println("\n" + message + " failed. See detailed report for a list of errors.\n                                                                                                                                \n");
+	}
+	
 	private static boolean validateInput(CommandLine line) {
 		boolean returnVal = true;
 		if (!line.hasOption("ws")) {
@@ -477,10 +596,10 @@ public class DataMatrixUploader {
 				fileList.append(", ");
 			fileList.append(f.getName());
 		}
-		if (inputFile == null)
-			throw new IllegalStateException(
-					"Input file with extention .txt or .tsv was not "
-							+ "found among: " + fileList);
+		if (inputFile == null){
+			throw new IllegalStateException("Input file with extention .txt or .tsv was not "
+					+ "found among: " + fileList);
+		}
 		return inputFile;
 	}
 
