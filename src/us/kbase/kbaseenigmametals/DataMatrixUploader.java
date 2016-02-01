@@ -268,7 +268,7 @@ public class DataMatrixUploader {
 						rowValues.add(value);
 					} catch (NumberFormatException e) {
 						rowValues.add(0.00);
-						System.out.println("WARNING: unsuccessful conversion of data value " + fields[j+1] + " in line:\n" + line);
+						System.out.println("WARNING: unsuccessful conversion of data value " + fields[j+1] + " in row " + fields [0] + ", column " + j);
 					}
 					// System.out.println(fields[0]+" "+fields[j+1]);
 					j++;
@@ -466,18 +466,19 @@ public class DataMatrixUploader {
 		
 		//Check Description 
 		int flag = 0;
-		boolean errorFlag = false;
+		int errorCount = 0;
+		
 		for (PropertyValue p: metaData.getMatrixMetadata()) {
 			if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION)) flag++;			
 		}
 		if (flag == 0) {
-			if (!errorFlag) printErrorStatus("Metadata validation");
-			System.err.println ("Metadata must have a " + MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION + " entry");
-			errorFlag = true;
+			if (errorCount == 0) printErrorStatus("Metadata validation");
+			if (errorCount < 50) System.err.println ("Metadata must have a " + MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION + " entry");
+			errorCount ++;
 		} else if (flag > 1){
-			if (!errorFlag) printErrorStatus("Metadata validation");
-			System.err.println ("Metadata must have only one " + MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION + " entry, but " + flag + " entries found");
-			errorFlag = true;
+			if (errorCount == 0) printErrorStatus("Metadata validation");
+			if (errorCount < 50) System.err.println ("Metadata must have only one " + MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION + " entry, but " + flag + " entries found");
+			errorCount ++;
 		}
 		
 		//Check Measurement for the entire table
@@ -486,9 +487,9 @@ public class DataMatrixUploader {
 		for (PropertyValue p: metaData.getMatrixMetadata()) {
 			if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES)) {
 				if (!MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE.contains(p.getPropertyValue())){
-					if (!errorFlag) printErrorStatus("Metadata validation");
-					System.err.println (MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " metadata entry contains illegal value " + p.getPropertyValue());
-					errorFlag = true;
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println (MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " metadata entry contains illegal value " + p.getPropertyValue());
+					errorCount ++;
 				} else if (p.getPropertyValue().equals("Measures")) {
 					Measures = true;
 				}
@@ -496,13 +497,13 @@ public class DataMatrixUploader {
 			}
 		}
 		if (flag == 0) {
-			if (!errorFlag) printErrorStatus("Metadata validation");
-			System.err.println ("Metadata must have " + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " entry");
-			errorFlag = true;
+			if (errorCount == 0) printErrorStatus("Metadata validation");
+			if (errorCount < 50) System.err.println ("Metadata must have " + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " entry");
+			errorCount ++;
 		} else if (flag > 1){
-			if (!errorFlag) printErrorStatus("Metadata validation");
-			System.err.println ("Metadata must have only one " + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " entry, , but it contains " + flag);
-			errorFlag = true;
+			if (errorCount == 0) printErrorStatus("Metadata validation");
+			if (errorCount < 50) System.err.println ("Metadata must have only one " + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " entry, , but it contains " + flag);
+			errorCount ++;
 		}
 		
 		if (Measures){
@@ -512,30 +513,32 @@ public class DataMatrixUploader {
 					for (PropertyValue p: metaData.getColumnMetadata().get(sampleName)){
 						if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE)){
 							if (!MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE_VALUE.contains(p.getPropertyValue())){
-								if (!errorFlag) printErrorStatus("Metadata validation");
-								System.err.println (MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry for column " + sampleName + " contains illegal value " + p.getPropertyValue());
-								errorFlag = true;
+								if (errorCount == 0) printErrorStatus("Metadata validation");
+								if (errorCount < 50) System.err.println (MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry for column " + sampleName + " contains illegal value " + p.getPropertyValue());
+								errorCount ++;
 							}
 							flag++;
 						}
 					}
 				} catch (NullPointerException e) {
-					if (!errorFlag) printErrorStatus("Metadata validation");
-					System.err.println ("Metadata entries for column " + sampleName + " are missing");
-					errorFlag = true;
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println ("Metadata entries for column " + sampleName + " are missing");
+					errorCount ++;
 				}
 				if (flag == 0) {
-					if (!errorFlag) printErrorStatus("Metadata validation");
-					System.err.println ("Metadata for column " + sampleName + " must have a " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry");
-					errorFlag = true;
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println ("Metadata for column " + sampleName + " must have a " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry");
+					errorCount ++;
 				} else if (flag > 1) {
-					if (!errorFlag) printErrorStatus("Metadata validation");
-					System.err.println ("Metadata for column " + sampleName + " must have only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry, but it contains " + flag);
-					errorFlag = true;
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println ("Metadata for column " + sampleName + " must have only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry, but it contains " + flag);
+					errorCount ++;
 				}
 			}
 		}
-		if (errorFlag) {
+		if (errorCount > 50) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed. " + errorCount + " errors were found, but only first 50 were displayed");
+		} else if (errorCount > 0) {
 			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed");
 		}
 	 

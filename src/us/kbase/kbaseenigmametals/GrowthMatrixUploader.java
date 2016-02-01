@@ -233,7 +233,8 @@ public class GrowthMatrixUploader {
 	private void validateMetadata(Matrix2DMetadata m, List<String> columnNames, List<String> rowNames) {
 		
 		int flag = 0;
-		boolean errorFlag = false;
+		//boolean errorFlag = false;
+		int errorCount = 0;
 		String timeUnit = "";
 		
 		for (String rowName : rowNames){
@@ -245,29 +246,29 @@ public class GrowthMatrixUploader {
 						flag++;
 						if (timeUnit.equals("")) timeUnit = p.getPropertyUnit();
 						if (!MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME_UNIT.contains(p.getPropertyUnit())){
-							if (!errorFlag) printErrorStatus("Metadata validation");
-							System.err.println (MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains illegal unit " + p.getPropertyUnit());
-							errorFlag = true;
+							if (errorCount == 0) printErrorStatus("Metadata validation");
+							if (errorCount < 50) System.err.println (MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains illegal unit " + p.getPropertyUnit());
+							errorCount ++;
 						} else if (!p.getPropertyUnit().equals(timeUnit)) {
-							if (!errorFlag) printErrorStatus("Metadata validation");
-							System.err.println (MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains unit " + p.getPropertyUnit() + ", which is different from " + timeUnit + " in other entries" );
-							errorFlag = true;
+							if (errorCount == 0) printErrorStatus("Metadata validation");
+							if (errorCount < 50) System.err.println (MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains unit " + p.getPropertyUnit() + ", which is different from " + timeUnit + " in other entries" );
+							errorCount ++;
 						}
 					}
 				}
 			} catch (NullPointerException e) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println ("Metadata entries for row " + rowName + " are missing");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println ("Metadata entries for row " + rowName + " are missing");
+				errorCount ++;
 			}
 			if (flag == 0) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println ("Metadata for row " + rowName + " must have one " + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println ("Metadata for row " + rowName + " must have one " + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry");
+				errorCount ++;
 			} else if (flag > 1) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println ("Metadata for row " + rowName + " must have only one " + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry, but it contains " + flag);
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println ("Metadata for row " + rowName + " must have only one " + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry, but it contains " + flag);
+				errorCount ++;
 			}
 		}
 
@@ -285,34 +286,37 @@ public class GrowthMatrixUploader {
 							String key = p.getEntity() + p.getPropertyName();
 							if (units.containsKey(key)) {
 								if (!units.get(key).equals(p.getPropertyUnit())) {
-									if (!errorFlag) printErrorStatus("Metadata validation");
-									System.err.println (p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
-									errorFlag = true;
+									if (errorCount == 0) printErrorStatus("Metadata validation");
+									if (errorCount < 50) System.err.println (p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
+									errorCount ++;
 								}
 							} else {
 								units.put(key, p.getPropertyUnit());
 							}
 						} else if (!p.getPropertyUnit().equals("")) {
-							if (!errorFlag) printErrorStatus("Metadata validation");
-							System.err.println (p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
-							errorFlag = true;
+							if (errorCount == 0) printErrorStatus("Metadata validation");
+							if (errorCount < 50) System.err.println (p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
+							errorCount ++;
 						}
 					}
 					
 				}
 			} catch (NullPointerException e) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println ("Metadata entries for column " + colName + " are missing");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println ("Metadata entries for column " + colName + " are missing");
+				errorCount ++;
 			}
 			
 			if (!conditionFlag) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println ("Metadata for column " + colName + " must have at least one " + MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_CONDITION + " entry");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have at least one " + MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_CONDITION + " entry");
+				errorCount ++;
 			}
 		}
-		if (errorFlag) {
+		
+		if (errorCount > 50) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed. " + errorCount + " errors were found, but only first 50 were displayed");
+		} else if (errorCount > 0) {
 			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed.");
 		}
 	}

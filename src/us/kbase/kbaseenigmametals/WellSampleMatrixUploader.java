@@ -229,7 +229,8 @@ public class WellSampleMatrixUploader {
 	private void validateMetadata(Matrix2DMetadata m, List<String> columnNames, List<String> rowNames) {
 		
 		int flag = 0;
-		boolean errorFlag = false;
+		//boolean errorFlag = false;
+		int errorCount = 0;
 		
 		for (String rowName : rowNames){
 			flag = 0;
@@ -237,27 +238,27 @@ public class WellSampleMatrixUploader {
 				for (PropertyValue p: m.getRowMetadata().get(rowName)){
 					if (p.getEntity().equals(MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE)&&p.getPropertyName().equals(MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID)){
 						if (p.getPropertyValue().equals("")) {
-							if (!errorFlag) printErrorStatus("Metadata validation");
-							System.err.println(MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " metadata entry for row " + rowName + " must have a value");
-							errorFlag = true;
+							if (errorCount == 0) printErrorStatus("Metadata validation");
+							if (errorCount < 50) System.err.println(MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " metadata entry for row " + rowName + " must have a value");
+							errorCount++;
 						}
 						flag++;
 					}
 				}
 			} catch (NullPointerException e) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println ("Metadata entries for row " + rowName + " are missing");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println ("Metadata entries for row " + rowName + " are missing");
+				errorCount++;
 			}
 
 			if (flag == 0) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println("Metadata for row " + rowName + " must have a " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " entry");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have a " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " entry");
+				errorCount++;
 			} else if (flag > 1) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println("Metadata for row " + rowName + " must have only one " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " entry, but it contains " + flag);
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have only one " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " entry, but it contains " + flag);
+				errorCount++;
 			}
 		}
 
@@ -276,34 +277,36 @@ public class WellSampleMatrixUploader {
 								String key = p.getEntity() + p.getPropertyName() + p.getPropertyValue();
 								if (units.containsKey(key)) {
 									if (!units.get(key).equals(p.getPropertyUnit())) {
-										if (!errorFlag) printErrorStatus("Metadata validation");
-										System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
-										errorFlag = true;
+										if (errorCount == 0) printErrorStatus("Metadata validation");
+										if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
+										errorCount++;
 									}
 								} else {
 									units.put(key, p.getPropertyUnit());
 								}
 							} else {
-								if (!errorFlag) printErrorStatus("Metadata validation");
-								System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
-								errorFlag = true;
+								if (errorCount == 0) printErrorStatus("Metadata validation");
+								if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
+								errorCount++;
 							}
 						}
 					}
 				}
 				if (!measurementFlag) {
-					if (!errorFlag) printErrorStatus("Metadata validation");
-					System.err.println("Metadata for column " + colName + " must have at least one " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_COLUMN_MEASUREMENT + " entry");
-					errorFlag = true;
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println("Metadata for column " + colName + " must have at least one " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_COLUMN_MEASUREMENT + " entry");
+					errorCount++;
 				}
 			} catch (NullPointerException e) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println ("Metadata entries for column " + colName + " are missing");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println ("Metadata entries for column " + colName + " are missing");
+				errorCount++;
 			}
 		}
 
-		if (errorFlag) {
+		if (errorCount > 50) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed. " + errorCount + " errors were found, but only first 50 were displayed");
+		} else if (errorCount > 0) {
 			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed.");
 		}
 

@@ -254,41 +254,47 @@ public class ChromatographyMatrixUploader {
 	private void validateMetadata(Matrix2DMetadata m, List<String> columnNames, List<String> rowNames) {
 		
 		int flag = 0;
-		boolean errorFlag = false;
+		int errorCount = 0;
 		String timeUnit = "";
 		
 		for (String rowName : rowNames){
 			flag = 0;
 			try {
 				for (PropertyValue p: m.getRowMetadata().get(rowName)){
-					if (p.getEntity().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES)&&p.getPropertyName().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME)){
+					if (p.getEntity().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES)){
+						if (!MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME.contains(p.getPropertyName())) {
+							if (errorCount == 0) printErrorStatus("Metadata validation");
+							if (errorCount < 50) System.err.println(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + " metadata entry for row " + rowName + " contains illegal property name " + p.getPropertyName());
+							errorCount ++;
+						}
+						
 						if (timeUnit.equals("")) timeUnit = p.getPropertyUnit();
 						if (!MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME_UNIT.contains(p.getPropertyUnit())){
-							if (!errorFlag) printErrorStatus("Metadata validation");
-							System.err.println(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains illegal unit " + p.getPropertyUnit());
-							errorFlag = true;
+							if (errorCount == 0) printErrorStatus("Metadata validation");
+							if (errorCount < 50) System.err.println(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + "_" + p.getPropertyName() + " metadata entry for row " + rowName + " contains illegal unit " + p.getPropertyUnit());
+							errorCount ++;
 						} else if (!p.getPropertyUnit().equals(timeUnit)) {
-							if (!errorFlag) printErrorStatus("Metadata validation");
-							System.err.println(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME + " metadata entry for row " + rowName + " contains unit " + p.getPropertyUnit() + ", which is different from " + timeUnit + " in other entries" );
-							errorFlag = true;
+							if (errorCount == 0) printErrorStatus("Metadata validation");
+							if (errorCount < 50) System.err.println(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + "_" + p.getPropertyName() + " metadata entry for row " + rowName + " contains unit " + p.getPropertyUnit() + ", which is different from " + timeUnit + " in other entries" );
+							errorCount ++;
 						}
 						flag++;
 						
 					}
 				}
 			} catch (NullPointerException e) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println("Metadata entries for row " + rowName + " are missing");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println("Metadata entries for row " + rowName + " are missing");
+				errorCount ++;
 			}
 			if (flag == 0) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println("Metadata for row " + rowName + " must have one " + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have one " + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + " entry");
+				errorCount ++;
 			} else if (flag > 1) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println("Metadata for row " + rowName + " must have only one " + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + "_" + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME + " entry, but it contains " + flag);
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have only one " + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + " entry, but it contains " + flag);
+				errorCount ++;
 			}
 		}
 
@@ -308,34 +314,36 @@ public class ChromatographyMatrixUploader {
 								String key = p.getEntity() + p.getPropertyName() + p.getPropertyValue();
 								if (units.containsKey(key)) {
 									if (!units.get(key).equals(p.getPropertyUnit())) {
-										if (!errorFlag) printErrorStatus("Metadata validation");
-										System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
-										errorFlag = true;
+										if (errorCount == 0) printErrorStatus("Metadata validation");
+										if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
+										errorCount ++;
 									}
 								} else {
 									units.put(key, p.getPropertyUnit());
 								}
 							} else {
-								if (!errorFlag) printErrorStatus("Metadata validation");
-								System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
-								errorFlag = true;
+								if (errorCount == 0) printErrorStatus("Metadata validation");
+								if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
+								errorCount ++;
 							}
 						}
 					}
 				}
 				if (!measurementFlag) {
-					if (!errorFlag) printErrorStatus("Metadata validation");
-					System.err.println("Metadata for column " + colName + " must have at least one " + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_COLUMN_MEASUREMENT + " entry");
-					errorFlag = true;
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println("Metadata for column " + colName + " must have at least one " + MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_COLUMN_MEASUREMENT + " entry");
+					errorCount ++;
 				}
 			} catch (NullPointerException e) {
-				if (!errorFlag) printErrorStatus("Metadata validation");
-				System.err.println("Metadata entries for column " + colName + " are missing");
-				errorFlag = true;
+				if (errorCount == 0) printErrorStatus("Metadata validation");
+				if (errorCount < 50) System.err.println("Metadata entries for column " + colName + " are missing");
+				errorCount ++;
 			}
 		}
 		
-		if (errorFlag) {
+		if (errorCount > 50) {
+			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed. " + errorCount + " errors were found, but only first 50 were displayed");
+		} else if (errorCount > 0) {
 			throw new IllegalStateException("Cannot proceed with upload: metadata validation failed.");
 		}
 
