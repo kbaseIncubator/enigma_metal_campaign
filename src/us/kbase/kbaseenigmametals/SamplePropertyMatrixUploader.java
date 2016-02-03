@@ -19,7 +19,7 @@ import org.apache.commons.cli.ParseException;
 
 import us.kbase.common.service.UObject;
 
-public class WellSampleMatrixUploader {
+public class SamplePropertyMatrixUploader {
 
 	static Options options = new Options();
 
@@ -29,11 +29,11 @@ public class WellSampleMatrixUploader {
 	 */
 	public static void main(String[] args) throws Exception {
 		MetadataProperties.startup();
-		WellSampleMatrixUploader uploader = new WellSampleMatrixUploader();
+		SamplePropertyMatrixUploader uploader = new SamplePropertyMatrixUploader();
 		uploader.upload(args);
 	}
 
-	public WellSampleMatrixUploader() {
+	public SamplePropertyMatrixUploader() {
 
 		OptionBuilder.withLongOpt("help");
 		OptionBuilder.withDescription("print this message");
@@ -120,10 +120,10 @@ public class WellSampleMatrixUploader {
 					File inputFile = findTabFile(new File(
 							line.getOptionValue("id")));
 
-					WellSampleMatrix matrix = new WellSampleMatrix();
+					SamplePropertyMatrix matrix = new SamplePropertyMatrix();
 					matrix.setName(line.getOptionValue("on"));
 					
-					matrix = generateWellSampleMatrix(inputFile, matrix);
+					matrix = generateSamplePropertyMatrix(inputFile, matrix);
 
 					// System.out.println(matrix.toString());
 					String outputFileName = line.getOptionValue("of");
@@ -156,7 +156,7 @@ public class WellSampleMatrixUploader {
 
 	}
 
-	public WellSampleMatrix generateWellSampleMatrix(File inputFile, WellSampleMatrix matrix)
+	public SamplePropertyMatrix generateSamplePropertyMatrix(File inputFile, SamplePropertyMatrix matrix)
 			throws Exception {
 
 		List<String> data = new ArrayList<String>();
@@ -236,10 +236,10 @@ public class WellSampleMatrixUploader {
 			flag = 0;
 			try {
 				for (PropertyValue p: m.getRowMetadata().get(rowName)){
-					if (p.getEntity().equals(MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE)&&p.getPropertyName().equals(MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID)){
+					if (p.getEntity().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE)&&p.getPropertyName().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID)){
 						if (p.getPropertyValue().equals("")) {
 							if (errorCount == 0) printErrorStatus("Metadata validation");
-							if (errorCount < 50) System.err.println(MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " metadata entry for row " + rowName + " must have a value");
+							if (errorCount < 50) System.err.println(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID + " metadata entry for row " + rowName + " must have a value");
 							errorCount++;
 						}
 						flag++;
@@ -253,11 +253,11 @@ public class WellSampleMatrixUploader {
 
 			if (flag == 0) {
 				if (errorCount == 0) printErrorStatus("Metadata validation");
-				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have a " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " entry");
+				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have a " + MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID + " entry");
 				errorCount++;
 			} else if (flag > 1) {
 				if (errorCount == 0) printErrorStatus("Metadata validation");
-				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have only one " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.WELLSAMPLEMATRIX_METADATA_ROW_SAMPLE_ID + " entry, but it contains " + flag);
+				if (errorCount < 50) System.err.println("Metadata for row " + rowName + " must have only one " + MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID + " entry, but it contains " + flag);
 				errorCount++;
 			}
 		}
@@ -270,10 +270,10 @@ public class WellSampleMatrixUploader {
 			
 			try {
 				for (PropertyValue p : m.getColumnMetadata().get(colName)){
-					if (p.getEntity().equals(MetadataProperties.WELLSAMPLEMATRIX_METADATA_COLUMN_MEASUREMENT)) {
+					if (p.getEntity().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT)) {
 						measurementFlag = true;
-						if (p.getPropertyName().equals(MetadataProperties.WELLSAMPLEMATRIX_METADATA_COLUMN_MEASUREMENT_SUBSTANCE)){
-							if (MetadataProperties.WELLSAMPLEMATRIX_METADATA_COLUMN_MEASUREMENT_SUBSTANCE_UNIT.contains(p.getPropertyUnit())){
+						if (p.getPropertyName().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT_SUBSTANCE)){
+							if (MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT_SUBSTANCE_UNIT.contains(p.getPropertyUnit())){
 								String key = p.getEntity() + p.getPropertyName() + p.getPropertyValue();
 								if (units.containsKey(key)) {
 									if (!units.get(key).equals(p.getPropertyUnit())) {
@@ -294,7 +294,7 @@ public class WellSampleMatrixUploader {
 				}
 				if (!measurementFlag) {
 					if (errorCount == 0) printErrorStatus("Metadata validation");
-					if (errorCount < 50) System.err.println("Metadata for column " + colName + " must have at least one " + MetadataProperties.WELLSAMPLEMATRIX_METADATA_COLUMN_MEASUREMENT + " entry");
+					if (errorCount < 50) System.err.println("Metadata for column " + colName + " must have at least one " + MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT + " entry");
 					errorCount++;
 				}
 			} catch (NullPointerException e) {

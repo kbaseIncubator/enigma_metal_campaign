@@ -75,7 +75,7 @@ module KBaseEnigmaMetals {
 		FloatMatrix2D data;
 	} ChromatographyMatrix;
 
-    /* Well sample data matrix
+    /* Sample property data matrix
 
       @optional description
     */
@@ -85,5 +85,5 @@ module KBaseEnigmaMetals {
 		string description;
 		Matrix2DMetadata metadata;
 		FloatMatrix2D data;
-	} WellSampleMatrix;
+	} SamplePropertyMatrix;
 };

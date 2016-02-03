@@ -2,17 +2,17 @@ package us.kbase.util;
 
 import java.io.File;
 import us.kbase.common.service.UObject;
-import us.kbase.kbaseenigmametals.WellSampleMatrix;
-import us.kbase.kbaseenigmametals.WellSampleMatrixUploader;
+import us.kbase.kbaseenigmametals.SamplePropertyMatrix;
+import us.kbase.kbaseenigmametals.SamplePropertyMatrixUploader;
 
-public class WellSampleDataImporter {
+public class SamplePropertyDataImporter {
 
 	private String fileName = null;
 	private String token = null;
 	private Long workspaceId = null;
 
 	
-	public WellSampleDataImporter (String fileName, Long workspaceId, String token) throws Exception{
+	public SamplePropertyDataImporter (String fileName, Long workspaceId, String token) throws Exception{
 		if (fileName == null) {
 			System.out.println("cMonkey Expression data file name required");
 		} else {
@@ -34,14 +34,14 @@ public class WellSampleDataImporter {
 	
 	public void importMatrix (String matrixName) throws Exception {
 		
-		WellSampleMatrixUploader uploader = new WellSampleMatrixUploader();
+		SamplePropertyMatrixUploader uploader = new SamplePropertyMatrixUploader();
 		
-		WellSampleMatrix matrix = new WellSampleMatrix();
+		SamplePropertyMatrix matrix = new SamplePropertyMatrix();
 		matrix.setName(matrixName);
 		
 		File inputFile = new File(this.fileName);
 		
-		matrix = uploader.generateWellSampleMatrix(inputFile, matrix);
+		matrix = uploader.generateSamplePropertyMatrix(inputFile, matrix);
 		//System.out.println(matrix.toString());
 		WsDeluxeUtil.saveObjectToWorkspaceRef(UObject.transformObjectToObject(matrix, UObject.class), "KBaseEnigmaMetals.WellSampleMatrix", workspaceId, matrixName, "https://ci.kbase.us/services/ws", token.toString());
 	}

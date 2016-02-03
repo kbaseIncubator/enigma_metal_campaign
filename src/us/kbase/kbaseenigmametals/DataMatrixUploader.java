@@ -140,7 +140,7 @@ public class DataMatrixUploader {
 						ChromatographyMatrixUploader uploader = new ChromatographyMatrixUploader();
 						uploader.upload(args);
 					} else if (externalType.equalsIgnoreCase(WELLS_EXTERNAL_TYPE)){
-						WellSampleMatrixUploader uploader = new WellSampleMatrixUploader();
+						SamplePropertyMatrixUploader uploader = new SamplePropertyMatrixUploader();
 						uploader.upload(args);
 					} else {
 						System.err.println("Unknown external type " + externalType);

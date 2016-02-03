@@ -17,11 +17,11 @@ import org.apache.commons.cli.ParseException;
 
 import us.kbase.auth.AuthService;
 import us.kbase.auth.AuthToken;
-import us.kbase.kbaseenigmametals.WellSampleMatrix;
+import us.kbase.kbaseenigmametals.SamplePropertyMatrix;
 import us.kbase.workspace.ObjectIdentity;
 import us.kbase.workspace.WorkspaceClient;
 
-public class WellSampleMatrixDownloader {
+public class SamplePropertyMatrixDownloader {
 
 	static Options options = new Options();
 	static String wsUrl;
@@ -35,11 +35,11 @@ public class WellSampleMatrixDownloader {
 	 */
 	public static void main(String[] args) throws Exception {
 		MetadataProperties.startup();
-		WellSampleMatrixDownloader downloader = new WellSampleMatrixDownloader();
+		SamplePropertyMatrixDownloader downloader = new SamplePropertyMatrixDownloader();
 		downloader.download(args);
 	}
 
-	public WellSampleMatrixDownloader() {
+	public SamplePropertyMatrixDownloader() {
 
 		OptionBuilder.withLongOpt("help");
 		OptionBuilder.withDescription("print this message");
@@ -139,8 +139,8 @@ public class WellSampleMatrixDownloader {
 		            if (version != null)
 		                ref += "/" + version;
 
-		            WellSampleMatrix matrix = client.getObjects(Arrays.asList(new ObjectIdentity().withRef(ref)))
-		                    .get(0).getData().asClassInstance(WellSampleMatrix.class);
+		            SamplePropertyMatrix matrix = client.getObjects(Arrays.asList(new ObjectIdentity().withRef(ref)))
+		                    .get(0).getData().asClassInstance(SamplePropertyMatrix.class);
 
 					// System.out.println(matrix.toString());
 					String outputFileName = line.getOptionValue("of");
@@ -174,7 +174,7 @@ public class WellSampleMatrixDownloader {
 
 	}
 
-	private void generateTSV(PrintWriter pw, WellSampleMatrix matrix) throws Exception {
+	private void generateTSV(PrintWriter pw, SamplePropertyMatrix matrix) throws Exception {
 		
 		try {
 			pw.print("DATA");
