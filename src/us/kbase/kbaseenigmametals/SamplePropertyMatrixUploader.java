@@ -176,7 +176,7 @@ public class SamplePropertyMatrixUploader {
 					dataFlag = true;
 					metaDataFlag = false;
 					data.add(line);
-				} else if (line.matches("METADATA\tEntity\tProperty\tUnit\tValue.*")) {
+				} else if (line.matches("METADATA\tCategory\tProperty\tUnit\tValue.*")) {
 					dataFlag = false;
 					metaDataFlag = true;
 				} else {
@@ -207,7 +207,7 @@ public class SamplePropertyMatrixUploader {
 		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
 		matrix.setDescription("");
 		for (PropertyValue propertyValue:properties){
-			if (propertyValue.getEntity().equals("Description")){
+			if (propertyValue.getCategory().equals("Description")){
 				matrix.setDescription(propertyValue.getPropertyValue());
 				break;
 			}
@@ -236,7 +236,7 @@ public class SamplePropertyMatrixUploader {
 			flag = 0;
 			try {
 				for (PropertyValue p: m.getRowMetadata().get(rowName)){
-					if (p.getEntity().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE)&&p.getPropertyName().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID)){
+					if (p.getCategory().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE)&&p.getPropertyName().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID)){
 						if (p.getPropertyValue().equals("")) {
 							if (errorCount == 0) printErrorStatus("Metadata validation");
 							if (errorCount < 50) System.err.println(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE + "_" + MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID + " metadata entry for row " + rowName + " must have a value");
@@ -270,15 +270,15 @@ public class SamplePropertyMatrixUploader {
 			
 			try {
 				for (PropertyValue p : m.getColumnMetadata().get(colName)){
-					if (p.getEntity().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT)) {
+					if (p.getCategory().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT)) {
 						measurementFlag = true;
 						if (p.getPropertyName().equals(MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT_SUBSTANCE)){
 							if (MetadataProperties.SAMPLEPROPERTYMATRIX_METADATA_COLUMN_MEASUREMENT_SUBSTANCE_UNIT.contains(p.getPropertyUnit())){
-								String key = p.getEntity() + p.getPropertyName() + p.getPropertyValue();
+								String key = p.getCategory() + p.getPropertyName() + p.getPropertyValue();
 								if (units.containsKey(key)) {
 									if (!units.get(key).equals(p.getPropertyUnit())) {
 										if (errorCount == 0) printErrorStatus("Metadata validation");
-										if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
+										if (errorCount < 50) System.err.println(p.getCategory() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
 										errorCount++;
 									}
 								} else {
@@ -286,7 +286,7 @@ public class SamplePropertyMatrixUploader {
 								}
 							} else {
 								if (errorCount == 0) printErrorStatus("Metadata validation");
-								if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
+								if (errorCount < 50) System.err.println(p.getCategory() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
 								errorCount++;
 							}
 						}

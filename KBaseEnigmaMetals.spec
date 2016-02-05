@@ -18,7 +18,7 @@ module KBaseEnigmaMetals {
     */
 
 	typedef structure {
-		string entity;
+		string category;
 		string property_name;
 		string property_unit;
 		string property_value;

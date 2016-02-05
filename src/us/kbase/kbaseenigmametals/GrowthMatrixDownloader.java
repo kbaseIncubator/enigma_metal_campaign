@@ -196,7 +196,7 @@ public class GrowthMatrixDownloader {
 				index++;
 			}
 			
-			pw.print("METADATA\tEntity\tProperty\tUnit\tValue\n");
+			pw.print("METADATA\tCategory\tProperty\tUnit\tValue\n");
 			for (PropertyValue value: matrix.getMetadata().getMatrixMetadata()){
 				pw.print (printProperty("T", value));				
 			}
@@ -227,8 +227,8 @@ public class GrowthMatrixDownloader {
 		sb.append(id);
 		sb.append("\t");
 		
-		if (value.getEntity() != null) {
-			sb.append(value.getEntity());
+		if (value.getCategory() != null) {
+			sb.append(value.getCategory());
 		}
 		sb.append("\t");
 		 

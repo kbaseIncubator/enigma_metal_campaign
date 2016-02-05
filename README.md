@@ -28,36 +28,36 @@ The first (leftmost) column of metadata should contain either identifiers of col
 The second column indicates a subject of metadata, the third column indicates a property of the subject.
 Last two columns of metadata section contain measurement unit and value of the property. 
 
-Metadata section must contain description of the data object in the Value column, with "T" in the leftmost cell, word "Description" in the Entity column. For example:
+Metadata section must contain description of the data object in the Value column, with "T" in the leftmost cell, word "Description" in the Category column. For example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |T |Description |||Pseudomonas stutzeri RCH2 in LB, Nickel |
 
-Any metadata describing the entire experiment should be placed into metadata as key-value pairs in columns Property and Value. Experiment metadata must have "T" in the leftmost column and word "Experiment" in the Entity column. For example:
+Any metadata describing the entire experiment should be placed into metadata as key-value pairs in columns Property and Value. Experiment metadata must have "T" in the leftmost column and word "Experiment" in the Category column. For example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |T |Experiment |Temperature |C|30|
 |T |Experiment |Medium ||LB |
 |T |Experiment |Read ||Absorbance |
 
-A data object may contain either statistical measures (average, standard deviation, standard error) or raw data. In the first case, metadata must contain an entry with "T" in the left most column, "Measurement" in the Entity column, "Values" in the Property column and "Measures" in the Value column:
+A data object may contain either statistical measures (average, standard deviation, standard error) or raw data. In the first case, metadata must contain an entry with "T" in the left most column, "Measurement" in the Category column, "Values" in the Property column and "Measures" in the Value column:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |T |Measurement |Values||Measures |
 
 In the second case, Measurement entry of metadata must have "RawValues" in the Value column:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |T |Measurement |Values||RawValues |
 
-If data contain statistical measures, every column must have a separate entry in the metadata section with designation of a statistical measure. Such entries have a valid column identifier in the leftmost column (like C1, C2 etc.), "Measurement" in the Entity column, "ValueType" in the Property column and "Average", "SD" or "SE" in the value column. For example, C1 column contains average values, and C2 column contains standard deviations:
+If data contain statistical measures, every column must have a separate entry in the metadata section with designation of a statistical measure. Such entries have a valid column identifier in the leftmost column (like C1, C2 etc.), "Measurement" in the Category column, "ValueType" in the Property column and "Average", "SD" or "SE" in the value column. For example, C1 column contains average values, and C2 column contains standard deviations:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |C1 |Measurement |ValueType ||Average
@@ -70,7 +70,7 @@ Row metadata describe time points in the following way:
 
 - leftmost column contains row identifier (like R1, R2, ...);
 
-- a cell in the Entity column contains reserved words "Time series";
+- a cell in the Category column contains reserved words "Time series";
 
 - a cell in the Property column contains reserved word "Time";
 
@@ -80,7 +80,7 @@ Row metadata describe time points in the following way:
 
 For example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |R1 |TimeSeries |Time |hours |0
@@ -88,14 +88,14 @@ For example:
 
 In addition, row metadata may describe other characteristics of the time point. For such rows, Unit column will be ignored. For example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |R1 |Experiment |Temperature |C|30
 
-Column metadata may describe sample-specific conditions and type of values in the column. Column metadata entry musty contain a valid column identifier in the leftmost column (like C1, C2 etc.). Description of condition must contain reserved word "Condition" in the Entity column. For chemical substances/compound, metadata entry must contain name of a chemical in the Property column, unit of measurement in Unit column, and a numerical value of weight/concentration in the Value column. Acceptable values in the unit column are: pM, nM, uM, mM, M, pg, ng, ug, mg, g. For description of an organism grown in culture, cell in the Property column should contain "Strain", "Organism", "Mutant" etc., and cell in the Value column must contain name of the organism or designation of the strain. For example:
+Column metadata may describe sample-specific conditions and type of values in the column. Column metadata entry musty contain a valid column identifier in the leftmost column (like C1, C2 etc.). Description of condition must contain reserved word "Condition" in the Category column. For chemical substances/compound, metadata entry must contain name of a chemical in the Property column, unit of measurement in Unit column, and a numerical value of weight/concentration in the Value column. Acceptable values in the unit column are: pM, nM, uM, mM, M, pg, ng, ug, mg, g. For description of an organism grown in culture, cell in the Property column should contain "Strain", "Organism", "Mutant" etc., and cell in the Value column must contain name of the organism or designation of the strain. For example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |C1 |Condition |Nickel |mM |0.00
@@ -111,11 +111,11 @@ Note: only those condition entries that have acceptable unit values (pM, nM, uM,
 
 Row metadata contain description of time points (see GrowthMatrix metadata section for details).
 
-Column metadata describe type of measurement and type of value. Entity column must contain word "Measurement", and Property column must contain "Intensity". For Intensity property, the Unit column must contain "CPS", and the Value column should contain a name of substance/compound measured. 
+Column metadata describe type of measurement and type of value. Category column must contain word "Measurement", and Property column must contain "Intensity". For Intensity property, the Unit column must contain "CPS", and the Value column should contain a name of substance/compound measured. 
 
 Example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |R1 |TimeSeries |Time |seconds |1.001
@@ -126,24 +126,24 @@ Example:
 
 ## WellSampleMatrix-specific metadata
 
-Row metadata describe samples, and column metadata describe measured characteristics. In case of row meatdata, the leftmost field contains row IDs, the Entity column contains "Sample", the Property column cotains either "ID" or "Well". The Value column contains Sample ID or Well ID, respectively.
+Row metadata describe samples, and column metadata describe measured characteristics. In case of row meatdata, the leftmost field contains row IDs, the Category column contains "Sample", the Property column cotains either "ID" or "Well". The Value column contains Sample ID or Well ID, respectively.
 
 Example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |R1 |Sample |ID | |GW101-7-25-12
 |R1 |Sample |Well | |GW-101
 
 
-If an entry in column metadata describes fraction, it must contain "Measurement" in the Entity column and "Fraction" in the Property column. Typical values are "Suspension", "Supernatant", "Pellet", but this is not a requirement. The Unit column should be empty.
+If an entry in column metadata describes fraction, it must contain "Measurement" in the Category column and "Fraction" in the Property column. Typical values are "Suspension", "Supernatant", "Pellet", but this is not a requirement. The Unit column should be empty.
 
-If an entry in column metadata describes a substance, it must contain "Measurement" in the Entity column and "Substance" in the Property column. The Unit column must contain acceptable concentration unit (pM, nM, uM, mM, M). The Value column must contain a name of substance (any text).
+If an entry in column metadata describes a substance, it must contain "Measurement" in the Category column and "Substance" in the Property column. The Unit column must contain acceptable concentration unit (pM, nM, uM, mM, M). The Value column must contain a name of substance (any text).
 
 Example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |C1 |Measurement |Substance |uM |Nickel
@@ -153,7 +153,7 @@ Example:
 
 ## Arbitrary metadata entries
 
-Any object may contain additional metadata entries for table, rows or columns. Such entries can use any combination of Entity and Property names, except:
+Any object may contain additional metadata entries for table, rows or columns. Such entries can use any combination of Category and Property names, except:
 
 - Measurement.ValueType;
 
@@ -165,7 +165,7 @@ The Unit column of such entries must be always empty.
 
 Example:
 
-|METADATA|Entity|Property|Unit|Value|
+|METADATA|Category|Property|Unit|Value|
 |---|---|---|---|---|
 |...|...|...|...|...|
 |T |Experiment |Date | |05/16/2013

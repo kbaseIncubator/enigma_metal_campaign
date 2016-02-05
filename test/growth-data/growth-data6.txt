@@ -48,7 +48,7 @@ R46	0.2415	0.298	0.381	0.318	0.3445
 R47	0.248	0.3055	0.3815	0.323	0.348
 R48	0.2575	0.3165	0.3805	0.328	0.3505
 R49	0.264	0.323	0.3805	0.3305	0.352
-METADATA	Entity	Property	Unit	Value	
+METADATA	Category	Property	Unit	Value	
 C1	Condition	Nickel	uM	0	
 C2	Condition	Nickel	uM	2.5	
 C3	Condition	Nickel	uM	5	

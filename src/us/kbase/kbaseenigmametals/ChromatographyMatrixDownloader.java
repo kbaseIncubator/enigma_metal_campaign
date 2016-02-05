@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -197,7 +196,7 @@ public class ChromatographyMatrixDownloader {
 				index++;
 			}
 			
-			pw.print("METADATA\tEntity\tProperty\tUnit\tValue\n");
+			pw.print("METADATA\tCategory\tProperty\tUnit\tValue\n");
 			for (PropertyValue value: matrix.getMetadata().getMatrixMetadata()){
 				pw.print (printProperty("T", value));				
 			}
@@ -228,8 +227,8 @@ public class ChromatographyMatrixDownloader {
 		sb.append(id);
 		sb.append("\t");
 		
-		if (value.getEntity() != null) {
-			sb.append(value.getEntity());
+		if (value.getCategory() != null) {
+			sb.append(value.getCategory());
 		}
 		sb.append("\t");
 		 

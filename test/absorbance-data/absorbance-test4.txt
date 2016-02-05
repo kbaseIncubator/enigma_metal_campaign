@@ -2059,7 +2059,7 @@ R2057	0.045776367
 R2058	0.045061111			
 R2059	0.045478344			
 R2060	0.04607439			
-METADATA	Entity	Property	Unit	Value
+METADATA	Category	Property	Unit	Value
 T	Description			Protein absorbance at 280 nm
 T	Measurement	Values		RawValues
 C1	Measurement	Substance		Protein

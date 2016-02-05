@@ -200,7 +200,7 @@ public class ChromatographyMatrixUploader {
 					dataFlag = true;
 					metaDataFlag = false;
 					data.add(line);
-				} else if (line.matches("METADATA\tEntity\tProperty\tUnit\tValue.*")) {
+				} else if (line.matches("METADATA\tCategory\tProperty\tUnit\tValue.*")) {
 					dataFlag = false;
 					metaDataFlag = true;
 				} else {
@@ -231,7 +231,7 @@ public class ChromatographyMatrixUploader {
 		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
 		matrix.setDescription("");
 		for (PropertyValue propertyValue:properties){
-			if (propertyValue.getEntity().equals("Description")){
+			if (propertyValue.getCategory().equals("Description")){
 				matrix.setDescription(propertyValue.getPropertyValue());
 				break;
 			}
@@ -261,7 +261,7 @@ public class ChromatographyMatrixUploader {
 			flag = 0;
 			try {
 				for (PropertyValue p: m.getRowMetadata().get(rowName)){
-					if (p.getEntity().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES)){
+					if (p.getCategory().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES)){
 						if (!MetadataProperties.GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME.contains(p.getPropertyName())) {
 							if (errorCount == 0) printErrorStatus("Metadata validation");
 							if (errorCount < 50) System.err.println(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES + " metadata entry for row " + rowName + " contains illegal property name " + p.getPropertyName());
@@ -306,16 +306,15 @@ public class ChromatographyMatrixUploader {
 			
 			try {
 				for (PropertyValue p : m.getColumnMetadata().get(colName)){
-					//System.out.println(colName + " " + p.getEntity() + " " + p.getPropertyName() + " " + p.getPropertyUnit() + " " + p.getPropertyValue() + " " + flag);
-					if (p.getEntity().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_COLUMN_MEASUREMENT)) {
+					if (p.getCategory().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_COLUMN_MEASUREMENT)) {
 						measurementFlag = true;
 						if (p.getPropertyName().equals(MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_COLUMN_MEASUREMENT_INTENSITY)){
 							if (MetadataProperties.CHROMATOGRAPHYMATRIX_METADATA_COLUMN_MEASUREMENT_INTENSITY_UNIT.contains(p.getPropertyUnit())){
-								String key = p.getEntity() + p.getPropertyName() + p.getPropertyValue();
+								String key = p.getCategory() + p.getPropertyName() + p.getPropertyValue();
 								if (units.containsKey(key)) {
 									if (!units.get(key).equals(p.getPropertyUnit())) {
 										if (errorCount == 0) printErrorStatus("Metadata validation");
-										if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
+										if (errorCount < 50) System.err.println(p.getCategory() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains unit " + p.getPropertyUnit() + ", which is different from " + units.get(key) + " in other entries" );
 										errorCount ++;
 									}
 								} else {
@@ -323,7 +322,7 @@ public class ChromatographyMatrixUploader {
 								}
 							} else {
 								if (errorCount == 0) printErrorStatus("Metadata validation");
-								if (errorCount < 50) System.err.println(p.getEntity() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
+								if (errorCount < 50) System.err.println(p.getCategory() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
 								errorCount ++;
 							}
 						}

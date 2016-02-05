@@ -183,7 +183,7 @@ public class DataMatrixUploader {
 				} else if (line.matches("DATA\t\t.*")) {
 					dataFlag = true;
 					metaDataFlag = false;
-				} else if (line.matches("METADATA\tEntity\tProperty\tUnit\tValue.*")) {
+				} else if (line.matches("METADATA\tCategory\tProperty\tUnit\tValue.*")) {
 					dataFlag = false;
 					metaDataFlag = true;
 				} else {
@@ -213,7 +213,7 @@ public class DataMatrixUploader {
 		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
 		matrix.setDescription("");
 		for (PropertyValue propertyValue:properties){
-			if (propertyValue.getEntity().equals("Description")){
+			if (propertyValue.getCategory().equals("Description")){
 				matrix.setDescription(propertyValue.getPropertyValue());
 				break;
 			}
@@ -301,7 +301,7 @@ public class DataMatrixUploader {
 				if (fields[0].equals("T")) {
 					// process series-specific fields
 					PropertyValue propertyValue = new PropertyValue();
-					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 1) propertyValue.setCategory(fields[1]);
 					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
@@ -309,7 +309,7 @@ public class DataMatrixUploader {
 				} else if (sampleNames.contains(fields[0])) {
 					// process sample-specific fields
 					PropertyValue propertyValue = new PropertyValue();
-					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 1) propertyValue.setCategory(fields[1]);
 					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
@@ -340,7 +340,7 @@ public class DataMatrixUploader {
 				if (fields[0].equals("T")) {
 					// process series-specific fields
 					PropertyValue propertyValue = new PropertyValue();
-					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 1) propertyValue.setCategory(fields[1]);
 					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
@@ -348,7 +348,7 @@ public class DataMatrixUploader {
 				} else if (rowNames.contains(fields[0])) {
 					// process sample-specific fields
 					PropertyValue propertyValue = new PropertyValue();
-					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 1) propertyValue.setCategory(fields[1]);
 					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
@@ -401,7 +401,7 @@ public class DataMatrixUploader {
 				if (fields[0].equals("T")) {
 					// process series-specific fields
 					PropertyValue propertyValue = new PropertyValue();
-					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 1) propertyValue.setCategory(fields[1]);
 					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
@@ -409,7 +409,7 @@ public class DataMatrixUploader {
 				} else if (sampleNames.contains(fields[0])) {
 					// process sample-specific fields
 					PropertyValue propertyValue = new PropertyValue();
-					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 1) propertyValue.setCategory(fields[1]);
 					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
@@ -426,7 +426,7 @@ public class DataMatrixUploader {
 				} else if (rowNames.contains(fields[0])) {
 					// process sample-specific fields
 					PropertyValue propertyValue = new PropertyValue();
-					if (fields.length > 1) propertyValue.setEntity(fields[1]);
+					if (fields.length > 1) propertyValue.setCategory(fields[1]);
 					if (fields.length > 2) propertyValue.setPropertyName(fields[2]);
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
@@ -469,7 +469,7 @@ public class DataMatrixUploader {
 		int errorCount = 0;
 		
 		for (PropertyValue p: metaData.getMatrixMetadata()) {
-			if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION)) flag++;			
+			if (p.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_DESCRIPTION)) flag++;			
 		}
 		if (flag == 0) {
 			if (errorCount == 0) printErrorStatus("Metadata validation");
@@ -485,7 +485,7 @@ public class DataMatrixUploader {
 		boolean Measures = false;
 		flag = 0;
 		for (PropertyValue p: metaData.getMatrixMetadata()) {
-			if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES)) {
+			if (p.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES)) {
 				if (!MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE.contains(p.getPropertyValue())){
 					if (errorCount == 0) printErrorStatus("Metadata validation");
 					if (errorCount < 50) System.err.println (MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " metadata entry contains illegal value " + p.getPropertyValue());
@@ -511,7 +511,7 @@ public class DataMatrixUploader {
 				flag = 0;
 				try {
 					for (PropertyValue p: metaData.getColumnMetadata().get(sampleName)){
-						if (p.getEntity().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE)){
+						if (p.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE)){
 							if (!MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE_VALUE.contains(p.getPropertyValue())){
 								if (errorCount == 0) printErrorStatus("Metadata validation");
 								if (errorCount < 50) System.err.println (MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE + " entry for column " + sampleName + " contains illegal value " + p.getPropertyValue());
