@@ -5,9 +5,13 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+import java.util.Vector;
+import java.util.Map.Entry;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -16,6 +20,7 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+
 
 import us.kbase.kbaseenigmametals.FloatMatrix2D;
 import us.kbase.kbaseenigmametals.DataMatrix;
@@ -461,6 +466,62 @@ public class DataMatrixUploader {
 		
 		return returnVal;
 	};
+	
+	private static void generateSeriesIds(Map<String, List<PropertyValue>> columnMetadata, String category){
+		Map<String, List<String>> columnProperties2columnIds = new Hashtable<String, List<String>>();
+		List<String> columnProperties = new Vector<String>();
+		
+		// Build an association between concatenated properties and columnIds
+		for(Entry<String, List<PropertyValue>> entry: columnMetadata.entrySet()){
+			String columnId = entry.getKey();
+			columnProperties.clear();
+			
+			// Build a list of properties
+			for(PropertyValue pv: entry.getValue()){
+				if(pv.getCategory().equals(category)){
+					String property = pv.getPropertyName() + "." + pv.getPropertyUnit() + "." + pv.getPropertyValue();
+					columnProperties.add(property);
+				}
+			}	
+			
+			// Sort properties alphabetically
+			Collections.sort(columnProperties);
+			String seriesProxyId = StringUtils.join(columnProperties, ";");
+			
+			// Register association between concatenated properties and column Id
+			List<String> columnIds  = columnProperties2columnIds.get(seriesProxyId);
+			if(columnIds == null){
+				columnIds = new Vector<String>();
+				columnProperties2columnIds.put(seriesProxyId, columnIds);
+			}
+			columnIds.add(columnId);						
+		}
+		
+		// Generate Series Id, and build a  hash to associate column id with series id
+		Map<String, String> columnIds2SeriesId = new Hashtable<String, String>();
+		int i = 0;
+		for (Entry<String,List<String>> entry: columnProperties2columnIds.entrySet()){
+			String seriesId = "Series_" + (++i);
+			for(String columnId: entry.getValue()){
+				columnIds2SeriesId.put(columnId, seriesId);
+			}
+		}
+		
+		// Add series id property to each column
+		for(Entry<String, List<PropertyValue>> entry: columnMetadata.entrySet()){
+			String columnId = entry.getKey();
+			String seriesId = columnIds2SeriesId.get(columnId);
+			entry.getValue().add(
+					new PropertyValue()
+					.withCategory("DataSeries")
+					.withPropertyName("SeriesId")
+					.withPropertyUnit("")
+					.withPropertyValue(seriesId)); 
+		}
+	}	
+
+	
+	
 
 	private static void validateMetadata(Matrix2DMetadata metaData, List<String> sampleNames, List<String> rowNames) {
 		
