@@ -1,6 +1,5 @@
 module KBaseEnigmaMetals {
 
-
     typedef structure {
         list<string> row_ids;
         list<string> col_ids;
@@ -102,10 +101,11 @@ module KBaseEnigmaMetals {
 
 	typedef structure{
     	string mtx_column_id;
-    	string growth_rate;
-        string lag_phase;
-        string max_growth;
-        string area_under_curve;
+	string method;
+    	float growth_rate;
+        float lag_phase;
+        float max_growth;
+        float area_under_curve;
 	} GrowthCurveParameters;
 
     /* Parameters of all growth curves for a GrowthMatrix
@@ -115,7 +115,7 @@ module KBaseEnigmaMetals {
 	typedef structure{
     	string matrix_id;
     	list <GrowthCurveParameters> parameters;
-	} GrowthMatrixParameters;
+	} GrowthParameters;
 
 
 };
