@@ -316,13 +316,8 @@ public class GrowthMatrixUploader {
 							if (errorCount < 50) System.err.println (p.getCategory() + "_" + p.getPropertyName() + " metadata entry for column " + colName + " contains illegal unit " + p.getPropertyUnit() );
 							errorCount ++;
 						}
-					} else if ((p.getCategory().equals(MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_DATASERIES)) && (p.getPropertyName().equals(MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_DATASERIES_SERIESID))) {
+					} else if ((p.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES)) && (p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES_SERIESID))) {
 						seriesCount++;
-						if (!statValues && replicatesOption.equals("2")) {
-							if (errorCount == 0) printErrorStatus("Metadata validation");
-							if (errorCount < 50) System.err.println (p.getCategory() + "_" + p.getPropertyName() + " metadata entry found for column " + colName + ", but no data series were expected" );
-							errorCount ++;
-						}
 					}
 					
 				}
@@ -341,15 +336,19 @@ public class GrowthMatrixUploader {
 			if (seriesCount != 1) {
 				if (!statValues && replicatesOption.equals("0")){
 					if (errorCount == 0) printErrorStatus("Metadata validation");
-					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_DATASERIES + " entry");
+					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " entry");
 					errorCount ++;
 				} else if (!statValues && replicatesOption.equals("1")){
 					if (errorCount == 0) printErrorStatus("Metadata validation");
-					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_DATASERIES + " entry, but " + seriesCount + " entries were auto-generated " );
+					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " entry, but " + seriesCount + " entries were auto-generated " );
+					errorCount ++;
+				} else if (!statValues && replicatesOption.equals("2")) {
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println (MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " metadata entry found for column " + colName + ", but no data series were expected" );
 					errorCount ++;
 				} else if (statValues) {
 					if (errorCount == 0) printErrorStatus("Metadata validation");
-					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_DATASERIES + " entry" );
+					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " entry" );
 					errorCount ++;
 				}
 			}

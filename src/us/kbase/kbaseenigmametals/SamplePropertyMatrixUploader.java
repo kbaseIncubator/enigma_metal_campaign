@@ -22,6 +22,7 @@ import us.kbase.common.service.UObject;
 public class SamplePropertyMatrixUploader {
 
 	static Options options = new Options();
+	static String replicatesOption = "2";
 
 	/**
 	 * @param args
@@ -88,6 +89,12 @@ public class SamplePropertyMatrixUploader {
 		OptionBuilder.withArgName("input_mapping");
 		options.addOption(OptionBuilder.create("im"));
 
+		OptionBuilder.withLongOpt("has_replicates");
+		OptionBuilder.withDescription("0 if data has marked replicates, 1 if data has non-marked replicates, 2 if data has no replicates");
+		OptionBuilder.hasArg(true);
+		OptionBuilder.withArgName("has_replicates");
+		options.addOption(OptionBuilder.create("hr"));
+
 		OptionBuilder.withLongOpt("format_type");
 		OptionBuilder.withDescription("Format type");
 		OptionBuilder.hasArg(true);
@@ -116,6 +123,8 @@ public class SamplePropertyMatrixUploader {
 			} else {
 
 				if (validateInput(line)) {
+					
+					replicatesOption = line.getOptionValue("hr");
 
 					File inputFile = findTabFile(new File(
 							line.getOptionValue("id")));
@@ -201,7 +210,7 @@ public class SamplePropertyMatrixUploader {
 		
 		matrix.setData(DataMatrixUploader.parseData(data));
 
-		matrix.setMetadata(parseWellSampleMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
+		matrix.setMetadata(parseWellSampleMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds(), replicatesOption));
 		
 		
 		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
@@ -217,9 +226,9 @@ public class SamplePropertyMatrixUploader {
 	}
 
 
-	private Matrix2DMetadata parseWellSampleMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
+	private Matrix2DMetadata parseWellSampleMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames, String repOption) {
 		
-		Matrix2DMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames, "3");//"3" is a dirty hack to avoid auto-generation of data series
+		Matrix2DMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames, repOption);//"3" is a dirty hack to avoid auto-generation of data series
 		
 		validateMetadata(returnVal, sampleNames, rowNames);
 				
@@ -232,6 +241,14 @@ public class SamplePropertyMatrixUploader {
 		//boolean errorFlag = false;
 		int errorCount = 0;
 		
+		boolean statValues = false;
+		
+		for (PropertyValue p: m.getMatrixMetadata()) {
+			if (p.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES)&& p.getPropertyValue().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE_STATVALUES)) {
+				statValues = true;
+			}
+		}
+
 		for (String rowName : rowNames){
 			flag = 0;
 			try {
@@ -267,6 +284,7 @@ public class SamplePropertyMatrixUploader {
 		
 		for (String colName : columnNames) {
 			boolean measurementFlag = false;
+			int seriesCount = 0;
 			
 			try {
 				for (PropertyValue p : m.getColumnMetadata().get(colName)){
@@ -290,6 +308,8 @@ public class SamplePropertyMatrixUploader {
 								errorCount++;
 							}
 						}
+					} else if ((p.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES)) && (p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES_SERIESID))) {
+						seriesCount++;
 					}
 				}
 				if (!measurementFlag) {
@@ -302,6 +322,27 @@ public class SamplePropertyMatrixUploader {
 				if (errorCount < 50) System.err.println ("Metadata entries for column " + colName + " are missing");
 				errorCount++;
 			}
+
+			if (seriesCount != 1) {
+				if (!statValues && replicatesOption.equals("0")){
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " entry");
+					errorCount ++;
+				} else if (!statValues && replicatesOption.equals("1")){
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " entry, but " + seriesCount + " entries were auto-generated " );
+					errorCount ++;
+				} else if (!statValues && replicatesOption.equals("2")) {
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println (MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " metadata entry found for column " + colName + ", but no data series were expected" );
+					errorCount ++;
+				} else if (statValues) {
+					if (errorCount == 0) printErrorStatus("Metadata validation");
+					if (errorCount < 50) System.err.println ("Metadata for column " + colName + " must have one and only one " + MetadataProperties.DATAMATRIX_METADATA_COLUMN_DATASERIES + " entry" );
+					errorCount ++;
+				}
+			}
+
 		}
 
 		if (errorCount > 50) {
@@ -337,6 +378,17 @@ public class SamplePropertyMatrixUploader {
 
 		if (!line.hasOption("wd")) {
 			System.err.println("Working directory required");
+			returnVal = false;
+		}
+
+		if (!line.hasOption("hr")) {
+			System.err.println("Has_replicates option required");
+			returnVal = false;
+		}
+		
+		String repOption = line.getOptionValue("hr");
+		if  (!(repOption.equals("0")||repOption.equals("1")||repOption.equals("2"))){
+			System.err.println("Has_replicates option must have value 0, 1 or 2 but it has " + repOption);
 			returnVal = false;
 		}
 

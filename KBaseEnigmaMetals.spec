@@ -101,7 +101,7 @@ module KBaseEnigmaMetals {
 
 	typedef structure{
     	string mtx_column_id;
-	string method;
+		string method;
     	float growth_rate;
         float lag_phase;
         float max_growth;
