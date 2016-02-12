@@ -242,7 +242,7 @@ public class ChromatographyMatrixUploader {
 
 	private Matrix2DMetadata parseChromatographyMetadata (List<String> metaData, List<String> sampleNames, List<String> rowNames) {
 		
-		Matrix2DMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames);
+		Matrix2DMetadata returnVal = DataMatrixUploader.parseMetadata(metaData, sampleNames, rowNames, "3");//"3" is a dirty hack to avoid auto-generation of data series
 		
 		validateMetadata(returnVal, sampleNames, rowNames);
 

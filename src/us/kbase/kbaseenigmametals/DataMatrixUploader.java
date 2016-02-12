@@ -20,6 +20,7 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.apache.commons.lang3.StringUtils;
 
 
 import us.kbase.kbaseenigmametals.FloatMatrix2D;
@@ -213,7 +214,7 @@ public class DataMatrixUploader {
 		}
 		
 		matrix.setData(parseData(data));
-		matrix.setMetadata(parseMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds()));
+		matrix.setMetadata(parseMetadata(metaData, matrix.getData().getColIds(), matrix.getData().getRowIds(), "3"));//"3" is a dirty hack to avoid auto-generation of data series
 		
 		List<PropertyValue> properties = matrix.getMetadata().getMatrixMetadata();
 		matrix.setDescription("");
@@ -379,7 +380,7 @@ public class DataMatrixUploader {
 		if (errorFlag) {
 			throw new IllegalStateException("Cannot proceed with upload: metadata parsing failed");
 		}
-
+		
 		returnVal.setColumnMetadata(columnMetadata);
 		returnVal.setRowMetadata(rowMetadata);
 		returnVal.setMatrixMetadata(matrixMetadata);
@@ -387,9 +388,10 @@ public class DataMatrixUploader {
 		return returnVal;
 	};
 
-	protected static Matrix2DMetadata parseMetadata (List<String> metadataLines, List<String> sampleNames, List<String> rowNames) {
+	protected static Matrix2DMetadata parseMetadata (List<String> metadataLines, List<String> sampleNames, List<String> rowNames, String repOption) {
 		
 		boolean errorFlag = false;
+		boolean statValues = false;
 		Matrix2DMetadata returnVal = new Matrix2DMetadata();
 		
 		Map<String, List<PropertyValue>> columnMetadata = new HashMap<String, List<PropertyValue>>();
@@ -411,6 +413,11 @@ public class DataMatrixUploader {
 					if (fields.length > 3) propertyValue.setPropertyUnit(fields[3]);
 					if (fields.length > 4) propertyValue.setPropertyValue(fields[4]);
 					matrixMetadata.add(propertyValue);
+					
+					if (propertyValue.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT) && propertyValue.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES) && propertyValue.getPropertyValue().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE_STATVALUES)) {
+						statValues = true;
+					}
+
 				} else if (sampleNames.contains(fields[0])) {
 					// process sample-specific fields
 					PropertyValue propertyValue = new PropertyValue();
@@ -458,6 +465,22 @@ public class DataMatrixUploader {
 			throw new IllegalStateException("Cannot proceed with upload: metadata parsing failed");
 		}
 
+//auto-generate data series IDs if not provided by user 
+		if (repOption.equals("1") && !statValues) {
+			generateSeriesIds(columnMetadata, MetadataProperties.GROWTHMATRIX_METADATA_COLUMN_CONDITION);
+		} else if (repOption.equals("2") && !statValues) {
+			int seriesIndex = 0; 
+			for(Entry<String, List<PropertyValue>> entry: columnMetadata.entrySet()){
+				seriesIndex++;
+				entry.getValue().add(
+						new PropertyValue()
+						.withCategory("DataSeries")
+						.withPropertyName("SeriesId")
+						.withPropertyUnit("")
+						.withPropertyValue("S" + seriesIndex)); 
+			}
+		}
+		
 		returnVal.setColumnMetadata(columnMetadata);
 		returnVal.setRowMetadata(rowMetadata);
 		returnVal.setMatrixMetadata(matrixMetadata);
@@ -543,7 +566,7 @@ public class DataMatrixUploader {
 		}
 		
 		//Check Measurement for the entire table
-		boolean Measures = false;
+		boolean statValues = false;
 		flag = 0;
 		for (PropertyValue p: metaData.getMatrixMetadata()) {
 			if (p.getCategory().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT)&&p.getPropertyName().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES)) {
@@ -551,8 +574,8 @@ public class DataMatrixUploader {
 					if (errorCount == 0) printErrorStatus("Metadata validation");
 					if (errorCount < 50) System.err.println (MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " metadata entry contains illegal value " + p.getPropertyValue());
 					errorCount ++;
-				} else if (p.getPropertyValue().equals("Measures")) {
-					Measures = true;
+				} else if (p.getPropertyValue().equals(MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE_STATVALUES)) {
+					statValues = true;
 				}
 				flag++;
 			}
@@ -566,8 +589,8 @@ public class DataMatrixUploader {
 			if (errorCount < 50) System.err.println ("Metadata must have only one " + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT + "_" + MetadataProperties.DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES + " entry, , but it contains " + flag);
 			errorCount ++;
 		}
-		
-		if (Measures){
+
+		if (statValues){
 			for (String sampleName : sampleNames){
 				flag = 0;
 				try {

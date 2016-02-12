@@ -1,0 +1,129 @@
+DATA	C1	C2	C3	C4	C5	C6	C7	C8	C9	C10
+R1	0.115	0.12	0.119	0.117	0.119	0.117	0.117	0.11	0.114	0.124
+R2	0.117	0.122	0.122	0.119	0.123	0.122	0.119	0.112	0.118	0.126
+R3	0.119	0.124	0.124	0.121	0.126	0.126	0.121	0.114	0.119	0.129
+R4	0.121	0.126	0.126	0.122	0.129	0.132	0.123	0.115	0.122	0.131
+R5	0.123	0.128	0.129	0.123	0.132	0.14	0.125	0.117	0.124	0.134
+R6	0.124	0.129	0.13	0.124	0.134	0.146	0.126	0.118	0.126	0.136
+R7	0.126	0.131	0.132	0.126	0.137	0.152	0.127	0.12	0.127	0.138
+R8	0.127	0.133	0.133	0.127	0.139	0.16	0.128	0.12	0.128	0.139
+R9	0.129	0.134	0.135	0.128	0.142	0.166	0.13	0.122	0.13	0.141
+R10	0.13	0.135	0.136	0.13	0.145	0.172	0.131	0.123	0.131	0.142
+R11	0.131	0.136	0.138	0.131	0.149	0.176	0.133	0.125	0.133	0.144
+R12	0.132	0.138	0.14	0.132	0.154	0.184	0.134	0.126	0.135	0.145
+R13	0.134	0.14	0.142	0.133	0.16	0.191	0.136	0.128	0.138	0.148
+R14	0.136	0.141	0.144	0.135	0.169	0.196	0.138	0.129	0.142	0.149
+R15	0.138	0.144	0.146	0.137	0.175	0.2	0.14	0.131	0.144	0.152
+R16	0.14	0.146	0.149	0.139	0.182	0.205	0.143	0.133	0.148	0.154
+R17	0.142	0.148	0.151	0.141	0.186	0.211	0.146	0.135	0.15	0.157
+R18	0.144	0.149	0.153	0.143	0.191	0.223	0.148	0.138	0.154	0.159
+R19	0.146	0.151	0.155	0.144	0.198	0.231	0.15	0.14	0.157	0.162
+R20	0.148	0.154	0.158	0.146	0.205	0.248	0.153	0.142	0.161	0.164
+R21	0.151	0.155	0.16	0.148	0.211	0.265	0.156	0.144	0.165	0.166
+R22	0.153	0.157	0.162	0.15	0.219	0.282	0.158	0.146	0.17	0.169
+R23	0.154	0.158	0.164	0.151	0.232	0.297	0.162	0.148	0.177	0.172
+R24	0.155	0.161	0.167	0.154	0.246	0.306	0.166	0.15	0.184	0.174
+R25	0.157	0.163	0.169	0.156	0.255	0.311	0.169	0.153	0.19	0.178
+R26	0.159	0.164	0.171	0.159	0.265	0.316	0.174	0.155	0.195	0.182
+R27	0.16	0.166	0.174	0.161	0.274	0.322	0.179	0.157	0.201	0.188
+R28	0.162	0.168	0.177	0.163	0.28	0.331	0.185	0.161	0.205	0.196
+R29	0.164	0.169	0.181	0.165	0.288	0.337	0.193	0.163	0.212	0.203
+R30	0.165	0.17	0.185	0.166	0.294	0.346	0.202	0.167	0.217	0.211
+R31	0.166	0.172	0.19	0.168	0.302	0.355	0.21	0.172	0.221	0.222
+R32	0.168	0.174	0.195	0.172	0.31	0.367	0.22	0.178	0.23	0.231
+R33	0.169	0.176	0.2	0.174	0.317	0.375	0.23	0.186	0.235	0.24
+R34	0.172	0.178	0.207	0.178	0.324	0.386	0.24	0.195	0.244	0.247
+R35	0.175	0.181	0.215	0.183	0.33	0.392	0.252	0.205	0.255	0.258
+R36	0.178	0.185	0.224	0.188	0.336	0.398	0.262	0.216	0.265	0.268
+R37	0.18	0.189	0.234	0.195	0.345	0.401	0.272	0.229	0.275	0.279
+R38	0.186	0.194	0.245	0.203	0.35	0.404	0.28	0.242	0.287	0.287
+R39	0.191	0.199	0.256	0.214	0.354	0.405	0.286	0.254	0.297	0.296
+R40	0.197	0.206	0.268	0.225	0.355	0.408	0.294	0.268	0.306	0.305
+R41	0.203	0.214	0.277	0.234	0.355	0.405	0.301	0.279	0.314	0.311
+R42	0.209	0.222	0.286	0.243	0.348	0.409	0.306	0.29	0.322	0.319
+R43	0.217	0.23	0.294	0.253	0.344	0.413	0.31	0.299	0.329	0.329
+R44	0.221	0.239	0.302	0.266	0.342	0.413	0.312	0.306	0.334	0.336
+R45	0.226	0.243	0.308	0.273	0.342	0.417	0.315	0.312	0.337	0.341
+R46	0.233	0.25	0.314	0.282	0.341	0.421	0.317	0.319	0.342	0.347
+R47	0.238	0.258	0.32	0.291	0.34	0.423	0.32	0.326	0.344	0.352
+R48	0.245	0.27	0.328	0.305	0.339	0.422	0.322	0.334	0.345	0.356
+R49	0.25	0.278	0.331	0.315	0.339	0.422	0.322	0.339	0.346	0.358
+METADATA	Category	Property	Unit	Value						
+C1	Condition	Nickel	uM	0						
+C2	Condition	Nickel	uM	0						
+C3	Condition	Nickel	uM	2.5						
+C4	Condition	Nickel	uM	2.5						
+C5	Condition	Nickel	uM	5						
+C6	Condition	Nickel	uM	5						
+C7	Condition	Nickel	uM	8						
+C8	Condition	Nickel	uM	8						
+C9	Condition	Nickel	uM	10						
+C10	Condition	Nickel	uM	10						
+C1	DataSeries	SeriesID		S1						
+C2	DataSeries	SeriesID		S1						
+C3	DataSeries	SeriesID		S2						
+C4	DataSeries	SeriesID		S2						
+C5	DataSeries	SeriesID		S3						
+C6	DataSeries	SeriesID		S3						
+C7	DataSeries	SeriesID		S4						
+C8	DataSeries	SeriesID		S4						
+C9	DataSeries	SeriesID		S5						
+C10	DataSeries	SeriesID		S5						
+T	Description			"FW510-R11 in R2A, Nickel"						
+T	Measurement	Values		RawValues						
+T	Medium	Substance		Nickel						
+T	Plate Number			Plate 1						
+T	Experiment	Date		11/20/2014						
+T	Experiment	Time		6:05:56 PM						
+T	Experiment	Reader Type:		Eon						
+T	Experiment	Reader Serial Number:		1309247						
+T	Experiment	Reading Type		Reader						
+R1	TimeSeries	Time	hours	0						
+R2	TimeSeries	Time	hours	1						
+R3	TimeSeries	Time	hours	2						
+R4	TimeSeries	Time	hours	3						
+R5	TimeSeries	Time	hours	4						
+R6	TimeSeries	Time	hours	5						
+R7	TimeSeries	Time	hours	6						
+R8	TimeSeries	Time	hours	7						
+R9	TimeSeries	Time	hours	8						
+R10	TimeSeries	Time	hours	9						
+R11	TimeSeries	Time	hours	10						
+R12	TimeSeries	Time	hours	11						
+R13	TimeSeries	Time	hours	12						
+R14	TimeSeries	Time	hours	13						
+R15	TimeSeries	Time	hours	14						
+R16	TimeSeries	Time	hours	15						
+R17	TimeSeries	Time	hours	16						
+R18	TimeSeries	Time	hours	17						
+R19	TimeSeries	Time	hours	18						
+R20	TimeSeries	Time	hours	19						
+R21	TimeSeries	Time	hours	20						
+R22	TimeSeries	Time	hours	21						
+R23	TimeSeries	Time	hours	22						
+R24	TimeSeries	Time	hours	23						
+R25	TimeSeries	Time	hours	24						
+R26	TimeSeries	Time	hours	25						
+R27	TimeSeries	Time	hours	26						
+R28	TimeSeries	Time	hours	27						
+R29	TimeSeries	Time	hours	28						
+R30	TimeSeries	Time	hours	29						
+R31	TimeSeries	Time	hours	30						
+R32	TimeSeries	Time	hours	31						
+R33	TimeSeries	Time	hours	32						
+R34	TimeSeries	Time	hours	33						
+R35	TimeSeries	Time	hours	34						
+R36	TimeSeries	Time	hours	35						
+R37	TimeSeries	Time	hours	36						
+R38	TimeSeries	Time	hours	37						
+R39	TimeSeries	Time	hours	38						
+R40	TimeSeries	Time	hours	39						
+R41	TimeSeries	Time	hours	40						
+R42	TimeSeries	Time	hours	41						
+R43	TimeSeries	Time	hours	42						
+R44	TimeSeries	Time	hours	43						
+R45	TimeSeries	Time	hours	44						
+R46	TimeSeries	Time	hours	45						
+R47	TimeSeries	Time	hours	46						
+R48	TimeSeries	Time	hours	47						
+R49	TimeSeries	Time	hours	48						

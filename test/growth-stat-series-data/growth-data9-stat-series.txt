@@ -1,0 +1,139 @@
+DATA	C1	C2	C3	C4	C5	C6	C7	C8	C9	C10
+R1	0.1175	0.118	0.118	0.1135	0.119	0.3	0.3	0.3	0.3	0.3
+R2	0.1195	0.1205	0.1225	0.1155	0.122	0.3	0.3	0.3	0.3	0.3
+R3	0.1215	0.1225	0.126	0.1175	0.124	0.3	0.3	0.3	0.3	0.3
+R4	0.1235	0.124	0.1305	0.119	0.1265	0.3	0.3	0.3	0.3	0.3
+R5	0.1255	0.126	0.136	0.121	0.129	0.3	0.3	0.3	0.3	0.3
+R6	0.1265	0.127	0.14	0.122	0.131	0.3	0.3	0.3	0.3	0.3
+R7	0.1285	0.129	0.1445	0.1235	0.1325	0.3	0.3	0.3	0.3	0.3
+R8	0.13	0.13	0.1495	0.124	0.1335	0.3	0.3	0.3	0.3	0.3
+R9	0.1315	0.1315	0.154	0.126	0.1355	0.3	0.3	0.3	0.3	0.3
+R10	0.1325	0.133	0.1585	0.127	0.1365	0.3	0.3	0.3	0.3	0.3
+R11	0.1335	0.1345	0.1625	0.129	0.1385	0.3	0.3	0.3	0.3	0.3
+R12	0.135	0.136	0.169	0.13	0.14	0.3	0.3	0.3	0.3	0.3
+R13	0.137	0.1375	0.1755	0.132	0.143	0.3	0.3	0.3	0.3	0.3
+R14	0.1385	0.1395	0.1825	0.1335	0.1455	0.3	0.3	0.3	0.3	0.3
+R15	0.141	0.1415	0.1875	0.1355	0.148	0.3	0.3	0.3	0.3	0.3
+R16	0.143	0.144	0.1935	0.138	0.151	0.3	0.3	0.3	0.3	0.3
+R17	0.145	0.146	0.1985	0.1405	0.1535	0.3	0.3	0.3	0.3	0.3
+R18	0.1465	0.148	0.207	0.143	0.1565	0.3	0.3	0.3	0.3	0.3
+R19	0.1485	0.1495	0.2145	0.145	0.1595	0.3	0.3	0.3	0.3	0.3
+R20	0.151	0.152	0.2265	0.1475	0.1625	0.3	0.3	0.3	0.3	0.3
+R21	0.153	0.154	0.238	0.15	0.1655	0.3	0.3	0.3	0.3	0.3
+R22	0.155	0.156	0.2505	0.152	0.1695	0.3	0.3	0.3	0.3	0.3
+R23	0.156	0.1575	0.2645	0.155	0.1745	0.3	0.3	0.3	0.3	0.3
+R24	0.158	0.1605	0.276	0.158	0.179	0.3	0.3	0.3	0.3	0.3
+R25	0.16	0.1625	0.283	0.161	0.184	0.3	0.3	0.3	0.3	0.3
+R26	0.1615	0.165	0.2905	0.1645	0.1885	0.3	0.3	0.3	0.3	0.3
+R27	0.163	0.1675	0.298	0.168	0.1945	0.3	0.3	0.3	0.3	0.3
+R28	0.165	0.17	0.3055	0.173	0.2005	0.3	0.3	0.3	0.3	0.3
+R29	0.1665	0.173	0.3125	0.178	0.2075	0.3	0.3	0.3	0.3	0.3
+R30	0.1675	0.1755	0.32	0.1845	0.214	0.3	0.3	0.3	0.3	0.3
+R31	0.169	0.179	0.3285	0.191	0.2215	0.3	0.3	0.3	0.3	0.3
+R32	0.171	0.1835	0.3385	0.199	0.2305	0.3	0.3	0.3	0.3	0.3
+R33	0.1725	0.187	0.346	0.208	0.2375	0.3	0.3	0.3	0.3	0.3
+R34	0.175	0.1925	0.355	0.2175	0.2455	0.3	0.3	0.3	0.3	0.3
+R35	0.178	0.199	0.361	0.2285	0.2565	0.3	0.3	0.3	0.3	0.3
+R36	0.1815	0.206	0.367	0.239	0.2665	0.3	0.3	0.3	0.3	0.3
+R37	0.1845	0.2145	0.373	0.2505	0.277	0.3	0.3	0.3	0.3	0.3
+R38	0.19	0.224	0.377	0.261	0.287	0.3	0.3	0.3	0.3	0.3
+R39	0.195	0.235	0.3795	0.27	0.2965	0.3	0.3	0.3	0.3	0.3
+R40	0.2015	0.2465	0.3815	0.281	0.3055	0.3	0.3	0.3	0.3	0.3
+R41	0.2085	0.2555	0.38	0.29	0.3125	0.3	0.3	0.3	0.3	0.3
+R42	0.2155	0.2645	0.3785	0.298	0.3205	0.3	0.3	0.3	0.3	0.3
+R43	0.2235	0.2735	0.3785	0.3045	0.329	0.3	0.3	0.3	0.3	0.3
+R44	0.23	0.284	0.3775	0.309	0.335	0.3	0.3	0.3	0.3	0.3
+R45	0.2345	0.2905	0.3795	0.3135	0.339	0.3	0.3	0.3	0.3	0.3
+R46	0.2415	0.298	0.381	0.318	0.3445	0.3	0.3	0.3	0.3	0.3
+R47	0.248	0.3055	0.3815	0.323	0.348	0.3	0.3	0.3	0.3	0.3
+R48	0.2575	0.3165	0.3805	0.328	0.3505	0.3	0.3	0.3	0.3	0.3
+R49	0.264	0.323	0.3805	0.3305	0.352	0.3	0.3	0.3	0.3	0.3
+METADATA	Category	Property	Unit	Value						
+C1	Condition	Nickel	uM	0						
+C2	Condition	Nickel	uM	2.5						
+C3	Condition	Nickel	uM	5						
+C4	Condition	Nickel	uM	8						
+C5	Condition	Nickel	uM	10						
+C6	Condition	Nickel	uM	0						
+C7	Condition	Nickel	uM	2.5						
+C8	Condition	Nickel	uM	5						
+C9	Condition	Nickel	uM	8						
+C10	Condition	Nickel	uM	10						
+C1	DataSeries	SeriesID		S1						
+C2	DataSeries	SeriesID		S2						
+C3	DataSeries	SeriesID		S3						
+C4	DataSeries	SeriesID		S4						
+C5	DataSeries	SeriesID		S5						
+C6	DataSeries	SeriesID		S1						
+C7	DataSeries	SeriesID		S2						
+C8	DataSeries	SeriesID		S3						
+C9	DataSeries	SeriesID		S4						
+C10	DataSeries	SeriesID		S5						
+C1	Measurement	ValueType		Average						
+C2	Measurement	ValueType		Average						
+C3	Measurement	ValueType		Average						
+C4	Measurement	ValueType		Average						
+C5	Measurement	ValueType		Average						
+C6	Measurement	ValueType		SD						
+C7	Measurement	ValueType		SD						
+C8	Measurement	ValueType		SD						
+C9	Measurement	ValueType		SD						
+C10	Measurement	ValueType		SD						
+T	Description			"FW510-R11 in R2A, Nickel"						
+T	Measurement	Values		StatValues						
+T	Medium	Substance		Nickel						
+T	Plate Number			Plate 1						
+T	Experiment	Date		11/20/2014						
+T	Experiment	Time		6:05:56 PM						
+T	Experiment	Reader Type:		Eon						
+T	Experiment	Reader Serial Number:		1309247						
+T	Experiment	Reading Type		Reader						
+R1	TimeSeries	Time	hours	0						
+R2	TimeSeries	Time	hours	1						
+R3	TimeSeries	Time	hours	2						
+R4	TimeSeries	Time	hours	3						
+R5	TimeSeries	Time	hours	4						
+R6	TimeSeries	Time	hours	5						
+R7	TimeSeries	Time	hours	6						
+R8	TimeSeries	Time	hours	7						
+R9	TimeSeries	Time	hours	8						
+R10	TimeSeries	Time	hours	9						
+R11	TimeSeries	Time	hours	10						
+R12	TimeSeries	Time	hours	11						
+R13	TimeSeries	Time	hours	12						
+R14	TimeSeries	Time	hours	13						
+R15	TimeSeries	Time	hours	14						
+R16	TimeSeries	Time	hours	15						
+R17	TimeSeries	Time	hours	16						
+R18	TimeSeries	Time	hours	17						
+R19	TimeSeries	Time	hours	18						
+R20	TimeSeries	Time	hours	19						
+R21	TimeSeries	Time	hours	20						
+R22	TimeSeries	Time	hours	21						
+R23	TimeSeries	Time	hours	22						
+R24	TimeSeries	Time	hours	23						
+R25	TimeSeries	Time	hours	24						
+R26	TimeSeries	Time	hours	25						
+R27	TimeSeries	Time	hours	26						
+R28	TimeSeries	Time	hours	27						
+R29	TimeSeries	Time	hours	28						
+R30	TimeSeries	Time	hours	29						
+R31	TimeSeries	Time	hours	30						
+R32	TimeSeries	Time	hours	31						
+R33	TimeSeries	Time	hours	32						
+R34	TimeSeries	Time	hours	33						
+R35	TimeSeries	Time	hours	34						
+R36	TimeSeries	Time	hours	35						
+R37	TimeSeries	Time	hours	36						
+R38	TimeSeries	Time	hours	37						
+R39	TimeSeries	Time	hours	38						
+R40	TimeSeries	Time	hours	39						
+R41	TimeSeries	Time	hours	40						
+R42	TimeSeries	Time	hours	41						
+R43	TimeSeries	Time	hours	42						
+R44	TimeSeries	Time	hours	43						
+R45	TimeSeries	Time	hours	44						
+R46	TimeSeries	Time	hours	45						
+R47	TimeSeries	Time	hours	46						
+R48	TimeSeries	Time	hours	47						
+R49	TimeSeries	Time	hours	48						

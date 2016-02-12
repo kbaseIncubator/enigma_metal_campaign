@@ -86,4 +86,36 @@ module KBaseEnigmaMetals {
 		Matrix2DMetadata metadata;
 		FloatMatrix2D data;
 	} SamplePropertyMatrix;
+	
+	    /* Growth data matrix
+
+      @optional description
+    */
+
+	/*////////////////////////////////
+	///   Additional data types   ////
+	////////////////////////////////*/
+
+    /* Parameters of a single growth curve
+
+    */
+
+	typedef structure{
+    	string mtx_column_id;
+    	string growth_rate;
+        string lag_phase;
+        string max_growth;
+        string area_under_curve;
+	} GrowthCurveParameters;
+
+    /* Parameters of all growth curves for a GrowthMatrix
+
+    */
+
+	typedef structure{
+    	string matrix_id;
+    	list <GrowthCurveParameters> parameters;
+	} GrowthMatrixParameters;
+
+
 };

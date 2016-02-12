@@ -15,6 +15,7 @@ public class MetadataProperties {
 	public static String DATAMATRIX_METADATA_TABLE_MEASUREMENT;
 	public static String DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES;
 	public static List<String> DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE;
+	public static String DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE_STATVALUES;
 	public static String DATAMATRIX_METADATA_COLUMN_MEASUREMENT;
 	public static String DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE;
 	public static List<String> DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE_VALUE;
@@ -23,6 +24,8 @@ public class MetadataProperties {
 	public static List<String> GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME_UNIT;
 	public static String GROWTHMATRIX_METADATA_COLUMN_CONDITION;
 	public static List<String> GROWTHMATRIX_METADATA_COLUMN_CONDITION_UNIT;
+	public static String GROWTHMATRIX_METADATA_COLUMN_DATASERIES;
+	public static String GROWTHMATRIX_METADATA_COLUMN_DATASERIES_SERIESID;
 	public static String CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES;
 	public static List<String> CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME;
 	public static List<String> CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME_UNIT;
@@ -35,6 +38,7 @@ public class MetadataProperties {
 	public static String SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE;
 	public static String SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_ID;
 	public static String SAMPLEPROPERTYMATRIX_METADATA_ROW_SAMPLE_WELLID;
+	
 	
 	public static void startup() {
 		
@@ -60,6 +64,7 @@ public class MetadataProperties {
 			DATAMATRIX_METADATA_TABLE_MEASUREMENT = prop.getProperty("datamatrix.metadata.table.measurement");
 			DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES = prop.getProperty("datamatrix.metadata.table.measurement.values");
 			DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE = Arrays.asList(prop.getProperty("datamatrix.metadata.table.measurement.values.value").split(",", 0));
+			DATAMATRIX_METADATA_TABLE_MEASUREMENT_VALUES_VALUE_STATVALUES = prop.getProperty("datamatrix.metadata.table.measurement.values.value.statvalues");
 			DATAMATRIX_METADATA_COLUMN_MEASUREMENT = prop.getProperty("datamatrix.metadata.column.measurement");
 			DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE = prop.getProperty("datamatrix.metadata.column.measurement.valuetype");
 			DATAMATRIX_METADATA_COLUMN_MEASUREMENT_VALUETYPE_VALUE = Arrays.asList(prop.getProperty("datamatrix.metadata.column.measurement.valuetype.value").split(",", 0));
@@ -68,6 +73,8 @@ public class MetadataProperties {
 			GROWTHMATRIX_METADATA_ROW_TIMESERIES_TIME_UNIT = Arrays.asList(prop.getProperty("growthmatrix.metadata.row.timeseries.time.unit").split(",", 0));
 			GROWTHMATRIX_METADATA_COLUMN_CONDITION = prop.getProperty("growthmatrix.metadata.column.condition");
 			GROWTHMATRIX_METADATA_COLUMN_CONDITION_UNIT = Arrays.asList(prop.getProperty("growthmatrix.metadata.column.condition.unit").split(",", 0));
+			GROWTHMATRIX_METADATA_COLUMN_DATASERIES = prop.getProperty("growthmatrix.metadata.column.dataseries");
+			GROWTHMATRIX_METADATA_COLUMN_DATASERIES_SERIESID = prop.getProperty("growthmatrix.metadata.column.dataseries.seriesid");
 			CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES = prop.getProperty("chromatographymatrix.metadata.row.timeseries");
 			CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME = Arrays.asList(prop.getProperty("chromatographymatrix.metadata.row.timeseries.time"));
 			CHROMATOGRAPHYMATRIX_METADATA_ROW_TIMESERIES_TIME_UNIT = Arrays.asList(prop.getProperty("chromatographymatrix.metadata.row.timeseries.time.unit").split(",", 0));
