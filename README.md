@@ -1,6 +1,8 @@
 # enigma_metal_campaign
 ENIGMA Metal Metabolism Campaign generates various types of biological data. This repository contains KBase data models, data uploaders/downloaders, etc to enable modeling of a collaborative research of several ENIMGA Metal Campaign teams in the Kbase environment.
 
+See [Wiki](https://github.com/kbaseIncubator/enigma_metal_campaign/wiki) for additional information
+
 # An easy way to prepare input file
 1. Put all your data and metadata on a single sheet in MS Excel or similar spreadsheet editor (see below what should be included).
 2. Save as Tab-separated text file with .txt or .tsv extension.
