@@ -1,0 +1,46 @@
+DATA	C1	C2	C3	C4	C5	C6	C7	C8	C9	C10
+R1	0.0118	0.01	0.0114	0.0099	0.0122	0.0111	0.0111	0.0108	0.0105	0.0101
+R2	0.0088	0.0083	0.0079	0.0124	0.0092	0.0114	0.0099	0.0151	0.0102	0.0119
+R3	0.027	0.0735	0.0188	0.0886	0.022	0.0529	0.0264	0.1126	0.0216	0.044
+R4	0.0306	0.1014	0.0259	0.1848	0.0263	0.0552	0.037	0.1817	0.028	0.0884
+R5	0.0251	0.1316	0.0249	0.2726	0.0221	0.0446	0.0314	0.3293	0.0243	0.1239
+R6	0.0308	0.1616	0.0288	0.278	0.0276	0.0416	0.0369	0.3287	0.0282	0.1616
+R7	0.0265	0.168	0.0282	0.2337	0.0246	0.0343	0.0348	0.3313	0.0287	0.2192
+R8	0.0272	0.1668	0.0282	0.2266	0.026	0.0335	0.036	0.3826	0.0294	0.233
+METADATA	Category	Property	Unit	Value						
+R1	TimeSeries	Time	hours	0						
+R2	TimeSeries	Time	hours	6						
+R3	TimeSeries	Time	hours	22						
+R4	TimeSeries	Time	hours	30						
+R5	TimeSeries	Time	hours	45						
+R6	TimeSeries	Time	hours	52						
+R7	TimeSeries	Time	hours	69						
+R8	TimeSeries	Time	hours	75						
+T	Description			N2E2 in UGA						
+T	Measurement	Values		RawValues						
+T	Experiment	Temperature	C	30						
+T	Experiment	Read		Absorbance Endpoint						
+T	Experiment	Wavelength		590						
+T	Condition	Strain		N2E2						
+T	Experiment	Date		3/11/2014						
+T	Experiment	Time		12:30PM						
+C1	Condition	fumarate	mM	10						
+C2	Condition	fumarate	mM	10						
+C3	Condition	lactate	mM	10						
+C4	Condition	lactate	mM	10						
+C5	Condition	pyruvate	mM	10						
+C6	Condition	pyruvate	mM	10						
+C7	Condition	sucrose	mM	10						
+C8	Condition	sucrose	mM	10						
+C9	Condition	succinate	mM	10						
+C10	Condition	succinate	mM	10						
+C1	Condition	nitrate	mM	0						
+C2	Condition	nitrate	mM	20						
+C3	Condition	nitrate	mM	0						
+C4	Condition	nitrate	mM	20						
+C5	Condition	nitrate	mM	0						
+C6	Condition	nitrate	mM	20						
+C7	Condition	nitrate	mM	0						
+C8	Condition	nitrate	mM	20						
+C9	Condition	nitrate	mM	0						
+C10	Condition	nitrate	mM	20						
