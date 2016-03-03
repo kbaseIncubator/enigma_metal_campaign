@@ -1,0 +1,32 @@
+DATA	C1	C2	C3	C4	C5	C6	C7	C8
+R1	380.01	20	2790.27	15758.68	10	180	220	310
+R2	550.01	40	2640.24	15648.56	40	290	300	410.01
+R3	480.01	30	2630.24	16699.74	30	180	360	400.01
+R4	620.01	30	2510.22	16439.44	20	180	140	390.01
+R5	470.01	10	2460.21	15858.79	20	120	240	380.01
+METADATA	Category	Property	Unit	Value				
+T	Description			"HPLC-ICPMS in N2E3, Metals"				
+T	Measurement	Values		RawValues				
+T	Experiment	Date		3/20/2014				
+T	Experiment	Time		2:56:05 PM				
+C1	Measurement	Substance		Iron				
+C2	Measurement	Substance		Cobalt				
+C3	Measurement	Substance		Nickel				
+C4	Measurement	Substance		Copper				
+C5	Measurement	Substance		Zinc				
+C6	Measurement	Substance		Molybdenum				
+C7	Measurement	Substance		Molybdenum				
+C8	Measurement	Substance		Tungsten				
+C1	Experiment	Isotope		56				
+C2	Experiment	Isotope		59				
+C3	Experiment	Isotope		60				
+C4	Experiment	Isotope		63				
+C5	Experiment	Isotope		66				
+C6	Experiment	Isotope		95				
+C7	Experiment	Isotope		98				
+C8	Experiment	Isotope		182				
+R1	TimeSeries	Time	seconds	0.828				
+R2	TimeSeries	Time	seconds	1.646				
+R3	TimeSeries	Time	seconds	2.464				
+R4	TimeSeries	Time	seconds	3.282				
+R5	TimeSeries	Time	seconds	4.1				
