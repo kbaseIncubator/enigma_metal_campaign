@@ -8,8 +8,6 @@ METADATA	Category	Property	Unit	Value
 T	Description			"N2E3, protein absorbance at 280 nm"
 T	Measurement	Values		RawValues
 C1	Measurement	Substance		Protein
-C1	Experiment	Wavelength		280 nm
-C1	Experiment	Read		Absorbance
 R1	TimeSeries	Time	minutes	0
 R2	TimeSeries	Time	minutes	0.009706853
 R3	TimeSeries	Time	minutes	0.019413706
