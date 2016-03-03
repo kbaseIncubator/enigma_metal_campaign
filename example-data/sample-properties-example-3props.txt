@@ -7,17 +7,17 @@ R5	0.012491489	0.001080588	0.000675577
 METADATA	Category	Property	Unit	Value
 T	Description			"Survey Data 1-118 2013-05-16, suspension"
 T	Measurement	Values		RawValues
+R1	Sample	Name		GW101-7-25-12
+R2	Sample	Name		FW104-7-26-12
+R3	Sample	Name		FW109-1-7-25-12
+R4	Sample	Name		FW109-2-7-25-12
+R5	Sample	Name		TPB16-7-26-12
 C1	Experiment	Isotope		47
 C2	Experiment	Isotope		51
 C3	Experiment	Isotope		52
 C1	Experiment	Fraction		Suspension
 C2	Experiment	Fraction		Suspension
 C3	Experiment	Fraction		Suspension
-R1	Sample	Name		GW101-7-25-12
-R2	Sample	Name		FW104-7-26-12
-R3	Sample	Name		FW109-1-7-25-12
-R4	Sample	Name		FW109-2-7-25-12
-R5	Sample	Name		TPB16-7-26-12
 C1	Property	Measurement	uM	Concentration
 C2	Property	Measurement	uM	Concentration
 C3	Property	Measurement	uM	Concentration
