@@ -5,7 +5,7 @@ R3	0.119	0.124	0.124	0.121	0.126	0.126	0.121	0.114	0.119	0.129
 R4	0.121	0.126	0.126	0.122	0.129	0.132	0.123	0.115	0.122	0.131
 R5	0.123	0.128	0.129	0.123	0.132	0.14	0.125	0.117	0.124	0.134
 METADATA	Entity	Property	Unit	Value						
-T	Description			"FW510-R11 in R2A, Nickel"						
+T	Description			FW510-R11 in R2A, Nickel						
 T	Measurement	Values		RawValues						
 T	Experiment	Date		11/20/2014						
 T	Experiment	Time		6:05:56 PM						
