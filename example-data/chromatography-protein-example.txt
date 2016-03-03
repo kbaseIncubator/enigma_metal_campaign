@@ -1,11 +1,11 @@
 DATA	C1			
-R1	-0.034749508			
-R2	-0.035464764			
-R3	-0.036776066			
-R4	-0.037908554			
-R5	-0.03862381			
+R1	28.9503336			
+R2	34.15316343			
+R3	41.71746969			
+R4	52.49124765			
+R5	67.31939316			
 METADATA	Category	Property	Unit	Value
-T	Description			"N2E3, protein absorbance at 280 nm"
+T	Description			N2E3, protein absorbance at 280 nm
 T	Measurement	Values		RawValues
 C1	Measurement	Substance		Protein
 R1	TimeSeries	Time	minutes	0
