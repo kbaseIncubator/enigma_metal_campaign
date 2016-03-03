@@ -5,7 +5,7 @@ R3	480.01	30	2630.24	16699.74	30	180	360	400.01
 R4	620.01	30	2510.22	16439.44	20	180	140	390.01
 R5	470.01	10	2460.21	15858.79	20	120	240	380.01
 METADATA	Category	Property	Unit	Value				
-T	Description			"HPLC-ICPMS in N2E3, Metals"				
+T	Description			HPLC-ICPMS in N2E3, Metals				
 T	Measurement	Values		RawValues				
 C1	Measurement	Substance		Iron				
 C2	Measurement	Substance		Cobalt				
