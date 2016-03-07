@@ -1,0 +1,16 @@
+DATA	C1
+R1	0.023659574
+R2	0.173191489
+R3	0.022489362
+R4	0.013161702
+R5	0.012491489
+METADATA	Category	Property	Unit	Value
+T	Description			Survey Data 1-118 2013-05-16, suspension
+T	Measurement	Values		RawValues
+C1	Property	Measurement	uM	Concentration
+C1	Property	Name		Ti
+R1	Sample	Name		GW101-7-25-12
+R2	Sample	Name		FW104-7-26-12
+R3	Sample	Name		FW109-1-7-25-12
+R4	Sample	Name		FW109-2-7-25-12
+R5	Sample	Name		TPB16-7-26-12

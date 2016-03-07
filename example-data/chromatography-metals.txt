@@ -1540,7 +1540,7 @@ R1538	610.01	20	2530.22	9593.22	20	160	250	400.01
 R1539	600.01	20	2570.23	9753.32	20	150	260	320
 R1540	640.01	10	2590.23	9893.42	0	210	220	330
 METADATA	Category	Property	Unit	Value				
-T	Description			"HPLC-ICPMS in N2E3, Metals"				
+T	Description			HPLC-ICPMS in N2E3, Metals				
 T	Measurement	Values		RawValues				
 C1	Experiment	Isotope		56				
 C2	Experiment	Isotope		59				

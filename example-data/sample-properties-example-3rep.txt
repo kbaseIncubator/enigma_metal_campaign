@@ -1,0 +1,59 @@
+DATA	C1	C2	C3	C4	C5	C6	C7	C8	C9
+R1	0.023659574	0.001982353	0.003096154	0.016381132	60.47272727	180.8928571	0.032898305	0.019416667	0.032365079
+R2	0.173191489	0.003358824	0.005726923	0.006366038	2801.818182	18.07142857	1.284745763	5.256666667	13.2984127
+R3	0.022489362	0.001939216	0.022076923	0.021037736	837.6363636	1.033928571	5.684745763	19.13333333	0.090936508
+R4	0.013161702	0.001550784	0.067826923	0.066716981	517.0909091	0.582678571	5.43220339	15.31333333	0.24984127
+R5	0.012491489	0.001080588	0.000675577	0	2.48	0.729821429	0.001891525	0.010488333	0.025031746	0.075666667
+METADATA	Category	Property	Unit	Value
+T	Description			Survey Data 1-118 2013-05-16, suspension
+T	Measurement	Values		RawValues
+R1	Sample	Name		GW101-7-25-12
+R2	Sample	Name		FW104-7-26-12
+R3	Sample	Name		FW109-1-7-25-12
+R4	Sample	Name		FW109-2-7-25-12
+R5	Sample	Name		TPB16-7-26-12
+C1	Experiment	Isotope		47
+C2	Experiment	Isotope		47
+C3	Experiment	Isotope		47
+C4	Experiment	Isotope		51
+C5	Experiment	Isotope		51
+C6	Experiment	Isotope		51
+C7	Experiment	Isotope		52
+C8	Experiment	Isotope		52
+C9	Experiment	Isotope		52
+C1	Experiment	Fraction		Suspension
+C2	Experiment	Fraction		Suspension
+C3	Experiment	Fraction		Suspension
+C4	Experiment	Fraction		Suspension
+C5	Experiment	Fraction		Suspension
+C6	Experiment	Fraction		Suspension
+C7	Experiment	Fraction		Suspension
+C8	Experiment	Fraction		Suspension
+C9	Experiment	Fraction		Suspension
+C1	DataSeries	SeriesID		Ti
+C2	DataSeries	SeriesID		Ti
+C3	DataSeries	SeriesID		Ti
+C4	DataSeries	SeriesID		V
+C5	DataSeries	SeriesID		V
+C6	DataSeries	SeriesID		V
+C7	DataSeries	SeriesID		Cr52
+C8	DataSeries	SeriesID		Cr52
+C9	DataSeries	SeriesID		Cr52
+C1	Property	Measurement	uM	Concentration
+C2	Property	Measurement	uM	Concentration
+C3	Property	Measurement	uM	Concentration
+C4	Property	Measurement	uM	Concentration
+C5	Property	Measurement	uM	Concentration
+C6	Property	Measurement	uM	Concentration
+C7	Property	Measurement	uM	Concentration
+C8	Property	Measurement	uM	Concentration
+C9	Property	Measurement	uM	Concentration
+C1	Property	Name		Ti
+C2	Property	Name		Ti
+C3	Property	Name		Ti
+C4	Property	Name		V
+C5	Property	Name		V
+C6	Property	Name		V
+C7	Property	Name		Cr52
+C8	Property	Name		Cr52
+C9	Property	Name		Cr52

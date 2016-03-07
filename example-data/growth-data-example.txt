@@ -1,0 +1,22 @@
+DATA	C1	C2	C3	C4	C5
+R1	0.1175	0.118	0.118	0.1135	0.119
+R2	0.1195	0.1205	0.1225	0.1155	0.122
+R3	0.1215	0.1225	0.126	0.1175	0.124
+R4	0.1235	0.124	0.1305	0.119	0.1265
+R5	0.1255	0.126	0.136	0.121	0.129
+METADATA	Entity	Property	Unit	Value	
+T	Description			FW510-R11 in R2A, Nickel	
+T	Measurement	Values		RawValues	
+T	Experiment	Date		11/20/2014	
+T	Experiment	Time		6:05:56 PM	
+T	Experiment	Read		Absorbance	
+C1	Condition	Nickel	uM	0	
+C2	Condition	Nickel	uM	2.5	
+C3	Condition	Nickel	uM	5	
+C4	Condition	Nickel	uM	8	
+C5	Condition	Nickel	uM	10	
+R1	TimeSeries	Time	hours	0	
+R2	TimeSeries	Time	hours	1	
+R3	TimeSeries	Time	hours	2	
+R4	TimeSeries	Time	hours	3	
+R5	TimeSeries	Time	hours	4	
